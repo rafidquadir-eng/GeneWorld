@@ -1,0 +1,4 @@
+path	bytes	sha256	dest	utc
+data/latents/vjepa2/LT0138_03.npz	183540328	23421dd3f283269cb484fc91e1f16746b76dd6dc83bd2ee819b314297dc06f44	/home/ubuntu/LambdaFilesystem/geneworld_backups/data/latents/vjepa2/LT0138_03.npz	2026-10-19T20:10:26Z
+data/latents/dinov2/LT0138_03.npz	68852328	fa7638d52a6dce30e7620406a5b1a1f6135f7af9ad9879585a33f044b68876a3	/home/ubuntu/LambdaFilesystem/geneworld_backups/data/latents/dinov2/LT0138_03.npz	2026-10-19T20:10:27Z
+data/latents/tijepa1/LT0138_03.npz	68852328	2faca3e67649b609bd65f618f9f8bbec6a3ccdf1bae85b94ef8f25f490cb99fb	/home/ubuntu/LambdaFilesystem/geneworld_backups/data/latents/tijepa1/LT0138_03.npz	2026-10-19T20:10:28Z
