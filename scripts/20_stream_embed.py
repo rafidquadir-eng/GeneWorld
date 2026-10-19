@@ -53,15 +53,16 @@ STD = torch.tensor([0.229, 0.224, 0.225], device=DEV).view(1, 1, 3, 1, 1)
 
 
 def tiles_and_clips(frames: np.ndarray) -> tuple[torch.Tensor, np.ndarray]:
-    """(93, 512, 672) uint8 -> (14*4, 16, 256, 256) float in [0, 1]; frame means."""
-    f = frames.astype(np.float32)
-    lo, hi = np.percentile(f[::4], (0.5, 99.8))
-    f = np.clip((f - lo) / max(hi - lo, 1.0), 0, 1)
+    """(93, 512, 672) uint8 -> (14*4, 16, 256, 256) float on the GPU in [0, 1]; frame means."""
+    f = torch.from_numpy(frames).to(DEV, non_blocking=True).float()
+    sub = f[::4, ::4, ::4].flatten()
+    lo, hi = torch.quantile(sub, torch.tensor([0.005, 0.998], device=DEV))
+    f = ((f - lo) / torch.clamp(hi - lo, min=1.0)).clamp_(0, 1)
     x0 = (f.shape[2] - 512) // 2
     f = f[:, :, x0:x0 + 512]
     tiles = [f[:, :TILE, :TILE], f[:, :TILE, TILE:], f[:, TILE:, :TILE], f[:, TILE:, TILE:]]
-    clips = np.stack([t[s:s + NF] for s in CLIP_STARTS for t in tiles])  # (56, 16, 256, 256)
-    return torch.from_numpy(clips.astype(np.float32)), frames.reshape(len(frames), -1).mean(1)
+    clips = torch.stack([t[s:s + NF] for s in CLIP_STARTS for t in tiles])  # (56, 16, 256, 256)
+    return clips, frames.reshape(len(frames), -1).mean(1)
 
 
 def pool_grid(tok: torch.Tensor, t: int, h: int, w: int) -> torch.Tensor:
@@ -128,6 +129,7 @@ def main() -> int:
     ap.add_argument("--fetchers", type=int, default=4, help="wells fetched concurrently")
     ap.add_argument("--streams", type=int, default=128)
     ap.add_argument("--max-plates", type=int, default=0)
+    ap.add_argument("--inflight", type=int, default=16, help="max wells in memory (~32 MB each)")
     args = ap.parse_args()
     which = args.backbones.split(",")
     wells = pd.read_csv(args.wells, sep="\t")
@@ -137,7 +139,9 @@ def main() -> int:
     print(f"{len(plates)} plates ({len(done)} done), {len(todo)} to embed; backbones {which}")
     bb = Backbones(which)
     pool = ThreadPoolExecutor(args.streams)
-    q: queue.Queue = queue.Queue(maxsize=12)            # rolling in-memory buffer (<1 GB)
+    q: queue.Queue = queue.Queue()
+    # at most `inflight` wells fetched or waiting at any time (bounded rolling buffer)
+    inflight = threading.BoundedSemaphore(args.inflight)
 
     def producer():
         jobs = [(p, r.Well, r.uuid) for p in todo for r in wells[wells.Plate == p].itertuples()]
@@ -146,9 +150,16 @@ def main() -> int:
                 return j, MC.read_well(j[2], j[1], 1, pool=pool), None
             except Exception as exc:  # recorded, not fatal
                 return j, None, f"{type(exc).__name__}: {exc}"[:300]
+        pending: queue.Queue = queue.Queue()
         with ThreadPoolExecutor(args.fetchers) as ex:
-            for res in ex.map(fetch, jobs):
-                q.put(res)
+            def feed():
+                for j in jobs:
+                    inflight.acquire()
+                    pending.put(ex.submit(fetch, j))
+                pending.put(None)
+            threading.Thread(target=feed, daemon=True).start()
+            while (fut := pending.get()) is not None:
+                q.put(fut.result())
         q.put(None)
 
     threading.Thread(target=producer, daemon=True).start()
@@ -177,6 +188,7 @@ def main() -> int:
         if item is None:
             break
         job, frames, err = item
+        inflight.release()
         plate, well, _ = job
         if err is not None:
             failures.append(f"{plate}:{well}: {err}")

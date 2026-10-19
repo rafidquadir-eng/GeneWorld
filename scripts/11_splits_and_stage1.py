@@ -8,11 +8,13 @@ Splits are defined once, over the whole screen, before any movie is read, and fr
   flag. Positive-control genes (on every plate) are always train.
 * Plate split (H1): every plate goes to train / val / test (70 / 10 / 20), stratified by plate
   series (the LTxxxx prefix).
-* Stage 1: a stratified subset of ~15,000 quality-controlled wells. Plates are sampled
-  (seeded, stratified by split and series); on each sampled plate every negative and positive
-  control is taken, every well whose siRNA has a reproducible phenotype, and random other wells
-  up to the per-plate budget. The per-class counts are reported so that every phenotype class is
-  shown to be covered.
+* Stage 1: a stratified subset of ~15,000 quality-controlled wells. Library series (the
+  LTxxxx layouts; each is screened on >= 3 replicate plates) are sampled, seeded, and **every
+  replicate plate** of a sampled series is taken, with the **same well positions** on each
+  replicate: every negative and positive control, every well whose siRNA has a reproducible
+  phenotype, and random other library wells up to the per-plate budget. So a seen gene on a
+  held-out plate (H1) has its replicate wells on training plates. The per-class counts are
+  reported so that every phenotype class is shown to be covered.
 """
 from __future__ import annotations
 
@@ -28,8 +30,8 @@ ANN = REPO / "data" / "annotations"
 OUT = REPO / "splits"
 SEED = 20261019
 TARGET_WELLS = 15000
-PER_PLATE = 100
-N_PLATES = 150
+PER_PLATE = 90
+N_SERIES = 50
 
 # reproducible phenotype term -> planning/stratification class
 CLASS_OF = {
@@ -109,25 +111,23 @@ def main() -> int:
     # ---------------- stage-1 wells
     s3 = json.loads((REPO / "data" / "meta" / "s3_plate_map.json").read_text())
     avail = [p for p in plates if p in s3]
-    n_plates = N_PLATES
-    order = []
-    for sp in ("train", "val", "test"):
-        ps = [p for p in avail if psplit[p] == sp]
-        rng.shuffle(ps)
-        k = int(round(n_plates * {"train": 0.7, "val": 0.1, "test": 0.2}[sp]))
-        order += ps[:k]
+    series_ok = sorted(sr for sr, grp in pdf.groupby("series") if all(p in s3 for p in grp.plate))
+    rng.shuffle(series_ok)
+    chosen = series_ok[:N_SERIES]
+    order = [p for sr in chosen for p in sorted(pdf.plate[pdf.series == sr])]
     rows = []
     # quality-controlled wells with an action: a control, or a library siRNA mapped to a gene
     q = a[a.qc & (a.control.isin(["negative control", "positive control"])
                   | ((a.control == "") & a["Gene Symbol"].notna()))]
-    for p in order:
-        w = q[q.Plate == p]
-        ctrl = w[w.control.isin(["negative control", "positive control"])]
-        phen = w[(w.control == "") & (w.classes.str.len() > 0)]
-        rest = w[(w.control == "") & (w.classes.str.len() == 0)]
+    for sr in chosen:
+        w = q[q.series == sr]
+        lay = w.drop_duplicates("Well").set_index("Well")
+        ctrl = sorted(lay.index[lay.control.isin(["negative control", "positive control"])])
+        phen = sorted(lay.index[(lay.control == "") & (lay.classes.str.len() > 0)])
+        rest = sorted(lay.index[(lay.control == "") & (lay.classes.str.len() == 0)])
         k = max(0, PER_PLATE - len(ctrl) - len(phen))
-        rest = rest.iloc[rng.permutation(len(rest))[:k]]
-        rows.append(pd.concat([ctrl, phen, rest]))
+        rest = [rest[i] for i in rng.permutation(len(rest))[:k]]
+        rows.append(w[w.Well.isin(set(ctrl) | set(phen) | set(rest))])
     st = pd.concat(rows)
     st = st[["Plate", "Well", "Plate_Well", "Gene Symbol", "siRNA Identifier", "control",
              "classes", "series"]].copy()
@@ -147,7 +147,7 @@ def main() -> int:
         "seed": SEED, "annotation_sha256": sha(ANN / "idr0013-screenA-annotation.csv.gz"),
         "genes": {k: int(v) for k, v in gene_split.split.value_counts().items()},
         "plates": {k: int(v) for k, v in pdf.split.value_counts().items()},
-        "plates_on_s3": len(avail), "stage1_plates": len(order),
+        "plates_on_s3": len(avail), "stage1_series": len(chosen), "stage1_plates": len(order),
         "stage1_wells": len(st),
         "stage1_by_plate_split": {k: int(v) for k, v in st.plate_split.value_counts().items()},
         "stage1_by_gene_split": {k: int(v) for k, v in st.gene_split.value_counts().items()},
