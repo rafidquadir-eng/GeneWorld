@@ -1,4 +1,10 @@
 {
+ "esm2": {
+  "train": 12164,
+  "val": 1722,
+  "test": 3461,
+  "total_genes_in_source": 20076
+ },
  "jump_crispr": {
   "train": 5408,
   "val": 748,
