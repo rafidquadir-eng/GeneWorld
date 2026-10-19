@@ -33,6 +33,27 @@ conversion). No AWS account and no login were used.
 | | 256 | 29.2 MB/s | 0 |
 | Globus personal endpoint | — | not tested | needs an interactive login to the author's Globus account (no unattended route) |
 
+### Second round (2026-10-19, 22:50–23:20 UTC; curl 8.5 `--parallel`, level-1 chunks)
+
+| endpoint | streams | throughput | errors |
+|---|---|---|---|
+| EBI S3, BIA bucket (`bia-integrator-data/S-BIAD865`), HTTPS | 128 | 91.0 MB/s | 0 / 3,720 |
+| | 256 | 82.8 MB/s | 0 / 3,720 |
+| | 128, fresh (uncached) wells | **85.0 MB/s** | 0 / 3,720 |
+| EBI S3, IDR bucket (`idr/zarr/v0.4/idr0013A`, same data, axes t/y/x), HTTPS | 128 | 82.5 MB/s | 0 / 3,720 |
+| | 256 | 91.6 MB/s | 0 / 3,720 |
+| **BIA + IDR buckets at once** (2 x 128), fresh wells | 256 | **180.8 MB/s** | 0 / 7,440 |
+| EBI S3 over plain HTTP (port 80) | — | unreachable | connection times out from this instance |
+| EBI FTP (`ftp.ebi.ac.uk`), 128–256 MB byte ranges of a plate zip | 1 | 2.0 MB/s | — |
+| | 16 | 11.1 MB/s | 8 / 16 connections refused |
+
+The first-round S3 figure (37.8 MB/s) was limited by the Python thread-pool client, not the
+server: the same endpoint gives 85–91 MB/s with curl's native parallel transfers, and the two
+S3 buckets add up (~181 MB/s), so they are served independently. Stage 1 is GPU-bound
+(0.55 wells/s needs ~10 MB/s), so it keeps the Python reader; for a stage-2 expansion the
+fetcher should move to a native parallel client and split plates across both buckets
+(IDR plate IDs map to plate names through each store's `.zattrs`).
+
 EBI HTTP limits concurrent connections per client; it suits a few large transfers (31 MB/s for
 64 MB ranges in an earlier test) but not per-frame reads. **EBI S3 at 128 streams is used.**
 Stage 1 (~15,000 wells x ~18 MB at level 1, ~270 GB) is ~2 h of transfer at that rate.
