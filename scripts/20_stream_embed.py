@@ -16,7 +16,9 @@ For each well in the selection (default: `splits/stage1_wells.tsv`):
      spatial grid (16 tokens);
   5. drop the raw frames.
 Per plate, one shard `data/latents/<backbone>/<plate>.npz` holds latents (wells, 14, 4, 16, D)
-in float16, the well list and the per-frame mean intensity (QC). Each shard is backed up to the
+in float16, the well list, the per-frame mean intensity (QC) and the TiJepa leakage fingerprint
+of the level-1 movie. `--static` writes the static-clip control (each clip = its middle frame
+repeated) to `data/latents_static/`. Each shard is backed up to the
 persistent filesystem with SHA-256 when written. Re-running resumes: finished plates are skipped.
 """
 from __future__ import annotations
@@ -41,6 +43,7 @@ sys.path.insert(0, str(REPO / "src"))
 
 from geneworld import backup  # noqa: E402
 from geneworld.io import mitocheck as MC  # noqa: E402
+from geneworld.preprocess.fingerprint import fingerprint  # noqa: E402
 
 OUT = REPO / "data" / "latents"
 CLIP_STARTS = list(range(0, 73, 6)) + [77]
@@ -52,7 +55,7 @@ MEAN = torch.tensor([0.485, 0.456, 0.406], device=DEV).view(1, 1, 3, 1, 1)
 STD = torch.tensor([0.229, 0.224, 0.225], device=DEV).view(1, 1, 3, 1, 1)
 
 
-def tiles_and_clips(frames: np.ndarray) -> tuple[torch.Tensor, np.ndarray]:
+def tiles_and_clips(frames: np.ndarray, static: bool = False) -> tuple[torch.Tensor, np.ndarray]:
     """(93, 512, 672) uint8 -> (14*4, 16, 256, 256) float on the GPU in [0, 1]; frame means."""
     f = torch.from_numpy(frames).to(DEV, non_blocking=True).float()
     sub = f[::4, ::4, ::4].flatten()
@@ -61,7 +64,10 @@ def tiles_and_clips(frames: np.ndarray) -> tuple[torch.Tensor, np.ndarray]:
     x0 = (f.shape[2] - 512) // 2
     f = f[:, :, x0:x0 + 512]
     tiles = [f[:, :TILE, :TILE], f[:, :TILE, TILE:], f[:, TILE:, :TILE], f[:, TILE:, TILE:]]
-    clips = torch.stack([t[s:s + NF] for s in CLIP_STARTS for t in tiles])  # (56, 16, 256, 256)
+    if static:   # control A.7(2): each clip is its middle frame repeated
+        clips = torch.stack([t[s + NF // 2].expand(NF, -1, -1) for s in CLIP_STARTS for t in tiles])
+    else:
+        clips = torch.stack([t[s:s + NF] for s in CLIP_STARTS for t in tiles])  # (56,16,256,256)
     return clips, frames.reshape(len(frames), -1).mean(1)
 
 
@@ -129,9 +135,13 @@ def main() -> int:
     ap.add_argument("--fetchers", type=int, default=4, help="wells fetched concurrently")
     ap.add_argument("--streams", type=int, default=128)
     ap.add_argument("--max-plates", type=int, default=0)
+    ap.add_argument("--static", action="store_true", help="static-clip control latents")
     ap.add_argument("--inflight", type=int, default=16, help="max wells in memory (~32 MB each)")
     args = ap.parse_args()
     which = args.backbones.split(",")
+    global OUT
+    if args.static:
+        OUT = REPO / "data" / "latents_static"
     wells = pd.read_csv(args.wells, sep="\t")
     plates = list(dict.fromkeys(wells.Plate))
     done = [p for p in plates if all((OUT / b / f"{p}.npz").exists() for b in which)]
@@ -177,7 +187,9 @@ def main() -> int:
             d.mkdir(parents=True, exist_ok=True)
             path = d / f"{plate}.npz"
             np.savez(path, latents=np.stack(s[b]), wells=np.array(s["wells"]),
-                     frame_mean=np.stack(s["fmean"]), clip_starts=np.array(CLIP_STARTS))
+                     frame_mean=np.stack(s["fmean"]), clip_starts=np.array(CLIP_STARTS),
+                     fingerprint=np.stack(s["fp"]), frame0_sha1=np.array(s["fp_sha1"]),
+                     backbone=b, static=args.static)
             backup.backup(path)
         el = time.time() - t0
         print(f"{plate}: {len(s['wells'])} wells; {n} wells in {el / 60:.1f} min "
@@ -194,10 +206,14 @@ def main() -> int:
             failures.append(f"{plate}:{well}: {err}")
             expected[plate] -= 1
         else:
-            clips, fmean = tiles_and_clips(frames)
+            clips, fmean = tiles_and_clips(frames, args.static)
+            fp = fingerprint(frames)
             emb = bb(clips)
-            s = store.setdefault(plate, {"wells": [], "fmean": [], **{b: [] for b in which}})
+            s = store.setdefault(plate, {"wells": [], "fmean": [], "fp": [], "fp_sha1": [],
+                                         **{b: [] for b in which}})
             s["wells"].append(well)
+            s["fp"].append(fp["vector"])
+            s["fp_sha1"].append(fp["frame0_sha1"])
             s["fmean"].append(fmean.astype(np.float32))
             for b in which:
                 s[b].append(emb[b].reshape(len(CLIP_STARTS), 4, 16, -1))
