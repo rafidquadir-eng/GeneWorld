@@ -10,3 +10,8 @@
 | STRING v12.0 human links and info | gene encoding | CC BY 4.0 | stringdb-downloads.org |
 | UniProtKB/Swiss-Prot human reviewed proteome | ESM-2 inputs | CC BY 4.0 | rest.uniprot.org |
 | HGNC complete set | gene identifier mapping | CC0 | genenames.org (copy from TiJepa) |
+| EBI Complex Portal human complexes (complextab 9606.tsv) | complex-held-out split; same-complex H3 hits | CC0 (Complex Portal 2022, NAR) | ftp.ebi.ac.uk/pub/databases/intact/complex/current |
+| Human Protein Atlas cell-line RNA (HeLa nTPM) | expression-matched permutation null (H3) | CC BY-SA 4.0 | proteinatlas.org/download/tsv/rna_celline.tsv.zip |
+
+CORUM (named in the design for complexes) did not respond from this instance on 2026-10-19
+(connection failure); Complex Portal is used instead.

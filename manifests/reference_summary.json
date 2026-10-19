@@ -1,0 +1,13 @@
+{
+ "complex_memberships": 8864,
+ "complexes": 2427,
+ "genes_in_complexes": 3439,
+ "complex_split": {
+  "train": 12500,
+  "test": 3754,
+  "val": 1806
+ },
+ "largest_component": 692,
+ "hela_genes": 17109,
+ "hela_detected": 10876
+}
