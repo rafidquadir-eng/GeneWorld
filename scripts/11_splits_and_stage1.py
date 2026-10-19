@@ -87,6 +87,17 @@ def main() -> int:
             split[gene] = "test" if i < n_te else "val" if i < n_te + n_va else "train"
     for gene in pos_genes:
         split[gene] = "train"
+    # design A.7(6): genes sharing an identical siRNA sense sequence form one group; the
+    # group takes the split of its alphabetically first gene (deterministic, no random draws)
+    seq = lib.dropna(subset=["Sense Sequence"]).drop_duplicates(["Gene Symbol", "Sense Sequence"])
+    n_regrouped = 0
+    for _, grp in seq.groupby("Sense Sequence"):
+        gs = sorted(set(grp["Gene Symbol"]))
+        if len(gs) > 1:
+            lead = "train" if any(x in pos_genes for x in gs) else split[gs[0]]
+            for x in gs:
+                n_regrouped += split[x] != lead
+                split[x] = lead
     gene_split = pd.DataFrame({"gene": list(split), "split": list(split.values())})
     gene_split = gene_split.merge(g[["classes", "validated"]], left_on="gene",
                                   right_index=True, how="left")
@@ -154,6 +165,7 @@ def main() -> int:
         "stage1_controls": {k: int(v) for k, v in st.control.value_counts().items() if k},
         "stage1_phenotype_class_wells": cls_counts,
         "stage1_genes": int(st["Gene Symbol"].nunique()),
+        "genes_regrouped_by_shared_sirna": int(n_regrouped),
     }
     (OUT / "split_summary.json").write_text(json.dumps(summary, indent=1))
     print(json.dumps(summary, indent=1))

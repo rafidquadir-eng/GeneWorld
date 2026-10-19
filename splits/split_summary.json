@@ -2,8 +2,8 @@
  "seed": 20261019,
  "annotation_sha256": "5c1e92d0ce470c23b812cb75457d151bd9873d9db888e3bdbbaf118f16d155d7",
  "genes": {
-  "train": 12645,
-  "test": 3613,
+  "train": 12648,
+  "test": 3610,
   "val": 1802
  },
  "plates": {
@@ -21,8 +21,8 @@
   "val": 1593
  },
  "stage1_by_gene_split": {
-  "train": 8686,
-  "test": 2530,
+  "train": 8694,
+  "test": 2522,
   "control": 2380,
   "val": 1157
  },
@@ -44,5 +44,6 @@
   "proliferation": 45,
   "segregation": 636
  },
- "stage1_genes": 3204
+ "stage1_genes": 3204,
+ "genes_regrouped_by_shared_sirna": 3
 }

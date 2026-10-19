@@ -1,0 +1,22 @@
+{
+ "n_eval_wells": 876,
+ "n_train_wells": 699,
+ "max_r": 0.3305157423019409,
+ "median_max_r": 0.13976061344146729,
+ "n_match_r>=0.98": 0,
+ "n_report_r>=0.90": 0,
+ "reported": [],
+ "frame0_sha1_duplicates": 0,
+ "shared_reagents": {
+  "gene": {
+   "sirnas_targeting_>1_gene": 2,
+   "sirnas_crossing_split_parts": 0,
+   "genes_involved_in_crossing": []
+  },
+  "complex": {
+   "sirnas_targeting_>1_gene": 2,
+   "sirnas_crossing_split_parts": 0,
+   "genes_involved_in_crossing": []
+  }
+ }
+}

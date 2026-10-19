@@ -64,6 +64,14 @@ def main() -> int:
         gs = [g for g in grp.gene if g in parent]
         for g in gs[1:]:
             parent[find(g)] = find(gs[0])
+    seqs = pd.read_csv(REPO / "data" / "annotations" / "idr0013-screenA-annotation.csv.gz",
+                       usecols=["Gene Symbol", "Sense Sequence", "Control Type"],
+                       low_memory=False).dropna(subset=["Gene Symbol", "Sense Sequence"])
+    for _, grp in seqs.drop_duplicates(["Gene Symbol", "Sense Sequence"]).groupby(
+            "Sense Sequence"):   # genes sharing an siRNA sequence stay together (A.7(6))
+        gs = [g for g in grp["Gene Symbol"] if g in parent]
+        for g in gs[1:]:
+            parent[find(g)] = find(gs[0])
     comps: dict[str, list[str]] = {}
     for g in genes:
         comps.setdefault(find(g), []).append(g)

@@ -73,6 +73,7 @@ def knn_forecast(z, meta, idx, train, enc, k=K_NN):
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--backbone", default="vjepa2")
+    ap.add_argument("--gene-split", choices=["gene", "complex"], default="gene")
     ap.add_argument("--models", required=True,
                     help="comma list source=checkpoint, e.g. string=h2_string,esm2=h2_esm2")
     ap.add_argument("--agnostic", required=True)
@@ -83,7 +84,7 @@ def main() -> int:
     if args.split == "test" and not args.freeze_commit:
         sys.exit("test genes are evaluated once, after freezing: pass --freeze-commit")
     ck = REPO / "checkpoints" / "predictors"
-    lat = load(args.backbone)
+    lat = load(args.backbone, gene_split=args.gene_split)
     m, z = lat.meta, lat.z
     agn, bat_n, rec_n, _ = from_checkpoint(ck / f"{args.agnostic}.pt", lat)
     hcols = [h - 1 for h in h1.HORIZONS]

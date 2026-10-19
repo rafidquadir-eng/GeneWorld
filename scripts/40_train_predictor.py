@@ -58,6 +58,7 @@ def rollout_error(model, z, bat, idx, steps=N_STEPS - 1, bs=512):
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--backbone", default="vjepa2")
+    ap.add_argument("--gene-split", choices=["gene", "complex"], default="gene")
     ap.add_argument("--mode", choices=["learned", "encoding", "none"], default="learned")
     ap.add_argument("--source", default="", help="encoding source for --mode encoding")
     ap.add_argument("--width", type=int, default=512)
@@ -73,7 +74,7 @@ def main() -> int:
     torch.manual_seed(args.seed)
     rng = np.random.default_rng(args.seed)
 
-    lat = load(args.backbone)
+    lat = load(args.backbone, gene_split=args.gene_split)
     m = lat.meta
     enc = sets.encoding(args.source) if args.mode == "encoding" else {}
     train = m.train.to_numpy().copy()

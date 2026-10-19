@@ -3748,7 +3748,7 @@ BRD8	test	[]	False
 DNTTIP2	test	[]	False
 PRSSL1	test	[]	False
 WWP2	test	[]	False
-TRIML1	test	[]	False
+TRIML1	train	[]	False
 RPH3A	test	[]	False
 C9orf142	test	[]	False
 C5orf3	test	[]	False
@@ -3877,7 +3877,7 @@ C19orf50	test	[]	False
 SPRR1B	test	[]	False
 APOA1BP	test	[]	False
 TROVE2	test	[]	False
-TRIM74	test	[]	False
+TRIM74	train	[]	False
 HIST2H2AB	test	[]	False
 SEC24A	test	[]	False
 GRTP1	test	[]	False
@@ -17386,7 +17386,7 @@ TBX6	train	[]	False
 NEDD4L	test	[]	True
 ARL4A	test	[]	True
 TCEAL2	test	[]	True
-TIAF1	test	[]	True
+TIAF1	train	[]	True
 NP_277022.1	test	[]	True
 USPL1	test	[]	True
 DDX41	test	[]	True

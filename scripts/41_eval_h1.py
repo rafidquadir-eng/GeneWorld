@@ -65,6 +65,7 @@ def plate_probe(x_list, plates, seed=0):
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--backbone", default="vjepa2")
+    ap.add_argument("--gene-split", choices=["gene", "complex"], default="gene")
     ap.add_argument("--model", required=True, help="action-conditioned checkpoint name")
     ap.add_argument("--agnostic", required=True, help="action-agnostic checkpoint name")
     ap.add_argument("--split", choices=["val", "test"], default="val")
@@ -74,7 +75,7 @@ def main() -> int:
     if args.split == "test" and not args.freeze_commit:
         sys.exit("test plates are evaluated once, after freezing: pass --freeze-commit")
     ck = REPO / "checkpoints" / "predictors"
-    lat = load(args.backbone)
+    lat = load(args.backbone, gene_split=args.gene_split)
     m, z = lat.meta, lat.z
     model, bat, rec, d = from_checkpoint(ck / f"{args.model}.pt", lat)
     agn, bat_n, rec_n, _ = from_checkpoint(ck / f"{args.agnostic}.pt", lat)

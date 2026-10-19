@@ -126,6 +126,7 @@ def perm_p(scores, labels, n=10_000, bins=None, seed=0):
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--backbone", default="vjepa2")
+    ap.add_argument("--gene-split", choices=["gene", "complex"], default="gene")
     ap.add_argument("--source", required=True)
     ap.add_argument("--model", required=True, help="encoding-mode checkpoint for --source")
     ap.add_argument("--split", choices=["val", "test"], default="val")
@@ -136,7 +137,7 @@ def main() -> int:
     args = ap.parse_args()
     if args.split == "test" and not args.freeze_commit:
         sys.exit("test genes are evaluated once, after freezing: pass --freeze-commit")
-    lat = load(args.backbone)
+    lat = load(args.backbone, gene_split=args.gene_split)
     m, z = lat.meta, lat.z
     model, bat, rec, d = from_checkpoint(REPO / "checkpoints" / "predictors" / f"{args.model}.pt",
                                          lat)
@@ -147,7 +148,8 @@ def main() -> int:
     train = mk["train"]
     train_genes = sorted({g for g in act[train & mk["library"]] if g in enc})
     ep_train = {g: zt[train & (act == g), 12].mean(0) for g in train_genes}
-    split = pd.read_csv(REPO / "splits" / "gene_split.tsv", sep="\t")
+    split = pd.read_csv(REPO / "splits" / ("gene_split_complex.tsv" if args.gene_split ==
+                                           "complex" else "gene_split.tsv"), sep="\t")
     gsplit = dict(zip(split.gene, split.split, strict=False))
     res = {"split": args.split, "backbone": args.backbone, "source": args.source, "model": rec,
            "design_commit": "deb443d", "freeze_commit": args.freeze_commit or None}

@@ -3,8 +3,8 @@
  "complexes": 2427,
  "genes_in_complexes": 3439,
  "complex_split": {
-  "train": 12500,
-  "test": 3754,
+  "train": 12642,
+  "test": 3612,
   "val": 1806
  },
  "largest_component": 692,

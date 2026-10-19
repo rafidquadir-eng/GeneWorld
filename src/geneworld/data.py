@@ -34,7 +34,8 @@ class Latents:
 
 
 def load(backbone: str = "vjepa2", root: Path | None = None,
-         wells_tsv: Path | None = None) -> Latents:
+         wells_tsv: Path | None = None, gene_split: str = "gene") -> Latents:
+    """`gene_split`: "gene" (default) or "complex" (whole Complex Portal components held out)."""
     root = root or REPO / "data" / "latents"
     wells = pd.read_csv(wells_tsv or REPO / "splits" / "stage1_wells.tsv", sep="\t")
     wells = wells.set_index(["Plate", "Well"])
@@ -56,6 +57,11 @@ def load(backbone: str = "vjepa2", root: Path | None = None,
     meta["action"] = np.where(meta.control == "negative control", "NEG",
                               meta["Gene Symbol"].fillna("NEG"))
     meta["sirna"] = meta["siRNA Identifier"].fillna("")
+    if gene_split == "complex":
+        cs = pd.read_csv(REPO / "splits" / "gene_split_complex.tsv", sep="\t")
+        cmap = dict(zip(cs.gene, cs.split, strict=False))
+        lib = meta.control == ""
+        meta.loc[lib, "gene_split"] = meta.loc[lib, "Gene Symbol"].map(cmap).fillna("train")
     meta["train"] = (meta.plate_split == "train") & meta.gene_split.isin(["train", "control"])
     tr = z[meta.train.to_numpy()]
     mean = tr.mean((0, 1, 2))
