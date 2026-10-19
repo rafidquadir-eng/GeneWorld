@@ -1,0 +1,24 @@
+# Frozen models and their licences. Every latent/result file records the backbone key below.
+vjepa2_vitl:
+  repo: facebook/vjepa2-vitl-fpc64-256
+  revision: b3c1679b7c34d3255ef3547f27c7b226aefab26f
+  file_sha256: 25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b
+  licence: MIT (model card)
+  role: primary frozen video encoder
+dinov2_vits14:
+  repo: timm/vit_small_patch14_dinov2.lvd142m
+  revision: 4610ca143709d58a633b6397a74412c2c3842454
+  file_sha256: 04d27f3400d059fc0cfd7d17dd1909a75bf3ea8fb3eeb48b97cb99e57ee20081
+  licence: Apache-2.0 (DINOv2)
+  role: alternative backbone (per-frame image encoder)
+tijepa1:
+  file: checkpoints/backbones/tijepa1_T1_seed0.pt (from TiJepa; backup on persistent filesystem)
+  file_sha256: a09e76e91b5c52d8 (prefix; full hash in the TiJepa backup ledger)
+  licence: author's own model (TiJepa repository)
+  role: alternative backbone (video JEPA trained on live-cell microscopy)
+esm2_650m:
+  repo: facebook/esm2_t33_650M_UR50D
+  revision: 08e4846e537177426273712802403f7ba8261b6c
+  file_sha256: a08adabb949fa67ad3c14b509d04fd60368b35007b0095e3358f81200c4f4db0
+  licence: MIT
+  role: protein-sequence gene encoding (H2)

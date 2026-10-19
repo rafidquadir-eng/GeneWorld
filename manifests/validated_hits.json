@@ -1,0 +1,33 @@
+{
+ "source": "idr0013-screenB-annotation.csv",
+ "source_sha256": "afaa016a8fc531d5a0f684e20d97ce1bd0b1692286879f7ed4865548774da59e",
+ "lists": {
+  "mitotic_delay": {
+   "genes": 120,
+   "genes_n_sirnas_ge2": 26,
+   "used": true,
+   "file": "validated_hits_mitotic_delay.tsv",
+   "sha256": "bab48447c5b805e830ca602933f67b7a4b2041d74cf759b27e36bb1ac5eb1ef2"
+  },
+  "polylobed": {
+   "genes": 113,
+   "genes_n_sirnas_ge2": 16,
+   "used": true,
+   "file": "validated_hits_polylobed.tsv",
+   "sha256": "795a77614e29829139177653a251e3a27c03429835339e07726cbc426bc54fda"
+  },
+  "binuclear": {
+   "genes": 49,
+   "genes_n_sirnas_ge2": 7,
+   "used": true,
+   "file": "validated_hits_binuclear.tsv",
+   "sha256": "cfead5de968a68f3f08e04cdf783a5c457e6f8825119fcc88a9d71cfe08012e3"
+  },
+  "cell_death": {
+   "genes": 0,
+   "genes_n_sirnas_ge2": 0,
+   "used": false,
+   "reason": "fewer than 20 validated genes"
+  }
+ }
+}

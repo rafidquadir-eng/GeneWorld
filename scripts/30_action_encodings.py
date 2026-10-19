@@ -156,7 +156,7 @@ def esm2(h: pd.DataFrame) -> tuple[list[str], np.ndarray]:
 
 
 def main() -> int:
-    which = sys.argv[1].split(",") if len(sys.argv) > 1 else [
+    which = [w for w in sys.argv[1].split(",") if w != "none"] if len(sys.argv) > 1 else [
         "perturbseq", "jump_crispr", "jump_orf", "string", "esm2"]
     h = hgnc()
     OUT.mkdir(parents=True, exist_ok=True)
@@ -173,9 +173,9 @@ def main() -> int:
                       usecols=["Gene Symbol", "Gene Identifier"], low_memory=False)
     s2e = symbol_to_ensg(h)
     g2e = {}
-    for s, e in ann.drop_duplicates().itertuples(index=False):
+    cur = set(h.ensembl_gene_id.dropna())
+    for s, e in ann[["Gene Symbol", "Gene Identifier"]].drop_duplicates().itertuples(index=False):
         if isinstance(s, str):
-            cur = set(h.ensembl_gene_id.dropna())
             g2e[s] = e if isinstance(e, str) and e in cur else s2e.get(s.upper(), e)
     pd.Series(g2e).rename_axis("gene").rename("ensembl_gene_id").to_csv(
         OUT / "mitocheck_gene_to_ensg.tsv", sep="\t")
