@@ -1,0 +1,47 @@
+{
+ "seed": 20261019,
+ "annotation_sha256": "5c1e92d0ce470c23b812cb75457d151bd9873d9db888e3bdbbaf118f16d155d7",
+ "genes": {
+  "train": 12645,
+  "test": 3613,
+  "val": 1802
+ },
+ "plates": {
+  "train": 359,
+  "test": 102,
+  "val": 51
+ },
+ "plates_on_s3": 510,
+ "stage1_plates": 150,
+ "stage1_wells": 14982,
+ "stage1_by_plate_split": {
+  "train": 10482,
+  "test": 3000,
+  "val": 1500
+ },
+ "stage1_by_gene_split": {
+  "train": 9077,
+  "test": 2489,
+  "control": 2145,
+  "val": 1271
+ },
+ "stage1_controls": {
+  "negative control": 1136,
+  "positive control": 1009
+ },
+ "stage1_phenotype_class_wells": {
+  "binuclear": 608,
+  "cell_cycle": 458,
+  "cell_death": 634,
+  "condensation": 15,
+  "grape": 99,
+  "large": 182,
+  "migration": 303,
+  "mitotic_delay": 517,
+  "nuclear_shape": 1295,
+  "polylobed": 335,
+  "proliferation": 88,
+  "segregation": 570
+ },
+ "stage1_genes": 7650
+}
