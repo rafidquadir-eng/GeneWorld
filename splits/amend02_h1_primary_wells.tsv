@@ -1,0 +1,1648 @@
+Plate	Well	Gene Symbol	siRNA Identifier	plate_split	terms_on_training_plates
+LT0001_09	B5	PPP2R2B	104997	test	binuclear cell phenotype
+LT0001_09	D19	DUSP19	104970	test	increased variability of nuclear shape in population
+LT0001_09	M8	PPP2R1A	2069	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0002_24	A22	PPP1R1B	104957	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0002_24	B12	CDC14A	105906	test	increased variability of nuclear shape in population
+LT0002_24	C10	ATP8A2	117530	test	proliferating cells
+LT0002_24	D10	PSMB3	105616	test	increased variability of nuclear shape in population
+LT0002_24	D18	SLC19A3	117676	test	increased nucleus size phenotype
+LT0002_24	E21	PPP1CB	104508	test	increased variability of nuclear shape in population
+LT0002_24	F1	PPP2R2A	104518	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0002_24	H11	PPP1R12B	144389	test	increased variability of nuclear shape in population
+LT0002_24	H24	PSMA4	105045	test	increased variability of nuclear shape in population
+LT0002_24	H4	SLC4A5	120041	test	increased nucleus size phenotype
+LT0002_24	I15	PPP1R3D	142918	test	increased variability of nuclear shape in population
+LT0002_24	I16	PPP2R1A	2247	test	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0002_24	J15	PPP2R5D	104841	test	increased nucleus size phenotype
+LT0002_24	J3	USP1	105061	test	binuclear cell phenotype
+LT0002_24	L5	ALPL	8596	test	polylobed nuclear phenotype
+LT0002_24	L6	PPP1CB	104506	test	binuclear cell phenotype
+LT0002_24	M11	NP_057218.1	105191	test	increased variability of nuclear shape in population
+LT0002_24	M12	PSMA2	105044	test	increased variability of nuclear shape in population
+LT0002_24	M9	PPM1L	104978	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0002_24	N19	PPAP2B	104674	test	increased variability of nuclear shape in population
+LT0002_24	O12	SNUPN	117371	test	increased cell movement speed
+LT0002_24	O20	ASNA1	117251	test	increased variability of nuclear shape in population
+LT0002_24	P19	DUSP8	5084	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0002_24	P7	PPP1R12A	143599	test	increased variability of nuclear shape in population
+LT0002_51	A22	PPP1R1B	104957	val	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0002_51	B12	CDC14A	105906	val	increased variability of nuclear shape in population
+LT0002_51	C10	ATP8A2	117530	val	proliferating cells
+LT0002_51	D10	PSMB3	105616	val	increased variability of nuclear shape in population
+LT0002_51	D18	SLC19A3	117676	val	increased nucleus size phenotype
+LT0002_51	E21	PPP1CB	104508	val	increased variability of nuclear shape in population
+LT0002_51	F1	PPP2R2A	104518	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0002_51	H11	PPP1R12B	144389	val	increased variability of nuclear shape in population
+LT0002_51	H24	PSMA4	105045	val	increased variability of nuclear shape in population
+LT0002_51	H4	SLC4A5	120041	val	increased nucleus size phenotype
+LT0002_51	I15	PPP1R3D	142918	val	increased variability of nuclear shape in population
+LT0002_51	I16	PPP2R1A	2247	val	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0002_51	J15	PPP2R5D	104841	val	increased nucleus size phenotype
+LT0002_51	J3	USP1	105061	val	binuclear cell phenotype
+LT0002_51	L5	ALPL	8596	val	polylobed nuclear phenotype
+LT0002_51	L6	PPP1CB	104506	val	binuclear cell phenotype
+LT0002_51	M11	NP_057218.1	105191	val	increased variability of nuclear shape in population
+LT0002_51	M12	PSMA2	105044	val	increased variability of nuclear shape in population
+LT0002_51	M9	PPM1L	104978	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0002_51	N19	PPAP2B	104674	val	increased variability of nuclear shape in population
+LT0002_51	O12	SNUPN	117371	val	increased cell movement speed
+LT0002_51	O20	ASNA1	117251	val	increased variability of nuclear shape in population
+LT0002_51	P19	DUSP8	5084	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0002_51	P7	PPP1R12A	143599	val	increased variability of nuclear shape in population
+LT0008_14	A19	MGAT1	11388	val	increased nucleus size phenotype
+LT0008_14	C17	PNPLA1	41138	val	increased variability of nuclear shape in population
+LT0008_14	D20	PLCB2	15072	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0008_14	H12	RAN	120461	val	cell death phenotype|increased variability of nuclear shape in population
+LT0008_14	I10	PRMT1	110970	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0008_14	I15	MYST1	33747	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0008_14	I18	MGAT4B	112306	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0008_14	J3	RAB37	120757	val	abnormal nucleus shape phenotype
+LT0008_14	K14	GALNT5	111893	val	binuclear cell phenotype
+LT0008_14	K2	GNPDA1	118106	val	increased variability of nuclear shape in population
+LT0008_14	L4	UGT1A10	202354	val	increased variability of nuclear shape in population
+LT0008_14	M10	PRMT3	111605	val	increased cell movement distance
+LT0008_14	M9	FKBP6	118100	val	increased variability of nuclear shape in population
+LT0008_14	N18	PRMT6	112018	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0008_14	N20	NKTR	118105	val	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0008_14	N6	TXNL4A	108084	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0008_14	N7	SDCCAG10	107863	val	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0008_17	A19	MGAT1	11388	test	increased nucleus size phenotype
+LT0008_17	C17	PNPLA1	41138	test	increased variability of nuclear shape in population
+LT0008_17	D20	PLCB2	15072	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0008_17	H12	RAN	120461	test	cell death phenotype|increased variability of nuclear shape in population
+LT0008_17	I10	PRMT1	110970	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0008_17	I15	MYST1	33747	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0008_17	I18	MGAT4B	112306	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0008_17	J3	RAB37	120757	test	abnormal nucleus shape phenotype
+LT0008_17	K14	GALNT5	111893	test	binuclear cell phenotype
+LT0008_17	K2	GNPDA1	118106	test	increased variability of nuclear shape in population
+LT0008_17	L4	UGT1A10	202354	test	increased variability of nuclear shape in population
+LT0008_17	M10	PRMT3	111605	test	increased cell movement distance
+LT0008_17	M9	FKBP6	118100	test	increased variability of nuclear shape in population
+LT0008_17	N18	PRMT6	112018	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0008_17	N20	NKTR	118105	test	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0008_17	N6	TXNL4A	108084	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0008_17	N7	SDCCAG10	107863	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0008_31	A19	MGAT1	11388	test	increased nucleus size phenotype
+LT0008_31	C17	PNPLA1	41138	test	increased variability of nuclear shape in population
+LT0008_31	D20	PLCB2	15072	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0008_31	H12	RAN	120461	test	cell death phenotype|increased variability of nuclear shape in population
+LT0008_31	I10	PRMT1	110970	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0008_31	I15	MYST1	33747	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0008_31	I18	MGAT4B	112306	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0008_31	J3	RAB37	120757	test	abnormal nucleus shape phenotype
+LT0008_31	K14	GALNT5	111893	test	binuclear cell phenotype
+LT0008_31	K2	GNPDA1	118106	test	increased variability of nuclear shape in population
+LT0008_31	L4	UGT1A10	202354	test	increased variability of nuclear shape in population
+LT0008_31	M10	PRMT3	111605	test	increased cell movement distance
+LT0008_31	M9	FKBP6	118100	test	increased variability of nuclear shape in population
+LT0008_31	N18	PRMT6	112018	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0008_31	N20	NKTR	118105	test	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0008_31	N6	TXNL4A	108084	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0008_31	N7	SDCCAG10	107863	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0014_12	A2	PIGL	117248	test	increased cell movement distance
+LT0014_12	A22	HMMR	108376	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0014_12	B15	CXCR7	112094	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|polylobed nuclear phenotype
+LT0014_12	B9	IL4R	110659	test	binuclear cell phenotype
+LT0014_12	C16	TLR1	111282	test	abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0014_12	C3	SORCS3	108655	test	increased variability of nuclear shape in population
+LT0014_12	D19	SORCS3	108656	test	increased cell movement speed|increased variability of nuclear shape in population
+LT0014_12	D22	TTF1	119752	test	cell death phenotype|increased cell movement distance|increased cell movement speed
+LT0014_12	F3	GFRA1	111546	test	increased variability of nuclear shape in population
+LT0014_12	G7	LRP5	111147	test	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0014_12	H17	TTF1	119753	test	increased variability of nuclear shape in population
+LT0014_12	H23	GDI2	114149	test	increased variability of nuclear shape in population
+LT0014_12	I17	GFRA1	111546	test	increased variability of nuclear shape in population
+LT0014_12	I23	IFNAR2	106298	test	increased cell movement distance|increased cell movement speed
+LT0014_12	J19	GOSR2	112310	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|cell death phenotype
+LT0014_12	K16	TLR2	107053	test	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0014_12	L13	TNFRSF10B	107249	test	increased cell movement distance
+LT0014_12	L16	CD244	108871	test	polylobed nuclear phenotype
+LT0014_12	M21	HAVCR2	109801	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0014_12	M23	IFNGR1	106092	test	increased variability of nuclear shape in population
+LT0014_12	P10	TAF2	119653	test	increased cell movement distance|increased cell movement speed
+LT0014_12	P18	POLD3	119914	test	polylobed nuclear phenotype
+LT0014_23	A2	PIGL	117248	test	increased cell movement distance
+LT0014_23	A22	HMMR	108376	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0014_23	B15	CXCR7	112094	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|polylobed nuclear phenotype
+LT0014_23	B9	IL4R	110659	test	binuclear cell phenotype
+LT0014_23	C16	TLR1	111282	test	abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0014_23	C3	SORCS3	108655	test	increased variability of nuclear shape in population
+LT0014_23	D22	TTF1	119752	test	cell death phenotype|increased cell movement distance|increased cell movement speed
+LT0014_23	F3	GFRA1	111546	test	increased variability of nuclear shape in population
+LT0014_23	G7	LRP5	111147	test	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0014_23	H17	TTF1	119753	test	increased variability of nuclear shape in population
+LT0014_23	H23	GDI2	114149	test	increased variability of nuclear shape in population
+LT0014_23	I17	GFRA1	111546	test	increased variability of nuclear shape in population
+LT0014_23	I23	IFNAR2	106298	test	increased cell movement distance|increased cell movement speed
+LT0014_23	J19	GOSR2	112310	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|cell death phenotype
+LT0014_23	J6	GPR141	112458	test	increased variability of nuclear shape in population
+LT0014_23	K16	TLR2	107053	test	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0014_23	L13	TNFRSF10B	107249	test	increased cell movement distance
+LT0014_23	L16	CD244	108871	test	polylobed nuclear phenotype
+LT0014_23	M21	HAVCR2	109801	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0014_23	M23	IFNGR1	106092	test	increased variability of nuclear shape in population
+LT0014_23	P10	TAF2	119653	test	increased cell movement distance|increased cell movement speed
+LT0014_23	P18	POLD3	119914	test	polylobed nuclear phenotype
+LT0015_55	B5	TXNDC3	121794	val	binuclear cell phenotype
+LT0015_55	C21	ITGAV	111116	val	increased variability of nuclear shape in population
+LT0015_55	J4	LILRA3	18751	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0015_55	K19	IL10RA	106504	val	abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0015_55	L24	LRP5	111147	val	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0015_55	M5	LRP5	106765	val	abnormal cell cycle phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0015_55	O7	IL17RB	112054	val	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0015_55	P8	IL17RB	112054	val	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0016_18	A14	CD244	108871	test	polylobed nuclear phenotype
+LT0016_18	B11	SORCS3	108655	test	increased variability of nuclear shape in population
+LT0016_18	C21	APC2	121574	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0016_18	H6	ESPL1	121651	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0016_18	M24	HSD17B7	24513	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0016_18	N11	TNFRSF10B	107249	test	increased cell movement distance
+LT0016_18	P22	ADIPOR1	111935	test	increased cell movement speed
+LT0016_26	A14	CD244	108871	test	polylobed nuclear phenotype
+LT0016_26	B11	SORCS3	108655	test	increased variability of nuclear shape in population
+LT0016_26	C21	APC2	121574	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0016_26	H6	ESPL1	121651	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0016_26	M24	HSD17B7	24513	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0016_26	N11	TNFRSF10B	107249	test	increased cell movement distance
+LT0016_26	P22	ADIPOR1	111935	test	increased cell movement speed
+LT0017_19	A13	TUBB4	120457	val	increased cell movement distance
+LT0017_19	A19	PTGD2_HUMAN	118109	val	increased variability of nuclear shape in population
+LT0017_19	A20	MIF	122486	val	increased variability of nuclear shape in population
+LT0017_19	A24	PTGD2_HUMAN	45408	val	increased cell movement speed
+LT0017_19	A6	TSTA3	117155	val	increased cell movement distance
+LT0017_19	B18	FKBP2	118103	val	increased variability of nuclear shape in population
+LT0017_19	C22	CDC2	118637	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0017_19	D10	PTPN7	104963	val	increased cell movement speed
+LT0017_19	D11	CCNF	118633	val	increased variability of nuclear shape in population
+LT0017_19	F6	BLVRB	9084	val	increased cell movement speed
+LT0017_19	H13	KIF22	118452	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0017_19	H21	CCNA2	118603	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0017_19	I14	PTGD2_HUMAN	117494	val	increased cell movement distance|increased cell movement speed
+LT0017_19	I19	PPWD1	118110	val	binuclear cell phenotype|increased variability of nuclear shape in population
+LT0017_19	J12	GSTA4	110960	val	increased nucleus size phenotype
+LT0017_19	J14	IARS	117878	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|polylobed nuclear phenotype
+LT0017_19	J21	GSTA2	122488	val	increased cell movement distance
+LT0017_19	K7	GAK	118757	val	mitosis arrested|mitosis delayed phenotype
+LT0017_19	L2	GZMA	2768	val	polylobed nuclear phenotype
+LT0017_19	L21	CCNB1	118840	val	binuclear cell phenotype
+LT0017_19	M17	RRAS	120869	val	increased variability of nuclear shape in population
+LT0017_19	M23	GSTM5	110729	val	increased cell movement distance|increased cell movement speed
+LT0017_19	M8	HARS	117877	val	increased cell movement distance
+LT0017_19	N4	FKBP9	108234	val	polylobed nuclear phenotype
+LT0017_19	O10	VPS16	104566	val	increased cell movement distance|increased cell movement speed
+LT0017_19	O15	KIF23	118502	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0017_19	O17	CDC2	42819	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0017_19	P15	PTGIS	118591	val	increased cell movement speed
+LT0017_19	P17	MTHFR	111629	val	increased nucleus size phenotype
+LT0017_19	P5	KIF20A	118441	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0017_19	P7	CCNB1	118838	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0019_06	A10	KCNN1	7202	test	increased variability of nuclear shape in population
+LT0019_06	A14	KCNH7	104825	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitotic metaphase plate congression phenotype
+LT0019_06	A19	KCNAB3	104489	test	binuclear cell phenotype
+LT0019_06	B20	CHST14	112331	test	increased cell movement distance
+LT0019_06	B6	DOT1L	112262	test	increased variability of nuclear shape in population
+LT0019_06	D5	ACADM	105928	test	increased cell movement distance
+LT0019_06	E16	B3GNT4	112225	test	polylobed nuclear phenotype
+LT0019_06	F20	DDOST	111543	test	cell death phenotype|increased variability of nuclear shape in population
+LT0019_06	F21	AGPAT3	112079	test	increased variability of nuclear shape in population
+LT0019_06	F22	KCNH4	7384	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|cell death phenotype|graped micronucleus phenotype|increased variability of nuclear shape in population|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0019_06	F23	KCNG3	104840	test	increased variability of nuclear shape in population
+LT0019_06	G13	OR10H2	2068	test	increased cell movement distance
+LT0019_06	G18	MAS1L	6664	test	increased variability of nuclear shape in population
+LT0019_06	H12	NDUFB10	14865	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0019_06	H8	HTR5A	6157	test	binuclear cell phenotype|increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0019_06	J15	ART3	110870	test	increased cell movement speed
+LT0019_06	K5	MC2R	1716	test	increased cell movement distance
+LT0019_06	M20	KCTD10	104812	test	increased variability of nuclear shape in population
+LT0019_06	M21	CHST8	112177	test	binuclear cell phenotype
+LT0019_06	N20	COMT	2453	test	increased variability of nuclear shape in population
+LT0019_06	N9	KCNH7	104823	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|cell death phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0019_06	O20	HTR3A	1989	test	increased variability of nuclear shape in population
+LT0019_06	O8	NDUFB3	44920	test	increased variability of nuclear shape in population
+LT0019_06	P17	HTR1B	1753	test	abnormal cell cycle phenotype|cell death phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0019_06	P21	NDUFA9	15697	test	cell death phenotype|increased variability of nuclear shape in population
+LT0019_06	P24	KCNJ6	105430	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|cell death phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0022_47	D5	KIF23	118503	test	binuclear cell phenotype
+LT0022_47	E23	C20orf185	122129	test	increased nucleus size phenotype
+LT0022_47	F17	KIF2C	118444	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0022_47	F19	TNC	121364	test	increased variability of nuclear shape in population
+LT0022_47	F23	AHR	106524	test	increased variability of nuclear shape in population
+LT0022_47	H12	KIF2B	118496	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0022_47	J16	LY6G5B	9710	test	increased variability of nuclear shape in population
+LT0022_47	M23	C20orf185	122128	test	increased cell movement speed
+LT0022_47	N17	SPSB2	34535	test	increased variability of nuclear shape in population
+LT0022_47	O5	CHRNG	114498	test	increased variability of nuclear shape in population
+LT0022_47	P5	KIF20A	118442	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0022_52	D15	PIGR	106864	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0022_52	D5	KIF23	118503	val	binuclear cell phenotype
+LT0022_52	E23	C20orf185	122129	val	increased nucleus size phenotype
+LT0022_52	F17	KIF2C	118444	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0022_52	F19	TNC	121364	val	increased variability of nuclear shape in population
+LT0022_52	F23	AHR	106524	val	increased variability of nuclear shape in population
+LT0022_52	H12	KIF2B	118496	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0022_52	H6	KIF18A	118492	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|mitotic metaphase plate congression phenotype
+LT0022_52	J16	LY6G5B	9710	val	increased variability of nuclear shape in population
+LT0022_52	M23	C20orf185	122128	val	increased cell movement speed
+LT0022_52	N17	SPSB2	34535	val	increased variability of nuclear shape in population
+LT0022_52	O5	CHRNG	114498	val	increased variability of nuclear shape in population
+LT0022_52	P5	KIF20A	118442	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0022_53	D15	PIGR	106864	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0022_53	D5	KIF23	118503	test	binuclear cell phenotype
+LT0022_53	E23	C20orf185	122129	test	increased nucleus size phenotype
+LT0022_53	F17	KIF2C	118444	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0022_53	F19	TNC	121364	test	increased variability of nuclear shape in population
+LT0022_53	F23	AHR	106524	test	increased variability of nuclear shape in population
+LT0022_53	H12	KIF2B	118496	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0022_53	H6	KIF18A	118492	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|mitotic metaphase plate congression phenotype
+LT0022_53	J16	LY6G5B	9710	test	increased variability of nuclear shape in population
+LT0022_53	M23	C20orf185	122128	test	increased cell movement speed
+LT0022_53	N17	SPSB2	34535	test	increased variability of nuclear shape in population
+LT0022_53	O5	CHRNG	114498	test	increased variability of nuclear shape in population
+LT0022_53	P5	KIF20A	118442	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0025_37	C17	OR10B1P	45260	val	binuclear cell phenotype
+LT0025_37	C23	ECT2	26070	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0025_37	F11	PRTFDC1	112086	val	increased cell movement speed
+LT0025_37	L5	DHPS	10692	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0025_54	C17	OR10B1P	45260	test	binuclear cell phenotype
+LT0025_54	C23	ECT2	26070	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0025_54	F11	PRTFDC1	112086	test	increased cell movement speed
+LT0025_54	L5	DHPS	10692	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0025_54	O15	EIF2AK3	103593	test	binuclear cell phenotype
+LT0025_56	C17	OR10B1P	45260	test	binuclear cell phenotype
+LT0025_56	C23	ECT2	26070	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0025_56	F11	PRTFDC1	112086	test	increased cell movement speed
+LT0027_45	B6	ECT2	26165	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0027_45	C18	GABRB3	118960	test	increased variability of nuclear shape in population
+LT0027_45	I20	SERPINI1	118746	test	increased variability of nuclear shape in population
+LT0027_45	I3	PRMT5	17564	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0027_45	I5	GRIK3	114111	test	binuclear cell phenotype
+LT0027_45	J12	RAB8A	3022	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0027_45	J21	AURKB	495	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0027_45	J24	SLC35A3	117455	test	increased variability of nuclear shape in population
+LT0027_45	M4	CDK4	44756	test	increased variability of nuclear shape in population
+LT0027_45	O9	MYH9	118367	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0028_02	B13	VRK2	805	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0028_02	B18	MAPK9	1452	test	increased cell movement speed
+LT0028_02	D21	ITGAV	106732	test	increased cell movement speed|increased variability of nuclear shape in population
+LT0028_02	F3	IL18R1	107261	test	abnormal cell cycle phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0028_02	F9	CDKL5	376	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0028_02	G14	HRK	120854	test	increased cell movement distance|increased cell movement speed
+LT0028_02	G9	NOS3	116875	test	increased cell movement distance
+LT0028_02	H14	FASTK	44224	test	increased variability of nuclear shape in population
+LT0028_02	H15	BCKDK	730	test	increased variability of nuclear shape in population
+LT0028_02	I18	PAK2	252	test	metaphase arrested phenotype|metaphase delayed phenotype
+LT0028_02	L17	CDC2	1625	test	binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0028_02	L20	DHFRL1	119005	test	increased cell movement speed
+LT0028_02	L4	CXCR7	112094	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|polylobed nuclear phenotype
+LT0028_02	N7	PI4KB	283	test	cell death phenotype|increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0028_14	B13	VRK2	805	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0028_14	B18	MAPK9	1452	val	increased cell movement speed
+LT0028_14	D21	ITGAV	106732	val	increased cell movement speed|increased variability of nuclear shape in population
+LT0028_14	F3	IL18R1	107261	val	abnormal cell cycle phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0028_14	F9	CDKL5	376	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0028_14	G14	HRK	120854	val	increased cell movement distance|increased cell movement speed
+LT0028_14	G9	NOS3	116875	val	increased cell movement distance
+LT0028_14	H14	FASTK	44224	val	increased variability of nuclear shape in population
+LT0028_14	H15	BCKDK	730	val	increased variability of nuclear shape in population
+LT0028_14	I18	PAK2	252	val	metaphase arrested phenotype|metaphase delayed phenotype
+LT0028_14	L17	CDC2	1625	val	binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0028_14	L20	DHFRL1	119005	val	increased cell movement speed
+LT0028_14	L4	CXCR7	112094	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|polylobed nuclear phenotype
+LT0028_14	N7	PI4KB	283	val	cell death phenotype|increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0030_04	A9	OPRD1	6503	test	increased cell movement distance
+LT0030_04	B10	VIPR1	5118	test	increased cell movement distance
+LT0030_04	B22	TAAR1	6692	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0030_04	B5	PTGER4	1861	test	increased nucleus size phenotype
+LT0030_04	C10	OR2H1	6180	test	increased variability of nuclear shape in population
+LT0030_04	C12	OR2C1	2059	test	increased cell movement speed
+LT0030_04	D23	GPR172B	25795	test	increased variability of nuclear shape in population
+LT0030_04	E24	VN1R1	28528	test	increased variability of nuclear shape in population
+LT0030_04	F17	BAI1	4069	test	increased cell movement distance|increased cell movement speed
+LT0030_04	F7	OR1A1	5692	test	increased variability of nuclear shape in population
+LT0030_04	G22	GPR171	2156	test	increased cell movement distance
+LT0030_04	G6	PTAFR	1993	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0030_04	G7	GPR83	5758	test	increased variability of nuclear shape in population
+LT0030_04	H16	RGR	4471	test	abnormal cell cycle phenotype|increased variability of nuclear shape in population|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0030_04	H23	GPR174	6196	test	increased variability of nuclear shape in population
+LT0030_04	H3	SCTR	4479	test	increased variability of nuclear shape in population
+LT0030_04	J4	FZD9	41959	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0030_04	L11	GPR128	6296	test	increased cell movement distance
+LT0030_04	L16	RGS11	13780	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitotic metaphase plate congression phenotype
+LT0030_04	L19	GPR37	1883	test	cell death phenotype|increased variability of nuclear shape in population
+LT0030_04	L6	GPR55	2109	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0030_04	L8	OR51E2	6177	test	increased variability of nuclear shape in population
+LT0030_04	M18	F2RL2	5132	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0030_04	N10	TAS2R9	6151	test	cell death phenotype|increased cell movement speed
+LT0030_04	N9	TUBB3	17178	test	metaphase arrested phenotype|metaphase delayed phenotype
+LT0030_04	P23	GPR19	2026	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0030_04	P8	OR5I1	2042	test	increased variability of nuclear shape in population
+LT0031_50	C19	KIR2DS4	213327	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0031_50	D17	FFAR3	202358	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0031_50	F21	FZD8	6186	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0031_50	J24	P2RX7	104431	test	cell death phenotype|increased variability of nuclear shape in population
+LT0031_50	J9	GALR3	120925	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0031_51	C19	KIR2DS4	213327	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0031_51	D17	FFAR3	202358	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0031_51	F21	FZD8	6186	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0031_51	J24	P2RX7	104431	val	cell death phenotype|increased variability of nuclear shape in population
+LT0031_51	J9	GALR3	120925	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0033_42	A14	NEK11	1287	test	increased cell movement speed
+LT0033_42	B14	GUSB	119042	test	increased variability of nuclear shape in population
+LT0033_42	B22	AKAP5	137775	test	abnormal nucleus shape phenotype|absence of mitotic chromosome decondensation phenotype|binuclear cell phenotype
+LT0033_42	F5	TLR1	111282	test	abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0033_42	H2	ACOT12	121102	test	increased cell movement speed
+LT0033_42	H3	ITGB5	11289	test	increased cell movement distance|increased cell movement speed
+LT0033_42	I9	CDKL5	375	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0033_42	J21	FGFR3	103815	test	cell death phenotype|increased nucleus size phenotype
+LT0033_42	M17	TLR2	107053	test	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0033_42	N10	AKAP4	137317	test	mitosis arrested|mitosis delayed phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0034_01	C3	UNC5C	107225	val	increased variability of nuclear shape in population
+LT0034_01	C9	MC5R	2203	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|absence of mitotic chromosome decondensation phenotype|binuclear cell phenotype
+LT0034_01	D16	CPA2	104002	val	cell death phenotype|polylobed nuclear phenotype
+LT0034_01	E10	GRINL1A	108745	val	increased variability of nuclear shape in population
+LT0034_01	F1	TLL2	104109	val	increased cell movement distance
+LT0034_01	F10	GEM	16101	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0034_01	H21	GRPR	2193	val	increased variability of nuclear shape in population
+LT0034_01	I6	NR0B2	6225	val	increased variability of nuclear shape in population
+LT0034_01	J6	GLP1R	4195	val	increased cell movement speed
+LT0034_01	K23	HTR5A	45475	val	increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0034_01	M9	BTN3A2	19034	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0034_01	N13	PAPPA	104027	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0034_01	N23	RAPGEF1	16016	val	increased variability of nuclear shape in population
+LT0034_41	C3	UNC5C	107225	test	increased variability of nuclear shape in population
+LT0034_41	C9	MC5R	2203	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|absence of mitotic chromosome decondensation phenotype|binuclear cell phenotype
+LT0034_41	D16	CPA2	104002	test	cell death phenotype|polylobed nuclear phenotype
+LT0034_41	E10	GRINL1A	108745	test	increased variability of nuclear shape in population
+LT0034_41	F1	TLL2	104109	test	increased cell movement distance
+LT0034_41	F10	GEM	16101	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0034_41	H21	GRPR	2193	test	increased variability of nuclear shape in population
+LT0034_41	I6	NR0B2	6225	test	increased variability of nuclear shape in population
+LT0034_41	J6	GLP1R	4195	test	increased cell movement speed
+LT0034_41	K23	HTR5A	45475	test	increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0034_41	M9	BTN3A2	19034	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0034_41	N13	PAPPA	104027	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0034_41	N23	RAPGEF1	16016	test	increased variability of nuclear shape in population
+LT0036_01	A24	ADAM33	32432	test	abnormal cell cycle phenotype|binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0036_01	B9	ADAM28	105361	test	increased variability of nuclear shape in population
+LT0036_01	F6	DPEP3	29989	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0036_01	G16	ADAM33	104183	test	binuclear cell phenotype
+LT0036_01	K9	ADAM33	104261	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0036_01	L7	DPEP3	104170	test	binuclear cell phenotype
+LT0036_36	A24	ADAM33	32432	val	abnormal cell cycle phenotype|binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0036_36	B9	ADAM28	105361	val	increased variability of nuclear shape in population
+LT0036_36	F6	DPEP3	29989	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0036_36	G16	ADAM33	104183	val	binuclear cell phenotype
+LT0036_36	K9	ADAM33	104261	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0036_36	L7	DPEP3	104170	val	binuclear cell phenotype
+LT0036_55	B9	ADAM28	105361	test	increased variability of nuclear shape in population
+LT0036_55	F6	DPEP3	29989	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0036_55	G16	ADAM33	104183	test	binuclear cell phenotype
+LT0036_55	K9	ADAM33	104261	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0036_55	L7	DPEP3	104170	test	binuclear cell phenotype
+LT0038_01	D3	ECT2	26257	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0038_01	E16	CIT	103721	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0038_01	F19	KCNN4	7204	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0038_01	F24	PAPSS1	103595	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0038_01	F4	RYK	358	test	abnormal chromosome segregation phenotype|binuclear cell phenotype
+LT0038_01	G10	AURKB	103587	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0038_01	G15	POLM	117951	test	proliferating cells
+LT0038_01	H19	FFAR3	202358	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0038_01	I19	STK39	898	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0038_01	I23	CDC42	10418	test	increased variability of nuclear shape in population
+LT0038_01	J16	RET	1530	test	increased variability of nuclear shape in population
+LT0038_01	K10	BUB1B	88	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0038_01	K5	ZADH1	110165	test	increased variability of nuclear shape in population
+LT0038_01	M17	PRKY	332	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic chromosome condensation phenotype
+LT0038_01	O22	KIR2DS4	213327	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0038_08	D3	ECT2	26257	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0038_08	E16	CIT	103721	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0038_08	F19	KCNN4	7204	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0038_08	F24	PAPSS1	103595	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0038_08	F4	RYK	358	test	abnormal chromosome segregation phenotype|binuclear cell phenotype
+LT0038_08	G10	AURKB	103587	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0038_08	G15	POLM	117951	test	proliferating cells
+LT0038_08	H19	FFAR3	202358	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0038_08	I19	STK39	898	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0038_08	I23	CDC42	10418	test	increased variability of nuclear shape in population
+LT0038_08	J16	RET	1530	test	increased variability of nuclear shape in population
+LT0038_08	K10	BUB1B	88	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0038_08	K5	ZADH1	110165	test	increased variability of nuclear shape in population
+LT0038_08	M17	PRKY	332	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic chromosome condensation phenotype
+LT0038_08	O22	KIR2DS4	213327	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0039_39	A18	KIFAP3	118458	val	increased cell movement distance
+LT0039_39	A21	KCTD10	104814	val	increased variability of nuclear shape in population
+LT0039_39	A22	KCNQ4	7239	val	increased variability of nuclear shape in population
+LT0039_39	A6	DAPK1	598	val	increased variability of nuclear shape in population
+LT0039_39	B1	PDIA6	111596	val	binuclear cell phenotype
+LT0039_39	B18	PISD	118781	val	increased variability of nuclear shape in population
+LT0039_39	B9	KIF4A	118453	val	abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0039_39	C16	DHX34	21770	val	increased cell movement speed
+LT0039_39	C2	BPHL	119221	val	increased cell movement distance
+LT0039_39	C21	PRLR	106338	val	proliferating cells
+LT0039_39	E18	KIF9	118508	val	increased variability of nuclear shape in population
+LT0039_39	E23	KCNN1	7298	val	abnormal nucleus shape phenotype
+LT0039_39	E24	AMD1	118626	val	increased cell movement distance
+LT0039_39	E7	PPIE	111651	val	binuclear cell phenotype
+LT0039_39	F16	MAPKAPK5	1229	val	increased variability of nuclear shape in population
+LT0039_39	F18	PCCA	118547	val	increased variability of nuclear shape in population
+LT0039_39	F19	KCNG2	212645	val	increased variability of nuclear shape in population
+LT0039_39	F2	GRK5	666	val	increased cell movement distance|increased cell movement speed
+LT0039_39	F3	TSKS_HUMAN	125326	val	increased nucleus size phenotype
+LT0039_39	F6	SCN1B	7065	val	increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0039_39	F7	DCT	111038	val	increased nucleus size phenotype
+LT0039_39	G21	PIGR	106865	val	increased variability of nuclear shape in population
+LT0039_39	H14	DDX19B	46183	val	increased cell movement distance|increased cell movement speed|increased nucleus size phenotype
+LT0039_39	H2	B4GALT3	111351	val	proliferating cells
+LT0039_39	H7	OPRS1	107859	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0039_39	H8	SRD5A2	8511	val	increased variability of nuclear shape in population
+LT0039_39	I14	CDC42BPB	746	val	increased variability of nuclear shape in population
+LT0039_39	I2	DHPS	117873	val	abnormal nucleus shape phenotype
+LT0039_39	I3	HMBS	117843	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0039_39	I4	LATS2	950	val	cell death phenotype|increased cell movement distance
+LT0039_39	J16	PASK	978	val	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0039_39	J20	BARX2	107203	val	increased nucleus size phenotype
+LT0039_39	J24	TRIM65	40930	val	increased variability of nuclear shape in population
+LT0039_39	K12	PDIA4	111533	val	increased cell movement speed
+LT0039_39	K15	APOBEC2	119267	val	increased variability of nuclear shape in population
+LT0039_39	K16	ASRGL1	32345	val	increased cell movement distance|increased cell movement speed
+LT0039_39	K19	SHROOM1	104848	val	increased variability of nuclear shape in population
+LT0039_39	L16	RYR2	104353	val	binuclear cell phenotype
+LT0039_39	L22	SCN5A	104923	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|polylobed nuclear phenotype
+LT0039_39	L23	DCT	111040	val	increased cell movement speed
+LT0039_39	L3	BCAT2	110882	val	increased cell movement speed
+LT0039_39	L5	SIRPA	112328	val	increased variability of nuclear shape in population
+LT0039_39	L8	SCN11A	104625	val	binuclear cell phenotype
+LT0039_39	M10	OAZ3	118799	val	increased variability of nuclear shape in population
+LT0039_39	M11	KIF5A	118436	val	increased cell movement speed
+LT0039_39	M22	KCNMB3	104644	val	abnormal cell cycle phenotype|cell death phenotype|increased variability of nuclear shape in population|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0039_39	M23	KCNMA1	104416	val	increased cell movement speed
+LT0039_39	N11	ARSE	119012	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|cell death phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0039_39	N23	MID2	118773	val	increased variability of nuclear shape in population
+LT0039_39	O8	P2RY8	112431	val	increased cell movement distance
+LT0039_39	P16	ZADH1	110166	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0039_39	P22	TOPORS	107841	val	binuclear cell phenotype|increased cell movement distance|increased cell movement speed
+LT0041_03	A19	HMBS	117844	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitotic metaphase plate congression phenotype
+LT0041_03	B10	AOAH	119145	test	increased variability of nuclear shape in population
+LT0041_03	B4	HLCS	117852	test	mitosis arrested|mitosis delayed phenotype
+LT0041_03	C16	SEPHS1	878	test	binuclear cell phenotype
+LT0041_03	C17	AGBL5	104165	test	binuclear cell phenotype
+LT0041_03	C19	ADAM17	104030	test	polylobed nuclear phenotype
+LT0041_03	C23	NEK9	1113	test	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0041_03	D21	EIF2AK3	103593	test	binuclear cell phenotype
+LT0041_03	E17	DAK	981	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0041_03	E22	TPCN2	37190	test	abnormal cell cycle phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0041_03	E5	KIF2A	118423	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0041_03	F12	TRPV1	105495	test	cell death phenotype|increased variability of nuclear shape in population
+LT0041_03	F16	TUBB2A	120192	test	binuclear cell phenotype
+LT0041_03	F18	MT-ND3	43750	test	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0041_03	G21	WNK4	1105	test	binuclear cell phenotype
+LT0041_03	G22	PLK3	103809	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0041_03	J19	MPL	114520	test	increased variability of nuclear shape in population
+LT0041_03	J21	MASTL	1109	test	binuclear cell phenotype
+LT0041_03	M21	TRPA1	104594	test	polylobed nuclear phenotype
+LT0041_03	M5	GCS1_HUMAN	119716	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|increased variability of nuclear shape in population|mitotic chromosome condensation phenotype|polylobed nuclear phenotype
+LT0041_03	N10	ITGA3	107726	test	increased nucleus size phenotype
+LT0041_03	N24	OGG1	122214	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0041_03	O5	YME1L1	104216	test	increased variability of nuclear shape in population
+LT0041_03	P21	ULK4	103445	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|cell death phenotype|graped micronucleus phenotype|increased variability of nuclear shape in population|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0042_10	B12	IFNAR2	106298	test	increased cell movement distance|increased cell movement speed
+LT0042_10	B14	ADIPOR1	111935	test	increased cell movement speed
+LT0042_10	B18	ITPR1	106733	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitotic metaphase plate congression phenotype
+LT0042_10	C3	ADCY8	119588	test	increased variability of nuclear shape in population
+LT0042_10	C8	DCK	68	test	proliferating cells
+LT0042_10	C9	OR12D3	43003	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|graped micronucleus phenotype|mitotic metaphase plate congression phenotype
+LT0042_10	D1	CSK	513	test	proliferating cells
+LT0042_10	D10	MYH9	118368	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|increased cell movement distance
+LT0042_10	D16	EHHADH	106631	test	increased variability of nuclear shape in population
+LT0042_10	E10	LIPG	17336	test	proliferating cells
+LT0042_10	E17	HAVCR2	109801	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0042_10	F24	POLG	117076	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0042_10	F3	LDLR	106132	test	increased variability of nuclear shape in population
+LT0042_10	G16	STK39	896	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|polylobed nuclear phenotype
+LT0042_10	H14	OPHN1	11828	test	proliferating cells
+LT0042_10	H21	PANK4	132363	test	increased variability of nuclear shape in population
+LT0042_10	I12	TUBGCP6	28508	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0042_10	I21	CNTFR	106597	test	binuclear cell phenotype
+LT0042_10	I23	FXYD5	122440	test	binuclear cell phenotype
+LT0042_10	I24	MGLL	43371	test	polylobed nuclear phenotype
+LT0042_10	K4	TUBGCP6	28697	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0042_10	K8	HK1	1506	test	polylobed nuclear phenotype
+LT0042_10	K9	PRPH2	2076	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0042_10	L24	ADAM19	104171	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0042_10	L7	AURKB	494	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic chromosome condensation phenotype|mitotic metaphase plate congression phenotype
+LT0042_10	M21	HMMR	108376	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0042_10	M6	LDLR	106132	test	increased variability of nuclear shape in population
+LT0042_10	N22	LIPE	16133	test	polylobed nuclear phenotype
+LT0042_10	O11	AKAP5	137774	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0042_10	O7	C9orf98	1615	test	increased cell movement distance|increased cell movement speed
+LT0042_10	P15	BAI3	4071	test	increased cell movement speed
+LT0042_10	P7	AURKC	379	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0042_28	B12	IFNAR2	106298	val	increased cell movement distance|increased cell movement speed
+LT0042_28	B14	ADIPOR1	111935	val	increased cell movement speed
+LT0042_28	B18	ITPR1	106733	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitotic metaphase plate congression phenotype
+LT0042_28	C3	ADCY8	119588	val	increased variability of nuclear shape in population
+LT0042_28	C8	DCK	68	val	proliferating cells
+LT0042_28	C9	OR12D3	43003	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|graped micronucleus phenotype|mitotic metaphase plate congression phenotype
+LT0042_28	D1	CSK	513	val	proliferating cells
+LT0042_28	D10	MYH9	118368	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|increased cell movement distance
+LT0042_28	D16	EHHADH	106631	val	increased variability of nuclear shape in population
+LT0042_28	E10	LIPG	17336	val	proliferating cells
+LT0042_28	E17	HAVCR2	109801	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0042_28	F24	POLG	117076	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0042_28	F3	LDLR	106132	val	increased variability of nuclear shape in population
+LT0042_28	G16	STK39	896	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|polylobed nuclear phenotype
+LT0042_28	H14	OPHN1	11828	val	proliferating cells
+LT0042_28	H21	PANK4	132363	val	increased variability of nuclear shape in population
+LT0042_28	I12	TUBGCP6	28508	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0042_28	I21	CNTFR	106597	val	binuclear cell phenotype
+LT0042_28	I23	FXYD5	122440	val	binuclear cell phenotype
+LT0042_28	I24	MGLL	43371	val	polylobed nuclear phenotype
+LT0042_28	K4	TUBGCP6	28697	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0042_28	K8	HK1	1506	val	polylobed nuclear phenotype
+LT0042_28	K9	PRPH2	2076	val	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0042_28	L24	ADAM19	104171	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0042_28	L7	AURKB	494	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic chromosome condensation phenotype|mitotic metaphase plate congression phenotype
+LT0042_28	M21	HMMR	108376	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0042_28	N22	LIPE	16133	val	polylobed nuclear phenotype
+LT0042_28	O11	AKAP5	137774	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0042_28	O7	C9orf98	1615	val	increased cell movement distance|increased cell movement speed
+LT0042_28	P15	BAI3	4071	val	increased cell movement speed
+LT0042_28	P7	AURKC	379	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0045_10	H16	DMBT1	118217	test	binuclear cell phenotype
+LT0045_10	H22	LDHC	11329	test	cell death phenotype|increased variability of nuclear shape in population
+LT0045_10	L16	RGS19	42209	test	increased variability of nuclear shape in population
+LT0045_10	P18	ARHGAP17	26031	test	binuclear cell phenotype
+LT0045_12	H16	DMBT1	118217	test	binuclear cell phenotype
+LT0045_12	H22	LDHC	11329	test	cell death phenotype|increased variability of nuclear shape in population
+LT0045_12	L16	RGS19	42209	test	increased variability of nuclear shape in population
+LT0045_12	P18	ARHGAP17	26031	test	binuclear cell phenotype
+LT0045_19	H16	DMBT1	118217	val	binuclear cell phenotype
+LT0045_19	H22	LDHC	11329	val	cell death phenotype|increased variability of nuclear shape in population
+LT0045_19	L16	RGS19	42209	val	increased variability of nuclear shape in population
+LT0045_19	P18	ARHGAP17	26031	val	binuclear cell phenotype
+LT0048_13	A10	GEM	16006	test	abnormal chromosome segregation phenotype|binuclear cell phenotype
+LT0048_13	A20	CAMKV	1067	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|cell death phenotype|increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0048_13	A6	ACADVL	105930	test	binuclear cell phenotype|cell death phenotype
+LT0048_13	A7	NR5A1	5343	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0048_13	B4	RPS6KA3	555	test	increased variability of nuclear shape in population
+LT0048_13	B7	CHRNA5	118985	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0048_13	C20	PML	42781	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0048_13	C23	HLCS	117851	test	proliferating cells
+LT0048_13	C24	AURKA	425	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|proliferating cells
+LT0048_13	D21	PRKACB	295	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|cell death phenotype|graped micronucleus phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0048_13	D23	RXFP4	202345	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0048_13	E11	LDHC	11329	test	cell death phenotype|increased variability of nuclear shape in population
+LT0048_13	E3	FRAP1	601	test	increased cell movement distance|increased cell movement speed
+LT0048_13	E8	AKR1C4	10525	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0048_13	F2	SLK	958	test	proliferating cells
+LT0048_13	F3	STK25	812	test	proliferating cells
+LT0048_13	G14	DLD	105954	test	mitosis arrested|mitosis delayed phenotype
+LT0048_13	G24	AURKA	426	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0048_13	H16	ERBB3	184	test	increased variability of nuclear shape in population
+LT0048_13	H17	WNK2	130210	test	increased variability of nuclear shape in population
+LT0048_13	H21	PRKG1	785	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|cell death phenotype|graped micronucleus phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0048_13	H4	ARL14	32136	test	cell death phenotype|polylobed nuclear phenotype
+LT0048_13	H7	SLC9A3	119681	test	increased cell movement distance
+LT0048_13	H9	ADAMTS6	104267	test	increased variability of nuclear shape in population
+LT0048_13	I15	PDK1	103627	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0048_13	I17	AKR1C2	41642	test	increased cell movement distance|increased cell movement speed
+LT0048_13	I22	DMBT1	118217	test	binuclear cell phenotype
+LT0048_13	I6	SDHD	12437	test	increased variability of nuclear shape in population
+LT0048_13	J1	ROS1	110795	test	proliferating cells
+LT0048_13	J12	FGFR2	1215	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0048_13	J18	CNGB1	104371	test	cell death phenotype|increased variability of nuclear shape in population
+LT0048_13	J3	BRD4	1694	test	increased cell movement distance|increased cell movement speed
+LT0048_13	K11	DGKI	571	test	binuclear cell phenotype|polylobed nuclear phenotype
+LT0048_13	K17	PLA2G3	23252	test	increased cell movement distance
+LT0048_13	K24	VRK1	402	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0048_13	K6	TNC	121366	test	proliferating cells
+LT0048_13	L1	CA1	118906	test	increased cell movement speed
+LT0048_13	L3	SEPT2	14709	test	proliferating cells
+LT0048_13	M5	MDH2	107886	test	binuclear cell phenotype
+LT0048_13	N16	CAMKV	1067	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|cell death phenotype|increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0048_13	N19	TRPM6	1158	test	polylobed nuclear phenotype
+LT0048_13	N23	PLK1	103548	test	cell death phenotype|mitosis arrested|mitosis delayed phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0048_13	N5	CHRNA5	118985	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0048_13	O21	ACSS2	117989	test	proliferating cells
+LT0048_13	O22	KIF2C	118446	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0048_13	P11	NR3C2	3931	test	proliferating cells
+LT0048_13	P9	IDH3G	107330	test	proliferating cells
+LT0048_14	A10	GEM	16006	test	abnormal chromosome segregation phenotype|binuclear cell phenotype
+LT0048_14	A20	CAMKV	1067	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|cell death phenotype|increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0048_14	A6	ACADVL	105930	test	binuclear cell phenotype|cell death phenotype
+LT0048_14	A7	NR5A1	5343	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0048_14	B4	RPS6KA3	555	test	increased variability of nuclear shape in population
+LT0048_14	B7	CHRNA5	118985	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0048_14	C20	PML	42781	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0048_14	C23	HLCS	117851	test	proliferating cells
+LT0048_14	C24	AURKA	425	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|proliferating cells
+LT0048_14	D21	PRKACB	295	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|cell death phenotype|graped micronucleus phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0048_14	D23	RXFP4	202345	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0048_14	E11	LDHC	11329	test	cell death phenotype|increased variability of nuclear shape in population
+LT0048_14	E3	FRAP1	601	test	increased cell movement distance|increased cell movement speed
+LT0048_14	E8	AKR1C4	10525	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0048_14	F2	SLK	958	test	proliferating cells
+LT0048_14	F3	STK25	812	test	proliferating cells
+LT0048_14	G14	DLD	105954	test	mitosis arrested|mitosis delayed phenotype
+LT0048_14	G24	AURKA	426	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0048_14	H16	ERBB3	184	test	increased variability of nuclear shape in population
+LT0048_14	H21	PRKG1	785	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|cell death phenotype|graped micronucleus phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0048_14	H4	ARL14	32136	test	cell death phenotype|polylobed nuclear phenotype
+LT0048_14	H6	SLC34A1	119649	test	increased variability of nuclear shape in population
+LT0048_14	H7	SLC9A3	119681	test	increased cell movement distance
+LT0048_14	H9	ADAMTS6	104267	test	increased variability of nuclear shape in population
+LT0048_14	I15	PDK1	103627	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0048_14	I17	AKR1C2	41642	test	increased cell movement distance|increased cell movement speed
+LT0048_14	I22	DMBT1	118217	test	binuclear cell phenotype
+LT0048_14	I6	SDHD	12437	test	increased variability of nuclear shape in population
+LT0048_14	J1	ROS1	110795	test	proliferating cells
+LT0048_14	J12	FGFR2	1215	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0048_14	J18	CNGB1	104371	test	cell death phenotype|increased variability of nuclear shape in population
+LT0048_14	J3	BRD4	1694	test	increased cell movement distance|increased cell movement speed
+LT0048_14	K11	DGKI	571	test	binuclear cell phenotype|polylobed nuclear phenotype
+LT0048_14	K17	PLA2G3	23252	test	increased cell movement distance
+LT0048_14	K24	VRK1	402	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0048_14	K6	TNC	121366	test	proliferating cells
+LT0048_14	L1	CA1	118906	test	increased cell movement speed
+LT0048_14	L3	SEPT2	14709	test	proliferating cells
+LT0048_14	M5	MDH2	107886	test	binuclear cell phenotype
+LT0048_14	N15	M6PR	111156	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0048_14	N16	CAMKV	1067	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|cell death phenotype|increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0048_14	N19	TRPM6	1158	test	polylobed nuclear phenotype
+LT0048_14	N23	PLK1	103548	test	cell death phenotype|mitosis arrested|mitosis delayed phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0048_14	N5	CHRNA5	118985	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0048_14	O21	ACSS2	117989	test	proliferating cells
+LT0048_14	O22	KIF2C	118446	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0048_14	P11	NR3C2	3931	test	proliferating cells
+LT0048_14	P9	IDH3G	107330	test	proliferating cells
+LT0049_42	A21	KIF12	118499	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0049_42	B19	KIF4A	118455	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0049_42	C9	DRD1	1834	val	abnormal cell cycle phenotype|binuclear cell phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0049_42	E21	KIF13A	118480	val	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0049_42	E24	CA1	118906	val	increased cell movement speed
+LT0049_42	F2	EMR2	20562	val	increased variability of nuclear shape in population
+LT0049_42	F24	PPM1F	104881	val	binuclear cell phenotype
+LT0049_42	G10	SEC23A	17702	val	binuclear cell phenotype
+LT0049_42	H21	NR3C2	3931	val	proliferating cells
+LT0049_42	I17	SUCLG2	120342	val	increased cell movement speed
+LT0049_42	I9	KIF14	22291	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0049_42	J14	GSS	117841	val	increased cell movement distance|increased cell movement speed
+LT0049_42	J7	ASS1	7869	val	binuclear cell phenotype
+LT0049_42	K14	IFNGR1	106092	val	increased variability of nuclear shape in population
+LT0049_42	K7	SLC9A3	119681	val	increased cell movement distance
+LT0049_42	L15	SLC34A1	119649	val	increased variability of nuclear shape in population
+LT0049_42	L16	RACGAP1	20189	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0049_42	L18	RGDSR_HUMAN	40269	val	abnormal nucleus shape phenotype|polylobed nuclear phenotype
+LT0049_42	L2	ITGAV	106731	val	increased variability of nuclear shape in population
+LT0049_42	N20	KIF20A	118443	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0049_42	O6	SEPT1	35491	val	binuclear cell phenotype
+LT0049_42	P13	PLA2G3	23252	val	increased cell movement distance
+LT0061_02	A10	C3orf32	124919	test	binuclear cell phenotype
+LT0061_02	A18	C19orf43	30499	test	binuclear cell phenotype
+LT0061_02	A24	ATOH8	109822	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|increased variability of nuclear shape in population|mitotic chromosome condensation phenotype|polylobed nuclear phenotype
+LT0061_02	A7	PCDH21	131565	test	increased nucleus size phenotype
+LT0061_02	A9	ZNF639	124958	test	increased nucleus size phenotype
+LT0061_02	B21	ARL5A	133794	test	binuclear cell phenotype|polylobed nuclear phenotype
+LT0061_02	B22	ATOH8	109823	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0061_02	D20	ZHX2	108651	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0061_02	D5	KIAA0649	138446	test	binuclear cell phenotype
+LT0061_02	D6	ZHX2	108650	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|cell death phenotype
+LT0061_02	E11	MAP6D1	125548	test	increased nucleus size phenotype
+LT0061_02	F12	EFTUD2	140008	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|graped micronucleus phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0061_02	H18	TIPIN	140452	test	increased nucleus size phenotype
+LT0061_02	J1	CENPK	127310	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0061_02	J17	VPS37B	123438	test	increased cell movement speed
+LT0061_02	J20	WNT2	121434	test	abnormal cell cycle phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0061_02	J6	WNT2	121433	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0061_02	J7	C8orf55	24659	test	increased variability of nuclear shape in population
+LT0061_02	K23	CENPO	125427	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0061_02	K6	TMEM53	31024	test	increased variability of nuclear shape in population
+LT0061_02	L1	KIAA1166	127182	test	binuclear cell phenotype
+LT0061_02	L11	PRRG1	121274	test	increased variability of nuclear shape in population
+LT0061_02	L2	ZNF750	140857	test	binuclear cell phenotype|cell death phenotype
+LT0061_02	L20	WDR37	148427	test	increased cell movement speed
+LT0061_02	L22	FAM70A	127052	test	increased nucleus size phenotype
+LT0061_02	L9	UBE1DC1	130746	test	increased variability of nuclear shape in population
+LT0061_02	M12	LINGO1	109812	test	increased nucleus size phenotype
+LT0061_02	M17	TECTB	139927	test	increased nucleus size phenotype
+LT0061_02	M20	C1orf50	123378	test	abnormal cell cycle phenotype|binuclear cell phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0061_02	M7	WNT6	122325	test	cell death phenotype|increased cell movement speed
+LT0061_02	N16	NOL12	125426	test	cell death phenotype|increased variability of nuclear shape in population
+LT0061_02	N6	WNT4	121946	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|increased nucleus size phenotype|mitosis arrested|mitosis delayed phenotype|polylobed nuclear phenotype
+LT0061_03	A10	C3orf32	124919	test	binuclear cell phenotype
+LT0061_03	A18	C19orf43	30499	test	binuclear cell phenotype
+LT0061_03	A24	ATOH8	109822	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|increased variability of nuclear shape in population|mitotic chromosome condensation phenotype|polylobed nuclear phenotype
+LT0061_03	A7	PCDH21	131565	test	increased nucleus size phenotype
+LT0061_03	A9	ZNF639	124958	test	increased nucleus size phenotype
+LT0061_03	B21	ARL5A	133794	test	binuclear cell phenotype|polylobed nuclear phenotype
+LT0061_03	B22	ATOH8	109823	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0061_03	D20	ZHX2	108651	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0061_03	D5	KIAA0649	138446	test	binuclear cell phenotype
+LT0061_03	D6	ZHX2	108650	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|cell death phenotype
+LT0061_03	E11	MAP6D1	125548	test	increased nucleus size phenotype
+LT0061_03	F12	EFTUD2	140008	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|graped micronucleus phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0061_03	H18	TIPIN	140452	test	increased nucleus size phenotype
+LT0061_03	J1	CENPK	127310	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0061_03	J17	VPS37B	123438	test	increased cell movement speed
+LT0061_03	J20	WNT2	121434	test	abnormal cell cycle phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0061_03	J6	WNT2	121433	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0061_03	J7	C8orf55	24659	test	increased variability of nuclear shape in population
+LT0061_03	K23	CENPO	125427	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0061_03	K6	TMEM53	31024	test	increased variability of nuclear shape in population
+LT0061_03	L1	KIAA1166	127182	test	binuclear cell phenotype
+LT0061_03	L11	PRRG1	121274	test	increased variability of nuclear shape in population
+LT0061_03	L2	ZNF750	140857	test	binuclear cell phenotype|cell death phenotype
+LT0061_03	L20	WDR37	148427	test	increased cell movement speed
+LT0061_03	L22	FAM70A	127052	test	increased nucleus size phenotype
+LT0061_03	L9	UBE1DC1	130746	test	increased variability of nuclear shape in population
+LT0061_03	M12	LINGO1	109812	test	increased nucleus size phenotype
+LT0061_03	M17	TECTB	139927	test	increased nucleus size phenotype
+LT0061_03	M20	C1orf50	123378	test	abnormal cell cycle phenotype|binuclear cell phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0061_03	M7	WNT6	122325	test	cell death phenotype|increased cell movement speed
+LT0061_03	N16	NOL12	125426	test	cell death phenotype|increased variability of nuclear shape in population
+LT0061_03	N6	WNT4	121946	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|increased nucleus size phenotype|mitosis arrested|mitosis delayed phenotype|polylobed nuclear phenotype
+LT0062_46	A7	S100A16	36010	val	increased nucleus size phenotype
+LT0062_46	B3	SUB1	108089	val	increased nucleus size phenotype
+LT0062_46	C18	NPDC1	22710	val	increased variability of nuclear shape in population
+LT0062_46	E18	TMEM129	36504	val	abnormal cell cycle phenotype|cell death phenotype|graped micronucleus phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0062_46	E19	MFSD3	45682	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|cell death phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0062_46	E20	RAD23A	15730	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitotic metaphase plate congression phenotype
+LT0062_46	E5	MFSD3	36711	val	metaphase arrested phenotype|metaphase delayed phenotype
+LT0062_46	E6	RAD23A	142818	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|cell death phenotype|graped micronucleus phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0062_46	E7	JARID1C	115486	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|graped micronucleus phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0062_46	F16	TMEM129	127821	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0062_46	F23	NP_001111.2	7070	val	binuclear cell phenotype|cell death phenotype
+LT0062_46	G18	NSFL1C	131914	val	abnormal cell cycle phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0062_46	G5	FUZ	125594	val	cell death phenotype|polylobed nuclear phenotype
+LT0062_46	H1	FYTTD1	125707	val	polylobed nuclear phenotype
+LT0062_46	J5	THRSP	12758	val	cell death phenotype|increased variability of nuclear shape in population
+LT0062_46	K14	SUPT5H	107012	val	increased nucleus size phenotype
+LT0062_46	K18	C1orf149	123331	val	increased nucleus size phenotype
+LT0062_46	L10	PREX1_HUMAN	121870	val	polylobed nuclear phenotype
+LT0062_46	L11	LPP	107758	val	binuclear cell phenotype|polylobed nuclear phenotype
+LT0062_46	L19	ZCCHC10	147658	val	increased nucleus size phenotype
+LT0062_46	L21	MYOG	114236	val	mitosis arrested|mitosis delayed phenotype
+LT0062_46	L5	ZCCHC10	147657	val	increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0062_46	M6	SLC44A4	130897	val	increased cell movement distance
+LT0062_46	N4	C14orf152	141255	val	mitosis arrested|mitosis delayed phenotype
+LT0064_01	A16	ZW10	137635	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0064_01	A2	ZW10	137634	val	abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0064_01	A3	TPX2	136425	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|cell death phenotype|graped micronucleus phenotype|mitosis arrested|mitosis delayed phenotype|polylobed nuclear phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0064_01	A9	PSMD8	12330	val	prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0064_01	B1	TPX2	136426	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0064_01	B5	CDC6	121297	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0064_01	C6	TMEM71	127870	val	binuclear cell phenotype
+LT0064_01	E7	NUDC	18203	val	abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0064_01	F13	NUDC	135922	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0064_01	F20	CDC5L	106420	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0064_01	F21	RANGAP1	12270	val	increased cell movement speed
+LT0064_01	F4	ZNF79	115859	val	increased nucleus size phenotype
+LT0064_01	G10	GLT1D1	141340	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0064_01	G15	CORO2B	17365	val	increased variability of nuclear shape in population
+LT0064_01	H8	GLT1D1	141339	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0064_01	I12	C9orf80	29205	val	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0064_01	I19	TOR1AIP1	23193	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|cell death phenotype|graped micronucleus phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0064_01	I5	TOR1AIP1	122817	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0064_01	J18	C9orf80	29116	val	metaphase arrested phenotype|metaphase delayed phenotype
+LT0064_01	K19	LRRC39	110044	val	abnormal nucleus shape phenotype
+LT0064_01	K20	BTBD14A	129249	val	binuclear cell phenotype
+LT0064_01	K4	LZIC	109751	val	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0064_01	L12	CDK5RAP3	131858	val	increased variability of nuclear shape in population
+LT0064_01	L4	SAP30BP	140103	val	abnormal cell cycle phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0064_01	L7	TADA2L	115210	val	increased nucleus size phenotype
+LT0064_01	M18	ANGEL1	108695	val	abnormal chromosome segregation phenotype|cell death phenotype|increased variability of nuclear shape in population|mitosis arrested|mitosis delayed phenotype
+LT0064_01	M19	GTPBP5	134622	val	increased cell movement distance|increased cell movement speed
+LT0064_01	M20	UACA	132235	val	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0064_01	M21	CBX7	137077	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|cell death phenotype|polylobed nuclear phenotype
+LT0064_01	M9	NHP2L1	143947	val	abnormal cell cycle phenotype|cell death phenotype|graped micronucleus phenotype|increased nucleus size phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0064_01	N6	ABLIM1	11337	val	binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0064_01	N7	NHP2L1	143946	val	abnormal cell cycle phenotype|cell death phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0064_01	O5	RFTN2	129240	val	increased cell movement distance|increased cell movement speed
+LT0064_01	P20	SMC3	137921	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0064_01	P6	SMC3	137920	val	abnormal chromosome segregation phenotype
+LT0064_02	A16	ZW10	137635	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0064_02	A2	ZW10	137634	test	abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0064_02	A3	TPX2	136425	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|cell death phenotype|graped micronucleus phenotype|mitosis arrested|mitosis delayed phenotype|polylobed nuclear phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0064_02	A9	PSMD8	12330	test	prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0064_02	B1	TPX2	136426	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0064_02	B5	CDC6	121297	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0064_02	C6	TMEM71	127870	test	binuclear cell phenotype
+LT0064_02	E7	NUDC	18203	test	abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0064_02	F13	NUDC	135922	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0064_02	F20	CDC5L	106420	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0064_02	F21	RANGAP1	12270	test	increased cell movement speed
+LT0064_02	F4	ZNF79	115859	test	increased nucleus size phenotype
+LT0064_02	G10	GLT1D1	141340	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0064_02	G15	CORO2B	17365	test	increased variability of nuclear shape in population
+LT0064_02	H8	GLT1D1	141339	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0064_02	I12	C9orf80	29205	test	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0064_02	I19	TOR1AIP1	23193	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|cell death phenotype|graped micronucleus phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0064_02	I5	TOR1AIP1	122817	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0064_02	J18	C9orf80	29116	test	metaphase arrested phenotype|metaphase delayed phenotype
+LT0064_02	K19	LRRC39	110044	test	abnormal nucleus shape phenotype
+LT0064_02	K4	LZIC	109751	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0064_02	L12	CDK5RAP3	131858	test	increased variability of nuclear shape in population
+LT0064_02	L20	NEURL	137470	test	binuclear cell phenotype
+LT0064_02	L4	SAP30BP	140103	test	abnormal cell cycle phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0064_02	L7	TADA2L	115210	test	increased nucleus size phenotype
+LT0064_02	M18	ANGEL1	108695	test	abnormal chromosome segregation phenotype|cell death phenotype|increased variability of nuclear shape in population|mitosis arrested|mitosis delayed phenotype
+LT0064_02	M19	GTPBP5	134622	test	increased cell movement distance|increased cell movement speed
+LT0064_02	M20	UACA	132235	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0064_02	M21	CBX7	137077	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|cell death phenotype|polylobed nuclear phenotype
+LT0064_02	M3	IGBP1	144766	test	increased nucleus size phenotype
+LT0064_02	M9	NHP2L1	143947	test	abnormal cell cycle phenotype|cell death phenotype|graped micronucleus phenotype|increased nucleus size phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0064_02	N6	ABLIM1	11337	test	binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0064_02	N7	NHP2L1	143946	test	abnormal cell cycle phenotype|cell death phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0064_02	O5	RFTN2	129240	test	increased cell movement distance|increased cell movement speed
+LT0064_02	P20	SMC3	137921	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0064_02	P6	SMC3	137920	test	abnormal chromosome segregation phenotype
+LT0064_18	A16	ZW10	137635	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0064_18	A2	ZW10	137634	test	abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0064_18	A3	TPX2	136425	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|cell death phenotype|graped micronucleus phenotype|mitosis arrested|mitosis delayed phenotype|polylobed nuclear phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0064_18	A9	PSMD8	12330	test	prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0064_18	B1	TPX2	136426	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0064_18	B5	CDC6	121297	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0064_18	C6	TMEM71	127870	test	binuclear cell phenotype
+LT0064_18	E7	NUDC	18203	test	abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0064_18	F13	NUDC	135922	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0064_18	F20	CDC5L	106420	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0064_18	F21	RANGAP1	12270	test	increased cell movement speed
+LT0064_18	F4	ZNF79	115859	test	increased nucleus size phenotype
+LT0064_18	G10	GLT1D1	141340	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0064_18	G15	CORO2B	17365	test	increased variability of nuclear shape in population
+LT0064_18	H8	GLT1D1	141339	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0064_18	I12	C9orf80	29205	test	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0064_18	I19	TOR1AIP1	23193	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|cell death phenotype|graped micronucleus phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0064_18	I5	TOR1AIP1	122817	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0064_18	J18	C9orf80	29116	test	metaphase arrested phenotype|metaphase delayed phenotype
+LT0064_18	K19	LRRC39	110044	test	abnormal nucleus shape phenotype
+LT0064_18	K20	BTBD14A	129249	test	binuclear cell phenotype
+LT0064_18	K4	LZIC	109751	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0064_18	L12	CDK5RAP3	131858	test	increased variability of nuclear shape in population
+LT0064_18	L20	NEURL	137470	test	binuclear cell phenotype
+LT0064_18	L4	SAP30BP	140103	test	abnormal cell cycle phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0064_18	L7	TADA2L	115210	test	increased nucleus size phenotype
+LT0064_18	M18	ANGEL1	108695	test	abnormal chromosome segregation phenotype|cell death phenotype|increased variability of nuclear shape in population|mitosis arrested|mitosis delayed phenotype
+LT0064_18	M19	GTPBP5	134622	test	increased cell movement distance|increased cell movement speed
+LT0064_18	M20	UACA	132235	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0064_18	M21	CBX7	137077	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|cell death phenotype|polylobed nuclear phenotype
+LT0064_18	M9	NHP2L1	143947	test	abnormal cell cycle phenotype|cell death phenotype|graped micronucleus phenotype|increased nucleus size phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0064_18	N6	ABLIM1	11337	test	binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0064_18	N7	NHP2L1	143946	test	abnormal cell cycle phenotype|cell death phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0064_18	O5	RFTN2	129240	test	increased cell movement distance|increased cell movement speed
+LT0064_18	P20	SMC3	137921	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0064_18	P6	SMC3	137920	test	abnormal chromosome segregation phenotype
+LT0067_02	B15	UBR2	136851	val	increased cell movement distance|increased cell movement speed
+LT0067_02	B16	MYL5	11608	val	increased cell movement distance|increased cell movement speed
+LT0067_02	C8	CYC1	10680	val	abnormal chromosome segregation phenotype|binuclear cell phenotype
+LT0067_02	D14	CYC1	10589	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0067_02	E1	MAD1L1	121447	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0067_02	E15	MAD1L1	121448	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0067_02	E2	E2F2	107308	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0067_02	E3	ANLN	132619	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0067_02	F1	ANLN	132620	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0067_02	I2	BAZ1B	138588	val	increased variability of nuclear shape in population
+LT0067_02	I23	ASPM	128734	val	metaphase arrested phenotype|metaphase delayed phenotype
+LT0067_02	I9	ANAPC4	134089	val	metaphase arrested phenotype|metaphase delayed phenotype
+LT0067_02	J21	ASPM	128735	val	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0067_02	J7	ANAPC4	134088	val	metaphase arrested phenotype|metaphase delayed phenotype
+LT0067_02	K11	TTLL12	124839	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0067_02	K12	FAM32A	147506	val	increased variability of nuclear shape in population
+LT0067_02	K18	UBN1	135162	val	increased variability of nuclear shape in population
+LT0067_02	L8	ZBTB40	108644	val	binuclear cell phenotype
+LT0067_02	N19	CAPG	10386	val	abnormal cell cycle phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0067_11	B15	UBR2	136851	test	increased cell movement distance|increased cell movement speed
+LT0067_11	B16	MYL5	11608	test	increased cell movement distance|increased cell movement speed
+LT0067_11	C8	CYC1	10680	test	abnormal chromosome segregation phenotype|binuclear cell phenotype
+LT0067_11	D14	CYC1	10589	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0067_11	E1	MAD1L1	121447	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0067_11	E15	MAD1L1	121448	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0067_11	E2	E2F2	107308	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0067_11	E3	ANLN	132619	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0067_11	F1	ANLN	132620	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0067_11	I2	BAZ1B	138588	test	increased variability of nuclear shape in population
+LT0067_11	I23	ASPM	128734	test	metaphase arrested phenotype|metaphase delayed phenotype
+LT0067_11	I9	ANAPC4	134089	test	metaphase arrested phenotype|metaphase delayed phenotype
+LT0067_11	J21	ASPM	128735	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0067_11	J7	ANAPC4	134088	test	metaphase arrested phenotype|metaphase delayed phenotype
+LT0067_11	K11	TTLL12	124839	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0067_11	K12	FAM32A	147506	test	increased variability of nuclear shape in population
+LT0067_11	K18	UBN1	135162	test	increased variability of nuclear shape in population
+LT0067_11	L8	ZBTB40	108644	test	binuclear cell phenotype
+LT0067_11	N19	CAPG	10386	test	abnormal cell cycle phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0067_37	B15	UBR2	136851	test	increased cell movement distance|increased cell movement speed
+LT0067_37	D14	CYC1	10589	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0067_37	E1	MAD1L1	121447	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0067_37	E15	MAD1L1	121448	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0067_37	E2	E2F2	107308	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0067_37	E3	ANLN	132619	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0067_37	F1	ANLN	132620	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0067_37	I2	BAZ1B	138588	test	increased variability of nuclear shape in population
+LT0067_37	I23	ASPM	128734	test	metaphase arrested phenotype|metaphase delayed phenotype
+LT0067_37	J21	ASPM	128735	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0067_37	J7	ANAPC4	134088	test	metaphase arrested phenotype|metaphase delayed phenotype
+LT0067_37	K11	TTLL12	124839	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0067_37	K12	FAM32A	147506	test	increased variability of nuclear shape in population
+LT0067_37	K18	UBN1	135162	test	increased variability of nuclear shape in population
+LT0067_37	L8	ZBTB40	108644	test	binuclear cell phenotype
+LT0067_37	N19	CAPG	10386	test	abnormal cell cycle phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0073_02	E10	FAM82B	126876	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0073_02	E11	ARMC1	127088	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|polylobed nuclear phenotype
+LT0073_02	E17	UPK3B	130913	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0073_02	F15	UPK3B	130912	test	increased variability of nuclear shape in population
+LT0073_02	K10	U2AF1	18675	test	increased nucleus size phenotype
+LT0073_02	K6	SRP14	12894	test	increased nucleus size phenotype
+LT0073_02	L8	U2AF1	18582	test	metaphase arrested phenotype|metaphase delayed phenotype
+LT0073_02	M18	C16orf53	30970	test	increased nucleus size phenotype
+LT0073_02	M9	TRIP13	115495	test	increased nucleus size phenotype
+LT0073_07	E10	FAM82B	126876	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0073_07	E11	ARMC1	127088	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|polylobed nuclear phenotype
+LT0073_07	E17	UPK3B	130913	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0073_07	F15	UPK3B	130912	val	increased variability of nuclear shape in population
+LT0073_07	K10	U2AF1	18675	val	increased nucleus size phenotype
+LT0073_07	K6	SRP14	12894	val	increased nucleus size phenotype
+LT0073_07	L8	U2AF1	18582	val	metaphase arrested phenotype|metaphase delayed phenotype
+LT0073_07	M9	TRIP13	115495	val	increased nucleus size phenotype
+LT0073_69	E10	FAM82B	126876	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0073_69	E11	ARMC1	127088	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|polylobed nuclear phenotype
+LT0073_69	F15	UPK3B	130912	test	increased variability of nuclear shape in population
+LT0073_69	K10	U2AF1	18675	test	increased nucleus size phenotype
+LT0073_69	K6	SRP14	12894	test	increased nucleus size phenotype
+LT0073_69	L8	U2AF1	18582	test	metaphase arrested phenotype|metaphase delayed phenotype
+LT0073_69	M18	C16orf53	30970	test	increased nucleus size phenotype
+LT0073_69	M9	TRIP13	115495	test	increased nucleus size phenotype
+LT0076_04	M17	CRTAP	135710	test	binuclear cell phenotype
+LT0076_16	M17	CRTAP	135710	val	binuclear cell phenotype
+LT0076_33	M17	CRTAP	135710	test	binuclear cell phenotype
+LT0078_01	A2	CBFA2T2	137844	test	mitosis arrested|mitosis delayed phenotype
+LT0078_01	C17	GMEB2	115941	test	cell death phenotype|increased variability of nuclear shape in population
+LT0078_01	C21	CEP192	33723	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0078_01	C23	CHRDL1	148075	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0078_01	D12	NKAP	30979	test	binuclear cell phenotype
+LT0078_01	D19	CHMP4B	129911	test	increased variability of nuclear shape in population
+LT0078_01	D21	CHRDL1	148076	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0078_01	D8	NPAL2	127454	test	binuclear cell phenotype
+LT0078_01	E11	CENPT	32163	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0078_01	E21	FAT	146644	test	increased variability of nuclear shape in population
+LT0078_01	E9	NUFIP1	133918	test	increased variability of nuclear shape in population
+LT0078_01	F17	CENPT	140932	test	metaphase arrested phenotype|metaphase delayed phenotype
+LT0078_01	G1	ZFYVE21	130525	test	increased variability of nuclear shape in population
+LT0078_01	G17	C20orf54	128823	test	increased variability of nuclear shape in population
+LT0078_01	G7	PRPF6	133974	test	metaphase arrested phenotype|metaphase delayed phenotype|polylobed nuclear phenotype
+LT0078_01	H13	PRPF6	133973	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0078_01	I4	SYP	12731	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0078_01	I8	KEAP1	138234	test	polylobed nuclear phenotype
+LT0078_01	J13	TNS1	139898	test	increased nucleus size phenotype
+LT0078_01	J2	SYP	12824	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0078_01	K18	OIP5	140093	test	binuclear cell phenotype
+LT0078_01	K23	ATP11C	110361	test	cell death phenotype|mitosis arrested|mitosis delayed phenotype
+LT0078_01	K4	CEP110	140180	test	abnormal chromosome segregation phenotype|binuclear cell phenotype
+LT0078_01	P6	BRUNOL4	28023	test	increased cell movement speed
+LT0079_05	B17	ANXA10	136295	test	binuclear cell phenotype
+LT0079_05	D11	C10orf92	148655	test	increased variability of nuclear shape in population
+LT0079_05	E21	PLEKHA4	28806	test	increased nucleus size phenotype
+LT0079_05	E4	DHX40	130631	test	increased variability of nuclear shape in population
+LT0079_05	F11	PLEKHA4	28902	test	increased cell movement distance|increased cell movement speed
+LT0079_05	F6	RABAC1	135791	test	increased variability of nuclear shape in population
+LT0079_05	G23	RAD51C	143141	test	increased variability of nuclear shape in population
+LT0079_05	G24	GNPTAB	140790	test	binuclear cell phenotype
+LT0079_05	I18	EZH1	106643	test	increased nucleus size phenotype
+LT0079_05	I24	PRPF19	147529	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|increased nucleus size phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0079_05	J13	LSM14A	147583	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|cell death phenotype|graped micronucleus phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0079_05	J14	CCDC9	148598	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|cell death phenotype|graped micronucleus phenotype|increased variability of nuclear shape in population|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0079_05	J2	CBX1	18707	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0079_05	J23	ARHGEF17	121714	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|graped micronucleus phenotype|polylobed nuclear phenotype
+LT0079_05	K1	C9orf5	135345	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0079_05	L21	TAX1BP3	140166	test	increased variability of nuclear shape in population
+LT0079_05	L22	ATN1	106623	test	increased variability of nuclear shape in population
+LT0079_05	L24	C6orf60	130620	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0079_05	L8	C12orf49	140870	test	binuclear cell phenotype
+LT0079_05	P17	NUP107	109235	test	abnormal chromosome segregation phenotype
+LT0079_05	P6	NPM3	18816	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|graped micronucleus phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0079_38	B17	ANXA10	136295	val	binuclear cell phenotype
+LT0079_38	F11	PLEKHA4	28902	val	increased cell movement distance|increased cell movement speed
+LT0079_38	G23	RAD51C	143141	val	increased variability of nuclear shape in population
+LT0079_38	G24	GNPTAB	140790	val	binuclear cell phenotype
+LT0079_38	I24	PRPF19	147529	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|increased nucleus size phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0079_38	J13	LSM14A	147583	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|cell death phenotype|graped micronucleus phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0079_38	J14	CCDC9	148598	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|cell death phenotype|graped micronucleus phenotype|increased variability of nuclear shape in population|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0079_38	J2	CBX1	18707	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0079_38	J23	ARHGEF17	121714	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|graped micronucleus phenotype|polylobed nuclear phenotype
+LT0079_38	K1	C9orf5	135345	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0079_38	L21	TAX1BP3	140166	val	increased variability of nuclear shape in population
+LT0079_38	L22	ATN1	106623	val	increased variability of nuclear shape in population
+LT0079_38	L24	C6orf60	130620	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0079_38	L8	C12orf49	140870	val	binuclear cell phenotype
+LT0079_38	P17	NUP107	109235	val	abnormal chromosome segregation phenotype
+LT0079_38	P6	NPM3	18816	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|graped micronucleus phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0081_09	B8	FAM117A	140978	test	increased variability of nuclear shape in population
+LT0081_09	F24	UBL3	143068	test	increased cell movement speed
+LT0081_09	G1	TJP2	122191	test	proliferating cells
+LT0081_09	I16	RCAN3	136550	test	binuclear cell phenotype
+LT0081_09	I7	PROX1	106878	test	increased variability of nuclear shape in population
+LT0081_09	K9	TCTN3	122832	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|graped micronucleus phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0081_09	M4	SCYL1BP1	123980	test	abnormal cell cycle phenotype|cell death phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0081_09	O20	ECD	122626	test	metaphase arrested phenotype|metaphase delayed phenotype
+LT0081_09	O21	KIAA1267	147569	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0081_09	P17	ACTRT1	127804	test	increased nucleus size phenotype
+LT0082_04	A16	HAUS3	130581	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitotic metaphase plate congression phenotype
+LT0082_04	A2	HAUS3	130580	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0082_04	B9	Q6UW61_HUMAN	124788	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0082_04	F4	ARMCX1	135129	test	increased nucleus size phenotype
+LT0082_04	G20	CHAC1	140781	test	increased variability of nuclear shape in population
+LT0082_11	A16	HAUS3	130581	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitotic metaphase plate congression phenotype
+LT0082_11	A2	HAUS3	130580	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0082_11	B9	Q6UW61_HUMAN	124788	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0082_11	F4	ARMCX1	135129	val	increased nucleus size phenotype
+LT0082_11	G20	CHAC1	140781	val	increased variability of nuclear shape in population
+LT0088_06	F18	C21orf91	131939	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0088_06	F20	C14orf133	133489	test	increased variability of nuclear shape in population
+LT0088_06	H13	CWF19L2	149180	test	increased cell movement distance|increased nucleus size phenotype
+LT0088_06	K11	CCT8	18290	test	metaphase arrested phenotype|metaphase delayed phenotype
+LT0088_06	L17	CCT8	18194	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0088_21	F18	C21orf91	131939	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0088_21	F20	C14orf133	133489	val	increased variability of nuclear shape in population
+LT0088_21	H13	CWF19L2	149180	val	increased cell movement distance|increased nucleus size phenotype
+LT0088_21	K11	CCT8	18290	val	metaphase arrested phenotype|metaphase delayed phenotype
+LT0088_21	L17	CCT8	18194	val	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0088_42	F18	C21orf91	131939	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0088_42	F20	C14orf133	133489	test	increased variability of nuclear shape in population
+LT0088_42	H13	CWF19L2	149180	test	increased cell movement distance|increased nucleus size phenotype
+LT0088_42	K11	CCT8	18290	test	metaphase arrested phenotype|metaphase delayed phenotype
+LT0088_42	L17	CCT8	18194	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0091_01	B12	PCF11	122844	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0091_01	B21	MAGEC3	44506	test	binuclear cell phenotype
+LT0091_01	C13	GOLGA2	145092	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0091_01	E19	BLCAP	136025	test	increased variability of nuclear shape in population
+LT0091_01	F17	TMEM170	141393	test	polylobed nuclear phenotype
+LT0091_01	F24	TEF	115370	test	increased variability of nuclear shape in population
+LT0091_01	F3	PLD4	36880	test	increased cell movement speed
+LT0091_01	G13	TRUB2	147590	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0091_01	G14	SP2	115333	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0091_01	G20	CDT1	140985	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0091_01	G3	ENOX2	137086	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|polylobed nuclear phenotype
+LT0091_01	G4	SPAG4L	129013	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0091_01	G6	CDT1	140984	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0091_01	H1	ENOX2	137087	test	increased variability of nuclear shape in population
+LT0091_01	H2	SPAG4L	129014	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0091_01	H3	TRUB2	147591	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0091_01	H4	SP2	43345	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0091_01	I17	HDX	110049	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0091_01	J15	HDX	110048	test	abnormal cell cycle phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0091_01	J16	NDEL1	130979	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0091_01	K19	ZNF668	140863	test	binuclear cell phenotype
+LT0091_01	K20	ZNF641	110144	test	binuclear cell phenotype
+LT0091_01	K6	ZNF641	110143	test	increased variability of nuclear shape in population
+LT0091_01	L18	WDR81	141454	test	binuclear cell phenotype
+LT0091_01	P19	TCP11L2	110231	test	proliferating cells
+LT0091_30	B12	PCF11	122844	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0091_30	B21	MAGEC3	44506	test	binuclear cell phenotype
+LT0091_30	C13	GOLGA2	145092	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0091_30	E19	BLCAP	136025	test	increased variability of nuclear shape in population
+LT0091_30	F17	TMEM170	141393	test	polylobed nuclear phenotype
+LT0091_30	F24	TEF	115370	test	increased variability of nuclear shape in population
+LT0091_30	F3	PLD4	36880	test	increased cell movement speed
+LT0091_30	G13	TRUB2	147590	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0091_30	G14	SP2	115333	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0091_30	G20	CDT1	140985	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0091_30	G3	ENOX2	137086	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|polylobed nuclear phenotype
+LT0091_30	G4	SPAG4L	129013	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0091_30	G6	CDT1	140984	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0091_30	H1	ENOX2	137087	test	increased variability of nuclear shape in population
+LT0091_30	H2	SPAG4L	129014	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0091_30	H3	TRUB2	147591	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0091_30	H4	SP2	43345	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0091_30	I17	HDX	110049	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0091_30	J15	HDX	110048	test	abnormal cell cycle phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0091_30	J16	NDEL1	130979	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0091_30	K19	ZNF668	140863	test	binuclear cell phenotype
+LT0091_30	K20	ZNF641	110144	test	binuclear cell phenotype
+LT0091_30	K6	ZNF641	110143	test	increased variability of nuclear shape in population
+LT0091_30	L18	WDR81	141454	test	binuclear cell phenotype
+LT0091_30	P19	TCP11L2	110231	test	proliferating cells
+LT0092_39	A3	SCARA3	134917	val	increased variability of nuclear shape in population
+LT0092_39	B12	WFDC12	36279	val	increased cell movement distance|increased cell movement speed
+LT0092_39	D18	DSCAM	145835	val	mitosis arrested|mitosis delayed phenotype
+LT0092_39	D24	C1orf156	123750	val	binuclear cell phenotype
+LT0092_39	E23	SNTB2	142999	val	increased cell movement distance|increased cell movement speed
+LT0092_39	F10	XKR6	110358	val	abnormal cell cycle phenotype|cell death phenotype|graped micronucleus phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0092_39	F20	SCGB1D1	18089	val	binuclear cell phenotype
+LT0092_39	F6	SCGB1D1	17998	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0092_39	G11	PLRG1	11985	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|graped micronucleus phenotype|mitotic metaphase plate congression phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0092_39	G21	ACTRT2	123792	val	increased nucleus size phenotype|polylobed nuclear phenotype
+LT0092_39	H17	PLRG1	11890	val	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0092_39	H5	CRADD	121468	val	polylobed nuclear phenotype
+LT0092_39	H7	GJB1	144487	val	polylobed nuclear phenotype
+LT0092_39	I13	NSG2_HUMAN	121766	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0092_39	I9	CRYGA	21540	val	binuclear cell phenotype
+LT0092_39	J15	COG7	131829	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|graped micronucleus phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0092_39	J20	HEXIM2	37278	val	metaphase arrested phenotype|metaphase delayed phenotype
+LT0092_39	J6	HEXIM2	141328	val	abnormal cell cycle phenotype|cell death phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0092_39	K13	CSN3	146604	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0092_39	K17	GPRIN1	127742	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|graped micronucleus phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0092_39	L10	EXOSC10	11896	val	cell death phenotype|increased variability of nuclear shape in population
+LT0092_39	L15	GPRIN1	127741	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0092_39	L19	ARL13B	126548	val	abnormal cell cycle phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0092_39	L3	CSN3	146605	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0092_39	L5	ARL13B	126547	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0092_39	M10	DLGAP1	137669	val	binuclear cell phenotype
+LT0092_39	M17	CDC40	134692	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|graped micronucleus phenotype|mitotic metaphase plate congression phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0092_39	M5	TMEM182	125951	val	binuclear cell phenotype
+LT0092_39	N19	GBX2	114143	val	increased nucleus size phenotype
+LT0092_39	O6	ZNF561	148099	val	binuclear cell phenotype
+LT0094_04	B8	TMEM125	37294	test	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0094_04	C5	FAM71C	141624	test	increased nucleus size phenotype
+LT0094_04	E19	CCDC89	124116	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0094_04	E5	CCDC89	124115	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0094_04	G15	NP_694588.1	128151	test	increased variability of nuclear shape in population
+LT0094_04	G4	ZNF579	116634	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|absence of mitotic chromosome decondensation phenotype|binuclear cell phenotype|mitotic chromosome condensation phenotype
+LT0094_04	H21	C8orf44	127233	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0094_04	H5	ZNF114	116672	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0094_04	K14	EXOC3	147444	test	abnormal nucleus shape phenotype|absence of mitotic chromosome decondensation phenotype|increased variability of nuclear shape in population
+LT0094_04	K21	KLHL11	148702	test	increased variability of nuclear shape in population
+LT0094_04	L4	EXOC3	147445	test	binuclear cell phenotype
+LT0094_04	M10	MAGED1	138201	test	increased cell movement speed
+LT0094_04	M17	CETN1	14166	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|cell death phenotype
+LT0094_04	N7	TGIF1	115091	test	cell death phenotype|increased variability of nuclear shape in population
+LT0094_04	N8	MAGED1	138200	test	increased variability of nuclear shape in population
+LT0094_44	B8	TMEM125	37294	test	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0094_44	C5	FAM71C	141624	test	increased nucleus size phenotype
+LT0094_44	E19	CCDC89	124116	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0094_44	E5	CCDC89	124115	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0094_44	G15	NP_694588.1	128151	test	increased variability of nuclear shape in population
+LT0094_44	G4	ZNF579	116634	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|absence of mitotic chromosome decondensation phenotype|binuclear cell phenotype|mitotic chromosome condensation phenotype
+LT0094_44	H21	C8orf44	127233	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0094_44	H5	ZNF114	116672	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0094_44	K14	EXOC3	147444	test	abnormal nucleus shape phenotype|absence of mitotic chromosome decondensation phenotype|increased variability of nuclear shape in population
+LT0094_44	K21	KLHL11	148702	test	increased variability of nuclear shape in population
+LT0094_44	L4	EXOC3	147445	test	binuclear cell phenotype
+LT0094_44	M10	MAGED1	138201	test	increased cell movement speed
+LT0094_44	M17	CETN1	14166	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|cell death phenotype
+LT0094_44	N7	TGIF1	115091	test	cell death phenotype|increased variability of nuclear shape in population
+LT0094_44	N8	MAGED1	138200	test	increased variability of nuclear shape in population
+LT0095_13	C18	NP_997392.1	150057	val	increased variability of nuclear shape in population|mitosis arrested|mitosis delayed phenotype
+LT0095_13	C21	C15orf52	149735	val	increased variability of nuclear shape in population
+LT0095_13	C6	ZNF187	110223	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0095_13	D18	NP_997337.1	149917	val	increased variability of nuclear shape in population
+LT0095_13	G12	LRP10	134174	val	abnormal cell cycle phenotype|graped micronucleus phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0095_13	G18	WDR5B	132849	val	abnormal chromosome segregation phenotype|binuclear cell phenotype
+LT0095_13	H1	B3GALTL	141978	val	polylobed nuclear phenotype
+LT0095_13	H15	UBQLN2	134136	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|increased nucleus size phenotype
+LT0095_13	H16	WDR5B	132847	val	abnormal chromosome segregation phenotype|binuclear cell phenotype
+LT0095_13	H18	LRP10	134173	val	cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0095_13	H5	DNAH10	149875	val	mitosis arrested|mitosis delayed phenotype
+LT0095_13	H8	ZNF688	38066	val	binuclear cell phenotype
+LT0095_13	I20	GIMAP5	26962	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0095_13	I4	FAM47B	128058	val	binuclear cell phenotype
+LT0095_13	I6	GIMAP5	26867	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0095_13	J2	FAM47B	39309	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|cell death phenotype|mitosis arrested|mitosis delayed phenotype
+LT0095_13	K23	TMEM120A	127585	val	cell death phenotype|mitosis arrested|mitosis delayed phenotype
+LT0095_13	K6	NP_079265.2	148907	val	increased nucleus size phenotype
+LT0095_13	L7	C19orf54	126592	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|cell death phenotype|graped micronucleus phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0095_13	M4	PCDH18	132808	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0095_13	N23	S100A2	142894	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0095_13	N9	S100A2	142893	val	increased variability of nuclear shape in population
+LT0095_13	O17	ARL4C	16713	val	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0097_04	A14	UPK3A	139671	test	increased cell movement distance
+LT0097_04	B15	MCAM	144271	test	binuclear cell phenotype
+LT0097_04	B17	PDYN	144376	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0097_04	B21	PALB2	140849	test	cell death phenotype|mitosis arrested|mitosis delayed phenotype
+LT0097_04	E10	DNAJC5	148919	test	increased nucleus size phenotype|increased variability of nuclear shape in population
+LT0097_04	E14	RBM23	109049	test	proliferating cells
+LT0097_04	F2	MICALL1	125807	test	proliferating cells
+LT0097_04	G13	ELL	115804	test	increased cell movement distance|increased cell movement speed
+LT0097_04	I14	COCH	14083	test	abnormal nucleus shape phenotype
+LT0097_04	J16	ASB2	121776	test	abnormal cell cycle phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0097_04	J4	COCH	14176	test	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0097_04	M12	VSIG1	128519	test	increased cell movement distance|increased cell movement speed
+LT0097_04	O21	PALM	11658	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0097_04	O22	OSM	144342	test	abnormal cell cycle phenotype|binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0097_04	O9	MZF1	45046	test	abnormal cell cycle phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0097_04	P22	KIAA1128	27674	test	increased variability of nuclear shape in population
+LT0097_04	P7	MZF1	44951	test	abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0098_01	A21	ELMOD1	123147	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0098_01	B17	NEUROD4	114885	test	increased variability of nuclear shape in population
+LT0098_01	B23	CRISP2	138919	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|graped micronucleus phenotype|increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0098_01	B9	CRISP2	138918	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0098_01	C17	TTR	138719	test	polylobed nuclear phenotype
+LT0098_01	D14	FAM62B	148760	test	cell death phenotype|increased variability of nuclear shape in population
+LT0098_01	D16	C3	146905	test	increased nucleus size phenotype
+LT0098_01	D18	HP1BP3	122900	test	binuclear cell phenotype
+LT0098_01	E12	ZNFX1	125312	test	polylobed nuclear phenotype
+LT0098_01	H12	C10orf6	132307	test	increased nucleus size phenotype
+LT0098_01	H20	SPP1	142121	test	increased variability of nuclear shape in population|mitosis arrested|mitosis delayed phenotype|polylobed nuclear phenotype
+LT0098_01	I12	EDN3	145523	test	increased variability of nuclear shape in population
+LT0098_01	I19	TNFSF10	137235	test	polylobed nuclear phenotype
+LT0098_01	I2	CCL1	12419	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|graped micronucleus phenotype|increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0098_01	I23	DSE	134072	test	cell death phenotype|polylobed nuclear phenotype
+LT0098_01	I24	ZBP1	130954	test	increased cell movement speed
+LT0098_01	I6	NP_079121.1	140900	test	increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0098_01	J16	CRY2	146763	test	polylobed nuclear phenotype
+LT0098_01	J4	ZNF549	110269	test	binuclear cell phenotype
+LT0098_01	J7	SCGB2A2	11393	test	binuclear cell phenotype
+LT0098_01	L10	DLL4	132858	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0098_01	M10	CCDC70	141000	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0098_01	M18	DEPDC7	123864	test	binuclear cell phenotype
+LT0098_01	M5	HPCA	11060	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|graped micronucleus phenotype|mitotic metaphase plate congression phenotype
+LT0098_01	M8	NFKB1	107297	test	cell death phenotype|increased nucleus size phenotype
+LT0098_01	N16	DEPDC7	123863	test	mitosis arrested|mitosis delayed phenotype
+LT0098_01	P4	TNFSF9	4808	test	increased cell movement speed
+LT0098_13	A21	ELMOD1	123147	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0098_13	B17	NEUROD4	114885	val	increased variability of nuclear shape in population
+LT0098_13	B23	CRISP2	138919	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|graped micronucleus phenotype|increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0098_13	B9	CRISP2	138918	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0098_13	C17	TTR	138719	val	polylobed nuclear phenotype
+LT0098_13	D14	FAM62B	148760	val	cell death phenotype|increased variability of nuclear shape in population
+LT0098_13	D16	C3	146905	val	increased nucleus size phenotype
+LT0098_13	D18	HP1BP3	122900	val	binuclear cell phenotype
+LT0098_13	E12	ZNFX1	125312	val	polylobed nuclear phenotype
+LT0098_13	H12	C10orf6	132307	val	increased nucleus size phenotype
+LT0098_13	H20	SPP1	142121	val	increased variability of nuclear shape in population|mitosis arrested|mitosis delayed phenotype|polylobed nuclear phenotype
+LT0098_13	I12	EDN3	145523	val	increased variability of nuclear shape in population
+LT0098_13	I19	TNFSF10	137235	val	polylobed nuclear phenotype
+LT0098_13	I2	CCL1	12419	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|graped micronucleus phenotype|increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0098_13	I23	DSE	134072	val	cell death phenotype|polylobed nuclear phenotype
+LT0098_13	I24	ZBP1	130954	val	increased cell movement speed
+LT0098_13	I6	NP_079121.1	140900	val	increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0098_13	J16	CRY2	146763	val	polylobed nuclear phenotype
+LT0098_13	J4	ZNF549	110269	val	binuclear cell phenotype
+LT0098_13	J7	SCGB2A2	11393	val	binuclear cell phenotype
+LT0098_13	L10	DLL4	132858	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0098_13	M10	CCDC70	141000	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0098_13	M18	DEPDC7	123864	val	binuclear cell phenotype
+LT0098_13	M5	HPCA	11060	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|graped micronucleus phenotype|mitotic metaphase plate congression phenotype
+LT0098_13	M8	NFKB1	107297	val	cell death phenotype|increased nucleus size phenotype
+LT0098_13	N16	DEPDC7	123863	val	mitosis arrested|mitosis delayed phenotype
+LT0098_13	P4	TNFSF9	4808	val	increased cell movement speed
+LT0104_04	A7	NP_001092691.1	127790	test	binuclear cell phenotype
+LT0104_04	A9	UBL4B	149450	test	increased variability of nuclear shape in population
+LT0104_04	C23	KLRG2	128617	test	binuclear cell phenotype
+LT0104_04	F11	KRT10	8470	test	increased nucleus size phenotype
+LT0104_04	J10	SREBF2	107467	test	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0104_04	K14	CABP7	215282	test	binuclear cell phenotype
+LT0104_04	L4	CABP7	215283	test	binuclear cell phenotype
+LT0104_14	A7	NP_001092691.1	127790	test	binuclear cell phenotype
+LT0104_14	A9	UBL4B	149450	test	increased variability of nuclear shape in population
+LT0104_14	C10	MT4	215746	test	increased cell movement speed
+LT0104_14	C23	KLRG2	128617	test	binuclear cell phenotype
+LT0104_14	F11	KRT10	8470	test	increased nucleus size phenotype
+LT0104_14	J10	SREBF2	107467	test	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0104_14	K14	CABP7	215282	test	binuclear cell phenotype
+LT0104_14	L4	CABP7	215283	test	binuclear cell phenotype
+LT0104_31	A7	NP_001092691.1	127790	val	binuclear cell phenotype
+LT0104_31	A9	UBL4B	149450	val	increased variability of nuclear shape in population
+LT0104_31	C10	MT4	215746	val	increased cell movement speed
+LT0104_31	C23	KLRG2	128617	val	binuclear cell phenotype
+LT0104_31	F11	KRT10	8470	val	increased nucleus size phenotype
+LT0104_31	J10	SREBF2	107467	val	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0104_31	K14	CABP7	215282	val	binuclear cell phenotype
+LT0104_31	L4	CABP7	215283	val	binuclear cell phenotype
+LT0106_02	B11	MAMDC4	216099	test	binuclear cell phenotype
+LT0106_02	B9	C1orf210	217282	test	increased variability of nuclear shape in population
+LT0106_02	C20	FAM100B	216016	test	abnormal cell cycle phenotype|cell death phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0106_02	E11	LHFP	216930	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0106_02	E6	C21orf123	215998	test	increased nucleus size phenotype
+LT0106_02	F17	LHFP	16828	test	metaphase arrested phenotype|metaphase delayed phenotype
+LT0106_02	H18	NP_997528.1	150079	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitotic metaphase plate congression phenotype
+LT0106_02	H5	OR52K2	215210	test	increased nucleus size phenotype
+LT0106_02	H9	OR5D14	215297	test	increased cell movement speed
+LT0106_02	L23	C2orf53	215987	test	increased variability of nuclear shape in population
+LT0106_02	M15	CCDC121	31118	test	polylobed nuclear phenotype
+LT0106_02	M8	OR5BF1	215238	test	increased nucleus size phenotype
+LT0106_02	N8	FAM101B	217274	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0106_02	P5	NOLA3	215701	test	increased variability of nuclear shape in population
+LT0106_43	B9	C1orf210	217282	test	increased variability of nuclear shape in population
+LT0106_43	C20	FAM100B	216016	test	abnormal cell cycle phenotype|cell death phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0106_43	E11	LHFP	216930	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0106_43	E6	C21orf123	215998	test	increased nucleus size phenotype
+LT0106_43	F17	LHFP	16828	test	metaphase arrested phenotype|metaphase delayed phenotype
+LT0106_43	G7	OR5T2	216457	test	increased variability of nuclear shape in population
+LT0106_43	H18	NP_997528.1	150079	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitotic metaphase plate congression phenotype
+LT0106_43	H5	OR52K2	215210	test	increased nucleus size phenotype
+LT0106_43	H9	OR5D14	215297	test	increased cell movement speed
+LT0106_43	L23	C2orf53	215987	test	increased variability of nuclear shape in population
+LT0106_43	M8	OR5BF1	215238	test	increased nucleus size phenotype
+LT0106_43	N8	FAM101B	217274	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0106_43	P5	NOLA3	215701	test	increased variability of nuclear shape in population
+LT0107_18	A18	SPATC1	217310	val	binuclear cell phenotype
+LT0107_18	B21	MEGF8	148332	val	increased variability of nuclear shape in population
+LT0107_18	D19	TCERG1	108086	val	increased variability of nuclear shape in population
+LT0107_18	D23	NP_001004331.1	216403	val	increased variability of nuclear shape in population
+LT0107_18	E21	ZNF579	116477	val	polylobed nuclear phenotype
+LT0107_18	G15	NEDD9	144266	val	increased cell movement speed
+LT0107_18	H14	LY86	137529	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0107_18	H20	FGF12	145376	val	binuclear cell phenotype
+LT0109_13	A11	SPC24	217210	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|mitotic metaphase plate congression phenotype
+LT0109_13	A5	C1orf92	123914	test	mitosis arrested|mitosis delayed phenotype
+LT0109_13	A8	ZNF541	217073	test	increased variability of nuclear shape in population
+LT0109_13	B12	POF1B	31873	test	polylobed nuclear phenotype
+LT0109_13	B21	MOCS1	215906	test	increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0109_13	B22	SEPN1	215935	test	binuclear cell phenotype
+LT0109_13	B24	MRPL55	215981	test	increased variability of nuclear shape in population
+LT0109_13	B9	IGSF8	215097	test	increased cell movement speed
+LT0109_13	C11	RPS14	215073	test	mitosis arrested|mitosis delayed phenotype
+LT0109_13	C12	TMUB1	33214	test	increased variability of nuclear shape in population
+LT0109_13	C21	RPAIN	216947	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0109_13	D11	RPAIN	34003	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0109_13	E22	CEACAM8	10523	test	graped micronucleus phenotype|increased variability of nuclear shape in population|metaphase arrested phenotype|metaphase delayed phenotype
+LT0109_13	E7	CDC20	215139	test	abnormal chromosome segregation phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0109_13	F11	FAM112A	216211	test	binuclear cell phenotype
+LT0109_13	F16	TMEM190	216954	test	increased nucleus size phenotype
+LT0109_13	F2	PTMS	215166	test	increased variability of nuclear shape in population
+LT0109_13	I11	EIF4A1	9763	test	increased variability of nuclear shape in population
+LT0109_13	J13	NP_055654.2	121716	test	increased variability of nuclear shape in population
+LT0109_13	J14	ZNF430	217056	test	increased cell movement distance
+LT0109_13	J16	MED27	115501	test	binuclear cell phenotype
+LT0109_13	J20	RASL11A	215505	test	binuclear cell phenotype
+LT0109_13	J23	LRRC52	216478	test	cell death phenotype|mitosis arrested|mitosis delayed phenotype
+LT0109_13	K16	MSTO1	26463	test	cell death phenotype|mitosis arrested|mitosis delayed phenotype
+LT0109_13	K4	ANKRD39	148062	test	increased variability of nuclear shape in population
+LT0109_13	N20	ZNF205	217341	test	abnormal cell cycle phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0109_13	N22	C1orf52	216020	test	increased variability of nuclear shape in population
+LT0109_13	N23	IL24	5472	test	increased variability of nuclear shape in population
+LT0109_13	O11	STEAP1	217130	test	increased variability of nuclear shape in population
+LT0109_13	O19	ANAPC10	22203	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0109_13	O21	NRL	217408	test	cell death phenotype|increased variability of nuclear shape in population
+LT0109_13	O22	TMEM8	133383	test	increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0109_13	O24	PHOX2A	114486	test	increased variability of nuclear shape in population
+LT0109_13	O5	ANAPC10	216879	test	binuclear cell phenotype
+LT0109_13	O9	ANAPC13	215182	test	metaphase arrested phenotype|metaphase delayed phenotype
+LT0109_38	A5	C1orf92	123914	test	mitosis arrested|mitosis delayed phenotype
+LT0109_38	A8	ZNF541	217073	test	increased variability of nuclear shape in population
+LT0109_38	B12	POF1B	31873	test	polylobed nuclear phenotype
+LT0109_38	B21	MOCS1	215906	test	increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0109_38	B22	SEPN1	215935	test	binuclear cell phenotype
+LT0109_38	B24	MRPL55	215981	test	increased variability of nuclear shape in population
+LT0109_38	B9	IGSF8	215097	test	increased cell movement speed
+LT0109_38	C11	RPS14	215073	test	mitosis arrested|mitosis delayed phenotype
+LT0109_38	C12	TMUB1	33214	test	increased variability of nuclear shape in population
+LT0109_38	C21	RPAIN	216947	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0109_38	D11	RPAIN	34003	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0109_38	E22	CEACAM8	10523	test	graped micronucleus phenotype|increased variability of nuclear shape in population|metaphase arrested phenotype|metaphase delayed phenotype
+LT0109_38	E7	CDC20	215139	test	abnormal chromosome segregation phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0109_38	F11	FAM112A	216211	test	binuclear cell phenotype
+LT0109_38	F16	TMEM190	216954	test	increased nucleus size phenotype
+LT0109_38	F2	PTMS	215166	test	increased variability of nuclear shape in population
+LT0109_38	I11	EIF4A1	9763	test	increased variability of nuclear shape in population
+LT0109_38	J13	NP_055654.2	121716	test	increased variability of nuclear shape in population
+LT0109_38	J14	ZNF430	217056	test	increased cell movement distance
+LT0109_38	J16	MED27	115501	test	binuclear cell phenotype
+LT0109_38	J20	RASL11A	215505	test	binuclear cell phenotype
+LT0109_38	J23	LRRC52	216478	test	cell death phenotype|mitosis arrested|mitosis delayed phenotype
+LT0109_38	K16	MSTO1	26463	test	cell death phenotype|mitosis arrested|mitosis delayed phenotype
+LT0109_38	K4	ANKRD39	148062	test	increased variability of nuclear shape in population
+LT0109_38	N20	ZNF205	217341	test	abnormal cell cycle phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0109_38	N22	C1orf52	216020	test	increased variability of nuclear shape in population
+LT0109_38	N23	IL24	5472	test	increased variability of nuclear shape in population
+LT0109_38	O11	STEAP1	217130	test	increased variability of nuclear shape in population
+LT0109_38	O19	ANAPC10	22203	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0109_38	O21	NRL	217408	test	cell death phenotype|increased variability of nuclear shape in population
+LT0109_38	O22	TMEM8	133383	test	increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0109_38	O24	PHOX2A	114486	test	increased variability of nuclear shape in population
+LT0109_38	O5	ANAPC10	216879	test	binuclear cell phenotype
+LT0109_38	O9	ANAPC13	215182	test	metaphase arrested phenotype|metaphase delayed phenotype
+LT0110_09	C18	NIP30_HUMAN	217067	val	increased variability of nuclear shape in population
+LT0110_09	P19	SF3B5	42584	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|graped micronucleus phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0112_01	C23	C19orf7	225624	test	binuclear cell phenotype
+LT0112_01	E17	OR2L3	216436	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0112_01	G17	Q9H7M0_HUMAN	225886	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|polylobed nuclear phenotype
+LT0112_01	H7	MAP7D3	225123	test	increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0112_01	I22	OR5D13	216765	test	cell death phenotype|increased variability of nuclear shape in population
+LT0112_01	I8	DSCR8	216262	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype
+LT0112_01	I9	ZNF789	216601	test	increased variability of nuclear shape in population
+LT0112_01	J14	DSCR8	216261	test	abnormal cell cycle phenotype|cell death phenotype|increased variability of nuclear shape in population|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0112_01	J24	ZFHX2	225787	test	increased variability of nuclear shape in population
+LT0112_01	L19	C15orf23	225553	test	binuclear cell phenotype|increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0112_01	L5	C15orf23	225552	test	increased variability of nuclear shape in population
+LT0112_01	L6	PSMB11	225561	test	increased cell movement speed|increased variability of nuclear shape in population
+LT0112_01	M5	KIAA0774	225684	test	increased nucleus size phenotype
+LT0113_01	B22	EPGN	231520	val	increased cell movement distance|increased cell movement speed
+LT0113_01	J4	Q86YV5_HUMAN	224425	val	polylobed nuclear phenotype
+LT0113_18	B22	EPGN	231520	test	increased cell movement distance|increased cell movement speed
+LT0113_18	J4	Q86YV5_HUMAN	224425	test	polylobed nuclear phenotype
+LT0115_01	D20	ZNF479	231268	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0115_01	D6	ZNF479	231267	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0115_01	G11	ZNF284	230624	test	increased cell movement speed|increased variability of nuclear shape in population
+LT0115_01	G17	XP_171855.3	231150	test	increased variability of nuclear shape in population
+LT0115_01	G19	Q6ZNN0_HUMAN	231162	test	increased variability of nuclear shape in population
+LT0115_01	J20	ZBTB7C	231507	test	increased variability of nuclear shape in population
+LT0115_01	L12	C12orf56	231898	test	proliferating cells
+LT0116_43	K21	CXorf25	232307	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0116_47	K21	CXorf25	232307	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0118_23	E2	SPANXN4	233291	test	binuclear cell phenotype
+LT0118_23	G5	FAT3	235562	test	increased nucleus size phenotype
+LT0118_23	I4	HLA-H	235575	test	cell death phenotype|increased cell movement speed
+LT0118_23	J14	SH2D5	232929	test	increased variability of nuclear shape in population
+LT0118_23	K18	PLXNB2	235540	test	increased variability of nuclear shape in population
+LT0118_23	L22	CXorf24	234390	test	increased nucleus size phenotype
+LT0119_13	C20	Q8IUR1_HUMAN	234066	test	cell death phenotype|increased nucleus size phenotype
+LT0119_13	D9	RPL27A	234293	test	polylobed nuclear phenotype
+LT0119_13	F18	ZNF251	227400	test	increased cell movement speed
+LT0119_13	H10	PABPCP2	234720	test	binuclear cell phenotype
+LT0119_13	H24	PABPCP2	234721	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0119_14	C20	Q8IUR1_HUMAN	234066	val	cell death phenotype|increased nucleus size phenotype
+LT0119_14	D9	RPL27A	234293	val	polylobed nuclear phenotype
+LT0119_14	F18	ZNF251	227400	val	increased cell movement speed
+LT0119_14	H10	PABPCP2	234720	val	binuclear cell phenotype
+LT0119_14	H24	PABPCP2	234721	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0122_04	F15	LMTK3	226209	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0122_04	L16	Q658V2_HUMAN	235303	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitotic metaphase plate congression phenotype
+LT0122_04	L24	NP_849153.3	227395	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|polylobed nuclear phenotype
+LT0122_11	F15	LMTK3	226209	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0122_11	L16	Q658V2_HUMAN	235303	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitotic metaphase plate congression phenotype
+LT0122_11	L24	NP_849153.3	227395	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|polylobed nuclear phenotype
+LT0122_51	F15	LMTK3	226209	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0122_51	L16	Q658V2_HUMAN	235303	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitotic metaphase plate congression phenotype
+LT0122_51	L24	NP_849153.3	227395	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|polylobed nuclear phenotype
+LT0124_19	B16	Q8N1X6_HUMAN	229307	test	increased cell movement speed
+LT0124_19	B5	KRT6C	224196	test	increased cell movement distance|increased cell movement speed
+LT0124_19	H10	Q8NA17_HUMAN	229824	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0124_19	H23	C8orf54	229729	test	increased variability of nuclear shape in population
+LT0124_19	K16	Q8N9V7_HUMAN	228554	test	increased variability of nuclear shape in population
+LT0124_19	O8	XP_945488.1	232342	test	increased variability of nuclear shape in population
+LT0125_02	E20	ZNF252	233977	val	abnormal chromosome segregation phenotype|binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0125_02	E21	XP_211871.1	232178	val	increased variability of nuclear shape in population
+LT0125_02	E6	ZNF252	233976	val	abnormal cell cycle phenotype|binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0125_02	K16	DYNC2H1	232012	val	increased cell movement distance|increased cell movement speed
+LT0125_02	L21	SHANK2	232367	val	cell death phenotype|increased cell movement speed|increased variability of nuclear shape in population
+LT0125_02	L23	ZF36_HUMAN	232916	val	increased variability of nuclear shape in population
+LT0125_02	L6	NP_001013646.1	233276	val	increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0125_02	P18	MEIG1	234072	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|polylobed nuclear phenotype
+LT0125_41	E20	ZNF252	233977	test	abnormal chromosome segregation phenotype|binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype
+LT0125_41	E21	XP_211871.1	232178	test	increased variability of nuclear shape in population
+LT0125_41	E6	ZNF252	233976	test	abnormal cell cycle phenotype|binuclear cell phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0125_41	K16	DYNC2H1	232012	test	increased cell movement distance|increased cell movement speed
+LT0125_41	L21	SHANK2	232367	test	cell death phenotype|increased cell movement speed|increased variability of nuclear shape in population
+LT0125_41	L23	ZF36_HUMAN	232916	test	increased variability of nuclear shape in population
+LT0125_41	L6	NP_001013646.1	233276	test	increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0125_41	P18	MEIG1	234072	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|polylobed nuclear phenotype
+LT0128_01	A16	IL18BP	243186	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|cell death phenotype|increased cell movement speed|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0128_01	F5	SPINLW1	242884	test	binuclear cell phenotype
+LT0128_01	G12	KRTAP19-6	243129	test	binuclear cell phenotype
+LT0128_01	L18	ANKRD47	243426	test	increased variability of nuclear shape in population
+LT0128_01	L19	RNASEH2C	242848	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0128_01	L5	RNASEH2C	242847	test	increased cell movement speed
+LT0128_01	O17	NP_079137.1	242842	test	binuclear cell phenotype
+LT0128_01	O22	ZBED2	242911	test	binuclear cell phenotype
+LT0128_07	A16	IL18BP	243186	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|cell death phenotype|increased cell movement speed|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0128_07	F5	SPINLW1	242884	val	binuclear cell phenotype
+LT0128_07	G12	KRTAP19-6	243129	val	binuclear cell phenotype
+LT0128_07	L18	ANKRD47	243426	val	increased variability of nuclear shape in population
+LT0128_07	L19	RNASEH2C	242848	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0128_07	L5	RNASEH2C	242847	val	increased cell movement speed
+LT0128_07	O17	NP_079137.1	242842	val	binuclear cell phenotype
+LT0128_07	O22	ZBED2	242911	val	binuclear cell phenotype
+LT0128_16	A16	IL18BP	243186	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|cell death phenotype|increased cell movement speed|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0128_16	F5	SPINLW1	242884	test	binuclear cell phenotype
+LT0128_16	G12	KRTAP19-6	243129	test	binuclear cell phenotype
+LT0128_16	L18	ANKRD47	243426	test	increased variability of nuclear shape in population
+LT0128_16	L19	RNASEH2C	242848	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0128_16	L5	RNASEH2C	242847	test	increased cell movement speed
+LT0128_16	O17	NP_079137.1	242842	test	binuclear cell phenotype
+LT0128_16	O22	ZBED2	242911	test	binuclear cell phenotype
+LT0134_01	A2	NP_775734.1	250204	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0134_01	D19	S100A11	244974	test	increased variability of nuclear shape in population
+LT0134_01	L2	ANAPC11	245902	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0134_03	A2	NP_775734.1	250204	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0134_03	D19	S100A11	244974	val	increased variability of nuclear shape in population
+LT0134_03	G7	FTL	248044	val	increased cell movement speed|increased variability of nuclear shape in population
+LT0134_03	L2	ANAPC11	245902	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0134_06	A2	NP_775734.1	250204	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0134_06	D19	S100A11	244974	test	increased variability of nuclear shape in population
+LT0134_06	G7	FTL	248044	test	increased cell movement speed|increased variability of nuclear shape in population
+LT0134_06	L2	ANAPC11	245902	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0137_03	A8	NP_061900.1	241739	val	increased cell movement speed
+LT0137_03	D7	VCX	241211	val	abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0137_05	A8	NP_061900.1	241739	test	increased cell movement speed
+LT0137_05	D7	VCX	241211	test	abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0137_44	A8	NP_061900.1	241739	test	increased cell movement speed
+LT0137_44	D7	VCX	241211	test	abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0139_01	C16	C1orf119	245241	test	binuclear cell phenotype
+LT0139_01	H20	LCE1D	245884	test	increased nucleus size phenotype
+LT0139_01	J23	MKL2	249100	test	increased variability of nuclear shape in population
+LT0139_08	C16	C1orf119	245241	test	binuclear cell phenotype
+LT0139_08	H20	LCE1D	245884	test	increased nucleus size phenotype
+LT0139_08	J23	MKL2	249100	test	increased variability of nuclear shape in population
+LT0140_06	F3	C2orf18	250767	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0140_06	L2	CLK3	246120	val	increased cell movement distance|increased cell movement speed
+LT0140_06	O19	BCAR1	246454	val	cell death phenotype|increased variability of nuclear shape in population
+LT0140_06	P7	PTMA	247626	val	increased variability of nuclear shape in population
+LT0142_01	B22	HIST1H2BK	247379	test	increased cell movement distance|increased cell movement speed
+LT0142_01	B5	HIST1H2AJ	246309	test	binuclear cell phenotype
+LT0142_01	E20	NPM1	247872	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|graped micronucleus phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0142_01	J2	HLA-DRB1	250489	test	increased cell movement distance|increased cell movement speed
+LT0142_01	P23	CCDC29	250026	test	mitosis arrested|mitosis delayed phenotype|prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0143_01	A14	Q8WUC5_HUMAN	228318	val	increased cell movement distance|increased cell movement speed
+LT0143_01	G14	Q8N1B8_HUMAN	229646	val	binuclear cell phenotype
+LT0143_01	G7	LRTM2	227805	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0143_01	H13	LRTM2	227804	val	abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0143_05	A14	Q8WUC5_HUMAN	228318	test	increased cell movement distance|increased cell movement speed
+LT0143_05	G14	Q8N1B8_HUMAN	229646	test	binuclear cell phenotype
+LT0143_05	G7	LRTM2	227805	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0143_05	H13	LRTM2	227804	test	abnormal nucleus shape phenotype|binuclear cell phenotype|polylobed nuclear phenotype
+LT0148_40	H23	HSFX1	244797	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|cell death phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0148_40	K20	C20orf51	244759	test	polylobed nuclear phenotype
+LT0148_40	L11	DENND4B	235089	test	increased variability of nuclear shape in population
+LT0149_01	A21	RPS12	242612	val	increased variability of nuclear shape in population
+LT0149_01	B4	NP_001034202.1	245283	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0149_01	E18	XP_496076.1	227907	val	binuclear cell phenotype
+LT0149_01	F11	MDFI	244940	val	increased cell movement distance|increased cell movement speed
+LT0149_01	G13	GJE1	245620	val	abnormal nucleus shape phenotype|binuclear cell phenotype|cell death phenotype
+LT0149_01	G16	CTAG2	245008	val	increased cell movement distance|increased cell movement speed
+LT0149_01	G3	CRB3	246924	val	increased cell movement speed
+LT0149_01	G4	C11orf44	242914	val	increased cell movement speed|increased variability of nuclear shape in population
+LT0149_01	H3	GJE1	245621	val	abnormal nucleus shape phenotype
+LT0149_01	I21	LAMA4	244943	val	increased nucleus size phenotype
+LT0149_01	K16	DGCR6L	245012	val	binuclear cell phenotype
+LT0149_01	K9	LYZL2	245168	val	increased nucleus size phenotype
+LT0149_01	L11	ALX3	245200	val	increased cell movement speed
+LT0149_01	L20	IFNA4	245149	val	increased cell movement distance|increased cell movement speed
+LT0149_01	M20	C6orf88	245463	val	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0149_03	A21	RPS12	242612	test	increased variability of nuclear shape in population
+LT0149_03	B4	NP_001034202.1	245283	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0149_03	E18	XP_496076.1	227907	test	binuclear cell phenotype
+LT0149_03	G13	GJE1	245620	test	abnormal nucleus shape phenotype|binuclear cell phenotype|cell death phenotype
+LT0149_03	G16	CTAG2	245008	test	increased cell movement distance|increased cell movement speed
+LT0149_03	G3	CRB3	246924	test	increased cell movement speed
+LT0149_03	G4	C11orf44	242914	test	increased cell movement speed|increased variability of nuclear shape in population
+LT0149_03	H3	GJE1	245621	test	abnormal nucleus shape phenotype
+LT0149_03	I21	LAMA4	244943	test	increased nucleus size phenotype
+LT0149_03	K16	DGCR6L	245012	test	binuclear cell phenotype
+LT0149_03	K9	LYZL2	245168	test	increased nucleus size phenotype
+LT0149_03	L11	ALX3	245200	test	increased cell movement speed
+LT0149_03	L20	IFNA4	245149	test	increased cell movement distance|increased cell movement speed
+LT0149_03	M20	C6orf88	245463	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0155_05	A24	FAM38A	241551	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0155_05	B22	FAM38A	241552	test	abnormal nucleus shape phenotype|binuclear cell phenotype|cell death phenotype
+LT0155_05	B7	HIST1H2AM	240122	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitotic metaphase plate congression phenotype
+LT0155_08	A24	FAM38A	241551	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0155_08	B22	FAM38A	241552	test	abnormal nucleus shape phenotype|binuclear cell phenotype|cell death phenotype
+LT0155_08	B7	HIST1H2AM	240122	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitotic metaphase plate congression phenotype
+LT0156_09	C20	SIP1	240712	val	increased cell movement speed
+LT0156_09	F24	Q8WYN8_HUMAN	241230	val	increased cell movement speed
+LT0156_09	G6	MICAL3	235717	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0156_09	H8	TFIP11	235272	val	binuclear cell phenotype
+LT0156_09	J19	TMC3	244501	val	increased variability of nuclear shape in population
+LT0156_09	K10	TRMU	236745	val	binuclear cell phenotype
+LT0156_09	L24	SUMO1P3	236358	val	increased variability of nuclear shape in population
+LT0156_09	M15	LRCH3	243706	val	increased cell movement speed
+LT0156_09	O12	AQP1	237366	val	increased variability of nuclear shape in population
+LT0156_09	O21	NOS2B	241098	val	binuclear cell phenotype
+LT0158_01	A23	BFAR	135091	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0158_01	B21	BFAR	135092	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0158_01	E3	RAE1	13303	test	increased nucleus size phenotype
+LT0158_01	J19	CD40LG	145476	test	increased variability of nuclear shape in population
+LT0158_01	J20	KATNAL1	148958	test	binuclear cell phenotype
+LT0158_01	J7	NUTF2	138123	test	increased variability of nuclear shape in population|mitosis arrested|mitosis delayed phenotype
+LT0158_01	K20	NP_116099.1	250703	test	binuclear cell phenotype|increased nucleus size phenotype|increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0158_01	L19	RAB22A	247917	test	abnormal cell cycle phenotype|cell death phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0159_17	A19	SHC1	4484	val	increased variability of nuclear shape in population
+LT0159_17	B6	NP_060887.1	119799	val	polylobed nuclear phenotype
+LT0159_17	C2	PJA2	138449	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0159_17	E1	NP_078836.1	118025	val	increased cell movement distance
+LT0159_17	E13	MAGEE1	127262	val	increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0159_17	I1	DAB2IP	34305	val	increased variability of nuclear shape in population
+LT0159_17	I5	SUMO1P3	138970	val	prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0159_50	A19	SHC1	4484	test	increased variability of nuclear shape in population
+LT0159_50	B6	NP_060887.1	119799	test	polylobed nuclear phenotype
+LT0159_50	C2	PJA2	138449	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0159_50	E1	NP_078836.1	118025	test	increased cell movement distance
+LT0159_50	E13	MAGEE1	127262	test	increased variability of nuclear shape in population|polylobed nuclear phenotype
+LT0159_50	I1	DAB2IP	34305	test	increased variability of nuclear shape in population
+LT0159_50	I5	SUMO1P3	138970	test	prometaphase arrested phenotype|prometaphase delayed phenotype
+LT0601_01	B18	MNT	5907	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|polylobed nuclear phenotype
+LT0601_01	C13	ITGB5	11201	test	increased cell movement distance|increased cell movement speed
+LT0601_01	C18	PRTN3	11931	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|cell death phenotype|graped micronucleus phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0601_01	C7	GPX5	10082	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0601_01	F20	NFX1	106836	test	increased cell movement speed
+LT0601_01	F9	USP29	105214	test	increased cell movement speed
+LT0601_01	G9	RNF141	108876	test	increased variability of nuclear shape in population
+LT0601_01	I18	FNTB	117024	test	increased variability of nuclear shape in population
+LT0601_01	I8	NFKBIE	115539	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0601_01	J1	ABCB8	117437	test	polylobed nuclear phenotype
+LT0601_01	J21	HEXA	119075	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0601_01	K6	ATAD1	119378	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0601_01	O4	SMU1	127099	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0601_01	O5	SMU1	127100	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|graped micronucleus phenotype|mitotic metaphase plate congression phenotype
+LT0601_04	B18	MNT	5907	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|polylobed nuclear phenotype
+LT0601_04	C13	ITGB5	11201	test	increased cell movement distance|increased cell movement speed
+LT0601_04	C18	PRTN3	11931	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|cell death phenotype|graped micronucleus phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype|polylobed nuclear phenotype
+LT0601_04	C7	GPX5	10082	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0601_04	F20	NFX1	106836	test	increased cell movement speed
+LT0601_04	F9	USP29	105214	test	increased cell movement speed
+LT0601_04	G9	RNF141	108876	test	increased variability of nuclear shape in population
+LT0601_04	I18	FNTB	117024	test	increased variability of nuclear shape in population
+LT0601_04	I8	NFKBIE	115539	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0601_04	J1	ABCB8	117437	test	polylobed nuclear phenotype
+LT0601_04	J21	HEXA	119075	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0601_04	K6	ATAD1	119378	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0601_04	O5	SMU1	127100	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|graped micronucleus phenotype|mitotic metaphase plate congression phenotype
+LT0602_04	A24	MAN1C1	133094	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|cell death phenotype|mitosis arrested|mitosis delayed phenotype|mitotic metaphase plate congression phenotype
+LT0602_04	B10	EIF2C1	133879	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0602_04	C11	PRC1	137452	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0602_04	D4	USH2A	139999	val	increased variability of nuclear shape in population
+LT0602_04	E15	SPC25	147757	val	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|mitotic metaphase plate congression phenotype
+LT0602_04	E9	C1QB	146935	val	binuclear cell phenotype
+LT0602_04	F14	NEK10	213347	val	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype

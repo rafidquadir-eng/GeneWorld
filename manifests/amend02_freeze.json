@@ -1,0 +1,109 @@
+{
+ "design_commit": "dd57079",
+ "annotation": "idr0013-screenA-annotation.csv.gz",
+ "annotation_sha256": "5c1e92d0ce470c23b812cb75457d151bd9873d9db888e3bdbbaf118f16d155d7",
+ "plate_split_sha256": "0f5d5d2befb661d7a9e990cfa2860317be3b22f163f45a40300e0c89566d7d8e",
+ "gene_split_sha256": "bebe1cba4cf84c3da08869903a490711928e2a46e7909d38882416817d130834",
+ "complex_split_sha256": "f5ddf1a3746426f8d94d3a36e7ffd50cca0569a37d964854889bbe7cc01d538e",
+ "reproducible_terms": [
+  "abnormal cell cycle phenotype",
+  "abnormal chromosome segregation phenotype",
+  "abnormal nucleus shape phenotype",
+  "absence of mitotic chromosome decondensation phenotype",
+  "binuclear cell phenotype",
+  "cell death phenotype",
+  "graped micronucleus phenotype",
+  "increased cell movement distance",
+  "increased cell movement speed",
+  "increased nucleus size phenotype",
+  "increased variability of nuclear shape in population",
+  "metaphase arrested phenotype",
+  "metaphase delayed phenotype",
+  "mitosis arrested",
+  "mitosis delayed phenotype",
+  "mitotic chromosome condensation phenotype",
+  "mitotic metaphase plate congression phenotype",
+  "polylobed nuclear phenotype",
+  "proliferating cells",
+  "prometaphase arrested phenotype",
+  "prometaphase delayed phenotype"
+ ],
+ "h1_primary_wells": {
+  "file": "amend02_h1_primary_wells.tsv",
+  "sha256": "91753eb2845699991d70bd578c501210ea9928e853b08b244c5cbb89992a96f8",
+  "n": 1647,
+  "by_plate_split": {
+   "test": 1112,
+   "val": 535
+  },
+  "held_out_qc_library_wells": 42949,
+  "held_out_wells_with_training_replicate": 35307
+ },
+ "h2_primary_genes": {
+  "file": "amend02_h2_primary_genes.tsv",
+  "sha256": "f3818539a51fc0a873ba535f853ea7b8ba26709df1c836cff9cbd79dee1a910e",
+  "n": 2088,
+  "gene_split": {
+   "train": 1467,
+   "test": 417,
+   "val": 204
+  },
+  "complex_split": {
+   "train": 1481,
+   "test": 422,
+   "val": 185
+  }
+ },
+ "truth": {
+  "mitotic_delay": {
+   "file": "amend02_truth_mitotic_delay.tsv",
+   "sha256": "d8b97cb97f3c11031690c3693500dcf3cfb9ba9deb4e58311683de1aa58c04b4",
+   "terms": [
+    "metaphase arrested phenotype",
+    "metaphase delayed phenotype",
+    "mitosis arrested",
+    "mitosis delayed phenotype",
+    "prometaphase arrested phenotype",
+    "prometaphase delayed phenotype"
+   ],
+   "n_genes": 423,
+   "unseen_counts": {
+    "gene_split_val": 42,
+    "gene_split_test": 84,
+    "complex_split_val": 39,
+    "complex_split_test": 94
+   },
+   "n_sirnas_ge2": 54
+  },
+  "polylobed": {
+   "file": "amend02_truth_polylobed.tsv",
+   "sha256": "d5a8decbb5762daf6793435ce1ea7208bf946d66cf90134e6b0001ae9c140cfd",
+   "terms": [
+    "polylobed nuclear phenotype"
+   ],
+   "n_genes": 290,
+   "unseen_counts": {
+    "gene_split_val": 35,
+    "gene_split_test": 62,
+    "complex_split_val": 29,
+    "complex_split_test": 57
+   },
+   "n_sirnas_ge2": 8
+  },
+  "binuclear": {
+   "file": "amend02_truth_binuclear.tsv",
+   "sha256": "4d97dc805d12c40d852f21c2f203209ff7304fe14b1e2065d1201eab9210f1cb",
+   "terms": [
+    "binuclear cell phenotype"
+   ],
+   "n_genes": 528,
+   "unseen_counts": {
+    "gene_split_val": 53,
+    "gene_split_test": 105,
+    "complex_split_val": 53,
+    "complex_split_test": 109
+   },
+   "n_sirnas_ge2": 82
+  }
+ }
+}
