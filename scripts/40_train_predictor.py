@@ -30,7 +30,7 @@ from geneworld.models.predictor import ActionPredictor  # noqa: E402
 from geneworld.train.batcher import Batcher  # noqa: E402
 
 DEV = "cuda"
-DESIGN_COMMIT = "dd57079"
+DESIGN_COMMIT = "deb443d"  # stage-1 (pre-amendment) pipeline
 EVAL_H = [1, 4, 8, 12]
 
 

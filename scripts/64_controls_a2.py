@@ -59,12 +59,16 @@ def main() -> int:
     ap.add_argument("--backbone", default="vjepa2")
     ap.add_argument("--suffix", default="")
     ap.add_argument("--split", default="val", choices=["val", "test"])
+    ap.add_argument("--freeze-commit", default="")
     ap.add_argument("--tag", default="")
     args = ap.parse_args()
+    if args.split == "test" and not args.freeze_commit:
+        sys.exit("test plates are evaluated once, after freezing: pass --freeze-commit")
     c = cache.load(args.backbone, args.norm, suffix=args.suffix)
     m, z = c.meta, c.z
     out = {"norm": args.norm, "backbone": verified_backbone_record(BACKBONE_KEY[args.backbone]),
-           "design_commit": a2.DESIGN_COMMIT, "split": args.split}
+           "design_commit": a2.DESIGN_COMMIT, "split": args.split,
+           "freeze_commit": args.freeze_commit or None}
     zs, idx = static_latents(c, args.backbone)
     real = z[idx].astype(np.float32)
     d_rs = ((real - zs) ** 2).mean((2, 3))

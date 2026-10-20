@@ -49,7 +49,7 @@ sys.path.insert(0, str(REPO / "src"))
 from geneworld import sets  # noqa: E402
 from geneworld.data import load  # noqa: E402
 from geneworld.eval.stats import bh  # noqa: E402
-DESIGN_COMMIT = "dd57079"
+DESIGN_COMMIT = "deb443d"  # stage-1 (pre-amendment) pipeline
 from geneworld.train.batcher import DEV, from_checkpoint  # noqa: E402
 
 PHENOTYPES = ["mitotic_delay", "polylobed", "binuclear"]
