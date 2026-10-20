@@ -136,12 +136,17 @@ def main() -> int:
     ap.add_argument("--streams", type=int, default=128)
     ap.add_argument("--max-plates", type=int, default=0)
     ap.add_argument("--static", action="store_true", help="static-clip control latents")
+    ap.add_argument("--out-root", default="", help="latent root (default data/latents)")
+    ap.add_argument("--fetcher", choices=["threads", "native"], default="threads",
+                    help="native = pycurl multi fetcher (geneworld.io.s3fetch)")
     ap.add_argument("--inflight", type=int, default=16, help="max wells in memory (~32 MB each)")
     args = ap.parse_args()
     which = args.backbones.split(",")
     global OUT
     if args.static:
         OUT = REPO / "data" / "latents_static"
+    if args.out_root:
+        OUT = REPO / args.out_root
     wells = pd.read_csv(args.wells, sep="\t")
     plates = list(dict.fromkeys(wells.Plate))
     done = [p for p in plates if all((OUT / b / f"{p}.npz").exists() for b in which)]
@@ -155,6 +160,15 @@ def main() -> int:
 
     def producer():
         jobs = [(p, r.Well, r.uuid) for p in todo for r in wells[wells.Plate == p].itertuples()]
+        if args.fetcher == "native":
+            from geneworld.io.s3fetch import fetch_wells
+            for j, frames, err in fetch_wells(((j, j[2], j[1]) for j in jobs),
+                                              streams=args.streams, max_wells=args.inflight):
+                inflight.acquire()
+                q.put((j, frames, err))
+            q.put(None)
+            return
+
         def fetch(j):
             try:
                 return j, MC.read_well(j[2], j[1], 1, pool=pool), None
@@ -223,7 +237,8 @@ def main() -> int:
     for plate in list(store):
         flush(plate)
     (REPO / "logs").mkdir(exist_ok=True)
-    (REPO / "logs" / "embed_failures.json").write_text(json.dumps(failures, indent=1))
+    tag = Path(args.wells).stem + ("_static" if args.static else "")
+    (REPO / "logs" / f"embed_failures_{tag}.json").write_text(json.dumps(failures, indent=1))
     print(f"done: {n} wells, {len(failures)} failures, {(time.time() - t0) / 3600:.2f} h")
     return 0
 

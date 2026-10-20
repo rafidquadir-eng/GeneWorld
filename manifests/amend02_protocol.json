@@ -1,0 +1,34 @@
+{
+ "design_commit": "dd57079",
+ "written": "2026-10-20, before stage-2 embedding and before any amended model is trained",
+ "author_decisions_2026-10-20": {
+  "stage2_fetch": "BIA bucket only, native pycurl fetcher (the IDR bucket holds one MitoCheck plate, LT0001_02; section 7's two-bucket split is not possible)",
+  "shuffled_control": "trained shuffled-encoding models: per source, 3 seeds trained on a fixed random permutation of genes to encodings (permutation seed = model seed); G-ZeroShot-2 compares true-encoding models with these. The stage-1 evaluation-time shuffle is also reported (secondary).",
+  "grid_scope": "every gated model family selects its own configuration from the 8-config grid on validation, by the mean over 3 seeds: H1 action-conditioned, H1 action-agnostic, each H2 source (true) and each H2 source (trained shuffled)",
+  "h1_action_conditioned": "learned per-gene embedding (with reagent token), as in stage 1"
+ },
+ "grid": {
+  "predictor": {"22M": {"width": 512, "depth": 6, "core_params_M": 20.0},
+                "50M": {"width": 768, "depth": 7, "core_params_M": 51.2}},
+  "dropout": [0.1, 0.3],
+  "weight_decay": [0.05, 0.2],
+  "seeds": [0, 1, 2]
+ },
+ "fixed_not_tuned": {
+  "rollout_steps": 6,
+  "lr": 0.0003,
+  "batch_wells": 256,
+  "schedule": "OneCycle over max_steps (anneals fully at max_steps)",
+  "max_steps": 12000,
+  "eval_every": 250,
+  "early_stopping": "keep the checkpoint with the lowest validation primary error; stop when it has not improved for 3000 steps",
+  "sirna_token_dropout": 0.2,
+  "note": "rollout 6 is the stage-1 validation selection (config B); other values as in stage 1"
+ },
+ "validation_primary_error": {
+  "H1": "MSE in the per-plate control-normalised space at 24 h and 36 h (clips 8 and 12, mean of the two) on primary wells (splits/amend02_h1_primary_wells.tsv) on validation plates",
+  "H2": "same horizons on wells of primary genes (splits/amend02_h2_primary_genes.tsv) in the validation gene split, on training or validation plates"
+ },
+ "normalisation": "section 1: per plate p, clip t, dimension d, mean and SD over the plate's negative-control wells of the tile-mean latent; sigma floored at the 5th percentile of sigma over all plates and clips for that d; plates with < 4 usable negative-control wells dropped and listed",
+ "seed_averaging": "per well and horizon, the errors of the three seeds' predictions are averaged before the plate- or gene-level test (section 4)"
+}

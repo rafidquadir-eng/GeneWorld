@@ -3,7 +3,8 @@
 One thread drives a pycurl CurlMulti with up to `streams` concurrent transfers over reused
 HTTPS connections; chunk bodies go to in-memory buffers only. A well's 93 level-1 frames are
 decoded and yielded as a (93, 512, 672) uint8 array as soon as all of its chunks arrive; wells
-in flight are bounded by `max_wells` (the rolling in-memory buffer; ~32 MB per well).
+in flight or finished-but-not-yet-consumed are bounded by `max_wells` (the rolling in-memory
+buffer; ~32 MB per well); a well's slot is freed only after the consumer has taken it.
 Failed chunks are retried with exponential backoff (8 attempts); a well whose chunk keeps
 failing is yielded with its error instead of an array.
 
@@ -128,6 +129,7 @@ def fetch_wells(wells: Iterable[tuple[object, str, str]], level: int = 1, stream
     threading.Thread(target=run, daemon=True).start()
     while (item := out.get()) is not None:
         yield item
+        slots.release()      # the consumer has taken the well: it leaves the buffer
 
 
 def _retry(j, t, att, err, pending, permanent=False):
@@ -145,7 +147,6 @@ def _maybe_finish(j, out, slots, h, w) -> int:
     if j.error is not None:
         j._done = True
         out.put((j.key, None, j.error))
-        slots.release()
         return 1
     if j.left == 0:
         j._done = True
@@ -154,6 +155,5 @@ def _maybe_finish(j, out, slots, h, w) -> int:
             frames[i] = np.frombuffer(_BLOSC.decode(b), np.uint8).reshape(h, w)
         j.bufs = []
         out.put((j.key, frames, None))
-        slots.release()
         return 1
     return 0
