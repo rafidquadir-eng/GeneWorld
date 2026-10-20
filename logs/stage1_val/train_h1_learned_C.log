@@ -1,0 +1,21 @@
+h1_learned_C: backbone vjepa2, mode learned ; train wells 7270, val wells 818, actions 1992
+/home/ubuntu/geneworld/scripts/40_train_predictor.py:129: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  curve.append({"step": step, "val": score, "loss_tf": float(loss_tf),
+step 500: tf 0.2335 ro 0.2663 val 0.3216 (1.4 min)
+step 1000: tf 0.2183 ro 0.2373 val 0.3327 (2.7 min)
+step 1500: tf 0.2027 ro 0.2007 val 0.3396 (4.1 min)
+step 2000: tf 0.1864 ro 0.1814 val 0.3397 (5.4 min)
+step 2500: tf 0.1736 ro 0.1842 val 0.3567 (6.8 min)
+step 3000: tf 0.1639 ro 0.1574 val 0.3505 (8.1 min)
+step 3500: tf 0.1578 ro 0.1496 val 0.3526 (9.5 min)
+step 4000: tf 0.1534 ro 0.1434 val 0.3543 (10.8 min)
+step 4500: tf 0.1490 ro 0.1368 val 0.3548 (12.1 min)
+step 5000: tf 0.1464 ro 0.1454 val 0.3554 (13.5 min)
+step 5500: tf 0.1444 ro 0.1303 val 0.3571 (14.8 min)
+step 6000: tf 0.1431 ro 0.1311 val 0.3575 (16.2 min)
+step 6500: tf 0.1424 ro 0.1287 val 0.3581 (17.5 min)
+step 7000: tf 0.1404 ro 0.1363 val 0.3580 (18.8 min)
+step 7500: tf 0.1400 ro 0.1309 val 0.3582 (20.2 min)
+step 8000: tf 0.1402 ro 0.1374 val 0.3581 (21.5 min)
+best val 0.3216 at step 500; 90.0 M parameters

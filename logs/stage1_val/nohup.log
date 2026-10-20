@@ -1,0 +1,68 @@
+[22:09:08] waiting for embed process 469261
+[04:24:09] G-Data
+{'rule': '>= 10,000 movies decoded and embedded', 'movies_embedded': 14663, 'plates': 168, 'failures': 90, 'pass': True}
+[04:24:09] static-clip control embeds
+[04:33:08] H1 configuration selection (validation plates)
+best val 0.3213 at step 1000; 22.2 M parameters
+best val 0.3119 at step 1500; 22.2 M parameters
+best val 0.3216 at step 500; 90.0 M parameters
+best val 0.3260 at step 500; 21.2 M parameters
+best val 0.3205 at step 1500; 21.2 M parameters
+best val 0.3197 at step 500; 88.4 M parameters
+[06:04:57] selected h1_learned_B / h1_none_C (config B)
+ }
+}
+action_conditioned_vs_action_agnostic: mean diff -0.0063 (-1.9%), p = 0.08805, plates better 72%
+action_conditioned_vs_slot_mean: mean diff -0.5408 (-62.5%), p = 1e-05, plates better 100%
+action_conditioned_vs_slot_drift: mean diff -0.1723 (-34.7%), p = 1e-05, plates better 100%
+action_conditioned_vs_copy_last: mean diff -0.5020 (-60.7%), p = 1e-05, plates better 100%
+action_conditioned_vs_control_mean: mean diff -0.5243 (-61.8%), p = 1e-05, plates better 100%
+action_conditioned_vs_control_drift: mean diff -0.1635 (-33.5%), p = 1e-05, plates better 100%
+[06:16:00] H2 encoding sources (validation genes)
+best val 0.3558 at step 1000; 20.9 M parameters
+best val 0.3630 at step 1000; 20.8 M parameters
+best val 0.3516 at step 500; 21.0 M parameters
+best val 0.3358 at step 1000; 21.4 M parameters
+best val 0.3335 at step 500; 21.4 M parameters
+perturbseq: 152 genes; true-shuffled -0.0020 (-0.6%) CI -0.0050..+0.0011; vs kNN -33.2%; vs agnostic +3.1%
+jump_crispr: 131 genes; true-shuffled +0.0019 (+0.5%) CI -0.0012..+0.0051; vs kNN -32.9%; vs agnostic +4.7%
+jump_orf: 193 genes; true-shuffled +0.0011 (+0.3%) CI -0.0021..+0.0044; vs kNN -34.0%; vs agnostic +3.4%
+string: 284 genes; true-shuffled -0.0020 (-0.6%) CI -0.0041..+0.0002; vs kNN -36.3%; vs agnostic -1.6%
+esm2: 287 genes; true-shuffled -0.0015 (-0.5%) CI -0.0036..+0.0006; vs kNN -37.0%; vs agnostic -2.2%
+{"rule": "true - shuffled 95% CI over genes below 0 for >= 1 source", "pass": false, "passing_sources": [], "selected_source": null}
+[07:34:41] planning source: string
+[07:34:41] H3 planning (validation genes)
+}
+unseen {"n_phenotypes_q<0.05": 0, "n_beats_gba": 0, "pass": false} {'mitotic_delay': 0.0202, 'polylobed': 0.0098, 'binuclear': 0.0076}
+seen {"n_phenotypes_q<0.05": 2, "n_beats_gba": 2, "pass": true} {'mitotic_delay': 0.1786, 'polylobed': 0.133, 'binuclear': 0.0199}
+{"rule": "trajectory: planner hit@100 above random (p < 0.05) and above retrieval_knn (bootstrap CI > 0); phenotype: amendment 01 rule on unseen genes", "trajectory_pass": false, "phenotype_pass": false}
+[07:47:46] alternative backbones (H1, validation plates)
+best val 0.3594 at step 500; 21.5 M parameters
+best val 0.3580 at step 500; 20.5 M parameters
+ }
+}
+action_conditioned_vs_action_agnostic: mean diff +0.0083 (+2.2%), p = 0.8729, plates better 44%
+action_conditioned_vs_slot_mean: mean diff -0.4984 (-56.7%), p = 1e-05, plates better 100%
+action_conditioned_vs_slot_drift: mean diff -0.1130 (-22.9%), p = 1e-05, plates better 94%
+action_conditioned_vs_copy_last: mean diff -0.3473 (-47.7%), p = 1e-05, plates better 100%
+action_conditioned_vs_control_mean: mean diff -0.4652 (-55.0%), p = 1e-05, plates better 100%
+action_conditioned_vs_control_drift: mean diff -0.1117 (-22.7%), p = 1e-05, plates better 94%
+best val 0.3565 at step 1000; 21.5 M parameters
+best val 0.3467 at step 500; 20.5 M parameters
+ }
+}
+action_conditioned_vs_action_agnostic: mean diff +0.0246 (+7.0%), p = 0.9973, plates better 28%
+action_conditioned_vs_slot_mean: mean diff -0.5217 (-58.2%), p = 1e-05, plates better 100%
+action_conditioned_vs_slot_drift: mean diff -0.2034 (-35.2%), p = 1e-05, plates better 100%
+action_conditioned_vs_copy_last: mean diff -0.5257 (-58.4%), p = 1e-05, plates better 100%
+action_conditioned_vs_control_mean: mean diff -0.4972 (-57.0%), p = 1e-05, plates better 100%
+action_conditioned_vs_control_drift: mean diff -0.1902 (-33.7%), p = 1e-05, plates better 100%
+[08:47:40] controls
+[08:52:03] complex-held-out split (H2/H3 robustness, source string)
+best val 0.3136 at step 500; 21.1 M parameters
+best val 0.3303 at step 2000; 21.4 M parameters
+string: 316 genes; true-shuffled -0.0015 (-0.4%) CI -0.0031..+0.0001; vs kNN -38.4%; vs agnostic +1.3%
+{"rule": "true - shuffled 95% CI over genes below 0 for >= 1 source", "pass": false, "passing_sources": [], "selected_source": null}
+seen {"n_phenotypes_q<0.05": 2, "n_beats_gba": 0, "pass": false} {'mitotic_delay': 0.0539, 'polylobed': 0.134, 'binuclear': 0.0251}
+{"rule": "trajectory: planner hit@100 above random (p < 0.05) and above retrieval_knn (bootstrap CI > 0); phenotype: amendment 01 rule on unseen genes", "trajectory_pass": false, "phenotype_pass": false}
+[09:37:20] validation pipeline done; GPU idle

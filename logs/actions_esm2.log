@@ -1,0 +1,40 @@
+Some weights of EsmModel were not initialized from the model checkpoint at facebook/esm2_t33_650M_UR50D and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+esm2: 20076 genes x 128
+{
+ "esm2": {
+  "train": 12164,
+  "val": 1722,
+  "test": 3461,
+  "total_genes_in_source": 20076
+ },
+ "jump_crispr": {
+  "train": 5408,
+  "val": 748,
+  "test": 1539,
+  "total_genes_in_source": 7974
+ },
+ "jump_orf": {
+  "train": 8012,
+  "val": 1162,
+  "test": 2271,
+  "total_genes_in_source": 12379
+ },
+ "perturbseq": {
+  "train": 6545,
+  "val": 938,
+  "test": 1810,
+  "total_genes_in_source": 9852
+ },
+ "string": {
+  "train": 12020,
+  "val": 1701,
+  "test": 3415,
+  "total_genes_in_source": 19210
+ },
+ "mitocheck_genes": {
+  "train": 12645,
+  "val": 1802,
+  "test": 3613
+ }
+}

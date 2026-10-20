@@ -11,4 +11,10 @@ encodings from other modalities, and plan by searching over gene actions.
 - Reused code from TiJepa (rafidquadir-eng/TiJepa): provenance, claims checker, leakage
   fingerprints, statistics, forecasting controls, the V-JEPA 2 wrapper and the TiJepa model.
 
+## Status (2026-10-20)
+
+Stage 1 (14,663 MitoCheck movies, validation splits) is complete: **`reports/RUN_REPORT_STAGE1.md`**.
+G-Data passed; G-Signal, G-ZeroShot and G-Plan failed on validation; test splits are untouched.
+Data access measurements: `reports/DATA_ACCESS.md`. Work is on branch `stage1`.
+
 Private repository; nothing here is published.

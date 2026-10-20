@@ -1,0 +1,33 @@
+jump_orf: 12379 genes x 128
+string: 19210 genes x 128
+{
+ "jump_crispr": {
+  "train": 0,
+  "val": 0,
+  "test": 0,
+  "total_genes_in_source": 7974
+ },
+ "jump_orf": {
+  "train": 0,
+  "val": 0,
+  "test": 0,
+  "total_genes_in_source": 12379
+ },
+ "perturbseq": {
+  "train": 0,
+  "val": 0,
+  "test": 0,
+  "total_genes_in_source": 9852
+ },
+ "string": {
+  "train": 0,
+  "val": 0,
+  "test": 0,
+  "total_genes_in_source": 19210
+ },
+ "mitocheck_genes": {
+  "train": 12645,
+  "val": 1802,
+  "test": 3613
+ }
+}
