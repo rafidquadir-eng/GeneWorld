@@ -1,0 +1,28 @@
+{
+ "design_commit": "dd57079",
+ "seed": 20261020,
+ "per_plate_budget": 190,
+ "series": 153,
+ "stage2_wells_train_val": 61372,
+ "stage2_by_split": {
+  "train": 54052,
+  "val": 7320
+ },
+ "stage2_plates": 410,
+ "stage2_controls": {
+  "negative control": 2119,
+  "positive control": 1872
+ },
+ "stage2_phenotypic_wells": 4240,
+ "test_wells_same_layout": 17559,
+ "test_wells_already_embedded_in_stage1": 3373,
+ "screenA_plates_not_on_s3": [
+  "LT0008_17",
+  "LT0155_08"
+ ],
+ "sha256": {
+  "stage2_layout.tsv": "2f4813972e1cb9b0679cb228e7d582503e34ceb24fa6001da65f9e3030e054f7",
+  "stage2_wells.tsv": "05097aa19877de46007f6875f76bc169e716e752940e54579b62a0e59e406c31",
+  "stage2_test_wells.tsv": "5c773ce5a2c7c9aacccc85996ef57fb5a2a36cfe20900d5c94981aaf9dc84f1a"
+ }
+}

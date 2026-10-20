@@ -40,7 +40,7 @@ conversion). No AWS account and no login were used.
 | EBI S3, BIA bucket (`bia-integrator-data/S-BIAD865`), HTTPS | 128 | 91.0 MB/s | 0 / 3,720 |
 | | 256 | 82.8 MB/s | 0 / 3,720 |
 | | 128, fresh (uncached) wells | **85.0 MB/s** | 0 / 3,720 |
-| EBI S3, IDR bucket (`idr/zarr/v0.4/idr0013A`, same data, axes t/y/x), HTTPS | 128 | 82.5 MB/s | 0 / 3,720 |
+| EBI S3, IDR bucket (`idr/zarr/v0.4/idr0013A`, axes t/y/x; **one plate only**, see correction), HTTPS | 128 | 82.5 MB/s | 0 / 3,720 |
 | | 256 | 91.6 MB/s | 0 / 3,720 |
 | **BIA + IDR buckets at once** (2 x 128), fresh wells | 256 | **180.8 MB/s** | 0 / 7,440 |
 | EBI S3 over plain HTTP (port 80) | — | unreachable | connection times out from this instance |
@@ -50,9 +50,16 @@ conversion). No AWS account and no login were used.
 The first-round S3 figure (37.8 MB/s) was limited by the Python thread-pool client, not the
 server: the same endpoint gives 85–91 MB/s with curl's native parallel transfers, and the two
 S3 buckets add up (~181 MB/s), so they are served independently. Stage 1 is GPU-bound
-(0.55 wells/s needs ~10 MB/s), so it keeps the Python reader; for a stage-2 expansion the
-fetcher should move to a native parallel client and split plates across both buckets
-(IDR plate IDs map to plate names through each store's `.zattrs`).
+(0.55 wells/s needs ~10 MB/s), so it keeps the Python reader.
+
+**Correction (2026-10-20, before stage 2).** The IDR bucket holds **one** MitoCheck plate
+(`idr0013A/3451.zarr` = LT0001_02); nothing else under `zarr/v0.4/idr0013*`, `zarr/v0.5/`
+or elsewhere in the bucket. All IDR measurements above used that plate, and the earlier
+statement that the IDR bucket carries the same data as BIA was wrong for the screen as a
+whole. On LT0001_02 the IDR level-1 frames are not byte-identical to BIA's (correlation 0.974,
+same mean; the two conversions downsample differently). Plates therefore cannot be split
+across the two buckets; BIA (85–91 MB/s with a native parallel client) is the only full
+source, which is still ~8 x what the GPU-bound embedder consumes.
 
 EBI HTTP limits concurrent connections per client; it suits a few large transfers (31 MB/s for
 64 MB ranges in an earlier test) but not per-frame reads. **EBI S3 at 128 streams is used.**
