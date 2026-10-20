@@ -8,11 +8,31 @@
   "h1_action_conditioned": "learned per-gene embedding (with reagent token), as in stage 1"
  },
  "grid": {
-  "predictor": {"22M": {"width": 512, "depth": 6, "core_params_M": 20.0},
-                "50M": {"width": 768, "depth": 7, "core_params_M": 51.2}},
-  "dropout": [0.1, 0.3],
-  "weight_decay": [0.05, 0.2],
-  "seeds": [0, 1, 2]
+  "predictor": {
+   "22M": {
+    "width": 512,
+    "depth": 6,
+    "core_params_M": 20.0
+   },
+   "50M": {
+    "width": 768,
+    "depth": 7,
+    "core_params_M": 51.2
+   }
+  },
+  "dropout": [
+   0.1,
+   0.3
+  ],
+  "weight_decay": [
+   0.05,
+   0.2
+  ],
+  "seeds": [
+   0,
+   1,
+   2
+  ]
  },
  "fixed_not_tuned": {
   "rollout_steps": 6,
@@ -30,5 +50,36 @@
   "H2": "same horizons on wells of primary genes (splits/amend02_h2_primary_genes.tsv) in the validation gene split, on training or validation plates"
  },
  "normalisation": "section 1: per plate p, clip t, dimension d, mean and SD over the plate's negative-control wells of the tile-mean latent; sigma floored at the 5th percentile of sigma over all plates and clips for that d; plates with < 4 usable negative-control wells dropped and listed",
- "seed_averaging": "per well and horizon, the errors of the three seeds' predictions are averaged before the plate- or gene-level test (section 4)"
+ "seed_averaging": "per well and horizon, the errors of the three seeds' predictions are averaged before the plate- or gene-level test (section 4)",
+ "fixed_before_any_amended_model_2026-10-20": {
+  "families": [
+   "h1_learned",
+   "h1_none",
+   "h2:perturbseq",
+   "h2:jump_crispr",
+   "h2:jump_orf",
+   "h2:string",
+   "h2:esm2",
+   "h2shuf:perturbseq",
+   "h2shuf:jump_crispr",
+   "h2shuf:jump_orf",
+   "h2shuf:string",
+   "h2shuf:esm2"
+  ],
+  "selection": "per family, the grid configuration with the lowest mean over seeds of the best validation primary error; written to results/a2/selection.json and committed before any gate is computed",
+  "h2_action_agnostic_reference": "the selected h1_none models (3 seeds), evaluated on the H2 wells",
+  "planning_source": "the G-ZeroShot-2-passing source with the most negative mean (true - trained-shuffled) primary error on validation; if none passes, the source with the most negative mean, and H3 is exploratory",
+  "secondary_analyses": {
+   "global_preprocessing": "every family re-trained on the globally standardised latents with its selected configuration, 3 seeds (no grid); reported beside the normalised results",
+   "alternative_backbones": "DINOv2 and TiJepa-1: h1_learned and h1_none with the V-JEPA 2 selected configurations, 3 seeds, per-plate normalisation",
+   "complex_split": "planning source true and trained-shuffled, and h1_none, on the complex-held-out split with selected configurations, 3 seeds"
+  },
+  "planning_horizons": {
+   "trajectory_score": "mean squared distance at clips 8 and 12 (24 h, 36 h) to the target well's observed latents",
+   "phenotype_target": "primary clip 12 (36 h), secondary clip 8 (24 h); start = negative-control clip-0 tile tokens of 20 seeded training plates",
+   "endpoint_for_retrieval": "clip 12"
+  },
+  "replicate_baselines": "fallback order for a well of siRNA s, gene g: s's training-plate wells; else g's other siRNAs' training-plate wells; else the plate's negative-control drift (replicate drift) / the training-wide clip mean (replicate endpoint); the fallback used is counted; replicate changes and endpoints are averaged over the replicate wells and their four tiles (tile positions are exchangeable fields of view) and added to / broadcast over every tile of the evaluated well, as for the control- and slot-drift baselines; the same applies to the nearest-gene lookup",
+  "phenotype_probe": "logistic regression (C = 0.1, balanced) trained on observed clip-12 latents of training-plate library wells; applied to observed and forecast clip-12 latents of all library wells on evaluated plates; seed-averaged decision scores; AUROC 95% cluster-bootstrap CI over plates (2,000 resamples)"
+ }
 }

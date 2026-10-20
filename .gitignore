@@ -5,3 +5,5 @@ logs/
 __pycache__/
 *.pyc
 *.part
+results/a2_dev/
+checkpoints/a2_dev/
