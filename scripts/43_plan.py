@@ -49,6 +49,7 @@ sys.path.insert(0, str(REPO / "src"))
 from geneworld import sets  # noqa: E402
 from geneworld.data import load  # noqa: E402
 from geneworld.eval.stats import bh  # noqa: E402
+DESIGN_COMMIT = "dd57079"
 from geneworld.train.batcher import DEV, from_checkpoint  # noqa: E402
 
 PHENOTYPES = ["mitotic_delay", "polylobed", "binuclear"]
@@ -152,7 +153,7 @@ def main() -> int:
                                            "complex" else "gene_split.tsv"), sep="\t")
     gsplit = dict(zip(split.gene, split.split, strict=False))
     res = {"split": args.split, "backbone": args.backbone, "source": args.source, "model": rec,
-           "design_commit": "deb443d", "freeze_commit": args.freeze_commit or None}
+           "design_commit": DESIGN_COMMIT, "freeze_commit": args.freeze_commit or None}
 
     # ---------------- (a) held-out trajectory targets
     cands = sorted({g for g in act[mk["library"]] if g in enc})

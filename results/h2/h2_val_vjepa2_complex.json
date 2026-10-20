@@ -11,8 +11,8 @@
    "kind": "backbone",
    "key": "vjepa2_vitl",
    "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
-   "revision": null,
-   "sha256": null
+   "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+   "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
   },
   "action_source": "none"
  },
@@ -30,8 +30,8 @@
      "kind": "backbone",
      "key": "vjepa2_vitl",
      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
-     "revision": null,
-     "sha256": null
+     "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+     "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
     },
     "action_source": "encoding:string"
    },
@@ -120,5 +120,6 @@
   "passing_sources": [],
   "selected_source": null
  },
- "code_commit": "a46da30"
+ "code_commit": "a46da30",
+ "provenance_backfill": "backbone revision and weights SHA-256 (and predictor checkpoint SHA-256 where missing) added 2026-10-20 under amendment 02 section 9; no result value changed"
 }

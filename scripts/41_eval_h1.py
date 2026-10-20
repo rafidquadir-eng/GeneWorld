@@ -32,6 +32,7 @@ sys.path.insert(0, str(REPO / "src"))
 from geneworld import sets  # noqa: E402
 from geneworld.data import HOURS_PER_STEP, load  # noqa: E402
 from geneworld.eval import h1  # noqa: E402
+DESIGN_COMMIT = "dd57079"
 from geneworld.train.batcher import from_checkpoint  # noqa: E402
 
 PHEN = ["mitotic_delay", "polylobed", "binuclear", "cell_death", "nuclear_shape", "segregation"]
@@ -108,7 +109,7 @@ def main() -> int:
            "n_wells": int(len(idx)), "n_library": int(lib.sum()),
            "n_plates": int(len(np.unique(plates))),
            "horizons_h": [h * HOURS_PER_STEP for h in h1.HORIZONS],
-           "design_commit": "deb443d", "freeze_commit": args.freeze_commit or None,
+           "design_commit": DESIGN_COMMIT, "freeze_commit": args.freeze_commit or None,
            "mean_error": {}, "tests": {}}
     for k, e in err.items():
         res["mean_error"][k] = {

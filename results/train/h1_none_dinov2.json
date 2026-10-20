@@ -100,5 +100,15 @@
    "loss_tf": 0.12915918231010437,
    "loss_ro": 0.17041853070259094
   }
- ]
+ ],
+ "checkpoint": "h1_none_dinov2.pt",
+ "checkpoint_sha256": "deba692a763f841000d23e0671c99e04258695aa24321c5436792971a221d87a",
+ "backbone": {
+  "kind": "backbone",
+  "key": "dinov2_vits14",
+  "source": "timm:vit_small_patch14_dinov2.lvd142m",
+  "revision": "4610ca143709d58a633b6397a74412c2c3842454",
+  "sha256": "04d27f3400d059fc0cfd7d17dd1909a75bf3ea8fb3eeb48b97cb99e57ee20081"
+ },
+ "provenance_backfill": "backbone revision and weights SHA-256 (and predictor checkpoint SHA-256 where missing) added 2026-10-20 under amendment 02 section 9; no result value changed"
 }

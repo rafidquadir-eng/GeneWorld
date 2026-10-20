@@ -66,7 +66,10 @@ def main() -> int:
             a, b = lat.z[w[:-1]], lat.z[w[1:]]
             between.append(((a - b) ** 2).mean((2, 3)))
     ref = np.median(np.concatenate(between), 0)                    # (14,)
+    from geneworld.data import BACKBONE_KEY
+    from geneworld.eval.provenance import verified_backbone_record
     out = {"backbone": args.backbone, "n_wells": int(len(idx)),
+           "backbone_record": verified_backbone_record(BACKBONE_KEY[args.backbone]),
            "real_vs_static_over_between_wells": {
                "per_clip": (np.median(d_rs, 0) / ref).round(4).tolist(),
                "median": float(np.median(d_rs / ref))}}

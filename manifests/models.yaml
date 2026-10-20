@@ -13,7 +13,7 @@ dinov2_vits14:
   role: alternative backbone (per-frame image encoder)
 tijepa1:
   file: checkpoints/backbones/tijepa1_T1_seed0.pt (from TiJepa; backup on persistent filesystem)
-  file_sha256: a09e76e91b5c52d8 (prefix; full hash in the TiJepa backup ledger)
+  file_sha256: a09e76e91b5c52d884f484cfbf5b00951b162136e1a44f6995dd2829f0289d38
   licence: author's own model (TiJepa repository)
   role: alternative backbone (video JEPA trained on live-cell microscopy)
 esm2_650m:

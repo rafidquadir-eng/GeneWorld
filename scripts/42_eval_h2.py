@@ -33,6 +33,7 @@ sys.path.insert(0, str(REPO / "src"))
 from geneworld import sets  # noqa: E402
 from geneworld.data import load  # noqa: E402
 from geneworld.eval import h1  # noqa: E402
+DESIGN_COMMIT = "dd57079"
 from geneworld.train.batcher import from_checkpoint  # noqa: E402
 
 K_NN = 10
@@ -89,7 +90,7 @@ def main() -> int:
     agn, bat_n, rec_n, _ = from_checkpoint(ck / f"{args.agnostic}.pt", lat)
     hcols = [h - 1 for h in h1.HORIZONS]
     res = {"split": args.split, "backbone": args.backbone, "agnostic": rec_n,
-           "design_commit": "deb443d", "freeze_commit": args.freeze_commit or None,
+           "design_commit": DESIGN_COMMIT, "freeze_commit": args.freeze_commit or None,
            "sources": {}}
     per_source_gene_err = {}
     for item in args.models.split(","):

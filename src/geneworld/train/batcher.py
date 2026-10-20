@@ -34,7 +34,7 @@ def from_checkpoint(path, lat):
     """(model, batcher, provenance record) for a saved predictor applied to `lat`."""
     from geneworld import sets
     from geneworld.data import BACKBONE_KEY
-    from geneworld.eval.provenance import backbone_record, predictor_record
+    from geneworld.eval.provenance import predictor_record, verified_backbone_record
     from geneworld.models.predictor import ActionPredictor
     d = torch.load(path, map_location="cpu", weights_only=False)
     a = d["args"]
@@ -51,6 +51,6 @@ def from_checkpoint(path, lat):
     model.eval()
     bat = Batcher(lat, a["mode"], vocab, sirnas, enc)
     rec = predictor_record(path, d["step"], d["split_sha256"],
-                           backbone_record(BACKBONE_KEY[a["backbone"]]),
+                           verified_backbone_record(BACKBONE_KEY[a["backbone"]]),
                            a["mode"] + (f":{a['source']}" if a["source"] else ""))
     return model, bat, rec, d

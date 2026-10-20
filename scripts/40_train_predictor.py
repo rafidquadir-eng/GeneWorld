@@ -30,6 +30,7 @@ from geneworld.models.predictor import ActionPredictor  # noqa: E402
 from geneworld.train.batcher import Batcher  # noqa: E402
 
 DEV = "cuda"
+DESIGN_COMMIT = "dd57079"
 EVAL_H = [1, 4, 8, 12]
 
 
@@ -141,8 +142,12 @@ def main() -> int:
     d["curve"] = curve
     torch.save(d, ck)
     backup.backup(ck)
+    from geneworld.data import BACKBONE_KEY
+    from geneworld.eval.provenance import sha256_file, verified_backbone_record
     rec = {"name": args.name, "best_val": best, "best_step": d["step"], "n_params": n_par,
-           "curve": curve}
+           "curve": curve, "checkpoint": ck.name, "checkpoint_sha256": sha256_file(ck),
+           "backbone": verified_backbone_record(BACKBONE_KEY[args.backbone]),
+           "design_commit": DESIGN_COMMIT}
     (REPO / "results" / "train").mkdir(parents=True, exist_ok=True)
     (REPO / "results" / "train" / f"{args.name}.json").write_text(json.dumps(rec, indent=1))
     print(f"best val {best:.4f} at step {d['step']}; {n_par / 1e6:.1f} M parameters")

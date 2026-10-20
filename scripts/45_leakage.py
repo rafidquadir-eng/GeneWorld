@@ -40,7 +40,9 @@ def main() -> int:
         arg[i:i + 1024] = tr[c.argmax(1)]
     matches = [{"eval": f"{m.plate[e]}:{m.well[e]}", "train": f"{m.plate[t]}:{m.well[t]}",
                 "r": float(r)} for e, t, r in zip(ev, arg, best, strict=True) if r >= REPORT_R]
-    out = {"n_eval_wells": int(len(ev)), "n_train_wells": int(len(tr)),
+    from geneworld.eval.provenance import verified_backbone_record
+    out = {"latents_backbone_record": verified_backbone_record("vjepa2_vitl"),
+           "n_eval_wells": int(len(ev)), "n_train_wells": int(len(tr)),
            "max_r": float(best.max()), "median_max_r": float(np.median(best)),
            "n_match_r>=0.98": int((best >= MATCH_R).sum()),
            "n_report_r>=0.90": int((best >= REPORT_R).sum()), "reported": matches[:200]}

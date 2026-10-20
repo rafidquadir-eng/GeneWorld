@@ -76,3 +76,46 @@ def check_labels(labels: dict) -> list[str]:
         if derived != shown:
             bad.append(f"{shown!r} shown but its record says {derived!r}")
     return bad
+
+
+#: manifests/models.yaml key and local weights file for each backbone
+_WEIGHTS = {
+    "vjepa2_vitl": ("vjepa2_vitl", "hf:facebook/vjepa2-vitl-fpc64-256", "model.safetensors"),
+    "dinov2_vits14": ("dinov2_vits14", "hf:timm/vit_small_patch14_dinov2.lvd142m",
+                      "model.safetensors"),
+    "tijepa1": ("tijepa1", "file:checkpoints/backbones/tijepa1_T1_seed0.pt", None),
+}
+_VERIFIED: dict[str, dict] = {}
+
+
+def _weights_path(key: str) -> Path:
+    from geneworld.data import REPO
+    _, where, fname = _WEIGHTS[key]
+    kind, ref = where.split(":", 1)
+    if kind == "file":
+        return REPO / ref
+    snap = (Path.home() / ".cache" / "huggingface" / "hub" /
+            ("models--" + ref.replace("/", "--")) / "snapshots")
+    m = manifest()[_WEIGHTS[key][0]]
+    return snap / m["revision"] / fname
+
+
+def manifest() -> dict:
+    import yaml
+    from geneworld.data import REPO
+    return yaml.safe_load((REPO / "manifests" / "models.yaml").read_text())
+
+
+def verified_backbone_record(key: str) -> dict:
+    """Backbone record with the pinned revision and the weights SHA-256, verified on disk
+    against manifests/models.yaml (amendment 02 section 9). Mismatch is a hard error."""
+    if key in _VERIFIED:
+        return _VERIFIED[key]
+    m = manifest()[_WEIGHTS[key][0]]
+    path = _weights_path(key)
+    got = sha256_file(path)
+    if got != m["file_sha256"]:
+        raise ProvenanceError(f"{key}: weights {path} hash {got} != manifest {m['file_sha256']}")
+    rec = backbone_record(key, revision=m.get("revision"), sha256=got)
+    _VERIFIED[key] = rec
+    return rec

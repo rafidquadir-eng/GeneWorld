@@ -19,5 +19,13 @@
    0.0966000035405159
   ],
   "median": 0.15102124214172363
- }
+ },
+ "backbone_record": {
+  "kind": "backbone",
+  "key": "tijepa1",
+  "source": "TiJepa checkpoint tijepa1_T1_seed0.pt",
+  "revision": null,
+  "sha256": "a09e76e91b5c52d884f484cfbf5b00951b162136e1a44f6995dd2829f0289d38"
+ },
+ "provenance_backfill": "backbone revision and weights SHA-256 (and predictor checkpoint SHA-256 where missing) added 2026-10-20 under amendment 02 section 9; no result value changed"
 }

@@ -11,8 +11,8 @@
    "kind": "backbone",
    "key": "dinov2_vits14",
    "source": "timm:vit_small_patch14_dinov2.lvd142m",
-   "revision": null,
-   "sha256": null
+   "revision": "4610ca143709d58a633b6397a74412c2c3842454",
+   "sha256": "04d27f3400d059fc0cfd7d17dd1909a75bf3ea8fb3eeb48b97cb99e57ee20081"
   },
   "action_source": "learned"
  },
@@ -26,8 +26,8 @@
    "kind": "backbone",
    "key": "dinov2_vits14",
    "source": "timm:vit_small_patch14_dinov2.lvd142m",
-   "revision": null,
-   "sha256": null
+   "revision": "4610ca143709d58a633b6397a74412c2c3842454",
+   "sha256": "04d27f3400d059fc0cfd7d17dd1909a75bf3ea8fb3eeb48b97cb99e57ee20081"
   },
   "action_source": "none"
  },
@@ -349,5 +349,6 @@
   "rule": "action_conditioned beats action_agnostic and slot_mean, one-sided p < 0.05 over plates (mean over 3/12/24/36 h)",
   "pass": false
  },
- "code_commit": "a46da30"
+ "code_commit": "a46da30",
+ "provenance_backfill": "backbone revision and weights SHA-256 (and predictor checkpoint SHA-256 where missing) added 2026-10-20 under amendment 02 section 9; no result value changed"
 }

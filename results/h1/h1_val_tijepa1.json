@@ -12,7 +12,7 @@
    "key": "tijepa1",
    "source": "TiJepa checkpoint tijepa1_T1_seed0.pt",
    "revision": null,
-   "sha256": null
+   "sha256": "a09e76e91b5c52d884f484cfbf5b00951b162136e1a44f6995dd2829f0289d38"
   },
   "action_source": "learned"
  },
@@ -27,7 +27,7 @@
    "key": "tijepa1",
    "source": "TiJepa checkpoint tijepa1_T1_seed0.pt",
    "revision": null,
-   "sha256": null
+   "sha256": "a09e76e91b5c52d884f484cfbf5b00951b162136e1a44f6995dd2829f0289d38"
   },
   "action_source": "none"
  },
@@ -349,5 +349,6 @@
   "rule": "action_conditioned beats action_agnostic and slot_mean, one-sided p < 0.05 over plates (mean over 3/12/24/36 h)",
   "pass": false
  },
- "code_commit": "a46da30"
+ "code_commit": "a46da30",
+ "provenance_backfill": "backbone revision and weights SHA-256 (and predictor checkpoint SHA-256 where missing) added 2026-10-20 under amendment 02 section 9; no result value changed"
 }

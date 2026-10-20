@@ -100,5 +100,15 @@
    "loss_tf": 0.13589909672737122,
    "loss_ro": 0.15954287350177765
   }
- ]
+ ],
+ "checkpoint": "h1_none_tijepa1.pt",
+ "checkpoint_sha256": "587ced3adf10f94ebe0c5009f5aaf0ccaccaefe15706ac50c506edf0d26a99fe",
+ "backbone": {
+  "kind": "backbone",
+  "key": "tijepa1",
+  "source": "TiJepa checkpoint tijepa1_T1_seed0.pt",
+  "revision": null,
+  "sha256": "a09e76e91b5c52d884f484cfbf5b00951b162136e1a44f6995dd2829f0289d38"
+ },
+ "provenance_backfill": "backbone revision and weights SHA-256 (and predictor checkpoint SHA-256 where missing) added 2026-10-20 under amendment 02 section 9; no result value changed"
 }

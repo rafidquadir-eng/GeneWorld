@@ -100,5 +100,15 @@
    "loss_tf": 0.18283753097057343,
    "loss_ro": 0.2190227508544922
   }
- ]
+ ],
+ "checkpoint": "h2_string.pt",
+ "checkpoint_sha256": "8a5908874605f2a2c62432baa56815fc2eded97e25e6b0b4a6a40266f2c46af3",
+ "backbone": {
+  "kind": "backbone",
+  "key": "vjepa2_vitl",
+  "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+  "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+  "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+ },
+ "provenance_backfill": "backbone revision and weights SHA-256 (and predictor checkpoint SHA-256 where missing) added 2026-10-20 under amendment 02 section 9; no result value changed"
 }
