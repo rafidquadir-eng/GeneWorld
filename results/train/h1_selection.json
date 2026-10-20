@@ -1,0 +1,12 @@
+{
+ "val_scores": {
+  "h1_learned_A": 0.32127925753593445,
+  "h1_learned_B": 0.31191352009773254,
+  "h1_learned_C": 0.3215537667274475,
+  "h1_none_A": 0.32598385214805603,
+  "h1_none_B": 0.3204975426197052,
+  "h1_none_C": 0.31967100501060486
+ },
+ "selected_learned": "h1_learned_B",
+ "selected_agnostic": "h1_none_C"
+}

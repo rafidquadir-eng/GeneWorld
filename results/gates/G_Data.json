@@ -1,0 +1,7 @@
+{
+ "rule": ">= 10,000 movies decoded and embedded",
+ "movies_embedded": 14663,
+ "plates": 168,
+ "failures": 90,
+ "pass": true
+}

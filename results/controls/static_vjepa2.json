@@ -1,0 +1,44 @@
+{
+ "backbone": "vjepa2",
+ "n_wells": 300,
+ "real_vs_static_over_between_wells": {
+  "per_clip": [
+   3.837100028991699,
+   3.828000068664551,
+   3.7262001037597656,
+   3.5885000228881836,
+   3.5190000534057617,
+   3.4700000286102295,
+   3.4033000469207764,
+   3.3631999492645264,
+   3.3041000366210938,
+   3.2523000240325928,
+   3.2648000717163086,
+   3.265500068664551,
+   3.289900064468384,
+   3.2857000827789307
+  ],
+  "median": 3.429750919342041
+ },
+ "predictor": {
+  "model": {
+   "kind": "predictor",
+   "file": "h1_learned_B.pt",
+   "step": 1500,
+   "sha256": "7a85946a00553338a18d8a62b5312ac6e0480598f612ba0f585b848396f565e1",
+   "split_manifest_sha256": "4551afe6ce0a0f78484b1440863ab9210b42ff053b73ff4733309f9a45745de4",
+   "backbone": {
+    "kind": "backbone",
+    "key": "vjepa2_vitl",
+    "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+    "revision": null,
+    "sha256": null
+   },
+   "action_source": "learned"
+  },
+  "error_real_context": 0.32228004932403564,
+  "error_static_context": 2.7165510654449463,
+  "one_step_change_real_context": 0.19312524795532227,
+  "one_step_change_static_context": 0.11013085395097733
+ }
+}

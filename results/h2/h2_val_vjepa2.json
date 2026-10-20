@@ -1,0 +1,480 @@
+{
+ "split": "val",
+ "backbone": "vjepa2",
+ "agnostic": {
+  "kind": "predictor",
+  "file": "h1_none_C.pt",
+  "step": 500,
+  "sha256": "972cf29351b1f80225b9cb4e45ee02badbe3a6247836e633b81b32aa6b8b05b1",
+  "split_manifest_sha256": "4551afe6ce0a0f78484b1440863ab9210b42ff053b73ff4733309f9a45745de4",
+  "backbone": {
+   "kind": "backbone",
+   "key": "vjepa2_vitl",
+   "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+   "revision": null,
+   "sha256": null
+  },
+  "action_source": "none"
+ },
+ "design_commit": "deb443d",
+ "freeze_commit": null,
+ "sources": {
+  "perturbseq": {
+   "model": {
+    "kind": "predictor",
+    "file": "h2_perturbseq.pt",
+    "step": 1000,
+    "sha256": "e728f1f95f71c3a78120ff81ca4be41d834ff68c86dea45cd385778a925465f5",
+    "split_manifest_sha256": "4551afe6ce0a0f78484b1440863ab9210b42ff053b73ff4733309f9a45745de4",
+    "backbone": {
+     "kind": "backbone",
+     "key": "vjepa2_vitl",
+     "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+     "revision": null,
+     "sha256": null
+    },
+    "action_source": "encoding:perturbseq"
+   },
+   "n_wells": 412,
+   "n_genes": 152,
+   "mean_error": {
+    "true": 0.3521826076076219,
+    "shuffled": 0.3541488469039139,
+    "knn_gene": 0.5268468703878554,
+    "agnostic": 0.3416854421559133,
+    "copy_last": 0.8545994339020628
+   },
+   "true_vs_shuffled": {
+    "n_genes": 152,
+    "mean": -0.001966239296292004,
+    "relative": -0.005552013831137792,
+    "ci95": [
+     -0.005010481619913327,
+     0.0010883164861680633
+    ],
+    "frac_genes_better": 0.5789473684210527
+   },
+   "true_vs_knn_gene": {
+    "n_genes": 152,
+    "mean": -0.17466426278023342,
+    "relative": -0.3315275701488912,
+    "ci95": [
+     -0.18495036463351233,
+     -0.16460211597579089
+    ],
+    "frac_genes_better": 1.0
+   },
+   "true_vs_agnostic": {
+    "n_genes": 152,
+    "mean": 0.010497165451708593,
+    "relative": 0.030721722838044307,
+    "ci95": [
+     0.0055238774977624415,
+     0.01555636465598486
+    ],
+    "frac_genes_better": 0.32894736842105265
+   },
+   "G_ZeroShot_pass": false
+  },
+  "jump_crispr": {
+   "model": {
+    "kind": "predictor",
+    "file": "h2_jump_crispr.pt",
+    "step": 1000,
+    "sha256": "6eb98eeacb823fdc249eca1d663c2fc93da8d78c538fe487c72c553161a357f6",
+    "split_manifest_sha256": "4551afe6ce0a0f78484b1440863ab9210b42ff053b73ff4733309f9a45745de4",
+    "backbone": {
+     "kind": "backbone",
+     "key": "vjepa2_vitl",
+     "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+     "revision": null,
+     "sha256": null
+    },
+    "action_source": "encoding:jump_crispr"
+   },
+   "n_wells": 374,
+   "n_genes": 131,
+   "mean_error": {
+    "true": 0.36112564927294055,
+    "shuffled": 0.35917771943197907,
+    "knn_gene": 0.5380062458624366,
+    "agnostic": 0.34506754736408934,
+    "copy_last": 0.875570914217534
+   },
+   "true_vs_shuffled": {
+    "n_genes": 131,
+    "mean": 0.0019479298409614855,
+    "relative": 0.0054233036616024854,
+    "ci95": [
+     -0.0011659548994694049,
+     0.005148075526679744
+    ],
+    "frac_genes_better": 0.4198473282442748
+   },
+   "true_vs_knn_gene": {
+    "n_genes": 131,
+    "mean": -0.17688059658949612,
+    "relative": -0.3287705262714048,
+    "ci95": [
+     -0.18954727427877543,
+     -0.16531993422856314
+    ],
+    "frac_genes_better": 1.0
+   },
+   "true_vs_agnostic": {
+    "n_genes": 131,
+    "mean": 0.016058101908851215,
+    "relative": 0.046536111643984635,
+    "ci95": [
+     0.00950502204986019,
+     0.022321837494960264
+    ],
+    "frac_genes_better": 0.2824427480916031
+   },
+   "G_ZeroShot_pass": false
+  },
+  "jump_orf": {
+   "model": {
+    "kind": "predictor",
+    "file": "h2_jump_orf.pt",
+    "step": 500,
+    "sha256": "903d41b55c3cd702f181383671121bd83346d46d852858f9ce03138e61ca293a",
+    "split_manifest_sha256": "4551afe6ce0a0f78484b1440863ab9210b42ff053b73ff4733309f9a45745de4",
+    "backbone": {
+     "kind": "backbone",
+     "key": "vjepa2_vitl",
+     "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+     "revision": null,
+     "sha256": null
+    },
+    "action_source": "encoding:jump_orf"
+   },
+   "n_wells": 565,
+   "n_genes": 193,
+   "mean_error": {
+    "true": 0.3509378831621279,
+    "shuffled": 0.34979156238736264,
+    "knn_gene": 0.5320972335462125,
+    "agnostic": 0.3393242685751594,
+    "copy_last": 0.8674906927686898
+   },
+   "true_vs_shuffled": {
+    "n_genes": 193,
+    "mean": 0.0011463207747652122,
+    "relative": 0.003277153876844574,
+    "ci95": [
+     -0.0020636957177380824,
+     0.004443036813115208
+    ],
+    "frac_genes_better": 0.48186528497409326
+   },
+   "true_vs_knn_gene": {
+    "n_genes": 193,
+    "mean": -0.18115935038408468,
+    "relative": -0.34046286836849526,
+    "ci95": [
+     -0.19131041201786983,
+     -0.17128572019656707
+    ],
+    "frac_genes_better": 0.9948186528497409
+   },
+   "true_vs_agnostic": {
+    "n_genes": 193,
+    "mean": 0.011613614586968496,
+    "relative": 0.034225711693816274,
+    "ci95": [
+     0.006297120818665608,
+     0.016779560738585768
+    ],
+    "frac_genes_better": 0.32124352331606215
+   },
+   "G_ZeroShot_pass": false
+  },
+  "string": {
+   "model": {
+    "kind": "predictor",
+    "file": "h2_string.pt",
+    "step": 1000,
+    "sha256": "8a5908874605f2a2c62432baa56815fc2eded97e25e6b0b4a6a40266f2c46af3",
+    "split_manifest_sha256": "4551afe6ce0a0f78484b1440863ab9210b42ff053b73ff4733309f9a45745de4",
+    "backbone": {
+     "kind": "backbone",
+     "key": "vjepa2_vitl",
+     "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+     "revision": null,
+     "sha256": null
+    },
+    "action_source": "encoding:string"
+   },
+   "n_wells": 819,
+   "n_genes": 284,
+   "mean_error": {
+    "true": 0.33399449210141746,
+    "shuffled": 0.3359844206084668,
+    "knn_gene": 0.5246847335931281,
+    "agnostic": 0.339588076295987,
+    "copy_last": 0.865038405421754
+   },
+   "true_vs_shuffled": {
+    "n_genes": 284,
+    "mean": -0.001989928507049319,
+    "relative": -0.005922680889326903,
+    "ci95": [
+     -0.004136782815076516,
+     0.000177145193160419
+    ],
+    "frac_genes_better": 0.6091549295774648
+   },
+   "true_vs_knn_gene": {
+    "n_genes": 284,
+    "mean": -0.19069024149171063,
+    "relative": -0.3634377546795239,
+    "ci95": [
+     -0.19836366101312386,
+     -0.1830842590838356
+    ],
+    "frac_genes_better": 0.9929577464788732
+   },
+   "true_vs_agnostic": {
+    "n_genes": 284,
+    "mean": -0.005593584194569521,
+    "relative": -0.016471674316662743,
+    "ci95": [
+     -0.009831729030210366,
+     -0.0012380320250883073
+    ],
+    "frac_genes_better": 0.5845070422535211
+   },
+   "G_ZeroShot_pass": false
+  },
+  "esm2": {
+   "model": {
+    "kind": "predictor",
+    "file": "h2_esm2.pt",
+    "step": 500,
+    "sha256": "9cb3d000159d63aa05c6242f9fef87170808de894f006f3dc491a65b7cc3b8eb",
+    "split_manifest_sha256": "4551afe6ce0a0f78484b1440863ab9210b42ff053b73ff4733309f9a45745de4",
+    "backbone": {
+     "kind": "backbone",
+     "key": "vjepa2_vitl",
+     "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+     "revision": null,
+     "sha256": null
+    },
+    "action_source": "encoding:esm2"
+   },
+   "n_wells": 845,
+   "n_genes": 287,
+   "mean_error": {
+    "true": 0.3316175387296112,
+    "shuffled": 0.3331284154375256,
+    "knn_gene": 0.5266786993380623,
+    "agnostic": 0.3390857961535038,
+    "copy_last": 0.8656800312447631
+   },
+   "true_vs_shuffled": {
+    "n_genes": 287,
+    "mean": -0.001510876707914399,
+    "relative": -0.004535418288860282,
+    "ci95": [
+     -0.003637797377666115,
+     0.0005812266173055361
+    ],
+    "frac_genes_better": 0.5226480836236934
+   },
+   "true_vs_knn_gene": {
+    "n_genes": 287,
+    "mean": -0.19506116060845113,
+    "relative": -0.370360830718248,
+    "ci95": [
+     -0.2026778539298719,
+     -0.1876227509580838
+    ],
+    "frac_genes_better": 0.9965156794425087
+   },
+   "true_vs_agnostic": {
+    "n_genes": 287,
+    "mean": -0.007468257423892669,
+    "relative": -0.022024683748509966,
+    "ci95": [
+     -0.011220034182019764,
+     -0.0037095203333719286
+    ],
+    "frac_genes_better": 0.6027874564459931
+   },
+   "G_ZeroShot_pass": false
+  }
+ },
+ "common_genes": {
+  "n_genes": 58,
+  "by_source": {
+   "perturbseq": {
+    "shuffled": {
+     "n_genes": 58,
+     "mean": -0.0018328145660203078,
+     "relative": -0.005180839248884128,
+     "ci95": [
+      -0.00642568018158962,
+      0.002566614657126624
+     ],
+     "frac_genes_better": 0.5689655172413793
+    },
+    "knn_gene": {
+     "n_genes": 58,
+     "mean": -0.17951785747347207,
+     "relative": -0.33778693574743845,
+     "ci95": [
+      -0.19659162360275614,
+      -0.16275578981971947
+     ],
+     "frac_genes_better": 1.0
+    },
+    "agnostic": {
+     "n_genes": 58,
+     "mean": 0.012109422478182563,
+     "relative": 0.03563422124503046,
+     "ci95": [
+      0.003628526486713311,
+      0.021097322469898337
+     ],
+     "frac_genes_better": 0.29310344827586204
+    }
+   },
+   "jump_crispr": {
+    "shuffled": {
+     "n_genes": 58,
+     "mean": -0.0027103074665727287,
+     "relative": -0.007540317137105901,
+     "ci95": [
+      -0.007396960913621146,
+      0.0022382017867318494
+     ],
+     "frac_genes_better": 0.5517241379310345
+    },
+    "knn_gene": {
+     "n_genes": 58,
+     "mean": -0.17204551835512294,
+     "relative": -0.3253647860452712,
+     "ci95": [
+      -0.18720591454927263,
+      -0.15661096607559713
+     ],
+     "frac_genes_better": 1.0
+    },
+    "agnostic": {
+     "n_genes": 58,
+     "mean": 0.016906145574717688,
+     "relative": 0.04974946847346273,
+     "ci95": [
+      0.007696154469559933,
+      0.026510143305720952
+     ],
+     "frac_genes_better": 0.3103448275862069
+    }
+   },
+   "jump_orf": {
+    "shuffled": {
+     "n_genes": 58,
+     "mean": -0.0007824491837929035,
+     "relative": -0.0022076668274260136,
+     "ci95": [
+      -0.007004555513889624,
+      0.005214925932473148
+     ],
+     "frac_genes_better": 0.46551724137931033
+    },
+    "knn_gene": {
+     "n_genes": 58,
+     "mean": -0.17027729081696477,
+     "relative": -0.32500725931748464,
+     "ci95": [
+      -0.1848503518271549,
+      -0.15538702386848888
+     ],
+     "frac_genes_better": 1.0
+    },
+    "agnostic": {
+     "n_genes": 58,
+     "mean": 0.013815480059590834,
+     "relative": 0.0406546120541047,
+     "ci95": [
+      0.004506162451259021,
+      0.023245857675270785
+     ],
+     "frac_genes_better": 0.3448275862068966
+    }
+   },
+   "string": {
+    "shuffled": {
+     "n_genes": 58,
+     "mean": -0.003886837383796429,
+     "relative": -0.01131680323128137,
+     "ci95": [
+      -0.00818748440079648,
+      0.0007378717177900746
+     ],
+     "frac_genes_better": 0.6551724137931034
+    },
+    "knn_gene": {
+     "n_genes": 58,
+     "mean": -0.18414121223934765,
+     "relative": -0.35160807258811333,
+     "ci95": [
+      -0.20166184099969164,
+      -0.16699651317863629
+     ],
+     "frac_genes_better": 1.0
+    },
+    "agnostic": {
+     "n_genes": 58,
+     "mean": -0.000255304163899915,
+     "relative": -0.000751279847115427,
+     "ci95": [
+      -0.010306221542173418,
+      0.01088312674185325
+     ],
+     "frac_genes_better": 0.603448275862069
+    }
+   },
+   "esm2": {
+    "shuffled": {
+     "n_genes": 58,
+     "mean": 0.00046427625006642835,
+     "relative": 0.001364599559936286,
+     "ci95": [
+      -0.003303116489330242,
+      0.0044109388286697445
+     ],
+     "frac_genes_better": 0.5172413793103449
+    },
+    "knn_gene": {
+     "n_genes": 58,
+     "mean": -0.1859218262392899,
+     "relative": -0.35305073777717655,
+     "ci95": [
+      -0.20313225050039332,
+      -0.1685394666832069
+     ],
+     "frac_genes_better": 1.0
+    },
+    "agnostic": {
+     "n_genes": 58,
+     "mean": 0.0008675545967858413,
+     "relative": 0.0025529402768456055,
+     "ci95": [
+      -0.006390426372145784,
+      0.008021681184141797
+     ],
+     "frac_genes_better": 0.5
+    }
+   }
+  }
+ },
+ "G_ZeroShot": {
+  "rule": "true - shuffled 95% CI over genes below 0 for >= 1 source",
+  "pass": false,
+  "passing_sources": [],
+  "selected_source": null
+ },
+ "code_commit": "a46da30"
+}
