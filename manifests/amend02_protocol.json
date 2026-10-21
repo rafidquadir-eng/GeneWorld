@@ -86,5 +86,17 @@
   "screenB": "evaluated after the freeze under the global preprocessing only, outside the gates, as a secondary independent-reagent test: H1 (seen genes; primary wells = splits/amend02_screenB_primary_wells.tsv, gene-level reproducible terms on screenA training plates) and H2 (test-split genes); every method and baseline in the global space with the global-preprocessing models (selected configurations, 3 seeds); siRNA token masked for screenB siRNAs; reported next to the global test results. Plate-control baselines are not available on screenB (no negative controls).",
   "plate_probe": "section 1 unchanged for the gates; diagnostics added for global, control-normalised and centre-only versions: (a) within-series replicate probe, (b) negative-control-only probe with leave-one-out normalisation statistics",
   "report": "RUN_REPORT_STAGE2 lists the 20 frozen primary test wells outside the test layout (LT0008_17: 17, LT0155_08: 3; plates absent from the S-BIAD865 S3 conversion) and names the data used to choose tile-averaged replicate baselines"
+ },
+ "record_for_run_report": {
+  "tile_averaged_replicate_baselines_choice_data": "development check on 2026-10-20 before any real amended model: a throwaway cache of stage-1 latents only (data/latents, splits/stage1_wells.tsv; test plates excluded), per-plate control normalisation; development models (h1_learned and h1_none, config 22M_d0.1_w0.05, seeds 0-2, 250 steps, deleted afterwards); evaluation on the stage-1 validation plates' 104 primary wells on 13 plates (683 library wells). Replicate drift with tile-k-to-tile-k changes had primary 24/36 h error 7.62 vs copy-last 5.54; averaged over tiles 5.72. No test plate, test gene or stage-2 well was used.",
+  "primary_test_wells_outside_layout": {
+   "n": 20,
+   "plates": {
+    "LT0008_17": 17,
+    "LT0155_08": 3
+   },
+   "reason": "the two plates are absent from the S-BIAD865 OME-Zarr conversion on EBI S3 (not in manifests/s3_plate_map.json), so they could not enter the test layout",
+   "file": "manifests/amend02_primary_test_wells_outside_layout.tsv"
+  }
  }
 }

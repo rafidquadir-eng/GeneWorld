@@ -1,0 +1,21 @@
+Plate	Well	Gene Symbol	siRNA Identifier	plate_split	terms_on_training_plates
+LT0008_17	A19	MGAT1	11388	test	increased nucleus size phenotype
+LT0008_17	C17	PNPLA1	41138	test	increased variability of nuclear shape in population
+LT0008_17	D20	PLCB2	15072	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0008_17	H12	RAN	120461	test	cell death phenotype|increased variability of nuclear shape in population
+LT0008_17	I10	PRMT1	110970	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0008_17	I15	MYST1	33747	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype
+LT0008_17	I18	MGAT4B	112306	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0008_17	J3	RAB37	120757	test	abnormal nucleus shape phenotype
+LT0008_17	K14	GALNT5	111893	test	binuclear cell phenotype
+LT0008_17	K2	GNPDA1	118106	test	increased variability of nuclear shape in population
+LT0008_17	L4	UGT1A10	202354	test	increased variability of nuclear shape in population
+LT0008_17	M10	PRMT3	111605	test	increased cell movement distance
+LT0008_17	M9	FKBP6	118100	test	increased variability of nuclear shape in population
+LT0008_17	N18	PRMT6	112018	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0008_17	N20	NKTR	118105	test	abnormal cell cycle phenotype|mitotic metaphase plate congression phenotype
+LT0008_17	N6	TXNL4A	108084	test	abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype
+LT0008_17	N7	SDCCAG10	107863	test	abnormal cell cycle phenotype|metaphase arrested phenotype|metaphase delayed phenotype|mitotic metaphase plate congression phenotype
+LT0155_08	A24	FAM38A	241551	test	abnormal cell cycle phenotype|abnormal nucleus shape phenotype|binuclear cell phenotype|mitotic metaphase plate congression phenotype
+LT0155_08	B22	FAM38A	241552	test	abnormal nucleus shape phenotype|binuclear cell phenotype|cell death phenotype
+LT0155_08	B7	HIST1H2AM	240122	test	abnormal cell cycle phenotype|abnormal chromosome segregation phenotype|abnormal nucleus shape phenotype|mitotic metaphase plate congression phenotype
