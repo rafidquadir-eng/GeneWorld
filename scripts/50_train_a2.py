@@ -68,7 +68,7 @@ def atomic_save(obj, path: Path) -> None:
 
 
 @torch.no_grad()
-def primary_error(model, z, bat, idx, steps=a2.PRIMARY_STEPS, bs=1024) -> float:
+def primary_error(model, z, bat, idx, steps=a2.PRIMARY_STEPS, bs=256) -> float:
     model.eval()
     errs = []
     for i in range(0, len(idx), bs):
@@ -182,6 +182,7 @@ def main() -> int:
            "best_val_primary": best, "best_step": best_step, "stopped_at": step,
            "n_params": n_par, "n_train_wells": int(len(tr_idx)), "n_val_wells": int(len(va_idx)),
            "minutes": (time.time() - t0) / 60, "curve": curve, "checkpoint": ck.name,
+           "peak_gpu_memory_gb": torch.cuda.max_memory_allocated() / 1e9,
            "checkpoint_sha256": sha256_file(ck),
            "backbone": verified_backbone_record(BACKBONE_KEY[args.backbone]),
            "design_commit": a2.DESIGN_COMMIT}

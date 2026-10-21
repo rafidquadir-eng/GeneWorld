@@ -15,7 +15,7 @@ from geneworld.train.batcher import DEV
 
 
 @torch.no_grad()
-def forecast(model, z, bat, idx, ctx_from=None, bs=1024) -> np.ndarray:
+def forecast(model, z, bat, idx, ctx_from=None, bs=256) -> np.ndarray:
     """(n, 12, K, D) float16 rollout from clip 0 (optionally another well's clip 0)."""
     model.eval()
     out = []

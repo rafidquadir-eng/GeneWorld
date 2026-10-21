@@ -18,11 +18,13 @@ Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" && git push -q && log "
 }
 
 EMBED_PID=${1:-}
+START=${2:-3}   # resume at step 3, 4 or 5 (completed steps are committed and not redone)
 if [ -n "$EMBED_PID" ]; then
   log "waiting for stage-2 embed $EMBED_PID"
   while kill -0 "$EMBED_PID" 2>/dev/null; do sleep 120; done
 fi
 
+if [ "$START" -le 3 ]; then
 log "step 3 completion: stage-2 data and backup audit"
 $P - <<'EOF' 2>&1 | tee -a $L/pipeline.log
 import json, glob, os, numpy as np, pandas as pd
@@ -47,6 +49,8 @@ json.dump(r, open("results/a2/stage2_data.json", "w"), indent=1)
 print({k: v for k, v in r.items() if k != "failure_examples"})
 EOF
 commit "Amendment 02 step 3 complete: stage-2 latents embedded and backed up (results/a2/stage2_data.json)"
+fi
+if [ "$START" -le 4 ]; then
 
 log "step 4: caches (per-plate normalisation and global) and plate-identity probe"
 for bb in vjepa2 dinov2 tijepa1; do
@@ -58,9 +62,10 @@ $P scripts/53_plate_probe.py --split val --out results/a2/plate_probe.json > $L/
 $P scripts/53_plate_probe.py --split train --out results/a2/plate_probe_train.json >> $L/plate_probe.log 2>&1
 grep -v -i warn $L/plate_probe.log | tee -a $L/pipeline.log
 commit "Amendment 02 step 4: per-plate negative-control normalisation; plate-identity probe re-run (results/a2/plate_probe*.json); global pipeline kept as sensitivity"
+fi
 
 log "step 5: grid (12 families x 8 configurations x 3 seeds)"
-$P scripts/run_a2_jobs.py --phase grid --workers 4 > $L/grid.log 2>&1
+$P scripts/run_a2_jobs.py --phase grid --workers 3 >> $L/grid.log 2>&1
 tail -1 $L/grid.log | tee -a $L/pipeline.log
 $P scripts/60_select_a2.py > $L/selection.log 2>&1 || { log "selection FAILED"; cat $L/selection.log; exit 1; }
 cat $L/selection.log | tee -a $L/pipeline.log
@@ -69,7 +74,7 @@ commit "Amendment 02 step 5: grid trained (3 seeds); selected configurations rec
 log "H2 validation (planning source)"
 $P scripts/62_eval_h2_a2.py --split val > $L/h2_val.log 2>&1; tail -3 $L/h2_val.log | tee -a $L/pipeline.log
 log "secondary training (global preprocessing, alternative backbones, complex split)"
-$P scripts/run_a2_jobs.py --phase secondary --workers 4 > $L/secondary.log 2>&1
+$P scripts/run_a2_jobs.py --phase secondary --workers 3 >> $L/secondary.log 2>&1
 tail -1 $L/secondary.log | tee -a $L/pipeline.log
 log "validation evaluations"
 $P scripts/61_eval_h1_a2.py --split val > $L/h1_val.log 2>&1; tail -1 $L/h1_val.log | tee -a $L/pipeline.log

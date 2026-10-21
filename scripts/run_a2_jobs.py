@@ -59,7 +59,7 @@ def jobs(phase: str) -> list[dict]:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--phase", choices=["grid", "secondary"], required=True)
-    ap.add_argument("--workers", type=int, default=4)
+    ap.add_argument("--workers", type=int, default=3)
     args = ap.parse_args()
     todo = []
     for j in jobs(args.phase):
@@ -79,8 +79,9 @@ def main() -> int:
                    "--config", j["config"], "--seed", str(j["seed"]), "--norm", j["norm"],
                    "--backbone", j["backbone"], "--gene-split", j["gene_split"]]
             fh = open(log / f"{name}.log", "w")
+            env = dict(__import__("os").environ, PYTORCH_CUDA_ALLOC_CONF="expandable_segments:True")
             running.append((name, subprocess.Popen(cmd, stdout=fh, stderr=subprocess.STDOUT,
-                                                   cwd=REPO), time.time()))
+                                                   cwd=REPO, env=env), time.time()))
         time.sleep(10)
         still = []
         for name, p, t0 in running:
