@@ -1,0 +1,3 @@
+[10-20 17:23:05] waiting for stage-2 embed 507563
+[10-21 20:21:06] step 3 completion: stage-2 data and backup audit
+{'wells_selected': 61372, 'wells_embedded': 60289, 'plates_selected': 410, 'plates_embedded': 404, 'failures_logged': 1083, 'shards': 1212, 'shards_not_backed_up': []}

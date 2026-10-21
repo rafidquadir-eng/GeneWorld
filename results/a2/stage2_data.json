@@ -1,0 +1,31 @@
+{
+ "wells_selected": 61372,
+ "wells_embedded": 60289,
+ "plates_selected": 410,
+ "plates_embedded": 404,
+ "failures_logged": 1083,
+ "failure_examples": [
+  "LT0003_15:L6: frame 58: HTTP 404 after 1 attempts",
+  "LT0003_40:A1: frame 92: HTTP 404 after 1 attempts",
+  "LT0003_40:A10: frame 92: HTTP 404 after 1 attempts",
+  "LT0003_40:A11: frame 92: HTTP 404 after 1 attempts",
+  "LT0003_40:A12: frame 92: HTTP 404 after 1 attempts",
+  "LT0003_40:A13: frame 92: HTTP 404 after 1 attempts",
+  "LT0003_40:A14: frame 92: HTTP 404 after 1 attempts",
+  "LT0003_40:A16: frame 92: HTTP 404 after 1 attempts",
+  "LT0003_40:A15: frame 92: HTTP 404 after 1 attempts",
+  "LT0003_40:A17: frame 92: HTTP 404 after 1 attempts",
+  "LT0003_40:A20: frame 92: HTTP 404 after 1 attempts",
+  "LT0003_40:A21: frame 92: HTTP 404 after 1 attempts",
+  "LT0003_40:A24: frame 92: HTTP 404 after 1 attempts",
+  "LT0003_40:A3: frame 92: HTTP 404 after 1 attempts",
+  "LT0003_40:A4: frame 92: HTTP 404 after 1 attempts",
+  "LT0003_40:A5: frame 92: HTTP 404 after 1 attempts",
+  "LT0003_40:A6: frame 92: HTTP 404 after 1 attempts",
+  "LT0003_40:A8: frame 92: HTTP 404 after 1 attempts",
+  "LT0003_40:B10: frame 92: HTTP 404 after 1 attempts",
+  "LT0003_40:B11: frame 92: HTTP 404 after 1 attempts"
+ ],
+ "shards": 1212,
+ "shards_not_backed_up": []
+}
