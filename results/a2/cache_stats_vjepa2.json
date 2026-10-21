@@ -1,0 +1,20 @@
+{
+ "backbone": "vjepa2",
+ "n_wells": 71579,
+ "n_plates": 404,
+ "include_test": false,
+ "shards_sha256": "b8fb0f4dbddcea75d7c82b7a6d364978fb11a6161c46d5f8db3d1cba81ba6fd0",
+ "n_shards": 572,
+ "plate_norm": {
+  "min_neg_wells": 4,
+  "dropped_plates": [],
+  "n_wells_dropped": 0,
+  "neg_wells_per_plate": {
+   "min": 4,
+   "median": 8.0,
+   "max": 8
+  },
+  "sigma_floor_median": 0.06937247514724731,
+  "frac_sigma_floored": 0.050035360678925035
+ }
+}

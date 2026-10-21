@@ -1,3 +1,8 @@
 [10-20 17:23:05] waiting for stage-2 embed 507563
 [10-21 20:21:06] step 3 completion: stage-2 data and backup audit
 {'wells_selected': 61372, 'wells_embedded': 60289, 'plates_selected': 410, 'plates_embedded': 404, 'failures_logged': 1083, 'shards': 1212, 'shards_not_backed_up': []}
+[10-21 20:21:10] committed: Amendment 02 step 3 complete: stage-2 latents embedded and backed up (results/a2/stage2_data.json)
+[10-21 20:21:10] step 4: caches (per-plate normalisation and global) and plate-identity probe
+main_validation_plates {'global': 0.7439, 'plate': 0.9391, 'centre_only': 0.9293} chance 0.0204
+negative_controls_loo {'global': 0.5095, 'plate': 0.0, 'centre_only': 0.0} chance 0.0204
+within_series 76 series; chance 0.3101 {'global': 0.9508, 'plate': 0.9437, 'centre_only': 0.9433}

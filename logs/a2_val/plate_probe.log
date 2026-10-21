@@ -1,0 +1,3 @@
+main_validation_plates {'global': 0.7439, 'plate': 0.9391, 'centre_only': 0.9293} chance 0.0204
+negative_controls_loo {'global': 0.5095, 'plate': 0.0, 'centre_only': 0.0} chance 0.0204
+within_series 76 series; chance 0.3101 {'global': 0.9508, 'plate': 0.9437, 'centre_only': 0.9433}

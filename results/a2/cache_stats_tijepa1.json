@@ -1,0 +1,20 @@
+{
+ "backbone": "tijepa1",
+ "n_wells": 71579,
+ "n_plates": 404,
+ "include_test": false,
+ "shards_sha256": "49d17008e3e0c8ae40388cf559e3a84ca7a25dc7eafd76976e490bc49b3d5807",
+ "n_shards": 572,
+ "plate_norm": {
+  "min_neg_wells": 4,
+  "dropped_plates": [],
+  "n_wells_dropped": 0,
+  "neg_wells_per_plate": {
+   "min": 4,
+   "median": 8.0,
+   "max": 8
+  },
+  "sigma_floor_median": 0.007411762606352568,
+  "frac_sigma_floored": 0.050035360678925035
+ }
+}

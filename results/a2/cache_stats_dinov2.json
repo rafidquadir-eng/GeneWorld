@@ -1,0 +1,20 @@
+{
+ "backbone": "dinov2",
+ "n_wells": 71579,
+ "n_plates": 404,
+ "include_test": false,
+ "shards_sha256": "493ae71069635abd2302157bc7bef2f0726b483cea19bf836a1c704071fa6f03",
+ "n_shards": 572,
+ "plate_norm": {
+  "min_neg_wells": 4,
+  "dropped_plates": [],
+  "n_wells_dropped": 0,
+  "neg_wells_per_plate": {
+   "min": 4,
+   "median": 8.0,
+   "max": 8
+  },
+  "sigma_floor_median": 0.12126407027244568,
+  "frac_sigma_floored": 0.050035360678925035
+ }
+}
