@@ -1,0 +1,22 @@
+{
+ "instruction": "author 2026-10-21: screenB after the freeze, global preprocessing only, outside the gates; siRNA token masked for screenB siRNAs",
+ "plates": 28,
+ "wells": 9151,
+ "library_wells": 8996,
+ "positive_controls": 155,
+ "library_wells_by_gene_split": {
+  "train": 6197,
+  "test": 1805,
+  "val": 994
+ },
+ "primary_wells": 7622,
+ "primary_by_gene_split": {
+  "train": 5277,
+  "test": 1483,
+  "val": 862
+ },
+ "sha256": {
+  "screenB_wells.tsv": "c61726d1da029e7733196d7a9f711adf62f70d6486d16bdecaeed1388f3feab2",
+  "amend02_screenB_primary_wells.tsv": "96d1790d8ae1b66a4cc898cc0239cb701312c176e3fc500d37194e85d30de2b0"
+ }
+}

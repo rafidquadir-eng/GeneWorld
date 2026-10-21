@@ -61,7 +61,7 @@ def knn(z, meta, idx, train, enc, k=10):
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--split", default="val", choices=["val", "test"])
+    ap.add_argument("--split", default="val", choices=["val", "test", "screenB"])
     ap.add_argument("--norm", default="plate", choices=["plate", "global"])
     ap.add_argument("--backbone", default="vjepa2")
     ap.add_argument("--gene-split", default="gene", choices=["gene", "complex"])
@@ -70,8 +70,8 @@ def main() -> int:
     ap.add_argument("--freeze-commit", default="")
     ap.add_argument("--tag", default="")
     args = ap.parse_args()
-    if args.split == "test" and not args.freeze_commit:
-        sys.exit("test genes are evaluated once, after freezing: pass --freeze-commit")
+    if args.split != "val" and not args.freeze_commit:
+        sys.exit("held-out test sets are evaluated once, after freezing: pass --freeze-commit")
     sel = json.loads((a2.RES_DIR / "selection.json").read_text())["selected"]
     c = cache.load(args.backbone, args.norm, gene_split=args.gene_split, suffix=args.suffix)
     m, z = c.meta, c.z
@@ -85,6 +85,8 @@ def main() -> int:
         enc = sets.encoding(src)
         T, rec_t = load3(f"h2:{src}", sel[f"h2:{src}"], args.norm, args.backbone, c, gs)
         S, rec_s = load3(f"h2shuf:{src}", sel[f"h2shuf:{src}"], args.norm, args.backbone, c, gs)
+        if args.split == "screenB":
+            res.setdefault("screenB_sirna_mask", {})[src] = E.mask_screenB_sirna([T, S, AG], m)
         out = {"models_true": rec_t, "models_shuffled": rec_s,
                "configs": {"true": sel[f"h2:{src}"], "shuffled": sel[f"h2shuf:{src}"]}}
         for scope, primary in (("primary", True), ("all_genes", False)):

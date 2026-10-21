@@ -71,8 +71,12 @@ def family_encoding(family: str, seed: int) -> dict[str, np.ndarray]:
 
 @lru_cache(maxsize=1)
 def h1_primary() -> set[tuple[str, str]]:
-    t = pd.read_csv(REPO / "splits" / "amend02_h1_primary_wells.tsv", sep="\t")
-    return set(zip(t.Plate, t.Well, strict=True))
+    """Frozen H1 primary wells (screenA held-out plates) and screenB primary wells."""
+    out = set()
+    for f in ("amend02_h1_primary_wells.tsv", "amend02_screenB_primary_wells.tsv"):
+        t = pd.read_csv(REPO / "splits" / f, sep="\t")
+        out |= set(zip(t.Plate, t.Well, strict=True))
+    return out
 
 
 @lru_cache(maxsize=1)
@@ -82,7 +86,7 @@ def h2_primary_genes() -> set[str]:
 
 def eval_mask(meta: pd.DataFrame, which: str, vocab: set[str], enc: dict | None = None,
               primary: bool = True) -> np.ndarray:
-    """which: h1_val | h1_test | h1_screenB | h2_val | h2_test."""
+    """which: h1_val | h1_test | h1_screenB | h2_val | h2_test | h2_screenB."""
     lib = (meta.control == "").to_numpy()
     ps = meta.plate_split.to_numpy()
     if which.startswith("h1"):
@@ -93,7 +97,10 @@ def eval_mask(meta: pd.DataFrame, which: str, vocab: set[str], enc: dict | None 
             m &= np.array([(p, w) in prim for p, w in zip(meta.plate, meta.well, strict=True)])
         return m
     part = which.split("_")[1]
-    m = (meta.gene_split.to_numpy() == part) & lib
+    if part == "screenB":       # unseen (test-split) genes, screenB's independent siRNAs
+        m = (meta.gene_split.to_numpy() == "test") & lib & (ps == "screenB")
+    else:
+        m = (meta.gene_split.to_numpy() == part) & lib & (ps != "screenB")
     if part == "val":
         m &= ps != "test"
     if enc is not None:

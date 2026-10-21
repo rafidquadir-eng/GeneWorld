@@ -74,6 +74,7 @@ def main() -> int:
     AC, rec_ac, d = models_for("h1_learned", sel["h1_learned"], args.norm, args.backbone, c)
     AG, rec_ag, _ = models_for("h1_none", sel["h1_none"], args.norm, args.backbone, c)
     vocab = set(d["vocab"]) | {"NEG"}
+    sirna_mask = E.mask_screenB_sirna([AC, AG], m) if args.split == "screenB" else None
     which = f"h1_{args.split}"
     prim = a2.eval_mask(m, which, vocab, primary=True)
     allw = a2.eval_mask(m, which, vocab, primary=False)
@@ -107,7 +108,7 @@ def main() -> int:
            "selected_configs": {"h1_learned": sel["h1_learned"], "h1_none": sel["h1_none"]},
            "n_wells_all": int(len(idx)), "n_wells_primary": int(is_p.sum()),
            "n_plates_primary": int(len(np.unique(plates[is_p]))),
-           "replicate_baseline_sources": rep_used,
+           "replicate_baseline_sources": rep_used, "screenB_sirna_mask": sirna_mask,
            "cache": c.stats, "mean_error": {}, "tests": {}}
     for k, e in errs.items():
         res["mean_error"][k] = {

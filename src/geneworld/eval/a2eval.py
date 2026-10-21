@@ -186,3 +186,16 @@ def probe_with_ci(x_tr, y_tr, evals: dict, y_ev, plates_ev, n_boot=2000, seed=0,
                          for k, v in dboots.items()}
     res["n_plates"] = int(len(ps))
     return res
+
+
+def mask_screenB_sirna(model_lists, meta) -> dict:
+    """Set the reagent token of every screenB well to 'unknown' (index 0) in each batcher
+    (author instruction 2026-10-21); returns how many screenB wells had a known siRNA."""
+    isb = np.flatnonzero((meta.plate_split == "screenB").to_numpy())
+    known = 0
+    for models in model_lists:
+        for _, bat in models:
+            t = torch.tensor(isb, device=bat.sirna.device)
+            known = max(known, int((bat.sirna[t] != 0).sum()))
+            bat.sirna[t] = 0
+    return {"screenB_wells": int(len(isb)), "wells_with_known_sirna_before_mask": known}

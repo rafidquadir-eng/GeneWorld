@@ -81,5 +81,10 @@
   },
   "replicate_baselines": "fallback order for a well of siRNA s, gene g: s's training-plate wells; else g's other siRNAs' training-plate wells; else the plate's negative-control drift (replicate drift) / the training-wide clip mean (replicate endpoint); the fallback used is counted; replicate changes and endpoints are averaged over the replicate wells and their four tiles (tile positions are exchangeable fields of view) and added to / broadcast over every tile of the evaluated well, as for the control- and slot-drift baselines; the same applies to the nearest-gene lookup",
   "phenotype_probe": "logistic regression (C = 0.1, balanced) trained on observed clip-12 latents of training-plate library wells; applied to observed and forecast clip-12 latents of all library wells on evaluated plates; seed-averaged decision scores; AUROC 95% cluster-bootstrap CI over plates (2,000 resamples)"
+ },
+ "author_decisions_2026-10-21": {
+  "screenB": "evaluated after the freeze under the global preprocessing only, outside the gates, as a secondary independent-reagent test: H1 (seen genes; primary wells = splits/amend02_screenB_primary_wells.tsv, gene-level reproducible terms on screenA training plates) and H2 (test-split genes); every method and baseline in the global space with the global-preprocessing models (selected configurations, 3 seeds); siRNA token masked for screenB siRNAs; reported next to the global test results. Plate-control baselines are not available on screenB (no negative controls).",
+  "plate_probe": "section 1 unchanged for the gates; diagnostics added for global, control-normalised and centre-only versions: (a) within-series replicate probe, (b) negative-control-only probe with leave-one-out normalisation statistics",
+  "report": "RUN_REPORT_STAGE2 lists the 20 frozen primary test wells outside the test layout (LT0008_17: 17, LT0155_08: 3; plates absent from the S-BIAD865 S3 conversion) and names the data used to choose tile-averaged replicate baselines"
  }
 }

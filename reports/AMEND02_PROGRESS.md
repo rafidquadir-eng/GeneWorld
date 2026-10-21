@@ -31,10 +31,21 @@ or screenB well has been evaluated.
   positions are exchangeable). Matching tile k to tile k made replicate drift worse than
   copy-last on development data.
 - **Plate-identity probe, early check on stage-1 data only:** 86.1% after per-plate control
-  normalisation versus 77.8% with global standardisation (chance 5.6%). Centring on the plate's
-  control mean alone also gives 86.3%, consistent with the 5–8-well control mean adding an
-  estimation offset shared by every well of the plate. Section 1 is run as written; the
-  full-data probe (step 4) reports both preprocessings and this diagnostic.
+  normalisation versus 77.8% with global standardisation (chance 5.6%); centring on the plate's
+  control mean alone gives 86.3%. **Correction (2026-10-21):** this probe cannot tell batch
+  effect from gene content. The validation plates are one per library series (51 plates, 51
+  series), so each plate carries a different siRNA layout and a classifier can identify a
+  plate from what is on it. The earlier reading (an estimation offset from the 5–8-well
+  control mean) is not supported by this probe and is withdrawn. Section 1 stays as committed
+  for the gates. Two diagnostics separate the two sources and are reported in step 4 for the
+  global, control-normalised and centre-only versions:
+  (a) a within-series replicate probe: training series with >= 3 training plates, well
+  positions present on every replicate plate, decode the replicate plate, cross-validation
+  grouped by well position;
+  (b) a negative-control-only probe on validation plates, with each plate's normalisation
+  statistics recomputed without the scored control well. Under this leave-one-out centring a
+  plate's control wells are anticorrelated with one another, so accuracy at or below chance
+  is the expected outcome when no plate offset remains.
 
 ## Open question for the author
 

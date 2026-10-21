@@ -6,6 +6,11 @@
 #   Part B: amendment 02: embed the test plates (native fetcher, frozen layout), build caches
 #           that add the test plates (training wells and their statistics unchanged; checked),
 #           then every amended evaluation and the gates, once.
+#   Part C: screenB (author instruction 2026-10-21): embed screenB, evaluate H1 (seen genes)
+#           and H2 (test-split genes) under the global preprocessing only, outside the gates,
+#           with the global-preprocessing models (selected configurations, 3 seeds) and the
+#           siRNA token masked for screenB's new siRNAs; reported next to the global test
+#           results.
 set -eu
 cd "$(dirname "$0")/.."
 P=~/venv/bin/python
@@ -21,6 +26,7 @@ BR=$(git rev-parse --abbrev-ref HEAD)
 [ -e results/a2/gates_val.json ] || { echo "validation gates not recorded"; exit 1; }
 for f in results/h1/h1_test_*.json results/h2/h2_test_*.json results/h3/h3_test_*.json \
          results/a2/h1/h1_test_*.json results/a2/h2/h2_test_*.json results/a2/h3/h3_test_*.json \
+         results/a2/h1/h1_screenB_*.json results/a2/h2/h2_screenB_*.json \
          results/a2/gates_test.json; do
   [ -e "$f" ] && { echo "test results already exist ($f): test splits are evaluated once"; exit 1; }
 done
@@ -73,4 +79,17 @@ $P scripts/64_controls_a2.py --split test --suffix _test --norm plate --freeze-c
 $P scripts/64_controls_a2.py --split test --suffix _test --norm global --freeze-commit $FREEZE > $L/controls_global.log 2>&1
 $P scripts/65_gates_a2.py --split test > $L/gates.log 2>&1
 cat $L/gates.log | tee -a $L/pipeline.log
+
+# ---------------- Part C: screenB, global preprocessing only, outside the gates
+echo "C: embedding screenB ($(($(wc -l < splits/screenB_wells.tsv) - 1)) wells)" | tee -a $L/pipeline.log
+$P scripts/20_stream_embed.py --wells splits/screenB_wells.tsv --fetcher native \
+   --out-root data/latents_screenB > $L/embed_screenB.log 2>&1
+$P -c "import sys; sys.path.insert(0,'src'); from geneworld import cache
+print(cache.build('vjepa2', roots=['data/latents','data/latents_s2','data/latents_screenB'],
+      tsvs=['splits/stage1_wells.tsv','splits/stage2_wells.tsv','splits/screenB_wells.tsv'],
+      include_test=False, suffix='_screenB'))" > $L/cache_screenB.log 2>&1
+B="--split screenB --norm global --suffix _screenB --freeze-commit $FREEZE"
+$P scripts/61_eval_h1_a2.py $B > $L/h1_screenB.log 2>&1
+$P scripts/62_eval_h2_a2.py $B > $L/h2_screenB.log 2>&1
+tail -1 $L/h1_screenB.log | tee -a $L/pipeline.log
 echo "test evaluation done (freeze $FREEZE); GPU idle" | tee -a $L/pipeline.log

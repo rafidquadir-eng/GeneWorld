@@ -172,11 +172,18 @@ def load(backbone: str = "vjepa2", norm: str = "plate", gene_split: str = "gene"
                               meta["Gene Symbol"].fillna("NEG"))
     meta["sirna"] = meta["siRNA Identifier"].fillna("")
     meta["train"] = (meta.plate_split == "train") & meta.gene_split.isin(["train", "control"])
-    ann = well_annotations("A")
     idx = pd.MultiIndex.from_arrays([meta.plate, meta.well])
-    cl = ann.classes.reindex(idx)
+    cl = well_annotations("A").classes.reindex(idx)
+    isb = (meta.plate_split == "screenB").to_numpy()
+    if isb.any():   # screenB wells take their classes from the screenB annotation
+        clb = well_annotations("B").classes.reindex(idx)
+        cl = pd.Series(np.where(isb, clb.values, cl.values))
     meta["classes"] = [c if isinstance(c, list) else [] for c in cl]
     keep = meta.plate_norm_ok.to_numpy()
+    if norm == "global":
+        # screenB has no negative controls (dropped by the plate normalisation); it is
+        # evaluated under the global preprocessing only (author instruction 2026-10-21)
+        keep = keep | isb
     meta = meta[keep].reset_index(drop=True)
     z = np.ascontiguousarray(zm[keep])       # in-memory copy aligned with meta
     return Cached(z, meta, backbone, norm, stats, path)
