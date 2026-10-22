@@ -12,3 +12,4 @@ grid finished; 277 failed: ['a2_plate_vjepa2_h2-esm2_22M_d0.1_w0.05_s0', 'a2_pla
 [10-21 23:12:04] selection FAILED
 277 runs missing, e.g. ['a2_plate_vjepa2_h1_learned_22M_d0.1_w0.05_s1.json', 'a2_plate_vjepa2_h1_learned_22M_d0.1_w0.05_s2.json', 'a2_plate_vjepa2_h1_learned_22M_d0.1_w0.2_s0.json']
 [10-21 23:17:08] step 5: grid (12 families x 8 configurations x 3 seeds)
+[10-22 07:31:59] step 5: grid (12 families x 8 configurations x 3 seeds)

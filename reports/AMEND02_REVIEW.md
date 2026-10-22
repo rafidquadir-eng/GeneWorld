@@ -1,4 +1,4 @@
-# GeneWorld amendment 02: review packet (as of 2026-10-22 03:40 UTC)
+# GeneWorld amendment 02: review packet (as of 2026-10-22 07:45 UTC)
 
 For review by the orchestrating agent. Covers everything done under `docs/DESIGN_AMENDMENT_02.md`
 (design commit `dd57079`) and the author's instructions of 2026-10-20 and 2026-10-21, up to
@@ -15,7 +15,7 @@ validation comparisons, so nothing in it anticipates a gate.
 | 2. Freeze before training (sections 2, 6) | done | `6716199` |
 | 3. Stage 2 (section 7) | done (60,289 of 61,372 wells) | `fa23c6f`, `b88f724`, `d5a5537` |
 | 4. Per-plate control normalisation; plate probe | done | `8ea9c67` (+ diagnostics `445f83c`) |
-| 5. Grid x 3 seeds; replicate baselines; probe CIs | running: grid 32 of 288 runs done | code `1511151`, fix `c03b433` |
+| 5. Grid x 3 seeds; replicate baselines; probe CIs | running: grid 52 of 288 runs done | code `1511151`, fixes `c03b433`, `77c1905` |
 | 6. Gates on validation, committed before step 7 | pending (automatic after step 5) | collector `scripts/65_gates_a2.py` |
 | 7. Freeze; embed test plates; test once; screenB | prepared, not run | `cf3db6e`, `445f83c` |
 | 8. Run report; GPU idle | pending | |
@@ -120,7 +120,10 @@ min with 3 concurrent, peak GPU memory up to 8.5 GB, median best step 2,250, med
    processes on 40 GB; up to 16 GB each, mainly validation evaluation in chunks of 1,024 wells
    on the 50 M model). Fix: chunks of 256 wells, expandable CUDA segments, 3 workers; peak
    memory now recorded per run. No protocol value changed; chunk size changes results only
-   through bf16 rounding. The 11 completed runs are kept.
+   through bf16 rounding. The 11 completed runs are kept. A second incident (10-22 07:30 UTC)
+   hit when the 50 M configurations started: they need ~14.6 GB in training itself, so three at
+   once overflowed and 12 runs failed (they rerun). The runner now schedules by GPU memory
+   (22 M = 1 unit, 50 M = 2, capacity 4) and counts runs holding a live lock (`77c1905`).
 6. **Stage-2 data loss.** 6 plates (2 validation) and 1,083 wells, all from frames missing on
    S3. Validation plates available for H1: 49 of 51.
 7. **ScreenB** has no negative-control wells (only empty wells and 155 transfection controls),
@@ -151,11 +154,11 @@ min with 3 concurrent, peak GPU memory up to 8.5 GB, median best step 2,250, med
   to beat a baseline that sees the target gene's data.
 - **Phenotype-planning replicate-endpoint retrieval** exists only for genes with embedded
   wells and is reported on that subset, with the planner scored on the same subset.
-- **Compute.** Grid throughput is about 5 runs/h on 22 M configurations and lower on 50 M. The
-  grid should finish around Oct 25 morning UTC, then secondary runs and validation evaluation
-  (~0.5 day), then the freeze, ~11 h of test-plate and screenB embedding and the test run. The
-  final report is expected about Oct 26–27. (The 10-21 estimate of Oct 24 midday for the grid
-  was too optimistic.)
+- **Compute.** 22 M runs take ~34 min (3 at a time), 50 M runs ~50–62 min (2 at a time). The
+  remaining ~236 runs need about 72–87 h, so the grid should finish around Oct 25 (morning to
+  evening UTC); then secondary runs and validation evaluation (~0.5 day), the freeze, ~11 h of
+  test-plate and screenB embedding and the test run. Final report about Oct 27–28. (Earlier
+  estimates of Oct 24 and Oct 25 morning were too optimistic.)
 
 ## 6. File index
 
