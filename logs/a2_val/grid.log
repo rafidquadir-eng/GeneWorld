@@ -344,3 +344,25 @@ grid: 277 jobs to run
 07:31:01 FAILED a2_plate_vjepa2_h1_none_50M_d0.1_w0.2_s0 (0.3 min); 222 queued
 07:31:21 FAILED a2_plate_vjepa2_h2-perturbseq_50M_d0.1_w0.2_s0 (0.3 min); 221 queued
 grid: 236 jobs to run; GPU memory units 4
+08:19:32 done a2_plate_vjepa2_h1_none_50M_d0.1_w0.05_s0 (33.8 min); 234 queued
+08:23:42 done a2_plate_vjepa2_h1_learned_50M_d0.1_w0.05_s0 (39.3 min); 233 queued
+08:57:02 done a2_plate_vjepa2_h2-perturbseq_50M_d0.1_w0.05_s0 (37.5 min); 232 queued
+09:03:22 done a2_plate_vjepa2_h2-jump_crispr_50M_d0.1_w0.05_s0 (39.7 min); 231 queued
+09:41:02 done a2_plate_vjepa2_h2-jump_orf_50M_d0.1_w0.05_s0 (44.0 min); 230 queued
+09:47:42 done a2_plate_vjepa2_h2-string_50M_d0.1_w0.05_s0 (44.3 min); 229 queued
+10:25:53 done a2_plate_vjepa2_h2shuf-perturbseq_50M_d0.1_w0.05_s0 (38.2 min); 228 queued
+10:34:53 done a2_plate_vjepa2_h2-esm2_50M_d0.1_w0.05_s0 (53.8 min); 227 queued
+11:07:43 done a2_plate_vjepa2_h2shuf-jump_crispr_50M_d0.1_w0.05_s0 (41.8 min); 226 queued
+11:18:43 done a2_plate_vjepa2_h2shuf-jump_orf_50M_d0.1_w0.05_s0 (43.8 min); 225 queued
+11:56:03 done a2_plate_vjepa2_h2shuf-string_50M_d0.1_w0.05_s0 (48.3 min); 224 queued
+12:13:23 done a2_plate_vjepa2_h2shuf-esm2_50M_d0.1_w0.05_s0 (54.7 min); 223 queued
+12:48:54 done a2_plate_vjepa2_h1_learned_50M_d0.1_w0.2_s0 (52.8 min); 222 queued
+12:52:54 done a2_plate_vjepa2_h1_none_50M_d0.1_w0.2_s0 (39.5 min); 221 queued
+13:32:44 done a2_plate_vjepa2_h2-perturbseq_50M_d0.1_w0.2_s0 (43.8 min); 220 queued
+13:36:34 done a2_plate_vjepa2_h2-jump_crispr_50M_d0.1_w0.2_s0 (43.7 min); 219 queued
+14:16:54 done a2_plate_vjepa2_h2-jump_orf_50M_d0.1_w0.2_s0 (44.2 min); 218 queued
+14:20:44 done a2_plate_vjepa2_h2-string_50M_d0.1_w0.2_s0 (44.2 min); 217 queued
+15:04:54 done a2_plate_vjepa2_h2shuf-perturbseq_50M_d0.1_w0.2_s0 (44.2 min); 216 queued
+15:13:34 done a2_plate_vjepa2_h2-esm2_50M_d0.1_w0.2_s0 (56.7 min); 215 queued
+15:48:35 done a2_plate_vjepa2_h2shuf-jump_crispr_50M_d0.1_w0.2_s0 (43.7 min); 214 queued
+15:57:45 done a2_plate_vjepa2_h2shuf-jump_orf_50M_d0.1_w0.2_s0 (44.2 min); 213 queued
