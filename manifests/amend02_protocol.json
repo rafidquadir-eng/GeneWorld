@@ -98,5 +98,15 @@
    "reason": "the two plates are absent from the S-BIAD865 OME-Zarr conversion on EBI S3 (not in manifests/s3_plate_map.json), so they could not enter the test layout",
    "file": "manifests/amend02_primary_test_wells_outside_layout.tsv"
   }
- }
+ },
+ "errata": [
+  {
+   "id": "E-02.1",
+   "date": "2026-10-22",
+   "source": "docs/AMEND02_COMPLETION_PLAN.md v2 (0f17e8d), finding F8; docs/DESIGN_AMENDMENT_02.md section 10",
+   "change": "G-Plan-2 trajectory rule: comparator = kNN-imputed endpoint retrieval (k = 10 nearest training genes in the planning source's encoding, no data from the unseen gene) instead of replicate-endpoint retrieval; replicate-endpoint retrieval kept in every table as 'oracle ceiling (uses the unseen gene's observed wells)', output key oracle_ceiling_replicate_endpoint. Phenotype-planning half unchanged.",
+   "verified_before": "no results/a2/selection.json, no H1/H2/H3 amended output, no results/a2/gates_val.json on disk or in git history",
+   "applied_in_commit": "pending"
+  }
+ ]
 }

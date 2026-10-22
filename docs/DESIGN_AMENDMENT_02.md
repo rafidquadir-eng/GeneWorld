@@ -131,3 +131,23 @@ including failures. No model, threshold or preprocessing change after this point
 - The phenotype probe reports, per class: number of positive and negative evaluation wells,
   and a 95% cluster-bootstrap CI over plates for each AUROC and for each difference
   (action-conditioned minus action-agnostic, minus replicate drift).
+
+## 10. Erratum E-02.1 (2026-10-22, before any gate)
+
+Recorded from `docs/AMEND02_COMPLETION_PLAN.md` v2, finding F8, before any selection, H2/H3
+validation output or gate existed.
+
+**G-Plan-2 trajectory rule uses an oracle comparator.** Section 4 requires the planner's
+hit@100 to beat *replicate-endpoint retrieval*. For unseen genes that baseline ranks candidates
+by the observed clip-12 latents of each candidate gene's own wells, i.e. the unseen gene's real
+data, which the planner never receives (stage 1: oracle hit@100 0.148 vs planner 0.034). The
+rule asks a zero-shot model to beat a method that sees the answer's replicates, so it cannot
+test planning. The error is in the amendment text, not in the implementation, which followed
+the text.
+
+**Corrected rule.** Trajectory planning passes if hit@100 is above random (one-sided binomial
+p < 0.05) **and above kNN-imputed endpoint retrieval** (endpoint imputed from the k nearest
+*training* genes in the planning source's encoding space, as in stage 1, using no data from the
+unseen gene; bootstrap CI of the difference over targets above 0). Replicate-endpoint retrieval
+stays in every table, labelled "oracle ceiling (uses the unseen gene's observed wells)". The
+phenotype-planning half of G-Plan-2 is unchanged.

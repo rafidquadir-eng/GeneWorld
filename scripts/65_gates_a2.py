@@ -19,6 +19,10 @@ sys.path.insert(0, str(REPO / "src"))
 
 from geneworld.train import a2  # noqa: E402
 
+# Erratum E-02.1 (docs/DESIGN_AMENDMENT_02.md section 10): trajectory half of G-Plan-2 is
+# judged against kNN-imputed endpoint retrieval, not the replicate-endpoint oracle.
+TRAJECTORY_GATE_COMPARATOR = "retrieval_knn"
+
 
 def rec(path: Path) -> dict:
     return {"file": str(path.relative_to(REPO)),
@@ -36,6 +40,10 @@ def main() -> int:
         "planning_source"]
     h3 = a2.RES_DIR / "h3" / f"h3_{sp}_plate_vjepa2_{src}.json"
     r1, r2, r3 = (json.loads(p.read_text()) for p in (h1, h2, h3))
+    comp = r3["trajectory_targets"].get("gate_comparator")
+    if comp != TRAJECTORY_GATE_COMPARATOR:
+        sys.exit(f"{h3.name}: trajectory gate comparator is {comp!r}, erratum E-02.1 requires "
+                 f"{TRAJECTORY_GATE_COMPARATOR!r}")
     sig = r1["G_Signal_2"]
     out = {"split": sp, "design_commit": a2.DESIGN_COMMIT,
            "freeze_commit": r1.get("freeze_commit"),
@@ -49,7 +57,14 @@ def main() -> int:
                                                "true_vs_agnostic":
                                                    v["primary"]["true_vs_agnostic"]}
                                            for s, v in r2["sources"].items()}},
-           "G_Plan_2": {**r3["G_Plan_2"], "source": rec(h3)},
+           "G_Plan_2": {**r3["G_Plan_2"], "source": rec(h3),
+                        "trajectory_gate_comparator": comp,
+                        "trajectory_vs_comparator": r3["trajectory_targets"][
+                            f"planner_vs_{comp}_hit@100"],
+                        "oracle_ceiling_hit@100": r3["trajectory_targets"]["methods"][
+                            "oracle_ceiling_replicate_endpoint"]["hit@100"]},
+           "errata": ["E-02.1 (2026-10-22): G-Plan-2 trajectory comparator = kNN-imputed "
+                      "endpoint retrieval"],
            "consequence": ("G-Signal-2 passed: H2/H3 are confirmatory" if sig["pass"] else
                            "G-Signal-2 failed: H2/H3 are exploratory (amendment 02 section 4)"),
            "code_commit": subprocess.run(["git", "-C", str(REPO), "rev-parse", "--short",

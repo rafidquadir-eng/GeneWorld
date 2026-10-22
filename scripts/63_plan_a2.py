@@ -9,15 +9,18 @@ Planner: the planning source's true-encoding models (three seeds; scores average
     amendment-01 validated hits. Metrics AP, AUROC, hits/enrichment @10/50/100; nulls: 10,000
     label permutations and 10,000 within HeLa-expression bins; baselines: guilt-by-association
     (cosine to the mean encoding of training genes in the truth list), kNN-imputed endpoint
-    retrieval, replicate-endpoint retrieval (observed clip-12 mean of the gene's own wells; only
+    retrieval, and the oracle ceiling (replicate-endpoint retrieval: observed clip-12 mean of
+    the gene's own wells, i.e. data the planner never receives; only
     genes with embedded wells, reported on that subset with the planner on the same subset).
     Rule: AP beats permutation (BH q < 0.05) for >= 2 of 3 phenotypes and beats
     guilt-by-association for >= 1 (primary truth).
 (b) Trajectory targets: up to 500 seeded wells of primary unseen genes; start = the well's clip 0;
     candidates = every embedded library gene with an encoding; planner score = -mean squared
-    distance at clips 8 and 12; replicate-endpoint retrieval = the candidate's observed mean
+    distance at clips 8 and 12; oracle ceiling (replicate-endpoint retrieval) = the candidate's
+    observed mean
     clip-12 latent over its other wells; kNN-imputed retrieval as stage 1. Rule: hit@100 above
-    random (one-sided binomial p < 0.05) and above replicate-endpoint retrieval (bootstrap over
+    random (one-sided binomial p < 0.05) and above kNN-imputed endpoint retrieval (erratum
+    E-02.1, docs/DESIGN_AMENDMENT_02.md section 10; bootstrap over
     target genes, 95% CI of the hit@100 difference above 0).
 G-Plan-2 passes when both (a) and (b) pass.
 """
@@ -46,6 +49,10 @@ from geneworld.train import a2  # noqa: E402
 from geneworld.train.batcher import DEV  # noqa: E402
 
 K_NN = 10
+# Erratum E-02.1 (2026-10-22): the trajectory gate comparator is kNN-imputed endpoint retrieval
+# (no data from the unseen gene). Replicate-endpoint retrieval is reported as an oracle ceiling.
+TRAJECTORY_GATE_COMPARATOR = "retrieval_knn"
+ORACLE = "oracle_ceiling_replicate_endpoint"
 
 
 @torch.no_grad()
@@ -218,7 +225,7 @@ def main() -> int:
                             ob = np.stack([obs_ep[g] for g in np.array(genes)[has_obs]])
                             rr["subset_with_embedded_wells"] = {
                                 "planner": metrics(score[has_obs], y[has_obs]),
-                                "replicate_endpoint_retrieval": metrics(
+                                ORACLE: metrics(
                                     -((ob - tgt) ** 2).mean(1), y[has_obs])}
                     r[hz] = rr
                 phen[p] = r
@@ -249,7 +256,7 @@ def main() -> int:
                                                   replace=False))
     imp = impute(cands, enc, train_genes, ep_train)
     wells_of = {g: np.flatnonzero(lib & (act == g)) for g in cands}
-    methods = ["planner", "retrieval_knn", "replicate_endpoint_retrieval"]
+    methods = ["planner", "retrieval_knn", ORACLE]
     ranks = {k: [] for k in methods}
     for i in tgt:
         g = act[i]
@@ -263,7 +270,7 @@ def main() -> int:
             w = w[w != i]
             if len(w):
                 ob[cix[cg]] = -((zt[w, 12].mean(0) - zt[i, 12]) ** 2).mean()
-        sc["replicate_endpoint_retrieval"] = ob
+        sc[ORACLE] = ob
         for k, s in sc.items():
             ranks[k].append(int(np.flatnonzero(np.argsort(-s) == cix[g])[0]) + 1)
     C = len(cands)
@@ -277,7 +284,7 @@ def main() -> int:
     tr["random"] = {"hit@1": 1 / C, "hit@10": 10 / C, "hit@100": 100 / C}
     from scipy.stats import binomtest
     hp = np.array(ranks["planner"]) <= 100
-    hr = np.array(ranks["replicate_endpoint_retrieval"]) <= 100
+    hr = np.array(ranks[TRAJECTORY_GATE_COMPARATOR]) <= 100
     tg = act[tgt]
     ug = np.unique(tg)
     per = np.array([[hp[tg == g].mean(), hr[tg == g].mean()] for g in ug])
@@ -285,15 +292,21 @@ def main() -> int:
     dd = bs[..., 0].mean(1) - bs[..., 1].mean(1)
     tr["planner_vs_random_hit@100_p"] = float(binomtest(int(hp.sum()), len(hp), 100 / C,
                                                         alternative="greater").pvalue)
-    tr["planner_vs_replicate_endpoint_hit@100"] = {
+    tr["gate_comparator"] = TRAJECTORY_GATE_COMPARATOR
+    tr["oracle_ceiling_label"] = "oracle ceiling (uses the unseen gene's observed wells)"
+    tr[f"planner_vs_{TRAJECTORY_GATE_COMPARATOR}_hit@100"] = {
         "difference": float(per[:, 0].mean() - per[:, 1].mean()),
         "ci95": [float(np.percentile(dd, 2.5)), float(np.percentile(dd, 97.5))]}
     tr["pass"] = bool(tr["planner_vs_random_hit@100_p"] < 0.05 and
-                      tr["planner_vs_replicate_endpoint_hit@100"]["ci95"][0] > 0)
+                      tr[f"planner_vs_{TRAJECTORY_GATE_COMPARATOR}_hit@100"]["ci95"][0] > 0)
     res["trajectory_targets"] = tr
     print(json.dumps(tr["methods"]))
     phen_pass = ph["sets"]["unseen"]["truth"]["primary"]["decision"]["pass"]
-    res["G_Plan_2"] = {"rule": "phenotype (primary truth, unseen genes) and trajectory rules",
+    res["G_Plan_2"] = {"rule": "phenotype (primary truth, unseen genes) and trajectory rules; "
+                               "trajectory: hit@100 above random (binomial p < 0.05) and above "
+                               "kNN-imputed endpoint retrieval (bootstrap CI over target genes "
+                               "above 0), erratum E-02.1",
+                       "erratum": "E-02.1",
                        "phenotype_pass": phen_pass, "trajectory_pass": tr["pass"],
                        "pass": bool(phen_pass and tr["pass"])}
     res["code_commit"] = subprocess.run(["git", "-C", str(REPO), "rev-parse", "--short", "HEAD"],

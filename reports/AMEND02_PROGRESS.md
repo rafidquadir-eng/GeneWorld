@@ -65,6 +65,17 @@ leave-one-out centring when no offset remains). So the plate effect that the con
 is removed by section 1, but most of the batch difference between replicate plates is not
 carried by the control wells' offset.
 
+## Erratum E-02.1 (2026-10-22, before any gate)
+
+The G-Plan-2 trajectory rule compared the planner with replicate-endpoint retrieval, which for
+unseen genes uses the unseen gene's own observed wells (an oracle; stage 1: hit@100 0.148 vs
+planner 0.034). Corrected per the author's completion plan v2 (F8): the trajectory half passes
+if hit@100 is above random (binomial p < 0.05) and above kNN-imputed endpoint retrieval
+(bootstrap CI over target genes above 0). Replicate-endpoint retrieval stays in every table as
+the oracle ceiling. Applied before any selection, H2/H3 validation output or gate existed
+(`docs/DESIGN_AMENDMENT_02.md` section 10; `scripts/63_plan_a2.py`, `scripts/65_gates_a2.py`,
+`tests/test_erratum_e021.py`).
+
 ## Author decisions 2026-10-21
 
 - ScreenB: evaluated after the freeze under the global preprocessing only, outside the gates
