@@ -65,6 +65,34 @@ leave-one-out centring when no offset remains). So the plate effect that the con
 is removed by section 1, but most of the batch difference between replicate plates is not
 carried by the control wells' offset.
 
+## Grid runs at the migration stop (2026-10-22 16:39 UTC)
+
+76 of 288 grid runs complete, 212 incomplete (never started or failed with out-of-memory; no run was stopped part-way: the two in flight at the stop finished normally). Cells list the completed seeds per family and configuration (per-plate normalisation, V-JEPA 2, gene split); "–" = none. Incomplete runs restart from scratch on the new instance; completed runs are never rerun or overwritten. Full lists: `results/a2/grid_status_at_migration.json`.
+
+| family | `22M_d0.1_w0.05` | `22M_d0.1_w0.2` | `22M_d0.3_w0.05` | `22M_d0.3_w0.2` | `50M_d0.1_w0.05` | `50M_d0.1_w0.2` | `50M_d0.3_w0.05` | `50M_d0.3_w0.2` |
+|---|---|---|---|---|---|---|---|---|
+| `h1_learned` | 0 | 0 | 0 | 0 | 0 | 0 | – | – |
+| `h1_none` | 0 | 0,1 | 0 | 0 | 0 | 0 | – | – |
+| `h2:perturbseq` | 0 | 0 | 0 | 0 | 0 | 0 | – | – |
+| `h2:jump_crispr` | 0 | 0 | 0 | 0 | 0 | 0 | – | – |
+| `h2:jump_orf` | 0 | 0 | 0 | 0 | 0 | 0 | – | – |
+| `h2:string` | 0 | 0,1 | 0 | 0 | 0 | 0 | – | – |
+| `h2:esm2` | 0,2 | 0 | 0 | 0 | 0 | 0 | – | – |
+| `h2shuf:perturbseq` | 0 | 0 | 0 | 0 | 0 | 0 | – | – |
+| `h2shuf:jump_crispr` | 0 | 0 | 0 | 0 | 0 | 0 | – | – |
+| `h2shuf:jump_orf` | 0 | 0 | 0 | 0 | 0 | 0 | 0 | – |
+| `h2shuf:string` | 0 | 0 | 0 | 0 | 0 | 0 | – | – |
+| `h2shuf:esm2` | 0 | 0 | 0 | 0 | 0 | 0 | – | – |
+
+## Backup audit for the migration (2026-10-22 17:40 UTC)
+
+`scripts/70_backup_audit.py` -> `results/a2/backup_audit.json`: 2,017 files, 303.9 GB (1,770
+latent shards 244.5 GB; 24 cache files 44.5 GB; 94 run summaries; 94 checkpoints 14.1 GB; 35
+annotation/encoding/reference tables 0.9 GB). 1,896 were already backed up with a matching
+ledger hash; 121 (the caches, and run summaries and checkpoints written since their last ledger
+row) were backed up now. Every backup copy was re-hashed: no mismatch, no file missing from
+`~/LambdaFilesystem/geneworld_backups/` or from `reports/BACKUP_LEDGER.tsv`.
+
 ## Erratum E-02.1 (2026-10-22, before any gate)
 
 The G-Plan-2 trajectory rule compared the planner with replicate-endpoint retrieval, which for

@@ -1,0 +1,760 @@
+{
+ "utc": "2026-10-22T17:40:31Z",
+ "dest_root": "/home/ubuntu/LambdaFilesystem/geneworld_backups",
+ "files": 2017,
+ "bytes": 303909734108,
+ "groups": {
+  "latent_shards": {
+   "files": 1770,
+   "bytes": 244489734962
+  },
+  "cache_files": {
+   "files": 24,
+   "bytes": 44479512406
+  },
+  "run_summaries": {
+   "files": 94,
+   "bytes": 328797
+  },
+  "checkpoints": {
+   "files": 94,
+   "bytes": 14059086021
+  },
+  "tables_not_in_git": {
+   "files": 35,
+   "bytes": 881071922
+  }
+ },
+ "already_backed_up_and_ledgered": 1896,
+ "backed_up_or_ledgered_now": 121,
+ "fixed": [
+  {
+   "path": "checkpoints/backbones/tijepa1_T1_seed0.pt",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/dinov2/fingerprint.npy",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/dinov2/global.npy",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/dinov2/global_stats.npz",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/dinov2/meta.tsv",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/dinov2/plate.npy",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/dinov2/plate_stats.npz",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/dinov2/raw.npy",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/dinov2/stats.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/tijepa1/fingerprint.npy",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/tijepa1/global.npy",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/tijepa1/global_stats.npz",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/tijepa1/meta.tsv",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/tijepa1/plate.npy",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/tijepa1/plate_stats.npz",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/tijepa1/raw.npy",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/tijepa1/stats.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/vjepa2/fingerprint.npy",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/vjepa2/global.npy",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/vjepa2/global_stats.npz",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/vjepa2/meta.tsv",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/vjepa2/plate.npy",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/vjepa2/plate_stats.npz",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/vjepa2/raw.npy",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/cache/vjepa2/stats.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/meta/idr_plate_map.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "data/meta/s3_plate_map.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h1_learned_22M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h1_learned_22M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h1_learned_22M_d0.3_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h1_learned_22M_d0.3_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h1_learned_50M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h1_learned_50M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h1_none_22M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h1_none_22M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h1_none_22M_d0.1_w0.2_s1.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h1_none_22M_d0.3_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h1_none_22M_d0.3_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h1_none_50M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h1_none_50M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-esm2_22M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-esm2_22M_d0.1_w0.05_s2.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-esm2_22M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-esm2_22M_d0.3_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-esm2_22M_d0.3_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-esm2_50M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-esm2_50M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-jump_crispr_22M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-jump_crispr_22M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-jump_crispr_22M_d0.3_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-jump_crispr_22M_d0.3_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-jump_crispr_50M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-jump_crispr_50M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-jump_orf_22M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-jump_orf_22M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-jump_orf_22M_d0.3_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-jump_orf_22M_d0.3_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-jump_orf_50M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-jump_orf_50M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-perturbseq_22M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-perturbseq_22M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-perturbseq_22M_d0.3_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-perturbseq_22M_d0.3_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-perturbseq_50M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-perturbseq_50M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-string_22M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-string_22M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-string_22M_d0.1_w0.2_s1.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-string_22M_d0.3_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-string_22M_d0.3_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-string_50M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2-string_50M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-esm2_22M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-esm2_22M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-esm2_22M_d0.3_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-esm2_22M_d0.3_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-esm2_50M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-esm2_50M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-jump_crispr_22M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-jump_crispr_22M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-jump_crispr_22M_d0.3_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-jump_crispr_22M_d0.3_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-jump_crispr_50M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-jump_crispr_50M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-jump_orf_22M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-jump_orf_22M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-jump_orf_22M_d0.3_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-jump_orf_22M_d0.3_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-jump_orf_50M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-jump_orf_50M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-jump_orf_50M_d0.3_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-perturbseq_22M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-perturbseq_22M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-perturbseq_22M_d0.3_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-perturbseq_22M_d0.3_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-perturbseq_50M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-perturbseq_50M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-string_22M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-string_22M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-string_22M_d0.3_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-string_22M_d0.3_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-string_50M_d0.1_w0.05_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/a2/train/a2_plate_vjepa2_h2shuf-string_50M_d0.1_w0.2_s0.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/train/h1_learned_A.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/train/h1_learned_B.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/train/h1_learned_C.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/train/h1_learned_dinov2.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/train/h1_learned_tijepa1.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/train/h1_none_A.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/train/h1_none_B.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/train/h1_none_C.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/train/h1_none_dinov2.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/train/h1_none_tijepa1.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/train/h1_selection.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/train/h2_esm2.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/train/h2_jump_crispr.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/train/h2_jump_orf.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/train/h2_perturbseq.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/train/h2_string.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/train/h2c_none.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  },
+  {
+   "path": "results/train/h2c_string.json",
+   "had_backup": false,
+   "backup_matched": false,
+   "in_ledger": false
+  }
+ ],
+ "problems_after_fix": [],
+ "minutes": 61.33930690685908
+}

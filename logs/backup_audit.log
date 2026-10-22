@@ -1,0 +1,32 @@
+{
+ "utc": "2026-10-22T17:40:31Z",
+ "dest_root": "/home/ubuntu/LambdaFilesystem/geneworld_backups",
+ "files": 2017,
+ "bytes": 303909734108,
+ "groups": {
+  "latent_shards": {
+   "files": 1770,
+   "bytes": 244489734962
+  },
+  "cache_files": {
+   "files": 24,
+   "bytes": 44479512406
+  },
+  "run_summaries": {
+   "files": 94,
+   "bytes": 328797
+  },
+  "checkpoints": {
+   "files": 94,
+   "bytes": 14059086021
+  },
+  "tables_not_in_git": {
+   "files": 35,
+   "bytes": 881071922
+  }
+ },
+ "already_backed_up_and_ledgered": 1896,
+ "backed_up_or_ledgered_now": 121,
+ "problems_after_fix": [],
+ "minutes": 61.33930690685908
+}
