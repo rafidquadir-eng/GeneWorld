@@ -56,10 +56,29 @@ def jobs(phase: str) -> list[dict]:
     return out
 
 
+def units_of(name: str) -> int:
+    """GPU memory units: 22 M ~8.5 GB peak, 50 M ~14.6 GB peak (measured), capacity 4 = 40 GB."""
+    return 2 if "_50M_" in name else 1
+
+
+def external_live(mine: set[str]) -> set[str]:
+    """Runs holding a live lock that this runner did not start (e.g. after a restart)."""
+    out = set()
+    for lk in a2.CK_DIR.glob("*.lock"):
+        try:
+            info = json.loads(lk.read_text())
+        except (OSError, ValueError):
+            continue
+        if lk.stem not in mine and Path(f"/proc/{info['pid']}").exists():
+            out.add(lk.stem)
+    return out
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--phase", choices=["grid", "secondary"], required=True)
-    ap.add_argument("--workers", type=int, default=3)
+    ap.add_argument("--workers", type=int, default=3, help="unused; see --units")
+    ap.add_argument("--units", type=int, default=4, help="GPU memory units (22M = 1, 50M = 2)")
     args = ap.parse_args()
     todo = []
     for j in jobs(args.phase):
@@ -69,25 +88,33 @@ def main() -> int:
             todo.append((name, j))
     log = REPO / "logs" / "a2"
     log.mkdir(parents=True, exist_ok=True)
-    print(f"{args.phase}: {len(todo)} jobs to run", flush=True)
-    running: list[tuple[str, subprocess.Popen, float]] = []
+    print(f"{args.phase}: {len(todo)} jobs to run; GPU memory units {args.units}", flush=True)
+    running: list[tuple[str, subprocess.Popen, float, int]] = []
     failed = []
-    while todo or running:
-        while todo and len(running) < args.workers:
-            name, j = todo.pop(0)
+    while todo or running or external_live(set()):
+        used = sum(u for *_, u in running)
+        mine = {n for n, *_ in running}
+        ext = external_live(mine)
+        used += sum(units_of(n) for n in ext)
+        for k, (name, j) in enumerate(list(todo)):
+            u = units_of(name)
+            if name in ext or used + u > args.units:
+                continue
+            todo.remove((name, j))
             cmd = [PY, str(REPO / "scripts" / "50_train_a2.py"), "--family", j["family"],
                    "--config", j["config"], "--seed", str(j["seed"]), "--norm", j["norm"],
                    "--backbone", j["backbone"], "--gene-split", j["gene_split"]]
             fh = open(log / f"{name}.log", "w")
             env = dict(__import__("os").environ, PYTORCH_CUDA_ALLOC_CONF="expandable_segments:True")
             running.append((name, subprocess.Popen(cmd, stdout=fh, stderr=subprocess.STDOUT,
-                                                   cwd=REPO, env=env), time.time()))
+                                                   cwd=REPO, env=env), time.time(), u))
+            used += u
         time.sleep(10)
         still = []
-        for name, p, t0 in running:
+        for name, p, t0, u in running:
             rc = p.poll()
             if rc is None:
-                still.append((name, p, t0))
+                still.append((name, p, t0, u))
             else:
                 ok = rc == 0 and (a2.RES_DIR / "train" / f"{name}.json").exists()
                 if not ok:
@@ -95,6 +122,9 @@ def main() -> int:
                 print(f"{time.strftime('%H:%M:%S')} {'done' if ok else 'FAILED'} {name} "
                       f"({(time.time() - t0) / 60:.1f} min); {len(todo)} queued", flush=True)
         running = still
+        if not todo and not running:
+            if not external_live(set()):
+                break
     print(f"{args.phase} finished; {len(failed)} failed: {failed}", flush=True)
     return 1 if failed else 0
 
