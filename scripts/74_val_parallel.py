@@ -75,10 +75,13 @@ def jobs() -> dict[str, dict]:
     J = {
         "grid": dict(cmd=P + ["scripts/run_a2_jobs.py", "--phase", "grid"], deps=[], gpus=8,
                      log="grid.log"),
-        "selection": dict(cmd=P + ["scripts/60_select_a2.py"], deps=["grid"], gpus=0),
+        # S11: final per-run grid record, committed with the selection
+        "grid_record": dict(cmd=P + ["scripts/73_grid_record.py"], deps=["grid"], gpus=0),
+        "selection": dict(cmd=P + ["scripts/60_select_a2.py"], deps=["grid_record"], gpus=0),
         "commit_selection": dict(commit=(
             "Amendment 02 step 5: grid trained (3 seeds); selected configurations recorded "
-            "(results/a2/selection.json) before any gate"), deps=["selection"]),
+            "(results/a2/selection.json) before any gate; final grid run record "
+            "(results/a2/grid_runs.json, S11)"), deps=["selection"]),
         "h2_val": dict(cmd=P + ["scripts/62_eval_h2_a2.py", "--split", "val"],
                        deps=["commit_selection"], gpus=1),
         "h1_val": dict(cmd=P + ["scripts/61_eval_h1_a2.py", "--split", "val"],

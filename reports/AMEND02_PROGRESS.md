@@ -153,6 +153,30 @@ gate), H2 validation, 57 secondary runs (~1–1.5 h on 8 GPUs), the validation e
 test and screenB embedding (~1.5 h on 8 GPUs), the test run, E1/E2 and the run report:
 about 10-24 to 10-25.
 
+## Completion plan v3 (2026-10-23)
+
+- **S10 (author-approved):** apt timers and unattended-upgrades disabled, apt services masked,
+  24 NVIDIA/CUDA packages held, needrestart list-only; NVIDIA state unchanged
+  (`logs/migration/os_freeze.log`). No upgrade or reboot until the instance is terminated.
+- **G4:** no stash, checkout, reset, rebase or pull in the working tree while jobs run; commits
+  by explicit paths. The v3 plan was merged in a separate worktree (`b9a1f76`); the main
+  worktree's branch ref and index were advanced without writing files, so
+  `docs/AMEND02_COMPLETION_PLAN_v3.md` is materialised in the working tree only once no job
+  runs.
+- **S11 grid record** (`scripts/73_grid_record.py` -> `results/a2/grid_runs.json`): per run
+  the attempts with host, GPU where known, start/end/minutes, status, the incident ending each
+  failed attempt and the results-file SHA-256; every attempt labelled "logged" (runner line)
+  or "reconstructed: <how>". Snapshot 14:57 UTC 10-23: 245 complete (76 old instance, 169 new),
+  16 running, 27 awaiting rerun; failed attempts 277 (incident 1), 13 (incident 2), 27
+  (incident 3). Correction: the runner log shows **13** failed attempts in incident 2
+  (07:27:21–07:31:21 UTC 10-22), not 12 as stated above. Reconstructed: the 169 runs of runner
+  section 4 (end = results-file time, GPU unknown, G3), the 27 incident-3 attempts, and 2
+  runs that finished on the old instance after its runner was stopped (16:11–16:39 UTC 10-22).
+  The final record is regenerated when the grid completes and committed with the selection.
+- **S12:** `scripts/run_a2_val.sh` was stopped during its grid step (its grid runner
+  continues); `scripts/74_val_parallel.py` takes over from the end of the grid (selection
+  first, then the independent validation jobs in parallel on the 8 GPUs, then the gates).
+
 ## Incident 3: OS upgrade restarted the NVIDIA services (2026-10-23 06:20 UTC)
 
 - **What happened:** Ubuntu's `apt-daily-upgrade` (unattended-upgrades) ran from 06:09 UTC. After
