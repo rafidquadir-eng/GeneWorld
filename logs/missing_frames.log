@@ -1,0 +1,36 @@
+selected 61372, embedded 60289, failed 1083
+{
+ "utc": "2026-10-23T05:57:53Z",
+ "rule": "HEAD on every level-1 frame chunk, 3 attempts, back-off 1/2/4 s",
+ "wells_selected": 61372,
+ "wells_failed": 1083,
+ "frames_requested": 100719,
+ "frames_missing": 21184,
+ "frames_other_status": 0,
+ "wells_recovered": 0,
+ "whole_plates_missing": [
+  "LT0003_40",
+  "LT0008_14",
+  "LT0012_29",
+  "LT0079_38",
+  "LT0084_46",
+  "LT0096_29"
+ ],
+ "by_split": {
+  "train": {
+   "wells": 745,
+   "plates": 26,
+   "h1_primary_wells": 0,
+   "h2_primary_gene_wells": 194,
+   "all_missing_ge_88": 532
+  },
+  "val": {
+   "wells": 338,
+   "plates": 4,
+   "h1_primary_wells": 33,
+   "h2_primary_gene_wells": 70,
+   "all_missing_ge_88": 336
+  }
+ },
+ "minutes": 20.564669239521027
+}
