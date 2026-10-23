@@ -1,0 +1,26 @@
+grid: 212 jobs to run; GPUs 0,1,2,3,4,5,6,7, 4 memory units each
+ok   a2_plate_vjepa2_h1_learned_50M_d0.3_w0.05_s0
+       inputs ok a2_plate_vjepa2_h1_learned_50M_d0.3_w0.05_s0: train wells 45786, val primary wells 362, actions 9967, backbone sha256 25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b
+ok   a2_plate_vjepa2_h1_none_50M_d0.3_w0.05_s0
+       inputs ok a2_plate_vjepa2_h1_none_50M_d0.3_w0.05_s0: train wells 45786, val primary wells 362, actions 9967, backbone sha256 25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b
+ok   a2_plate_vjepa2_h2-perturbseq_50M_d0.3_w0.05_s0
+       inputs ok a2_plate_vjepa2_h2-perturbseq_50M_d0.3_w0.05_s0: train wells 26083, val primary wells 532, actions 5135, backbone sha256 25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b
+ok   a2_plate_vjepa2_h2-jump_crispr_50M_d0.3_w0.05_s0
+       inputs ok a2_plate_vjepa2_h2-jump_crispr_50M_d0.3_w0.05_s0: train wells 22076, val primary wells 480, actions 4398, backbone sha256 25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b
+ok   a2_plate_vjepa2_h2-jump_orf_50M_d0.3_w0.05_s0
+       inputs ok a2_plate_vjepa2_h2-jump_orf_50M_d0.3_w0.05_s0: train wells 28605, val primary wells 692, actions 6270, backbone sha256 25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b
+ok   a2_plate_vjepa2_h2-string_50M_d0.3_w0.05_s0
+       inputs ok a2_plate_vjepa2_h2-string_50M_d0.3_w0.05_s0: train wells 43695, val primary wells 943, actions 9455, backbone sha256 25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b
+ok   a2_plate_vjepa2_h2-esm2_50M_d0.3_w0.05_s0
+       inputs ok a2_plate_vjepa2_h2-esm2_50M_d0.3_w0.05_s0: train wells 44062, val primary wells 997, actions 9559, backbone sha256 25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b
+ok   a2_plate_vjepa2_h2shuf-perturbseq_50M_d0.3_w0.05_s0
+       inputs ok a2_plate_vjepa2_h2shuf-perturbseq_50M_d0.3_w0.05_s0: train wells 26083, val primary wells 532, actions 5135, backbone sha256 25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b
+ok   a2_plate_vjepa2_h2shuf-jump_crispr_50M_d0.3_w0.05_s0
+       inputs ok a2_plate_vjepa2_h2shuf-jump_crispr_50M_d0.3_w0.05_s0: train wells 22076, val primary wells 480, actions 4398, backbone sha256 25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b
+ok   a2_plate_vjepa2_h2shuf-string_50M_d0.3_w0.05_s0
+       inputs ok a2_plate_vjepa2_h2shuf-string_50M_d0.3_w0.05_s0: train wells 43695, val primary wells 943, actions 9455, backbone sha256 25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b
+ok   a2_plate_vjepa2_h2shuf-esm2_50M_d0.3_w0.05_s0
+       inputs ok a2_plate_vjepa2_h2shuf-esm2_50M_d0.3_w0.05_s0: train wells 44062, val primary wells 997, actions 9559, backbone sha256 25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b
+ok   a2_plate_vjepa2_h2shuf-jump_orf_50M_d0.3_w0.2_s0
+       inputs ok a2_plate_vjepa2_h2shuf-jump_orf_50M_d0.3_w0.2_s0: train wells 28605, val primary wells 692, actions 6270, backbone sha256 25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b
+input check: 12 of 12 family inputs ok

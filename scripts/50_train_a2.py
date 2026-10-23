@@ -54,7 +54,8 @@ def take_lock(path: Path) -> None:
             sys.exit(f"{path} is held by live PID {info['pid']}; refusing to start")
     fd = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_TRUNC)
     os.write(fd, json.dumps({"host": socket.gethostname(), "pid": os.getpid(),
-                             "start": time.time()}).encode())
+                             "start": time.time(),
+                             "gpu": os.environ.get("CUDA_VISIBLE_DEVICES")}).encode())
     os.close(fd)
 
 
@@ -93,12 +94,32 @@ def main() -> int:
     ap.add_argument("--gene-split", default="gene", choices=["gene", "complex"])
     ap.add_argument("--suffix", default="")
     ap.add_argument("--max-steps", type=int, default=0, help="override (smoke tests only)")
+    ap.add_argument("--check-inputs", action="store_true",
+                    help="load every input and verify the backbone hash, then exit (no lock, "
+                         "no training, nothing written)")
     args = ap.parse_args()
     P = a2.protocol()["fixed_not_tuned"]
     cfg = a2.config_by_id(args.config)
     max_steps = args.max_steps or P["max_steps"]
     name = a2.run_name(args.norm, args.backbone, args.family, args.config, args.seed,
                        args.gene_split)
+    if args.check_inputs:
+        c = cache.load(args.backbone, args.norm, gene_split=args.gene_split,
+                       suffix=args.suffix)
+        mode, _, _ = a2.family_mode(args.family)
+        enc = a2.family_encoding(args.family, args.seed)
+        train = a2.train_mask(c.meta, args.family, args.seed)
+        vocab = {g: i for i, g in enumerate(sorted(set(c.meta.action[train]) - {"NEG"}))}
+        sirnas = {s: i + 1 for i, s in enumerate(sorted(set(c.meta.sirna[train]) - {""}))}
+        val = a2.eval_mask(c.meta, "h2_val" if mode == "encoding" else "h1_val",
+                           set(vocab) | {"NEG"}, enc if mode == "encoding" else None)
+        Batcher(c, mode, vocab, sirnas, enc)
+        bb = verified_backbone_record(BACKBONE_KEY[args.backbone])
+        split_sha()
+        print(f"inputs ok {name}: train wells {int(train.sum())}, val primary wells "
+              f"{int(val.sum())}, actions {len(vocab)}, backbone sha256 "
+              f"{bb['sha256']}")
+        return 0
     a2.CK_DIR.mkdir(parents=True, exist_ok=True)
     lock = a2.CK_DIR / f"{name}.lock"
     take_lock(lock)
