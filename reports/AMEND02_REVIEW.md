@@ -1,4 +1,108 @@
-# GeneWorld amendment 02: review packet (as of 2026-10-22 07:45 UTC)
+# GeneWorld amendment 02: review packet (updated 2026-10-23 14:45 UTC)
+
+## Update 2026-10-23: migration to 8 x A100-40GB, S2, S3, grid resumed
+
+Covers the work since the 10-22 packet below, under `docs/AMEND02_COMPLETION_PLAN.md` v2 and
+the author's instructions of 10-23. Commits `131156c`..HEAD on `stage1`; `main` untouched.
+**Still no selection, no H2/H3 or amended H1 validation output, no gate; no test plate, test
+gene or screenB well embedded or evaluated.** As before, no per-family validation errors are
+reported here.
+
+### Status
+
+| completion-plan step | status | commits / evidence |
+|---|---|---|
+| S1 erratum E-02.1 | done 10-22 (confirmed on the new instance) | `3236065`, `5f5ca7e` |
+| Migration (section 3, steps 2–3) | done; author told "restore verified; the old instance can be terminated" | `131156c`, `264fee5`, `54ffd2f`; `results/a2/restore_audit.json` |
+| S2 missing frames confirmed | done | `65db5d2`; `results/a2/missing_frames.json` |
+| S3 rule pre-registered for test and screenB | done (before the freeze, before any test/screenB embedding) | `884a9c0`; protocol `missing_frames_rule` |
+| S5 grid | running: 245 of 288 runs done at 14:30 UTC, 43 left (27 reruns after incident 3) | `results/a2/train/*.json` |
+| S5 selection -> H2 val -> secondary -> validation evaluations -> `gates_val.json` | queued, automatic (`scripts/run_a2_val.sh`, resumed at step 5; commits, backs up and pushes after each step) | |
+| S6–S9 freeze, test/screenB embedding, test once, E1/E2, run report, GPUs idle | pending, by hand | |
+
+### What was done and how
+
+- **Hardware and environment:** 8 x A100-SXM4-40GB (NVSwitch, NV12), 2 x EPYC 7542, 1.77 TB
+  RAM, Ubuntu 24.04.2; driver **580.178.04** and Fabric Manager **580.178.04** (installed by
+  hand; the author's prompt said 550-server, which is installed but not loaded); `~/venv` from
+  `requirements-lock.txt` (`3888e77`), torch 2.11.0+cu128; bf16 matmul checked on every GPU.
+- **Restore** (`scripts/71_restore.py`): every ledger path copied from the persistent
+  filesystem to a `.part` file, hashed, moved into place only on a match with the path's latest
+  ledger row; files already present (git) hashed, never overwritten. 1,956 restored (309.3 GB),
+  95 present, all matching. All 2,083 ledger rows reconciled (2,029 matching, 24 superseded by a
+  later row, 27 rows of 24 kept-aside files, 3 without a backup copy).
+- **Two author decisions on the restore (10-23):**
+  1. `checkpoints/predictors/smoke_{l,n,s}.pt` (10-19 stage-1 smoke tests) have no backup copy;
+     unreferenced and not on the old disk at its 10-22 audit: recorded as lost, not needed.
+  2. 24 ledgered early shards (10-19, 8 stage-2 training plates x 3 backbones, 100 wells, no
+     fingerprint) were not on the old disk when the caches were built (572 shards per
+     backbone; 10-22 audit 1,770 = 572 x 3 + 54). With them, `cache.build` fails, and they would
+     have replaced stage-2 latents of 58–100 wells per plate. Kept aside in
+     `data/latents_unused_1019/`, not used.
+  Ledger rows are never edited; two `#` reconciliation notes were appended.
+- **Caches reproduced exactly:** rebuilt for all three backbones; `stats.json` byte-identical to
+  `results/a2/cache_stats_*.json` and every cache array byte-identical to the restored cache.
+  V-JEPA 2 weights hash matches `manifests/models.yaml`.
+- **Shard guard (author instruction):** `manifests/cache_shards.tsv` (1,770 shards with SHA-256);
+  `cache.build` and `scripts/70_backup_audit.py` refuse, listing paths, on a shard not in the
+  manifest or a listed shard missing; `tests/test_cache_guard.py`.
+- **Runner (operational only):** per-GPU slots (`CUDA_VISIBLE_DEVICES` per job, 4 units per GPU,
+  22 M = 1, 50 M = 2; job on the GPU with most free units); the trainer lock records the GPU;
+  `--check-inputs` dry run (12 of 12 families load; train/validation well counts identical to
+  the completed runs). Completed runs are skipped, never rerun or overwritten.
+- **S5 additions before any evaluation (`e0de078`):** F6 well-weighted H1 test (sign flip over
+  plates of the well-weighted mean difference; secondary field in every H1 comparison and in
+  `G_Signal_2.secondary_well_weighted`; pass rule unchanged; `tests/test_well_weighted.py`);
+  the pipeline backs up every new results file with SHA-256 before each commit.
+- **S2:** 1,083 failed wells re-requested frame by frame (100,719 HEAD requests, 3 attempts,
+  back-off): 21,184 frames missing, no other status, none recovered. 214–215 wells miss every
+  frame; 868 (532 training, 336 validation) miss only frames >= 88 (F9). Validation loses 338
+  wells, 33 H1 primary, 70 primary-gene.
+- **S3:** protocol `missing_frames_rule`: any frame missing after 3 attempts -> well excluded
+  everywhere; embed failure lists committed and backed up before any evaluation; report
+  counts and per-class tests. The fetcher now retries HTTP 404 up to 3 times
+  (`MAX_404_ATTEMPTS`; previously final after 1), which applies only to embeds from now on
+  (test, screenB); `tests/test_fetch_retry.py`. Tests: 11 passed.
+
+### Incidents and own errors
+
+- **Incident 3 (06:20 UTC):** unattended-upgrades (libc6) restarted `nvidia-fabricmanager` and
+  `nvidia-persistenced`; all CUDA contexts torn down (Xid 45 on all GPUs, no hardware error); 27
+  in-flight grid runs failed and rerun from scratch; no completed run affected. Evidence
+  `logs/migration/incident_1023_nvidia_restart.log`; details in `reports/AMEND02_PROGRESS.md`.
+- **Lost runner log (my error):** a `git stash`/`stash pop` at ~05:45 UTC replaced
+  `logs/a2_val/grid.log` under the running grid runner; its lines from 05:36 to 14:26 UTC are
+  lost. Per-run logs and results files are intact.
+
+### Points for the reviewer
+
+1. **Shard manifest at the freeze.** The author asked that test and screenB shards be added to
+   the manifest *in the freeze commit*, but they are embedded after the freeze and
+   `run_stage1_test.sh` builds the cache right after embedding, which the guard would block.
+   Proposed: a commit right after embedding and before any evaluation that adds them to the
+   manifest with SHA-256 and records the embed failure lists (author decision pending).
+2. **OS upgrades.** The next `apt-daily-upgrade` is 10-24 06:55 UTC, likely during the
+   evaluations or the test run; disabling the apt timers until the work is done is proposed
+   (author decision pending).
+3. **S3 test specification** (the plan says "a Fisher or chi-square test"): fixed as two-sided
+   Fisher exact tests per class (mitotic delay, polylobed, binuclear, any reproducible) on
+   library wells, classes from training-plate annotations, BH over the 4; descriptive only.
+4. **F6 implementation:** plate signs flip, weights = primary wells per plate; equals the
+   unweighted test when plates are equal-sized (unit test).
+5. **Validation evaluations run on one GPU** (as committed in `run_a2_val.sh`); only training
+   uses all 8.
+
+### Files new since 10-22
+
+`ENVIRONMENT.md`, `requirements-lock.txt`; `scripts/71_restore.py`, `scripts/72_missing_frames.py`;
+`results/a2/restore_audit.json`, `results/a2/missing_frames.json`, `results/a2/backup_audit.json`,
+`results/a2/grid_status_at_migration.json`; `manifests/cache_shards.tsv`;
+`tests/test_cache_guard.py`, `tests/test_well_weighted.py`, `tests/test_fetch_retry.py`;
+`logs/migration/`, `logs/restore.log`, `logs/check_inputs_grid.log`, `logs/missing_frames.log`.
+
+---
+
+# Packet as of 2026-10-22 07:45 UTC
 
 For review by the orchestrating agent. Covers everything done under `docs/DESIGN_AMENDMENT_02.md`
 (design commit `dd57079`) and the author's instructions of 2026-10-20 and 2026-10-21, up to

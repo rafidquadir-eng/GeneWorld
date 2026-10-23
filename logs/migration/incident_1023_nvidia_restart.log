@@ -1,0 +1,582 @@
+# 2026-10-23 06:20 UTC: unattended-upgrades restarted nvidia-fabricmanager / nvidia-persistenced; extracted 2026-10-23T14:31:43Z
+## /var/log/apt/history.log (2026-10-23)
+Start-Date: 2026-10-23  06:12:16
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: perl:amd64 (5.38.2-3.2ubuntu0.1, 5.38.2-3.2ubuntu0.6), perl-base:amd64 (5.38.2-3.2ubuntu0.1, 5.38.2-3.2ubuntu0.6), perl-modules-5.38:amd64 (5.38.2-3.2ubuntu0.1, 5.38.2-3.2ubuntu0.6), libperl5.38t64:amd64 (5.38.2-3.2ubuntu0.1, 5.38.2-3.2ubuntu0.6)
+End-Date: 2026-10-23  06:12:19
+Start-Date: 2026-10-23  06:12:24
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: coreutils:amd64 (9.4-3ubuntu6, 9.4-3ubuntu6.3)
+End-Date: 2026-10-23  06:12:26
+Start-Date: 2026-10-23  06:12:30
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: python3-twisted:amd64 (24.3.0-1ubuntu0.1, 24.3.0-1ubuntu0.2)
+End-Date: 2026-10-23  06:12:34
+Start-Date: 2026-10-23  06:12:40
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: snapd:amd64 (2.67.1+24.04, 2.76+ubuntu24.04.1)
+End-Date: 2026-10-23  06:12:45
+Start-Date: 2026-10-23  06:12:50
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: python3-cryptography:amd64 (41.0.7-4ubuntu0.1, 41.0.7-4ubuntu0.4)
+End-Date: 2026-10-23  06:12:51
+Start-Date: 2026-10-23  06:12:55
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: udev:amd64 (255.4-1ubuntu8.8, 255.4-1ubuntu8.18), systemd-timesyncd:amd64 (255.4-1ubuntu8.8, 255.4-1ubuntu8.18), libpam-systemd:amd64 (255.4-1ubuntu8.8, 255.4-1ubuntu8.18), libsystemd0:amd64 (255.4-1ubuntu8.8, 255.4-1ubuntu8.18), libnss-systemd:amd64 (255.4-1ubuntu8.8, 255.4-1ubuntu8.18), systemd:amd64 (255.4-1ubuntu8.8, 255.4-1ubuntu8.18), libudev1:amd64 (255.4-1ubuntu8.8, 255.4-1ubuntu8.18), systemd-dev:amd64 (255.4-1ubuntu8.8, 255.4-1ubuntu8.18), systemd-resolved:amd64 (255.4-1ubuntu8.8, 255.4-1ubuntu8.18), libsystemd-shared:amd64 (255.4-1ubuntu8.8, 255.4-1ubuntu8.18), systemd-sysv:amd64 (255.4-1ubuntu8.8, 255.4-1ubuntu8.18)
+End-Date: 2026-10-23  06:13:09
+Start-Date: 2026-10-23  06:13:14
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libcap2-bin:amd64 (1:2.66-5ubuntu2.2, 1:2.66-5ubuntu2.4), libcap2:amd64 (1:2.66-5ubuntu2.2, 1:2.66-5ubuntu2.4), libpam-cap:amd64 (1:2.66-5ubuntu2.2, 1:2.66-5ubuntu2.4)
+End-Date: 2026-10-23  06:13:16
+Start-Date: 2026-10-23  06:13:21
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: gpg:amd64 (2.4.4-2ubuntu17.2, 2.4.4-2ubuntu17.6), keyboxd:amd64 (2.4.4-2ubuntu17.2, 2.4.4-2ubuntu17.6), gnupg:amd64 (2.4.4-2ubuntu17.2, 2.4.4-2ubuntu17.6), gpg-agent:amd64 (2.4.4-2ubuntu17.2, 2.4.4-2ubuntu17.6), gpgv:amd64 (2.4.4-2ubuntu17.2, 2.4.4-2ubuntu17.6), gpgsm:amd64 (2.4.4-2ubuntu17.2, 2.4.4-2ubuntu17.6), dirmngr:amd64 (2.4.4-2ubuntu17.2, 2.4.4-2ubuntu17.6), gnupg-utils:amd64 (2.4.4-2ubuntu17.2, 2.4.4-2ubuntu17.6), gnupg-l10n:amd64 (2.4.4-2ubuntu17.2, 2.4.4-2ubuntu17.6), gpg-wks-client:amd64 (2.4.4-2ubuntu17.2, 2.4.4-2ubuntu17.6), gpgconf:amd64 (2.4.4-2ubuntu17.2, 2.4.4-2ubuntu17.6)
+End-Date: 2026-10-23  06:13:25
+Start-Date: 2026-10-23  06:13:29
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libp11-kit0:amd64 (0.25.3-4ubuntu2.1, 0.25.3-4ubuntu2.2)
+End-Date: 2026-10-23  06:13:29
+Start-Date: 2026-10-23  06:13:34
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libpolkit-agent-1-0:amd64 (124-2ubuntu1.24.04.2, 124-2ubuntu1.24.04.4), polkitd:amd64 (124-2ubuntu1.24.04.2, 124-2ubuntu1.24.04.4), libpolkit-gobject-1-0:amd64 (124-2ubuntu1.24.04.2, 124-2ubuntu1.24.04.4)
+End-Date: 2026-10-23  06:13:36
+Start-Date: 2026-10-23  06:13:41
+Commandline: /usr/bin/unattended-upgrade
+Install: linux-tools-6.8.0-147:amd64 (6.8.0-147.147, automatic), linux-image-6.8.0-147-generic:amd64 (6.8.0-147.147, automatic), linux-headers-6.8.0-147:amd64 (6.8.0-147.147, automatic), linux-tools-6.8.0-147-generic:amd64 (6.8.0-147.147, automatic), linux-headers-6.8.0-147-generic:amd64 (6.8.0-147.147, automatic), linux-modules-6.8.0-147-generic:amd64 (6.8.0-147.147, automatic)
+Upgrade: linux-tools-common:amd64 (6.8.0-62.65, 6.8.0-147.147), linux-virtual:amd64 (6.8.0-62.65, 6.8.0-147.147), linux-headers-generic:amd64 (6.8.0-62.65, 6.8.0-147.147), linux-image-virtual:amd64 (6.8.0-62.65, 6.8.0-147.147), linux-headers-virtual:amd64 (6.8.0-62.65, 6.8.0-147.147), linux-libc-dev:amd64 (6.8.0-62.65, 6.8.0-147.147)
+End-Date: 2026-10-23  06:15:44
+Start-Date: 2026-10-23  06:15:48
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: rsync:amd64 (3.2.7-1ubuntu1.2, 3.2.7-1ubuntu1.5)
+End-Date: 2026-10-23  06:15:51
+Start-Date: 2026-10-23  06:15:55
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libarchive13t64:amd64 (3.7.2-2ubuntu0.5, 3.7.2-2ubuntu0.9)
+End-Date: 2026-10-23  06:15:55
+Start-Date: 2026-10-23  06:16:00
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libexpat1:amd64 (2.6.1-2ubuntu0.3, 2.6.1-2ubuntu0.6)
+End-Date: 2026-10-23  06:16:01
+Start-Date: 2026-10-23  06:16:05
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libsmartcols1:amd64 (2.39.3-9ubuntu6.2, 2.39.3-9ubuntu6.6), libmount1:amd64 (2.39.3-9ubuntu6.2, 2.39.3-9ubuntu6.6), util-linux:amd64 (2.39.3-9ubuntu6.2, 2.39.3-9ubuntu6.6), fdisk:amd64 (2.39.3-9ubuntu6.2, 2.39.3-9ubuntu6.6), libfdisk1:amd64 (2.39.3-9ubuntu6.2, 2.39.3-9ubuntu6.6), eject:amd64 (2.39.3-9ubuntu6.2, 2.39.3-9ubuntu6.6), libuuid1:amd64 (2.39.3-9ubuntu6.2, 2.39.3-9ubuntu6.6), uuid-runtime:amd64 (2.39.3-9ubuntu6.2, 2.39.3-9ubuntu6.6), mount:amd64 (2.39.3-9ubuntu6.2, 2.39.3-9ubuntu6.6), libblkid1:amd64 (2.39.3-9ubuntu6.2, 2.39.3-9ubuntu6.6), bsdutils:amd64 (1:2.39.3-9ubuntu6.2, 1:2.39.3-9ubuntu6.6), bsdextrautils:amd64 (2.39.3-9ubuntu6.2, 2.39.3-9ubuntu6.6)
+End-Date: 2026-10-23  06:16:10
+Start-Date: 2026-10-23  06:16:15
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: python3-minimal:amd64 (3.12.3-0ubuntu2, 3.12.3-0ubuntu2.1), python3:amd64 (3.12.3-0ubuntu2, 3.12.3-0ubuntu2.1), libpython3-stdlib:amd64 (3.12.3-0ubuntu2, 3.12.3-0ubuntu2.1)
+End-Date: 2026-10-23  06:16:17
+Start-Date: 2026-10-23  06:16:22
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libglib2.0-bin:amd64 (2.80.0-6ubuntu3.4, 2.80.0-6ubuntu3.9), gir1.2-glib-2.0:amd64 (2.80.0-6ubuntu3.4, 2.80.0-6ubuntu3.9), libglib2.0-data:amd64 (2.80.0-6ubuntu3.4, 2.80.0-6ubuntu3.9), libglib2.0-0t64:amd64 (2.80.0-6ubuntu3.4, 2.80.0-6ubuntu3.9)
+End-Date: 2026-10-23  06:16:23
+Start-Date: 2026-10-23  06:16:28
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: iputils-ping:amd64 (3:20240117-1build1, 3:20240117-1ubuntu0.1), iputils-tracepath:amd64 (3:20240117-1build1, 3:20240117-1ubuntu0.1)
+End-Date: 2026-10-23  06:16:29
+Start-Date: 2026-10-23  06:16:33
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libtasn1-6:amd64 (4.19.0-3ubuntu0.24.04.1, 4.19.0-3ubuntu0.24.04.2)
+End-Date: 2026-10-23  06:16:33
+Start-Date: 2026-10-23  06:16:38
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: ntfs-3g:amd64 (1:2022.10.3-1.2ubuntu3, 1:2022.10.3-1.2ubuntu3.2), libntfs-3g89t64:amd64 (1:2022.10.3-1.2ubuntu3, 1:2022.10.3-1.2ubuntu3.2)
+End-Date: 2026-10-23  06:16:46
+Start-Date: 2026-10-23  06:16:51
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: open-vm-tools:amd64 (2:12.4.5-1~ubuntu0.24.04.2, 2:12.5.0-1~ubuntu0.24.04.2)
+End-Date: 2026-10-23  06:16:54
+Start-Date: 2026-10-23  06:16:58
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: packagekit-tools:amd64 (1.2.8-2ubuntu1.2, 1.2.8-2ubuntu1.5), gir1.2-packagekitglib-1.0:amd64 (1.2.8-2ubuntu1.2, 1.2.8-2ubuntu1.5), packagekit:amd64 (1.2.8-2ubuntu1.2, 1.2.8-2ubuntu1.5), libpackagekit-glib2-18:amd64 (1.2.8-2ubuntu1.2, 1.2.8-2ubuntu1.5)
+End-Date: 2026-10-23  06:17:00
+Start-Date: 2026-10-23  06:17:04
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: bind9-host:amd64 (1:9.18.30-0ubuntu0.24.04.2, 1:9.18.39-0ubuntu0.24.04.8), bind9-dnsutils:amd64 (1:9.18.30-0ubuntu0.24.04.2, 1:9.18.39-0ubuntu0.24.04.8), bind9-libs:amd64 (1:9.18.30-0ubuntu0.24.04.2, 1:9.18.39-0ubuntu0.24.04.8)
+End-Date: 2026-10-23  06:17:05
+Start-Date: 2026-10-23  06:17:10
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: tar:amd64 (1.35+dfsg-3build1, 1.35+dfsg-3ubuntu0.4)
+End-Date: 2026-10-23  06:17:11
+Start-Date: 2026-10-23  06:17:15
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: sudo:amd64 (1.9.15p5-3ubuntu5, 1.9.15p5-3ubuntu5.24.04.4)
+End-Date: 2026-10-23  06:17:16
+Start-Date: 2026-10-23  06:17:21
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: vim:amd64 (2:9.1.0016-1ubuntu7.8, 2:9.1.0016-1ubuntu7.20), xxd:amd64 (2:9.1.0016-1ubuntu7.8, 2:9.1.0016-1ubuntu7.20), vim-common:amd64 (2:9.1.0016-1ubuntu7.8, 2:9.1.0016-1ubuntu7.20), vim-tiny:amd64 (2:9.1.0016-1ubuntu7.8, 2:9.1.0016-1ubuntu7.20), vim-runtime:amd64 (2:9.1.0016-1ubuntu7.8, 2:9.1.0016-1ubuntu7.20)
+End-Date: 2026-10-23  06:17:24
+Start-Date: 2026-10-23  06:17:28
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libsodium23:amd64 (1.0.18-1build3, 1.0.18-1ubuntu0.24.04.1)
+End-Date: 2026-10-23  06:17:28
+Start-Date: 2026-10-23  06:17:32
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: openssh-client:amd64 (1:9.6p1-3ubuntu13.12, 1:9.6p1-3ubuntu13.20), openssh-server:amd64 (1:9.6p1-3ubuntu13.12, 1:9.6p1-3ubuntu13.20), openssh-sftp-server:amd64 (1:9.6p1-3ubuntu13.12, 1:9.6p1-3ubuntu13.20)
+End-Date: 2026-10-23  06:17:36
+Start-Date: 2026-10-23  06:17:40
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: klibc-utils:amd64 (2.0.13-4ubuntu0.1, 2.0.13-4ubuntu0.2), libklibc:amd64 (2.0.13-4ubuntu0.1, 2.0.13-4ubuntu0.2)
+End-Date: 2026-10-23  06:17:47
+Start-Date: 2026-10-23  06:17:51
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: screen:amd64 (4.9.1-1build1, 4.9.1-1ubuntu1)
+End-Date: 2026-10-23  06:17:53
+Start-Date: 2026-10-23  06:17:57
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: tzdata:amd64 (2025b-0ubuntu0.24.04.1, 2026e-0ubuntu0.24.04.1)
+End-Date: 2026-10-23  06:17:58
+Start-Date: 2026-10-23  06:18:02
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: python3-openssl:amd64 (23.2.0-1, 23.2.0-1ubuntu0.1)
+End-Date: 2026-10-23  06:18:03
+Start-Date: 2026-10-23  06:18:07
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: udisks2:amd64 (2.10.1-6ubuntu1.2, 2.10.1-6ubuntu1.5), libudisks2-0:amd64 (2.10.1-6ubuntu1.2, 2.10.1-6ubuntu1.5)
+End-Date: 2026-10-23  06:18:09
+Start-Date: 2026-10-23  06:18:16
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: ca-certificates:amd64 (20240203, 20260816ubuntu0.24.04.1)
+End-Date: 2026-10-23  06:18:22
+Start-Date: 2026-10-23  06:18:26
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libtinfo6:amd64 (6.4+20240113-1ubuntu2, 6.4+20240113-1ubuntu2.2), ncurses-base:amd64 (6.4+20240113-1ubuntu2, 6.4+20240113-1ubuntu2.2), libncursesw6:amd64 (6.4+20240113-1ubuntu2, 6.4+20240113-1ubuntu2.2), ncurses-bin:amd64 (6.4+20240113-1ubuntu2, 6.4+20240113-1ubuntu2.2), ncurses-term:amd64 (6.4+20240113-1ubuntu2, 6.4+20240113-1ubuntu2.2), libncurses6:amd64 (6.4+20240113-1ubuntu2, 6.4+20240113-1ubuntu2.2)
+End-Date: 2026-10-23  06:18:30
+Start-Date: 2026-10-23  06:18:34
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: sg3-utils:amd64 (1.46-3ubuntu4, 1.46-3ubuntu4.1), libsgutils2-1.46-2:amd64 (1.46-3ubuntu4, 1.46-3ubuntu4.1), sg3-utils-udev:amd64 (1.46-3ubuntu4, 1.46-3ubuntu4.1)
+End-Date: 2026-10-23  06:18:42
+Start-Date: 2026-10-23  06:18:47
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: krb5-locales:amd64 (1.20.1-6ubuntu2.6, 1.20.1-6ubuntu2.7), libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.6, 1.20.1-6ubuntu2.7), libkrb5support0:amd64 (1.20.1-6ubuntu2.6, 1.20.1-6ubuntu2.7), libkrb5-3:amd64 (1.20.1-6ubuntu2.6, 1.20.1-6ubuntu2.7), libk5crypto3:amd64 (1.20.1-6ubuntu2.6, 1.20.1-6ubuntu2.7)
+End-Date: 2026-10-23  06:18:48
+Start-Date: 2026-10-23  06:18:53
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: ubuntu-pro-client-l10n:amd64 (35.1ubuntu0~24.04, 37.2ubuntu~24.04.1), ubuntu-pro-client:amd64 (35.1ubuntu0~24.04, 37.2ubuntu~24.04.1)
+End-Date: 2026-10-23  06:18:57
+Start-Date: 2026-10-23  06:19:01
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: kmod:amd64 (31+20240202-2ubuntu7.1, 31+20240202-2ubuntu7.2), libkmod2:amd64 (31+20240202-2ubuntu7.1, 31+20240202-2ubuntu7.2)
+End-Date: 2026-10-23  06:19:09
+Start-Date: 2026-10-23  06:19:13
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libheif1:amd64 (1.17.6-1ubuntu4.1, 1.17.6-1ubuntu4.9), libheif-plugin-libde265:amd64 (1.17.6-1ubuntu4.1, 1.17.6-1ubuntu4.9), libheif-plugin-aomdec:amd64 (1.17.6-1ubuntu4.1, 1.17.6-1ubuntu4.9), libheif-plugin-aomenc:amd64 (1.17.6-1ubuntu4.1, 1.17.6-1ubuntu4.9)
+End-Date: 2026-10-23  06:19:14
+Start-Date: 2026-10-23  06:19:19
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: python3-pyasn1:amd64 (0.4.8-4, 0.4.8-4ubuntu0.3)
+End-Date: 2026-10-23  06:19:19
+Start-Date: 2026-10-23  06:19:23
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libde265-0:amd64 (1.0.15-1build3, 1.0.15-1ubuntu0.2)
+End-Date: 2026-10-23  06:19:24
+Start-Date: 2026-10-23  06:19:28
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libisns0t64:amd64 (0.101-0.3build3, 0.101-0.3ubuntu0.1)
+End-Date: 2026-10-23  06:19:28
+Start-Date: 2026-10-23  06:19:33
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libpng16-16t64:amd64 (1.6.43-5build1, 1.6.43-5ubuntu0.7)
+End-Date: 2026-10-23  06:19:33
+Start-Date: 2026-10-23  06:19:39
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: python-apt-common:amd64 (2.7.7ubuntu4, 2.7.7ubuntu5.1), python3-apt:amd64 (2.7.7ubuntu4, 2.7.7ubuntu5.1)
+End-Date: 2026-10-23  06:19:39
+Start-Date: 2026-10-23  06:19:44
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libnghttp2-14:amd64 (1.59.0-1ubuntu0.2, 1.59.0-1ubuntu0.4)
+End-Date: 2026-10-23  06:19:44
+Start-Date: 2026-10-23  06:19:48
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: python3-idna:amd64 (3.6-2ubuntu0.1, 3.6-2ubuntu0.2)
+End-Date: 2026-10-23  06:19:49
+Start-Date: 2026-10-23  06:19:53
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: gzip:amd64 (1.12-1ubuntu3, 1.12-1ubuntu3.2)
+End-Date: 2026-10-23  06:19:54
+Start-Date: 2026-10-23  06:19:58
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libaom3:amd64 (3.8.2-2ubuntu0.1, 3.8.2-2ubuntu0.2)
+End-Date: 2026-10-23  06:19:59
+Start-Date: 2026-10-23  06:20:03
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: telnet:amd64 (0.17+2.5-3ubuntu4, 0.17+2.5-3ubuntu4.2), inetutils-telnet:amd64 (2:2.5-3ubuntu4, 2:2.5-3ubuntu4.2)
+End-Date: 2026-10-23  06:20:04
+Start-Date: 2026-10-23  06:20:09
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libc6:amd64 (2.39-0ubuntu8.4, 2.39-0ubuntu8.9), locales:amd64 (2.39-0ubuntu8.4, 2.39-0ubuntu8.9), libc-dev-bin:amd64 (2.39-0ubuntu8.4, 2.39-0ubuntu8.9), libc-bin:amd64 (2.39-0ubuntu8.4, 2.39-0ubuntu8.9), libc-devtools:amd64 (2.39-0ubuntu8.4, 2.39-0ubuntu8.9), libc6-dev:amd64 (2.39-0ubuntu8.4, 2.39-0ubuntu8.9)
+End-Date: 2026-10-23  06:20:15
+Start-Date: 2026-10-23  06:20:25
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libpcap0.8t64:amd64 (1.10.4-4.1ubuntu3, 1.10.4-4.1ubuntu3.1)
+End-Date: 2026-10-23  06:20:26
+Start-Date: 2026-10-23  06:20:29
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: python3-urllib3:amd64 (2.0.7-1ubuntu0.2, 2.0.7-1ubuntu0.8)
+End-Date: 2026-10-23  06:20:29
+Start-Date: 2026-10-23  06:20:33
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libcurl3t64-gnutls:amd64 (8.5.0-2ubuntu10.6, 8.5.0-2ubuntu10.16), libcurl4t64:amd64 (8.5.0-2ubuntu10.6, 8.5.0-2ubuntu10.16), curl:amd64 (8.5.0-2ubuntu10.6, 8.5.0-2ubuntu10.16)
+End-Date: 2026-10-23  06:20:34
+Start-Date: 2026-10-23  06:20:38
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libssl3t64:amd64 (3.0.13-0ubuntu3.5, 3.0.13-0ubuntu3.16), openssl:amd64 (3.0.13-0ubuntu3.5, 3.0.13-0ubuntu3.16)
+End-Date: 2026-10-23  06:20:39
+Start-Date: 2026-10-23  06:20:48
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libtiff6:amd64 (4.5.1+git230720-4ubuntu2.2, 4.5.1+git230720-4ubuntu2.5)
+End-Date: 2026-10-23  06:20:48
+Start-Date: 2026-10-23  06:20:51
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libsqlite3-0:amd64 (3.45.1-1ubuntu2.3, 3.45.1-1ubuntu2.8)
+End-Date: 2026-10-23  06:20:52
+Start-Date: 2026-10-23  06:20:56
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libgcrypt20:amd64 (1.10.3-2build1, 1.10.3-2ubuntu0.2)
+End-Date: 2026-10-23  06:20:56
+Start-Date: 2026-10-23  06:21:02
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: cloud-init:amd64 (25.1.2-0ubuntu0~24.04.1, 25.1.4-0ubuntu0~24.04.1)
+End-Date: 2026-10-23  06:21:06
+Start-Date: 2026-10-23  06:21:10
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libxml2:amd64 (2.9.14+dfsg-1.3ubuntu3.3, 2.9.14+dfsg-1.3ubuntu3.10)
+End-Date: 2026-10-23  06:21:11
+Start-Date: 2026-10-23  06:21:15
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: jq:amd64 (1.7.1-3build1, 1.7.1-3ubuntu0.24.04.2), libjq1:amd64 (1.7.1-3build1, 1.7.1-3ubuntu0.24.04.2)
+End-Date: 2026-10-23  06:21:16
+Start-Date: 2026-10-23  06:21:21
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: python3-apport:amd64 (2.28.1-0ubuntu3.7, 2.28.1-0ubuntu3.8), apport-core-dump-handler:amd64 (2.28.1-0ubuntu3.7, 2.28.1-0ubuntu3.8), python3-problem-report:amd64 (2.28.1-0ubuntu3.7, 2.28.1-0ubuntu3.8), apport:amd64 (2.28.1-0ubuntu3.7, 2.28.1-0ubuntu3.8)
+End-Date: 2026-10-23  06:21:26
+Start-Date: 2026-10-23  06:21:31
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libpam-runtime:amd64 (1.5.3-5ubuntu5.4, 1.5.3-5ubuntu5.7), libpam-modules:amd64 (1.5.3-5ubuntu5.4, 1.5.3-5ubuntu5.7), libpam-modules-bin:amd64 (1.5.3-5ubuntu5.4, 1.5.3-5ubuntu5.7), libpam0g:amd64 (1.5.3-5ubuntu5.4, 1.5.3-5ubuntu5.7)
+End-Date: 2026-10-23  06:21:34
+Start-Date: 2026-10-23  06:21:39
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: python3-jwt:amd64 (2.7.0-1, 2.7.0-1ubuntu0.4)
+End-Date: 2026-10-23  06:21:40
+Start-Date: 2026-10-23  06:21:45
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libgnutls30t64:amd64 (3.8.3-1.1ubuntu3.3, 3.8.3-1.1ubuntu3.6)
+End-Date: 2026-10-23  06:21:45
+Start-Date: 2026-10-23  06:21:50
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: pollinate:amd64 (4.33-3.1ubuntu1.1, 4.33-3.1ubuntu1.3)
+End-Date: 2026-10-23  06:21:52
+Start-Date: 2026-10-23  06:21:57
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: sed:amd64 (4.9-2build1, 4.9-2ubuntu0.24.04.1)
+End-Date: 2026-10-23  06:21:59
+Start-Date: 2026-10-23  06:22:04
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: git:amd64 (1:2.43.0-1ubuntu7.2, 1:2.43.0-1ubuntu7.4), git-man:amd64 (1:2.43.0-1ubuntu7.2, 1:2.43.0-1ubuntu7.4)
+End-Date: 2026-10-23  06:22:06
+Start-Date: 2026-10-23  06:22:11
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: nano:amd64 (7.2-2ubuntu0.1, 7.2-2ubuntu0.2)
+End-Date: 2026-10-23  06:22:13
+Start-Date: 2026-10-23  06:22:18
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libssh-4:amd64 (0.10.6-2build2, 0.10.6-2ubuntu0.5)
+End-Date: 2026-10-23  06:22:18
+Start-Date: 2026-10-23  06:22:23
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: liblzma5:amd64 (5.6.1+really5.4.5-1ubuntu0.2, 5.6.1+really5.4.5-1ubuntu0.4), xz-utils:amd64 (5.6.1+really5.4.5-1ubuntu0.2, 5.6.1+really5.4.5-1ubuntu0.4)
+End-Date: 2026-10-23  06:22:25
+Start-Date: 2026-10-23  06:22:30
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: rsyslog:amd64 (8.2312.0-3ubuntu9.1, 8.2312.0-3ubuntu9.4)
+End-Date: 2026-10-23  06:22:33
+Start-Date: 2026-10-23  06:22:37
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: wget:amd64 (1.21.4-1ubuntu4.1, 1.21.4-1ubuntu4.5)
+End-Date: 2026-10-23  06:22:39
+Start-Date: 2026-10-23  06:22:43
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: gawk:amd64 (1:5.2.1-2build3, 1:5.2.1-2ubuntu0.1)
+End-Date: 2026-10-23  06:22:44
+Start-Date: 2026-10-23  06:22:49
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: cpio:amd64 (2.15+dfsg-1ubuntu2, 2.15+dfsg-1ubuntu2.1)
+End-Date: 2026-10-23  06:22:50
+Start-Date: 2026-10-23  06:22:55
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libxslt1.1:amd64 (1.1.39-0exp1ubuntu0.24.04.2, 1.1.39-0exp1ubuntu0.24.04.3)
+End-Date: 2026-10-23  06:22:56
+Start-Date: 2026-10-23  06:23:00
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: diffutils:amd64 (1:3.10-1build1, 1:3.10-1ubuntu0.1)
+End-Date: 2026-10-23  06:23:01
+Start-Date: 2026-10-23  06:23:06
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libattr1:amd64 (1:2.5.2-1build1.1, 1:2.5.2-1ubuntu0.1)
+End-Date: 2026-10-23  06:23:07
+Start-Date: 2026-10-23  06:23:11
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: dracut-install:amd64 (060+5-1ubuntu3.3, 060+5-1ubuntu3.4)
+End-Date: 2026-10-23  06:23:12
+Start-Date: 2026-10-23  06:23:16
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libfreetype6:amd64 (2.13.2+dfsg-1build3, 2.13.2+dfsg-1ubuntu0.2)
+End-Date: 2026-10-23  06:23:17
+Start-Date: 2026-10-23  06:23:21
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: zlib1g:amd64 (1:1.3.dfsg-3.1ubuntu2.1, 1:1.3.dfsg-3.1ubuntu2.3)
+End-Date: 2026-10-23  06:23:21
+Start-Date: 2026-10-23  06:23:34
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: python3-httplib2:amd64 (0.20.4-3, 0.20.4-3ubuntu0.1)
+End-Date: 2026-10-23  06:23:35
+Start-Date: 2026-10-23  06:23:38
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libnss3:amd64 (2:3.98-1build1, 2:3.98-1ubuntu0.3)
+End-Date: 2026-10-23  06:23:38
+Start-Date: 2026-10-23  06:23:41
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: python3-requests:amd64 (2.31.0+dfsg-1ubuntu1.1, 2.31.0+dfsg-1ubuntu1.2)
+End-Date: 2026-10-23  06:23:42
+Start-Date: 2026-10-23  06:23:45
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libevent-core-2.1-7t64:amd64 (2.1.12-stable-9ubuntu2, 2.1.12-stable-9ubuntu2.2)
+End-Date: 2026-10-23  06:23:46
+Start-Date: 2026-10-23  06:23:50
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: libxpm4:amd64 (1:3.5.17-1build2, 1:3.5.17-1ubuntu0.24.04.2)
+End-Date: 2026-10-23  06:23:51
+Start-Date: 2026-10-23  06:23:55
+Commandline: /usr/bin/unattended-upgrade
+Upgrade: distro-info-data:amd64 (0.60ubuntu0.3, 2026.10.12-0ubuntu0.24.04.1)
+End-Date: 2026-10-23  06:23:55
+## journal 06:09-06:25 (apt, systemd nvidia units, NVRM first lines; repeated Xid 45 lines counted below)
+Oct 23 06:09:54 150-136-44-126 systemd[1]: Starting apt-daily-upgrade.service - Daily apt upgrade and clean activities...
+Oct 23 06:12:16 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:12:23 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:12:29 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:12:40 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:12:43 150-136-44-126 systemd[1]: Reloading requested from client PID 51059 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:12:43 150-136-44-126 systemd[1]: Reloading requested from client PID 51124 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:12:44 150-136-44-126 systemd[1]: Reloading requested from client PID 51276 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:12:49 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:12:54 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:12:57 150-136-44-126 systemd[1]: Reexecuting requested from client PID 51868 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:12:58 150-136-44-126 systemd[1]: Reloading requested from client PID 51943 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:12:59 150-136-44-126 systemd[1]: Reloading requested from client PID 52013 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:13:00 150-136-44-126 systemd[1]: Reloading requested from client PID 52093 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:13:13 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:13:17 150-136-44-126 systemd[1]: Reexecuting requested from client PID 56253 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:13:21 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:13:28 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:13:34 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:13:35 150-136-44-126 systemd[1]: Reloading requested from client PID 57270 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:13:35 150-136-44-126 systemd[1]: Starting apt-daily.service - Daily apt download activities...
+Oct 23 06:13:40 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:15:48 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:15:49 150-136-44-126 systemd[1]: Reloading requested from client PID 75217 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:15:49 150-136-44-126 systemd[1]: Reloading requested from client PID 75274 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:15:55 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:16:00 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:16:04 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:16:06 150-136-44-126 systemd[1]: Reloading requested from client PID 75850 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:16:06 150-136-44-126 systemd[1]: Reloading requested from client PID 75902 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:16:08 150-136-44-126 systemd[1]: Reloading requested from client PID 76123 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:16:09 150-136-44-126 systemd[1]: Reloading requested from client PID 76181 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:16:11 150-136-44-126 systemd[1]: Reexecuting requested from client PID 76302 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:16:14 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:16:22 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:16:27 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:16:32 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:16:38 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:16:50 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:16:51 150-136-44-126 systemd[1]: Reloading requested from client PID 81298 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:16:52 150-136-44-126 systemd[1]: Reloading requested from client PID 81351 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:16:52 150-136-44-126 systemd[1]: Reloading requested from client PID 81406 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:16:57 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:17:04 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:17:09 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:17:14 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:17:20 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:17:27 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:17:32 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:17:33 150-136-44-126 systemd[1]: Reloading requested from client PID 82904 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:17:34 150-136-44-126 systemd[1]: Reloading requested from client PID 82962 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:17:39 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:17:51 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:17:52 150-136-44-126 systemd[1]: Reloading requested from client PID 87070 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:17:57 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:18:02 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:18:06 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:18:07 150-136-44-126 systemd[1]: Reloading requested from client PID 87740 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:18:13 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:18:26 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:18:34 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:18:47 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:18:53 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:18:55 150-136-44-126 systemd[1]: Reloading requested from client PID 99287 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:18:56 150-136-44-126 systemd[1]: Reloading requested from client PID 99340 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:19:00 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:19:01 150-136-44-126 systemd[1]: Reloading requested from client PID 99694 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:19:10 150-136-44-126 systemd[1]: Reexecuting requested from client PID 103504 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:19:13 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:19:18 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:19:23 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:19:27 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:19:33 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:19:38 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:19:43 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:19:48 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:19:52 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:19:58 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:20:03 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:20:08 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:20:10 150-136-44-126 systemd[1]: Reexecuting requested from client PID 105661 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:20:17 150-136-44-126 systemd[1]: Stopping nvidia-fabricmanager.service - NVIDIA fabric manager service...
+Oct 23 06:20:17 150-136-44-126 nvidia-persistenced[2162]: Received signal 15
+Oct 23 06:20:17 150-136-44-126 systemd[1]: Stopping nvidia-persistenced.service - NVIDIA Persistence Daemon...
+Oct 23 06:20:17 150-136-44-126 nvidia-persistenced[2162]: Socket closed.
+Oct 23 06:20:17 150-136-44-126 nvidia-persistenced[2162]: PID file unlocked.
+Oct 23 06:20:17 150-136-44-126 nvidia-persistenced[2162]: PID file closed.
+Oct 23 06:20:17 150-136-44-126 nvidia-persistenced[2162]: The daemon no longer has permission to remove its runtime data directory /var/run/nvidia-persistenced
+Oct 23 06:20:17 150-136-44-126 nvidia-persistenced[2162]: Shutdown (2162)
+Oct 23 06:20:17 150-136-44-126 nvidia-fabricmanager-start.sh[106397]: Stopped "Nvidia Fabric Manager"
+Oct 23 06:20:17 150-136-44-126 kernel: nvidia-nvlink: nvlink driver close
+Oct 23 06:20:17 150-136-44-126 systemd[1]: nvidia-persistenced.service: Deactivated successfully.
+Oct 23 06:20:17 150-136-44-126 systemd[1]: Stopped nvidia-persistenced.service - NVIDIA Persistence Daemon.
+Oct 23 06:20:17 150-136-44-126 kernel: NVRM: GPU at PCI:0000:07:00: GPU-cab1759e-937b-a7ee-8da6-15b575bddd82
+Oct 23 06:20:17 150-136-44-126 systemd[1]: Starting nvidia-persistenced.service - NVIDIA Persistence Daemon...
+Oct 23 06:20:17 150-136-44-126 kernel: NVRM: GPU at PCI:0000:08:00: GPU-0b143137-85c5-0dbe-6b5e-07e76edab5f7
+Oct 23 06:20:17 150-136-44-126 nvidia-persistenced[106424]: Verbose syslog connection opened
+Oct 23 06:20:17 150-136-44-126 nvidia-persistenced[106424]: Now running with user ID 109 and group ID 112
+Oct 23 06:20:17 150-136-44-126 nvidia-persistenced[106424]: Started (106424)
+Oct 23 06:20:17 150-136-44-126 kernel: NVRM: GPU at PCI:0000:09:00: GPU-42874334-e7ad-ce12-bf03-e9598959f94a
+Oct 23 06:20:17 150-136-44-126 kernel: NVRM: GPU at PCI:0000:0a:00: GPU-b36394a9-0df1-83ee-7dbb-c6714532d173
+Oct 23 06:20:17 150-136-44-126 kernel: NVRM: GPU at PCI:0000:0b:00: GPU-7e8f1b82-bcfc-bcb5-8223-58e95e0d6233
+Oct 23 06:20:17 150-136-44-126 kernel: NVRM: GPU at PCI:0000:0c:00: GPU-edb48518-bfdc-03af-6126-0bc74700eb46
+Oct 23 06:20:17 150-136-44-126 kernel: NVRM: GPU at PCI:0000:0d:00: GPU-3a1bd9ba-2443-c78a-6dc5-c79a977774dd
+Oct 23 06:20:17 150-136-44-126 kernel: NVRM: GPU at PCI:0000:0e:00: GPU-7476d5d5-7ea0-707f-63de-f40147c69cdc
+Oct 23 06:20:17 150-136-44-126 systemd[1]: nvidia-fabricmanager.service: Deactivated successfully.
+Oct 23 06:20:17 150-136-44-126 systemd[1]: Stopped nvidia-fabricmanager.service - NVIDIA fabric manager service.
+Oct 23 06:20:17 150-136-44-126 systemd[1]: nvidia-fabricmanager.service: Consumed 50.238s CPU time, 74.5M memory peak, 0B memory swap peak.
+Oct 23 06:20:17 150-136-44-126 systemd[1]: Starting nvidia-fabricmanager.service - NVIDIA fabric manager service...
+Oct 23 06:20:17 150-136-44-126 nvidia-fabricmanager-start.sh[106522]: Detected Pre-NVL5 system
+Oct 23 06:20:18 150-136-44-126 nvidia-persistenced[106424]: device 0000:07:00.0 - registered
+Oct 23 06:20:18 150-136-44-126 nvidia-persistenced[106424]: device 0000:08:00.0 - registered
+Oct 23 06:20:18 150-136-44-126 nvidia-persistenced[106424]: device 0000:09:00.0 - registered
+Oct 23 06:20:18 150-136-44-126 nvidia-persistenced[106424]: device 0000:0a:00.0 - registered
+Oct 23 06:20:18 150-136-44-126 nvidia-persistenced[106424]: device 0000:0b:00.0 - registered
+Oct 23 06:20:18 150-136-44-126 nvidia-persistenced[106424]: device 0000:0c:00.0 - registered
+Oct 23 06:20:18 150-136-44-126 nvidia-persistenced[106424]: device 0000:0d:00.0 - registered
+Oct 23 06:20:18 150-136-44-126 nvidia-persistenced[106424]: device 0000:0e:00.0 - registered
+Oct 23 06:20:18 150-136-44-126 systemd[1]: Started nvidia-persistenced.service - NVIDIA Persistence Daemon.
+Oct 23 06:20:18 150-136-44-126 nvidia-persistenced[106424]: Local RPC services initialized
+Oct 23 06:20:19 150-136-44-126 kernel: nvidia-nvlink: nvlink driver open
+Oct 23 06:20:19 150-136-44-126 kernel: nvidia-nvlink: nvlink driver close
+Oct 23 06:20:19 150-136-44-126 kernel: nvidia-nvlink: nvlink driver open
+Oct 23 06:20:23 150-136-44-126 nvidia-fabricmanager-start.sh[106522]: Started "Nvidia Fabric Manager"
+Oct 23 06:20:23 150-136-44-126 systemd[1]: Started nvidia-fabricmanager.service - NVIDIA fabric manager service.
+Oct 23 06:20:25 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:20:28 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:20:32 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:20:38 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:20:40 150-136-44-126 systemd[1]: Reexecuting requested from client PID 108986 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:20:48 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:20:51 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:20:56 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:20:58 150-136-44-126 systemd[1]: Reexecuting requested from client PID 112962 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:21:02 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:21:10 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:21:14 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:21:21 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:21:23 150-136-44-126 systemd[1]: Reloading requested from client PID 114089 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:21:23 150-136-44-126 systemd[1]: Reloading requested from client PID 114143 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:21:25 150-136-44-126 systemd[1]: Reloading requested from client PID 114238 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:21:30 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:21:32 150-136-44-126 systemd[1]: Reloading requested from client PID 114496 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:21:35 150-136-44-126 systemd[1]: Reexecuting requested from client PID 114653 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:21:39 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:21:44 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:21:49 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:21:50 150-136-44-126 systemd[1]: Reloading requested from client PID 115214 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:21:57 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:22:03 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:22:11 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:22:17 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:22:23 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:22:26 150-136-44-126 systemd[1]: Reexecuting requested from client PID 116365 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:22:30 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:22:32 150-136-44-126 systemd[1]: Reloading requested from client PID 116789 ('systemctl') (unit apt-daily-upgrade.service)...
+Oct 23 06:22:37 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:22:42 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:22:49 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:22:55 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:23:00 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:23:06 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:23:11 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:23:16 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:23:21 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:23:23 150-136-44-126 systemd[1]: Stopping nvidia-fabricmanager.service - NVIDIA fabric manager service...
+Oct 23 06:23:23 150-136-44-126 nvidia-fabricmanager-start.sh[118426]: Stopped "Nvidia Fabric Manager"
+Oct 23 06:23:23 150-136-44-126 kernel: nvidia-nvlink: nvlink driver close
+Oct 23 06:23:23 150-136-44-126 systemd[1]: nvidia-fabricmanager.service: Deactivated successfully.
+Oct 23 06:23:23 150-136-44-126 systemd[1]: Stopped nvidia-fabricmanager.service - NVIDIA fabric manager service.
+Oct 23 06:23:23 150-136-44-126 systemd[1]: nvidia-fabricmanager.service: Consumed 3.818s CPU time, 18.1M memory peak, 0B memory swap peak.
+Oct 23 06:23:23 150-136-44-126 systemd[1]: Starting nvidia-fabricmanager.service - NVIDIA fabric manager service...
+Oct 23 06:23:23 150-136-44-126 nvidia-fabricmanager-start.sh[118504]: Detected Pre-NVL5 system
+Oct 23 06:23:26 150-136-44-126 kernel: nvidia-nvlink: nvlink driver open
+Oct 23 06:23:26 150-136-44-126 kernel: nvidia-nvlink: nvlink driver close
+Oct 23 06:23:26 150-136-44-126 kernel: nvidia-nvlink: nvlink driver open
+Oct 23 06:23:31 150-136-44-126 nvidia-fabricmanager-start.sh[118504]: Started "Nvidia Fabric Manager"
+Oct 23 06:23:31 150-136-44-126 systemd[1]: Started nvidia-fabricmanager.service - NVIDIA fabric manager service.
+Oct 23 06:23:34 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:23:37 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:23:41 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:23:45 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:23:50 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:23:54 150-136-44-126 apt.systemd.daily[50080]: /usr/bin/unattended-upgrade:567: DeprecationWarning: This process (pid=50080) is multi-threaded, use of fork() may lead to deadlocks in the child.
+Oct 23 06:24:00 150-136-44-126 systemd[1]: apt-daily-upgrade.service: Deactivated successfully.
+Oct 23 06:24:00 150-136-44-126 systemd[1]: Finished apt-daily-upgrade.service - Daily apt upgrade and clean activities.
+Oct 23 06:24:00 150-136-44-126 systemd[1]: apt-daily-upgrade.service: Consumed 16min 36.283s CPU time, 2.7G memory peak, 0B memory swap peak.
+Oct 23 06:24:01 150-136-44-126 systemd[1]: apt-daily.service: Deactivated successfully.
+Oct 23 06:24:01 150-136-44-126 systemd[1]: Finished apt-daily.service - Daily apt download activities.
+## Xid counts per GPU (all Xid 45)
+     40 Xid (PCI:0000:07:00): 45
+     40 Xid (PCI:0000:08:00): 45
+     40 Xid (PCI:0000:09:00): 45
+     40 Xid (PCI:0000:0a:00): 45
+     40 Xid (PCI:0000:0b:00): 45
+     48 Xid (PCI:0000:0c:00): 45
+     48 Xid (PCI:0000:0d:00): 45
+     48 Xid (PCI:0000:0e:00): 45
+## grid runs whose log shows the CUDA error (restarted from scratch)
+a2_plate_vjepa2_h1_learned_22M_d0.1_w0.2_s1
+a2_plate_vjepa2_h1_learned_22M_d0.1_w0.05_s1
+a2_plate_vjepa2_h2-esm2_22M_d0.1_w0.2_s1
+a2_plate_vjepa2_h2-jump_orf_22M_d0.1_w0.2_s1
+a2_plate_vjepa2_h2shuf-esm2_22M_d0.1_w0.05_s1
+a2_plate_vjepa2_h2-jump_crispr_22M_d0.1_w0.05_s1
+a2_plate_vjepa2_h2shuf-jump_orf_22M_d0.1_w0.05_s1
+a2_plate_vjepa2_h2-perturbseq_22M_d0.1_w0.05_s1
+a2_plate_vjepa2_h1_none_22M_d0.1_w0.05_s1
+a2_plate_vjepa2_h2shuf-jump_crispr_50M_d0.3_w0.2_s0
+a2_plate_vjepa2_h2-jump_crispr_22M_d0.1_w0.2_s1
+a2_plate_vjepa2_h2shuf-esm2_22M_d0.1_w0.2_s1
+a2_plate_vjepa2_h2-perturbseq_22M_d0.1_w0.2_s1
+a2_plate_vjepa2_h2shuf-string_22M_d0.1_w0.2_s1
+a2_plate_vjepa2_h2shuf-esm2_50M_d0.3_w0.2_s0
+a2_plate_vjepa2_h2shuf-jump_orf_22M_d0.1_w0.2_s1
+a2_plate_vjepa2_h2shuf-jump_orf_50M_d0.3_w0.2_s0
+a2_plate_vjepa2_h2shuf-string_50M_d0.3_w0.2_s0
+a2_plate_vjepa2_h2-esm2_22M_d0.1_w0.05_s1
+a2_plate_vjepa2_h2-jump_orf_22M_d0.1_w0.05_s1
+a2_plate_vjepa2_h2-string_22M_d0.1_w0.05_s1
+a2_plate_vjepa2_h2shuf-jump_crispr_22M_d0.1_w0.2_s1
+a2_plate_vjepa2_h2shuf-jump_crispr_22M_d0.1_w0.05_s1
+a2_plate_vjepa2_h2shuf-perturbseq_50M_d0.3_w0.2_s0
+a2_plate_vjepa2_h2shuf-perturbseq_22M_d0.1_w0.2_s1
+a2_plate_vjepa2_h2shuf-string_22M_d0.1_w0.05_s1
+a2_plate_vjepa2_h2shuf-perturbseq_22M_d0.1_w0.05_s1
+Oct 23 06:20:18 150-136-44-126 systemd[1]: Started nvidia-persistenced.service - NVIDIA Persistence Daemon.
+Oct 23 06:20:23 150-136-44-126 nv-fabricmanager[106525]: Successfully configured all the available GPUs and NVSwitches to route NVLink traffic.
+Oct 23 06:20:23 150-136-44-126 systemd[1]: Started nvidia-fabricmanager.service - NVIDIA fabric manager service.
+Oct 23 06:23:31 150-136-44-126 nv-fabricmanager[118507]: Successfully configured all the available GPUs and NVSwitches to route NVLink traffic.

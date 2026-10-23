@@ -1,8 +1,8 @@
-# Amendment 02: progress (updated 2026-10-22 07:45 UTC)
+# Amendment 02: progress (updated 2026-10-23 14:45 UTC)
 
 Interim status while the amendment-02 round runs (design commit `dd57079`). Final results go in
-`reports/RUN_REPORT_STAGE2.md`. No amended model has been trained and no test plate, test gene
-or screenB well has been evaluated.
+`reports/RUN_REPORT_STAGE2.md`. No gate, selection or amended validation evaluation has been
+computed, and no test plate, test gene or screenB well has been embedded or evaluated.
 
 | step | status | evidence |
 |---|---|---|
@@ -10,8 +10,9 @@ or screenB well has been evaluated.
 | 2. Freeze before training (sections 2, 6) | done | `splits/amend02_h1_primary_wells.tsv` (535 val / 1,112 test), `splits/amend02_h2_primary_genes.tsv` (204 / 417), truth lists with SHA-256 and unseen counts in `manifests/amend02_freeze.json` (`6716199`) |
 | 3. Stage 2 (section 7) | done 20:21 UTC | 60,289 of 61,372 wells on 404 of 410 plates; 1,212 shards backed up with SHA-256 (`results/a2/stage2_data.json`). All 1,083 failures are HTTP 404 for frames missing from the S3 conversion (movies shorter than 93 frames; mostly frames 89–92): 6 plates entirely (LT0003_40, LT0008_14, LT0012_29, LT0079_38, LT0084_46, LT0096_29; 4 training, 2 validation) and 1–3 wells on 24 others |
 | 4. Per-plate control normalisation and plate probe | done 20:57 UTC | no plate dropped (4–8 negative-control wells per plate, median 8); probes below (`results/a2/plate_probe.json`) |
-| 5. Grid x 3 seeds, replicate baselines, probe CIs | running | first attempt: 277 of 288 runs failed with CUDA out-of-memory (4 concurrent processes on 40 GB); 11 completed and are kept. Operational fix (evaluation chunks of 256 wells, expandable CUDA segments, 3 workers; no protocol value changed, `c03b433`); 277 runs restarted 23:17 UTC. Second incident 07:30 UTC 10-22: 50 M runs need ~14.6 GB in training, so three at once overflowed; 12 more runs failed (rerun). The runner now schedules by GPU memory (22 M = 1 unit, 50 M = 2, capacity 4) and respects live locks (`77c1905`); 52 of 288 runs done, 236 queued |
-| 6. Gates on validation | queued (automatic) | `results/a2/gates_val.json`, committed before the freeze |
+| 5. Grid x 3 seeds, replicate baselines, probe CIs | running | first attempt: 277 of 288 runs failed with CUDA out-of-memory (4 concurrent processes on 40 GB); 11 completed and are kept. Operational fix (evaluation chunks of 256 wells, expandable CUDA segments, 3 workers; no protocol value changed, `c03b433`); 277 runs restarted 23:17 UTC. Second incident 07:30 UTC 10-22: 50 M runs need ~14.6 GB in training, so three at once overflowed; 12 more runs failed (rerun). The runner now schedules by GPU memory (22 M = 1 unit, 50 M = 2, capacity 4) and respects live locks (`77c1905`); 52 of 288 runs done, 236 queued. Migrated 10-23 to 8 x A100-40GB (per-GPU slots, `264fee5`; section "Migration" below). Third incident 06:20 UTC 10-23: an unattended OS upgrade restarted the NVIDIA services and 27 in-flight runs failed (rerun from scratch; section "Incident 3"). 245 of 288 done at 14:30 UTC 10-23, 43 running or queued |
+| S2/S3 missing frames (completion plan v2) | done 10-23 | S2 `65db5d2` (`results/a2/missing_frames.json`); S3 rule pre-registered for test and screenB in the protocol, `884a9c0` |
+| 6. Gates on validation | queued (automatic, `scripts/run_a2_val.sh` from step 5) | `results/a2/gates_val.json`, committed before the freeze |
 | 7. Freeze, embed test plates, test once | prepared | `splits/test_wells_to_embed.tsv` (14,186 wells, 100 plates); extended `scripts/run_stage1_test.sh` |
 | 8. Run report | after step 7 | |
 
@@ -143,9 +144,35 @@ the oracle ceiling. Applied before any selection, H2/H3 validation output or gat
   (H1 and H2, siRNA token masked); reported next to the global test results.
 - Plate-probe diagnostics (a) and (b) added; section 1 unchanged.
 
-## Timeline (revised 10-22)
+## Timeline (revised 10-23, 8 x A100-40GB)
 
-22 M runs take ~34 min (3 at a time) and 50 M runs ~50–62 min (2 at a time). The remaining
-~94 22 M and ~142 50 M runs need about 72–87 h: grid to about Oct 25 morning–evening UTC, then
-secondary runs and validation evaluations (~0.5 day), the freeze, test-plate and screenB
-embedding (~11 h) and the test run. Run report and GPU idle about Oct 27–28.
+Grid: 245 of 288 runs done at 14:30 UTC 10-23; the remaining 43 (27 reruns after incident 3,
+16 last 50 M configurations) to about 16:00–16:30 UTC. Then selection (committed before any
+gate), H2 validation, 57 secondary runs (~1–1.5 h on 8 GPUs), the validation evaluations
+(single GPU) and `results/a2/gates_val.json`, probably late 10-23 or overnight. Then the freeze,
+test and screenB embedding (~1.5 h on 8 GPUs), the test run, E1/E2 and the run report:
+about 10-24 to 10-25.
+
+## Incident 3: OS upgrade restarted the NVIDIA services (2026-10-23 06:20 UTC)
+
+- **What happened:** Ubuntu's `apt-daily-upgrade` (unattended-upgrades) ran from 06:09 UTC. After
+  the libc6 upgrade (06:20:09–06:20:15) systemd re-executed and restarted
+  `nvidia-persistenced` and `nvidia-fabricmanager` at 06:20:17; Fabric Manager came back at
+  06:20:23 and was reconfigured again at 06:23:31. Every CUDA context was torn down (Xid 45 on
+  all 8 GPUs; no ECC, row-remapping or other hardware error; driver, Fabric Manager and CUDA
+  versions unchanged). Evidence: `logs/migration/incident_1023_nvidia_restart.log`.
+- **Effect:** 27 grid runs failed (`cudaErrorLaunchFailure` / `CUBLAS_STATUS_EXECUTION_FAILED`):
+  the 16 in flight at 06:20 and 11 started before the second reconfiguration at 06:23. None
+  had a results file; they restart from scratch (partial checkpoints overwritten), as the
+  completion plan prescribes for stopped runs. No completed run was in flight at 06:20 (start =
+  results-file time minus run minutes), so all 245 completed runs are unaffected. No protocol
+  value changed.
+- **Lost runner log (my error):** at about 05:45 UTC a `git stash` / `git stash pop` in the
+  working tree replaced `logs/a2_val/grid.log` while the grid runner (PID 43528) was writing to
+  it, so that runner's per-run lines and final summary (05:36–14:26 UTC) went to an unlinked
+  file and are lost. Per-run logs (`logs/a2/<run>.log`) and every results file are intact; the
+  restarted pipeline's runner logs normally. The working tree is no longer touched while jobs
+  write to it.
+- **Open (author decision):** the next `apt-daily-upgrade` is scheduled for 10-24 06:55 UTC,
+  inside the evaluation / test window; disabling `apt-daily.timer` and
+  `apt-daily-upgrade.timer` until the work is done has been proposed.

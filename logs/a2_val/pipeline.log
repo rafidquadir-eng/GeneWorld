@@ -12,3 +12,6 @@ grid finished; 277 failed: ['a2_plate_vjepa2_h2-esm2_22M_d0.1_w0.05_s0', 'a2_pla
 [10-21 23:12:04] selection FAILED
 [10-21 23:17:08] step 5: grid (12 families x 8 configurations x 3 seeds)
 [10-22 07:31:59] step 5: grid (12 families x 8 configurations x 3 seeds)
+[10-23 05:35:47] step 5 resumed on 8 x A100-40GB: grid (per-GPU slots, 4 units per GPU)
+[10-23 14:26:02] grid runner 43528 exited; resuming run_a2_val.sh at step 5
+[10-23 14:26:02] step 5: grid (12 families x 8 configurations x 3 seeds)
