@@ -1,4 +1,4 @@
-# Amendment 02: progress (updated 2026-10-23 14:45 UTC)
+# Amendment 02: progress (updated 2026-10-23 15:50 UTC)
 
 Interim status while the amendment-02 round runs (design commit `dd57079`). Final results go in
 `reports/RUN_REPORT_STAGE2.md`. No gate, selection or amended validation evaluation has been
@@ -175,7 +175,13 @@ about 10-24 to 10-25.
   The final record is regenerated when the grid completes and committed with the selection.
 - **S12:** `scripts/run_a2_val.sh` was stopped during its grid step (its grid runner
   continues); `scripts/74_val_parallel.py` takes over from the end of the grid (selection
-  first, then the independent validation jobs in parallel on the 8 GPUs, then the gates).
+  first, then the independent validation jobs in parallel on the 8 GPUs, then the gates). Grid at 15:44 UTC: 261 of 288 runs complete.
+- **CPU-side work while the GPUs finish step 5** (author, 10-23; no result read): E1-E3 code
+  written and unit-tested, not run on real data (`src/geneworld/explore.py`,
+  `scripts/8[023]_*.py`; `91f9d23`); run-report generator `scripts/90_run_report_stage2.py`
+  (`9aa0ac0`); manuscript draft `paper/geneworld/` with a verified novelty search and numbers
+  generated from results (`scripts/91_paper_numbers.py`; `14b63b8`). Details and open points in
+  `reports/AMEND02_REVIEW.md` (update 15:50 UTC).
 
 ## Incident 3: OS upgrade restarted the NVIDIA services (2026-10-23 06:20 UTC)
 

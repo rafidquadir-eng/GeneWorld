@@ -1,6 +1,101 @@
-# GeneWorld amendment 02: review packet (updated 2026-10-23 14:45 UTC)
+# GeneWorld amendment 02: review packet (updated 2026-10-23 15:50 UTC)
 
-## Update 2026-10-23: migration to 8 x A100-40GB, S2, S3, grid resumed
+## Update 2026-10-23 15:50 UTC: completion plan v3 (S10-S12 under way) and CPU-side work
+
+Covers the work since the 14:45 update below, under `docs/AMEND02_COMPLETION_PLAN_v3.md`
+(`bd9d376`) and the author's instructions of 10-23. **Still no selection, no H2/H3 or amended H1
+validation output, no gate; no test plate, test gene or screenB well embedded or evaluated; no
+exploratory analysis run on real data.** No per-family validation errors are reported here.
+
+### Status
+
+| step | status | commits / evidence |
+|---|---|---|
+| v3 merged into stage1 | done, in a separate worktree; main worktree's ref and index advanced without writing files during jobs | `b9a1f76` |
+| S10 stop automatic system changes | done, verified (author-approved) | `6683e51`; `logs/migration/os_freeze.log` |
+| G4 git hygiene while jobs run | in force: no stash/checkout/reset/rebase/pull; commits by explicit paths | |
+| S11 grid run record | snapshot committed; final version regenerated after the grid and committed with the selection | `726aae6`; `results/a2/grid_runs.json` |
+| S12 finish step 5 in parallel | grid 261 of 288 at 15:44 UTC (last 50 M runs; about 1 h left); orchestrator `scripts/74_val_parallel.py` waiting on the grid runner | `9e2044a`, `726aae6` |
+| S13 review checkpoint | pending: GATES_VAL_SUMMARY.md with the 8-point checklist, then stop for "go" | |
+| CPU work (author, 10-23) | E1-E3 code, run-report generator, manuscript draft: done, see below | `91f9d23`, `9aa0ac0`, `14b63b8` |
+
+### S10-S12 details
+
+- **S10:** apt timers and unattended-upgrades disabled, apt services masked, 24 NVIDIA/CUDA
+  packages held, needrestart list-only; driver 580.178.04 and Fabric Manager unchanged; the
+  running grid was unaffected.
+- **S11:** per run the attempts with host, GPU where known, times, status, the incident ending
+  each failed attempt and the results-file SHA-256; each attempt labelled logged or
+  reconstructed. Snapshot 14:57 UTC: failed attempts 277 / 13 / 27 for incidents 1 / 2 / 3.
+  **Correction:** incident 2 had 13 failed attempts in the runner log, not 12 as reported
+  earlier.
+- **S12:** `scripts/run_a2_val.sh` (serial evaluations on one GPU) was stopped during its grid
+  step; its grid runner continues. `scripts/74_val_parallel.py` waits for the grid, writes the
+  final grid record, commits `selection.json` (pushed) before anything else, then runs H2
+  validation, H1 validation, the plate controls and the secondary runs in parallel, the
+  complex-split runs once the planning source exists, the remaining evaluations (each alone on
+  one GPU), commits, then the gate collector, commits and pushes. A failed job blocks its
+  dependents and the gates. Per-job GPU, times and exit codes go to
+  `results/a2/eval_jobs.json`. Scheduler unit test `tests/test_val_parallel.py`.
+- **Own error, caught before harm:** while relaunching the orchestrator to add the grid-record
+  step, a `kill` hit the old orchestrator's wrapper shell instead of the Python process, and a
+  commit command chain ending in `&` ran in the background and would have started a second
+  orchestrator after its tests. Both were found within minutes and stopped before either
+  started a job or a commit; exactly one orchestrator (PID 185417) runs. Launches are now
+  separate commands, verified by PID.
+
+### CPU-side work (no result read, nothing shown)
+
+1. **E1, E2, E3 (S15)** written and unit-tested, not run on real data:
+   `src/geneworld/explore.py` (median polish / B-score; the within-series replicate probe; partial
+   movies of frames 0-87 with clip 13 invalid; per-plate statistics for new wells; cache
+   extender that leaves existing rows byte-identical), `scripts/80_e1_bscore.py`,
+   `82_e2_forecast_probe.py`, `83_e3_partial.py`. They reuse the committed training and
+   evaluation scripts unchanged and write only to `checkpoints/a2_e1/` and
+   `results/a2/exploratory/`, every output labelled "exploratory, after the test". Tests on
+   synthetic data (`tests/test_explore.py`) caught one bug (chunked copy bound), fixed.
+   Equivalence: `explore.within_series_probe` reproduces the committed probe (a) exactly in the
+   plate space (only match/no-match was printed).
+2. **Run report generator** `scripts/90_run_report_stage2.py`: builds
+   `reports/RUN_REPORT_STAGE2.md` and figures from `results/` only; directional words from p
+   values and CIs in code; absent inputs (test) give one-sentence placeholders; exploratory
+   numbers only once `gates_test.json` exists. Dry run on the current files reproduces the
+   committed numbers; figures use a palette that passes the dataviz validator, with numbers also
+   in tables. To do: check on the validation outputs; add incidents, deviations and "not run".
+3. **Manuscript** `paper/geneworld/` (TMLR; anonymised `main_anon.tex` and named
+   `main_biorxiv.tex`): introduction, related work, data, model, evaluation design, controls and
+   baselines, pre-registration and errata; results and discussion are placeholders. All 59
+   numbers are macros from `scripts/91_paper_numbers.py`. Novelty search of 2026-10-23
+   (`novelty_search_2026-10-23.md`): 27 references, each verified against Crossref or arXiv; no
+   prior gene-conditioned latent world model of live-cell video with zero-shot transfer to
+   unseen genes found (closest: transcriptomic cell world models, static-image perturbation
+   generators, microscopy video diffusion without perturbation conditioning). Compiles with
+   Tectonic (scratchpad binary; no system package installed). Author TODOs: e-mail,
+   affiliation, data/code availability. Nothing submitted or posted.
+
+### Points for the reviewer (in addition to those of the 14:45 update)
+
+1. **S13 checklist item 4 will fail as written.** It expects 535 - 33 = 502 H1 primary
+   validation wells; 362 are evaluated. Decomposition of the 535 frozen wells: 362 evaluated,
+   98 of test-split genes and 42 of validation-split genes (the H1 action-conditioned model is a
+   learned per-gene embedding and has no embedding for held-out-split genes; the evaluation mask
+   requires the gene in the training vocabulary), 33 S2 exclusions. The same 362 wells were the
+   training-time early-stopping set. Not changed (it would alter selection and need retraining);
+   author decision at S13.
+2. **`scripts/run_stage1_test.sh` before S14:** it embeds test plates with a single embedder
+   (S14 requires one per GPU, <= 128 streams in total), and its `cache.build(..., '_test')` will
+   be refused by the shard guard unless the test shards are first added to
+   `manifests/cache_shards.tsv` (proposed: a commit right after embedding, before any
+   evaluation). Same for screenB.
+3. **E3 design choice:** wells added by E3 on training plates are kept out of every training set
+   and replicate baseline (the frozen models' input check requires their original training
+   wells, and the baselines were defined on them); only validation and test wells are added to
+   the evaluated set.
+4. **Validation evaluations now run in parallel** (point 5 of the 14:45 update resolved by S12).
+
+---
+
+## Update 2026-10-23 14:45 UTC: migration to 8 x A100-40GB, S2, S3, grid resumed
 
 Covers the work since the 10-22 packet below, under `docs/AMEND02_COMPLETION_PLAN.md` v2 and
 the author's instructions of 10-23. Commits `131156c`..HEAD on `stage1`; `main` untouched.
