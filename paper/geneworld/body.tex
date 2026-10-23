@@ -1,0 +1,274 @@
+% Shared body of the anonymised (main_anon.tex) and named (main_biorxiv.tex) versions.
+% Every number is a macro from numbers.tex (scripts/91_paper_numbers.py). Results and
+% discussion are placeholders until the test has been run.
+
+\begin{abstract}
+World models that predict the consequences of actions in a learned latent space have been
+built for robots and games; whether the same recipe can model how a population of human cells
+evolves under a genetic perturbation is open. We train an action-conditioned latent world model
+of genome-scale live-cell RNAi time-lapse microscopy: a frozen self-supervised video encoder
+(V-JEPA~2) turns two-day movies into latent trajectories, and a small transformer predicts the
+next latent state given the past and the knocked-down gene. We ask three pre-registered
+questions, each with a decision gate fixed before the test data were read: whether conditioning
+on the gene improves forecasts for held-out plates beyond an action-agnostic model and a
+replicate-memorisation baseline; whether gene representations from independent modalities
+(Perturb-seq, Cell Painting, protein language models, interaction networks) transfer the model
+to genes never seen in training; and whether searching over gene actions recovers the genes
+that produce a target phenotype or trajectory. \textbf{[Results: to be filled from the test
+evaluation.]}
+\end{abstract}
+
+\section{Introduction}
+
+A world model predicts how the state of an environment changes under an action and can then be
+used to plan, by searching for actions whose predicted consequences reach a goal
+\citep{ha2018worldmodels,hafner2025dreamer}. Recent self-supervised video encoders make this
+possible without pixels: V-JEPA~2 learns latent video representations from internet-scale video
+and, with a small action-conditioned predictor trained on its frozen latents, plans robot
+manipulation in latent space \citep{assran2025vjepa2}. Cell biology has its own version of the
+problem. A genetic perturbation is an action, a time-lapse movie of a cell population is a
+trajectory, and the questions a world model answers (what will happen under this knockdown, and
+which knockdown produces this phenotype) are central to functional genomics and to the
+``virtual cell'' programme \citep{bunne2024virtualcell,xing2026worldmodel}.
+
+Existing virtual-cell world models predict transcriptomic responses
+\citep{qiu2026chreode,miao2026vclmu,chuai2026alphacell}, and image-based perturbation models
+generate static images of perturbed cells \citep{palma2025impa,wang2025morphdiff,
+zhang2025cellflux,zhang2026cellfluxv2} or 3D morphologies \citep{naidoo2025form}. Live-cell
+video, where a perturbation's phenotype unfolds over hours, has been modelled generatively
+without perturbation conditioning \citep{holmberg2025videodiffusion}. We found no prior model
+that conditions latent dynamics of live-cell video on the perturbed gene and evaluates transfer
+to genes held out entirely (Section~\ref{sec:related}).
+
+We build such a model on the MitoCheck screen, a genome-wide RNAi screen in which every
+knockdown was imaged for two days by time-lapse microscopy \citep{neumann2010mitocheck}, and we
+design its evaluation around three lessons from perturbation modelling. First, simple baselines
+are hard to beat \citep{ahlmanneltze2025baselines}, so every model must beat a
+memorisation baseline that replays the training replicates of the same reagent. Second, plate
+and batch effects can dominate learned image representations, so the metric is computed after a
+per-plate normalisation to negative controls and the plate identity carried by the latent is
+measured. Third, a test set evaluated more than once stops being a test set, so the design,
+gates, primary metrics and evaluation lists were frozen before training, and the test splits are
+evaluated once.
+
+Our contributions are: (i) an action-conditioned latent world model of genome-scale live-cell
+RNAi video, trained on \NWellsStageTwoEmbedded{} wells beyond a first stage of
+\NMoviesStageOne{} movies; (ii) a pre-registered evaluation with three decision gates
+(prediction, zero-shot transfer and planning), memorisation and kNN baselines, trained
+shuffled-encoding controls and per-plate normalisation; (iii) a quantification of the batch
+structure carried by frozen video-encoder latents of microscopy; and (iv)
+\textbf{[results summary: to be filled]}.
+
+\section{Related work}\label{sec:related}
+
+\paragraph{World models.} Latent world models learn a transition model in a learned
+representation and plan by searching over actions \citep{ha2018worldmodels,hafner2025dreamer}.
+V-JEPA~2 \citep{assran2025vjepa2} separates the two: a self-supervised video encoder is
+pre-trained without actions, then frozen, and an action-conditioned predictor (V-JEPA~2-AC) is
+trained on its latents with teacher forcing and a rollout loss. We follow this recipe with gene
+knockdowns as actions.
+
+\paragraph{Virtual cells and perturbation prediction.} Models of perturbation responses have
+mostly predicted transcriptomes \citep{roohani2024gears}, and simple linear baselines remain
+competitive with deep models for unseen perturbations \citep{ahlmanneltze2025baselines}.
+Recent ``cell world models'' treat perturbations as actions on a latent cell state, again for
+expression data \citep{qiu2026chreode,miao2026vclmu,chuai2026alphacell}. Perspectives argue for
+models that couple modalities, including imaging \citep{bunne2024virtualcell,xing2026worldmodel}.
+
+\paragraph{Image-based perturbation models.} Generative models predict how cells look after a
+genetic or chemical perturbation from static images: IMPA by style transfer
+\citep{palma2025impa}, MorphDiff by diffusion conditioned on L1000 expression
+\citep{wang2025morphdiff}, CellFlux and CellFluxV2 by flow matching between control and perturbed
+populations \citep{zhang2025cellflux,zhang2026cellfluxv2}, and FORM for 3D morphology
+\citep{naidoo2025form}. Video diffusion has been adapted to time-lapse microscopy, conditioned on
+phenotype descriptions or a first frame rather than a perturbation
+\citep{holmberg2025videodiffusion}.
+
+\paragraph{Live-cell RNAi screens.} MitoCheck imaged a genome-wide siRNA library in HeLa cells
+expressing histone~2B--GFP and scored mitotic phenotypes per cell with supervised classifiers
+\citep{neumann2010mitocheck,held2010cellcognition}; later work found phenotypes without labels
+using hidden Markov models on the class time courses \citep{failmezger2013unsupervised}. We use
+the movies through the Image Data Resource and the BioImage Archive
+\citep{williams2017idr,hartley2022bia}.
+
+\paragraph{Novelty search.} On 23 October 2026 we searched arXiv, bioRxiv and journal indexes for
+action-conditioned or gene-conditioned world models and perturbation-conditioned video models of
+live-cell imaging published in 2025--2026, and verified every cited work against its DOI or
+arXiv record. We found no model that conditions the latent dynamics of live-cell video on the
+perturbed gene, and none that evaluates zero-shot transfer of such a model to unseen genes.
+
+\section{Data}\label{sec:data}
+
+\paragraph{Movies.} The MitoCheck primary screen (screen A) imaged each siRNA-transfected well
+every 30 minutes for two days (93 frames) \citep{neumann2010mitocheck}. We stream the movies at
+the pyramid level of $512\times672$ pixels from the BioImage Archive's object store and never store
+raw frames. Plates are split into \NPlatesTrain{} training, \NPlatesVal{} validation and
+\NPlatesTest{} test plates; genes are split into \NGenesTrain{} training, \NGenesVal{} validation and
+\NGenesTest{} test genes, with a second split that holds out whole protein complexes. A first
+stage embedded \NMoviesStageOne{} movies on \NPlatesStageOne{} plates; a second stage, run on
+training and validation plates only before any amended model was trained, selected
+\NWellsStageTwoSelected{} further wells (all controls, every siRNA with a reproducible
+phenotype, and random library wells up to a per-plate budget) and embedded
+\NWellsStageTwoEmbedded{} of them on \NPlatesStageTwoEmbedded{} plates. The cache used for
+training and validation holds \NCacheWells{} wells on \NCachePlates{} plates.
+
+\paragraph{Missing frames.} \NWellsMissingFrames{} selected wells could not be embedded because
+frames were missing from the archive's conversion, including \NWholePlatesMissing{} whole plates;
+every missing frame was re-requested three times before the well was excluded. \NWellsMissingOnlyLate{}
+of these wells miss only frames that the primary horizons do not use; the exclusion rule was
+nevertheless fixed and applied identically to the test and screen-B data before they were read
+(Section~\ref{sec:prereg}).
+
+\paragraph{Independent reagents.} Screen B re-tested genes with independent siRNAs; it is
+evaluated once, after the freeze, outside the gates.
+
+\paragraph{Gene encodings.} Each gene is represented by a frozen vector from one of five sources
+that use no MitoCheck data: genome-wide Perturb-seq pseudobulk responses in K562 cells
+\citep{replogle2022perturbseq}, JUMP Cell Painting profiles of CRISPR knockouts and of ORF
+overexpression \citep{chandrasekaran2023jump}, a spectral embedding of the STRING network
+\citep{szklarczyk2023string} and mean-pooled ESM-2 protein embeddings \citep{lin2023esm2}.
+Coverage of validation and test genes differs by source (Table~\ref{tab:coverage}).
+
+\begin{table}[t]
+\centering
+\caption{Validation and test genes covered by each encoding source.}
+\label{tab:coverage}
+\begin{tabular}{lrr}
+\toprule
+source & validation genes & test genes \\
+\midrule
+Perturb-seq (K562) & \CovPerturbseqVal & \CovPerturbseqTest \\
+JUMP CRISPR & \CovJumpCrisprVal & \CovJumpCrisprTest \\
+JUMP ORF & \CovJumpOrfVal & \CovJumpOrfTest \\
+STRING & \CovStringVal & \CovStringTest \\
+ESM-2 & \CovEsmTwoVal & \CovEsmTwoTest \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Model}\label{sec:model}
+
+\paragraph{Latent states.} Each movie is cut into four $256\times256$ tiles and into 14 clips of
+16 frames (8 hours); clips start every 6 frames (3 hours) for the first 13 clips. Each clip of
+each tile is encoded by the frozen V-JEPA~2 ViT-L video encoder \citep{assran2025vjepa2}, its
+tokens are averaged over time and pooled to $4\times4$ spatial tokens, and these are averaged to
+one token per tile. A well's state at step $t$ is the set of its four tile tokens. DINOv2
+\citep{oquab2023dinov2} and a video JEPA trained on live-cell microscopy serve as alternative
+encoders.
+
+\paragraph{Normalisation.} For each plate, clip and latent dimension, latents are centred and
+scaled by the mean and standard deviation of that plate's negative-control wells
+(\NNegPerPlateMin--\NNegPerPlateMax{} per plate), with the standard deviation floored at its 5th
+percentile over plates. A global standardisation is kept as a sensitivity analysis.
+
+\paragraph{Predictor.} A block-causal transformer takes the tile tokens of steps $\le t$, an
+action token and a reagent (siRNA) token, and predicts the tile tokens at $t+1$ as a residual. The
+action token is a learned per-gene embedding (seen genes), an MLP adapter of a frozen gene
+encoding (zero-shot), or a constant (action-agnostic). Tile tokens carry a step embedding but no
+position embedding, since fields of view are exchangeable. Two sizes are used: width
+\WidthSmall{} and depth \DepthSmall{} (\ParamsSmall{}\,M core parameters) and width \WidthLarge{}
+and depth \DepthLarge{} (\ParamsLarge{}\,M).
+
+\paragraph{Training.} The loss is the L1 error of teacher-forced one-step predictions plus that
+of a rollout of up to \RolloutSteps{} steps from a random context, as in V-JEPA~2-AC. We use
+AdamW with learning rate \LearningRate{} and a one-cycle schedule over at most \MaxSteps{}
+steps, batches of \BatchWells{} wells and siRNA-token dropout \SirnaDropout{}. The checkpoint with
+the lowest validation primary error (evaluated every \EvalEvery{} steps) is kept, and training
+stops \Patience{} steps after the last improvement.
+
+\paragraph{Planner.} Given a start state and a target, the planner rolls the predictor out for
+every candidate gene's encoding and ranks genes by the latent distance of the rolled-out state to
+the target.
+
+\section{Evaluation design}\label{sec:eval}
+
+\paragraph{Primary horizons and wells.} The primary metric is the mean squared error of the
+forecast latent at 24 and 36 hours after the first clip, in the normalised space. Most
+knockdowns have no visible phenotype, so the primary wells for prediction are held-out-plate
+wells whose siRNA carries a reproducible MitoCheck phenotype on training plates
+(\NPrimaryWellsVal{} validation and \NPrimaryWellsTest{} test wells, frozen before training); the
+primary genes for transfer are genes with a reproducible phenotype annotation
+(\NPrimaryGenesVal{} validation and \NPrimaryGenesTest{} test genes). All wells and genes are
+reported as secondary analyses.
+
+\paragraph{Prediction (H1).} On primary wells of held-out plates, the gene-conditioned
+predictor must beat the action-agnostic predictor and the replicate-drift baseline
+(Section~\ref{sec:baselines}), each with a one-sided sign-flip test over plates at $p<0.05$, with
+errors averaged over three seeds before testing.
+
+\paragraph{Zero-shot transfer (H2).} On primary genes of the held-out gene split, at least one
+encoding source must beat a model trained with the same encodings randomly permuted across genes
+and the action-agnostic predictor, each with a 95\% bootstrap confidence interval over genes
+below zero.
+
+\paragraph{Planning (H3).} Phenotype planning ranks unseen genes for their ability to reach the
+mean state of training wells with a MitoCheck phenotype (mitotic delay, polylobed nuclei,
+binucleation); average precision must beat a label-permutation null (Benjamini--Hochberg
+$q<0.05$) for at least two of the three phenotypes and a guilt-by-association baseline for at
+least one. Unseen-gene truth sets hold \NTruthMitoticDelayVal, \NTruthPolylobedVal{} and
+\NTruthBinuclearVal{} validation genes and \NTruthMitoticDelayTest, \NTruthPolylobedTest{} and
+\NTruthBinuclearTest{} test genes. Trajectory planning ranks the gene that produced a held-out
+trajectory; hit@100 must exceed random (binomial $p<0.05$) and endpoint retrieval with endpoints
+imputed from the nearest training genes in the encoding space.
+
+\section{Controls and baselines}\label{sec:baselines}
+
+\paragraph{Baselines.} Copy-last; the time-slot mean; the plate's negative-control drift; the
+action-agnostic predictor; \emph{replicate drift}, which adds to a well's own first state the
+mean change of the same siRNA's wells on training plates (falling back to the gene's other
+siRNAs, then to the plate's control drift); \emph{replicate endpoint}, the mean training-plate
+latent of the same siRNA; a nearest-gene lookup in each encoding space; and, for planning,
+guilt-by-association and endpoint retrieval. Replicate endpoints of unseen genes use those genes'
+own observed wells, which the planner never sees, so they are reported as an oracle ceiling and
+not as a gate comparator.
+
+\paragraph{Controls.} Models trained on shuffled encodings (three seeds per source); an
+evaluation-time shuffle; a static-clip control in which every clip repeats one frame; a context
+swap in which the first state comes from another well with the same gene; a phenotype probe
+applied to observed and forecast latents; probes that decode the plate from the latent within
+replicate series; and a duplicate-movie check between splits by image fingerprints.
+
+\section{Pre-registration, amendment and errata}\label{sec:prereg}
+
+The design, hypotheses, splits and gates were committed before any test data were read. After a
+first validation round on \NMoviesStageOne{} movies, the design was amended once, before any test
+data were read, to add the per-plate normalisation, the primary horizons and wells, the
+replicate baselines, three seeds and a fixed configuration grid (two predictor sizes, dropout
+\Dropouts{}, weight decay \WeightDecays{}; \NGridRuns{} runs across \NFamilies{} model families),
+a second stage of training data and a planning ground truth with more positives. The amendment
+allows one round only: if the amended gates fail on validation, the models are frozen as they
+are and the test is run once.
+
+One erratum was recorded before any gate was computed: the amended trajectory-planning rule
+compared the planner with replicate-endpoint retrieval, which for unseen genes uses the genes'
+own observed wells and therefore cannot test zero-shot planning; the comparator was replaced by
+nearest-gene-imputed endpoint retrieval, and the original baseline is reported as an oracle
+ceiling. The rule for excluding wells with missing frames was likewise fixed for the test and
+screen-B data before they were embedded. Configuration selection uses validation data only, the
+validation gates were recorded before the freeze, and every number in Section~\ref{sec:results}
+comes from models frozen before the test data were read. \TODO{author: review this section.}
+
+\section{Results}\label{sec:results}
+
+\textbf{[Placeholder. Filled from the results files after the test has been run: gates on
+validation and test; prediction with every baseline and the phenotype probe; transfer per
+encoding source; planning; normalised and global preprocessing; alternative encoders;
+complex-held-out split; screen B; plate-identity probes; exploratory analyses after the test,
+labelled as such.]}
+
+\section{Discussion}\label{sec:discussion}
+
+\textbf{[Placeholder until the results exist.]}
+
+\section*{Licences and data availability}
+
+MitoCheck movies and annotations (Image Data Resource idr0013; BioImage Archive S-BIAD865) are
+CC0; the Perturb-seq pseudobulk data and STRING are CC~BY~4.0; JUMP Cell Painting profiles are
+CC0. Model weights: V-JEPA~2 (MIT), DINOv2 (Apache-2.0), ESM-2 (MIT).
+\TODO{author: code and data availability statement.}
+
+\section*{Use of AI assistance}
+
+Code, analyses and an initial manuscript draft were produced with the assistance of an AI coding
+agent (Claude, Anthropic) under the author's direction; the author reviewed and is responsible
+for all content. \TODO{author: review.}
