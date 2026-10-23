@@ -108,5 +108,20 @@
    "verified_before": "no results/a2/selection.json, no H1/H2/H3 amended output, no results/a2/gates_val.json on disk or in git history",
    "applied_in_commit": "3236065"
   }
- ]
+ ],
+ "missing_frames_rule": {
+  "registered": "2026-10-23, completion plan v2 step S3, before the freeze and before any test plate or screenB well is embedded",
+  "rule": "a well with any level-1 frame missing after 3 attempts (HTTP 404 re-requested with back-off; src/geneworld/io/s3fetch.py MAX_404_ATTEMPTS = 3) is excluded from every analysis, as in train and validation; no partial-movie embedding (F9: listed under 'not run')",
+  "applies_to": [
+   "test plates (splits/test_wells_to_embed.tsv)",
+   "screenB (splits/screenB_wells.tsv)"
+  ],
+  "train_and_validation": "unchanged: the wells embedded in stage 1 and stage 2 (missing-frame audit S2: results/a2/missing_frames.json); recovered frames are listed only",
+  "records": "the embed failure lists (logs/embed_failures_<tag>.json) are copied to results/a2/embed_failures_test.json and results/a2/embed_failures_screenB.json, committed and backed up with SHA-256 before any test or screenB evaluation",
+  "report": {
+   "counts": "for test and screenB separately: wells, plates (whole plates lost listed), primary wells (H1: splits/amend02_h1_primary_wells.tsv; screenB: splits/amend02_screenB_primary_wells.tsv) and primary-gene wells (splits/amend02_h2_primary_genes.tsv) lost; wells lost whose missing frames are all >= 88 (F9)",
+   "independence_test": "library wells only; phenotype class of a well = the classes its siRNA carries on training plates (screenA annotation rows on training plates; screenB: its gene's classes on screenA training plates, the gene-level rule of the screenB primary wells); for each of mitotic_delay, polylobed, binuclear and 'any reproducible class': two-sided Fisher exact test of lost vs embedded x class vs not; Benjamini-Hochberg over the 4 tests; reported for test and screenB separately",
+   "use": "descriptive only: never used to change the exclusion, a gate, a metric or a model"
+  }
+ }
 }

@@ -5,8 +5,8 @@ HTTPS connections; chunk bodies go to in-memory buffers only. A well's 93 level-
 decoded and yielded as a (93, 512, 672) uint8 array as soon as all of its chunks arrive; wells
 in flight or finished-but-not-yet-consumed are bounded by `max_wells` (the rolling in-memory
 buffer; ~32 MB per well); a well's slot is freed only after the consumer has taken it.
-Failed chunks are retried with exponential backoff (8 attempts); a well whose chunk keeps
-failing is yielded with its error instead of an array.
+Failed chunks are retried with exponential backoff (8 attempts; HTTP 404: 3 attempts); a well
+whose chunk keeps failing is yielded with its error instead of an array.
 
 Measured with curl's own parallel mode: 85–91 MB/s from the BIA bucket at 128 streams
 (`reports/DATA_ACCESS.md`). Only the BIA bucket holds the whole screen.
@@ -28,6 +28,10 @@ from geneworld.io.mitocheck import LEVEL_SHAPE, N_FRAMES, chunk_url
 
 _BLOSC = numcodecs.Blosc()
 MAX_ATTEMPTS = 8
+#: completion plan v2 S3 (pre-registered 2026-10-23 for test and screenB): a frame answering
+#: HTTP 404 is re-requested with back-off and counts as missing only after 3 attempts (the
+#: stage-2 fetch treated 404 as final after 1; S2 re-requested those frames 3 times)
+MAX_404_ATTEMPTS = 3
 
 
 class _Job:
@@ -108,7 +112,8 @@ def fetch_wells(wells: Iterable[tuple[object, str, str]], level: int = 1, stream
                         j.bufs[t] = buf.getvalue()
                         j.left -= 1
                     else:
-                        _retry(j, t, att, f"HTTP {code}", pending, permanent=code == 404)
+                        _retry(j, t, att, f"HTTP {code}", pending,
+                               limit=MAX_404_ATTEMPTS if code == 404 else MAX_ATTEMPTS)
                     jobs_open -= _maybe_finish(j, out, slots, h, w)
                 for c, errno, msg in bad:
                     j, t, att, _ = meta.pop(id(c))
@@ -132,8 +137,8 @@ def fetch_wells(wells: Iterable[tuple[object, str, str]], level: int = 1, stream
         slots.release()      # the consumer has taken the well: it leaves the buffer
 
 
-def _retry(j, t, att, err, pending, permanent=False):
-    if permanent or att + 1 >= MAX_ATTEMPTS:
+def _retry(j, t, att, err, pending, limit=MAX_ATTEMPTS):
+    if att + 1 >= limit:
         j.error = f"frame {t}: {err} after {att + 1} attempts"
         return
     delay = min(30.0, 0.5 * 2 ** att) * (0.5 + random.random())
