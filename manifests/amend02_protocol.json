@@ -123,5 +123,20 @@
    "independence_test": "library wells only; phenotype class of a well = the classes its siRNA carries on training plates (screenA annotation rows on training plates; screenB: its gene's classes on screenA training plates, the gene-level rule of the screenB primary wells); for each of mitotic_delay, polylobed, binuclear and 'any reproducible class': two-sided Fisher exact test of lost vs embedded x class vs not; Benjamini-Hochberg over the 4 tests; reported for test and screenB separately",
    "use": "descriptive only: never used to change the exclusion, a gate, a metric or a model"
   }
- }
+ },
+ "clarifications": [
+  {
+   "id": "D1",
+   "date": "2026-10-23",
+   "source": "docs/AMEND02_COMPLETION_PLAN_v4.md section 2, D1 (8953484)",
+   "type": "clarification of the H1 primary-well definition, not an amendment; recorded before the freeze",
+   "text": "H1 primary wells = frozen H1 primary wells (splits/amend02_h1_primary_wells.tsv) whose gene is in the training gene split (splits/gene_split.tsv), minus the missing-frame exclusions (S2 for validation, S3 for test). H1 asks whether the action-conditioned model forecasts seen genes on held-out plates (design A.4); wells of validation- and test-split genes belong to H2.",
+   "expected_counts": {
+    "validation": "362 = 386 frozen validation primary wells of training-split genes - 24 S2 exclusions (40 plates); decomposition of the 535: 386 training-split genes (362 evaluated, 24 S2), 106 test-split genes, 43 validation-split genes",
+    "test": "<= 770 = 783 frozen test primary wells of training-split genes - 13 outside the test layout (82 plates), minus S3 exclusions"
+   },
+   "implementation": "unchanged: src/geneworld/train/a2.py eval_mask requires the gene in the training vocabulary; the same 362 wells were the training-time validation set",
+   "verified": "counts recomputed on 2026-10-23 from the frozen list, the gene split and results/a2/missing_frames.json (no test data read)"
+  }
+ ]
 }

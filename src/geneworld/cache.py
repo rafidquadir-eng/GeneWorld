@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -39,6 +40,14 @@ ROOTS = ["data/latents", "data/latents_s2"]
 SHARD_MANIFEST = REPO / "manifests" / "cache_shards.tsv"
 DATA = REPO / "data"
 UNUSED_DIRS = {"latents_unused_1019"}
+#: rehearsal of the test path (completion plan v4 S17/S18): its shards are listed in their own
+#: manifest, read only when GENEWORLD_REHEARSAL=1; otherwise data/latents_rehearsal/ is ignored
+REHEARSAL_DIR = "latents_rehearsal"
+REHEARSAL_MANIFEST = REPO / "manifests" / "cache_shards_rehearsal.tsv"
+
+
+def rehearsal_mode() -> bool:
+    return os.environ.get("GENEWORLD_REHEARSAL") == "1"
 
 
 class ShardManifestError(RuntimeError):
@@ -49,8 +58,14 @@ def check_shard_manifest() -> None:
     """Refuse (listing the paths) if a shard under data/latents*/ is not in the manifest, or a
     manifest shard is missing from disk. Paths only; backup and restore check the hashes."""
     want = set(pd.read_csv(SHARD_MANIFEST, sep="\t").path)
+    skip = set(UNUSED_DIRS)
+    if rehearsal_mode():
+        if REHEARSAL_MANIFEST.exists():
+            want |= set(pd.read_csv(REHEARSAL_MANIFEST, sep="\t").path)
+    else:
+        skip.add(REHEARSAL_DIR)
     have = {str(p.relative_to(DATA.parent)) for d in DATA.glob("latents*")
-            if d.is_dir() and d.name not in UNUSED_DIRS for p in d.rglob("*.npz")}
+            if d.is_dir() and d.name not in skip for p in d.rglob("*.npz")}
     extra, missing = sorted(have - want), sorted(want - have)
     if extra or missing:
         raise ShardManifestError(
@@ -66,12 +81,15 @@ def well_table(tsvs) -> pd.DataFrame:
 
 
 def build(backbone: str, roots=ROOTS, tsvs=WELL_TSVS, include_test: bool = False,
-          suffix: str = "") -> Path:
+          suffix: str = "", exclude: set[str] | None = None) -> Path:
+    """`exclude`: shard paths (relative to the repository) to skip; used only by the
+    rehearsal, so that re-embedded shards replace the originals of the same plates."""
     check_shard_manifest()
     out = CACHE / f"{backbone}{suffix}"
     out.mkdir(parents=True, exist_ok=True)
     wt = well_table(tsvs)
-    shards = sorted(f for r in roots for f in (REPO / r / backbone).glob("*.npz"))
+    shards = sorted(f for r in roots for f in (REPO / r / backbone).glob("*.npz")
+                    if not exclude or str(f.relative_to(REPO)) not in exclude)
     h = hashlib.sha256()
     rows, toks, fps = [], [], []
     seen = set()

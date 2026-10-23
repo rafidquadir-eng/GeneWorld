@@ -22,8 +22,11 @@ SECONDARY_STEPS = [1, 4]          # 3 h and 12 h
 ALL_STEPS = list(range(1, 13))
 # GW_A2_DEV=1 redirects smoke-test outputs away from the real run directories
 _DEV = __import__("os").environ.get("GW_A2_DEV") == "1"
+# GENEWORLD_REHEARSAL=1 (completion plan v4 S18, `run_stage1_test.sh --rehearsal`) writes every
+# evaluation output to results/a2/rehearsal/; models are still read from checkpoints/a2/
+_REHEARSAL = __import__("os").environ.get("GENEWORLD_REHEARSAL") == "1"
 CK_DIR = REPO / "checkpoints" / ("a2_dev" if _DEV else "a2")
-RES_DIR = REPO / "results" / ("a2_dev" if _DEV else "a2")
+RES_DIR = REPO / "results" / ("a2_dev" if _DEV else "a2/rehearsal" if _REHEARSAL else "a2")
 
 
 @lru_cache(maxsize=1)
