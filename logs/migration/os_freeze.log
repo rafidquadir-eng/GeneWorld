@@ -1,0 +1,105 @@
+# S10 (completion plan v3), 2026-10-23T14:49:15Z: stop automatic system changes; author-approved
+## before: nvidia-smi / fabric manager
+0, NVIDIA A100-SXM4-40GB, 580.178.04, 00000000:07:00.0
+1, NVIDIA A100-SXM4-40GB, 580.178.04, 00000000:08:00.0
+2, NVIDIA A100-SXM4-40GB, 580.178.04, 00000000:09:00.0
+3, NVIDIA A100-SXM4-40GB, 580.178.04, 00000000:0A:00.0
+4, NVIDIA A100-SXM4-40GB, 580.178.04, 00000000:0B:00.0
+5, NVIDIA A100-SXM4-40GB, 580.178.04, 00000000:0C:00.0
+6, NVIDIA A100-SXM4-40GB, 580.178.04, 00000000:0D:00.0
+7, NVIDIA A100-SXM4-40GB, 580.178.04, 00000000:0E:00.0
+active
+active
+Fabric Manager version is : 580.178.04
+## commands
+$ sudo systemctl disable --now apt-daily.timer apt-daily-upgrade.timer
+Removed "/etc/systemd/system/timers.target.wants/apt-daily-upgrade.timer".
+Removed "/etc/systemd/system/timers.target.wants/apt-daily.timer".
+exit 0
+$ sudo systemctl disable --now unattended-upgrades.service
+Synchronizing state of unattended-upgrades.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install disable unattended-upgrades
+Removed "/etc/systemd/system/multi-user.target.wants/unattended-upgrades.service".
+exit 0
+$ sudo systemctl mask apt-daily.service apt-daily-upgrade.service
+Created symlink /etc/systemd/system/apt-daily.service → /dev/null.
+Created symlink /etc/systemd/system/apt-daily-upgrade.service → /dev/null.
+exit 0
+$ sudo apt-mark hold <24 packages>
+libnvidia-cfg1-580-server set on hold.
+libnvidia-common-580-server set on hold.
+libnvidia-compute-580-server set on hold.
+libnvidia-decode-580-server set on hold.
+libnvidia-egl-wayland1 set on hold.
+libnvidia-encode-580-server set on hold.
+libnvidia-extra-580-server set on hold.
+libnvidia-fbc1-580-server set on hold.
+libnvidia-gl-580-server set on hold.
+nvidia-compute-utils-580-server set on hold.
+nvidia-dkms-580-server set on hold.
+nvidia-driver-550-server set on hold.
+nvidia-driver-570-server set on hold.
+nvidia-driver-580-server set on hold.
+nvidia-fabricmanager-550 set on hold.
+nvidia-fabricmanager-570 set on hold.
+nvidia-fabricmanager-580 set on hold.
+nvidia-firmware-580-server-580.178.04 set on hold.
+nvidia-kernel-common-580-server set on hold.
+nvidia-kernel-source-580-server set on hold.
+nvidia-utils-550-server set on hold.
+nvidia-utils-570-server set on hold.
+nvidia-utils-580-server set on hold.
+xserver-xorg-video-nvidia-580-server set on hold.
+exit 0
+## needrestart
+installed; setting list-only
+$nrconf{restart} = 'l';
+## verify 2026-10-23T14:49:27Z
+$ systemctl list-timers --all | grep -i apt
+(none)
+$ systemctl is-enabled / is-active
+apt-daily.timer: disabled / inactive
+apt-daily-upgrade.timer: disabled / inactive
+unattended-upgrades.service: disabled / inactive
+apt-daily.service: masked / inactive
+apt-daily-upgrade.service: masked / inactive
+$ apt-mark showhold
+libnvidia-cfg1-580-server
+libnvidia-common-580-server
+libnvidia-compute-580-server
+libnvidia-decode-580-server
+libnvidia-egl-wayland1
+libnvidia-encode-580-server
+libnvidia-extra-580-server
+libnvidia-fbc1-580-server
+libnvidia-gl-580-server
+nvidia-compute-utils-580-server
+nvidia-dkms-580-server
+nvidia-driver-550-server
+nvidia-driver-570-server
+nvidia-driver-580-server
+nvidia-fabricmanager-550
+nvidia-fabricmanager-570
+nvidia-fabricmanager-580
+nvidia-firmware-580-server-580.178.04
+nvidia-kernel-common-580-server
+nvidia-kernel-source-580-server
+nvidia-utils-550-server
+nvidia-utils-570-server
+nvidia-utils-580-server
+xserver-xorg-video-nvidia-580-server
+$ cat /etc/needrestart/conf.d/99-noauto.conf
+$nrconf{restart} = 'l';
+## after: nvidia-smi / fabric manager (unchanged?)
+0, NVIDIA A100-SXM4-40GB, 580.178.04, 00000000:07:00.0
+1, NVIDIA A100-SXM4-40GB, 580.178.04, 00000000:08:00.0
+2, NVIDIA A100-SXM4-40GB, 580.178.04, 00000000:09:00.0
+3, NVIDIA A100-SXM4-40GB, 580.178.04, 00000000:0A:00.0
+4, NVIDIA A100-SXM4-40GB, 580.178.04, 00000000:0B:00.0
+5, NVIDIA A100-SXM4-40GB, 580.178.04, 00000000:0C:00.0
+6, NVIDIA A100-SXM4-40GB, 580.178.04, 00000000:0D:00.0
+7, NVIDIA A100-SXM4-40GB, 580.178.04, 00000000:0E:00.0
+active
+active
+Fabric Manager version is : 580.178.04
+running trainers: 17
