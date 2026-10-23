@@ -93,6 +93,39 @@ ledger hash; 121 (the caches, and run summaries and checkpoints written since th
 row) were backed up now. Every backup copy was re-hashed: no mismatch, no file missing from
 `~/LambdaFilesystem/geneworld_backups/` or from `reports/BACKUP_LEDGER.tsv`.
 
+## Migration to 8 x A100-40GB (2026-10-23)
+
+- **Hardware:** Lambda on-demand, us-east-1, 8 x NVIDIA A100-SXM4-40GB (40,960 MiB, VBIOS
+  92.00.45.00.03), all pairs NVLink NV12 via NVSwitch; 2 x AMD EPYC 7542, 124 vCPUs, 1.77 TB RAM;
+  Ubuntu 24.04.2, kernel 6.8.0-62. Driver installed by hand (not a Lambda Stack image): loaded
+  kernel module **580.178.04**, **Fabric Manager 580.178.04** (active; 550-server and 570-server
+  packages are also installed but not loaded). Python 3.12.3, `~/venv` from
+  `requirements-lock.txt`, **torch 2.11.0+cu128** (CUDA 12.8): `torch.cuda.device_count()` = 8,
+  bf16 matmul checked on every GPU.
+- **Restore** (`scripts/71_restore.py` -> `results/a2/restore_audit.json`): 2,054 ledger paths
+  (2,083 rows); 1,956 files restored (309.3 GB) and 95 already present (in git), each with a
+  SHA-256 matching its latest ledger row. Every row reconciled: 2,029 restored or present with a
+  matching hash, 24 superseded by a later row for the same path, 27 rows of 24 files kept aside,
+  3 without a backup copy. Ledger rows are never edited; two reconciliation notes appended.
+  - *Without a backup copy:* `checkpoints/predictors/smoke_{l,n,s}.pt` (10-19 stage-1 smoke
+    tests, unreferenced, not needed; author decision 10-23).
+  - *Kept aside:* 24 early 10-19 shards (8 stage-2 training plates x 3 backbones; 100 wells,
+    no fingerprint) that were not on the old instance's disk when the caches were built (572
+    shards per backbone; the 10-22 audit counted 1,770 = 572 x 3 + 54 static). They would
+    have replaced the stage-2 latents of 58–100 wells per plate. Moved to
+    `data/latents_unused_1019/` and not used (author decision 10-23).
+- **Shard manifest** (author instruction 10-23): `manifests/cache_shards.tsv` lists the 1,770
+  shards under `data/latents*/` (572 per backbone + 18 static per backbone) with SHA-256;
+  `cache.build` and the backup audit refuse to run if a shard is not in it or a listed shard
+  is missing (`data/latents_unused_1019/` excluded by name; `tests/test_cache_guard.py`).
+- **Caches rebuilt and reproduced exactly:** for V-JEPA 2, DINOv2 and TiJepa-1, `stats.json` is
+  byte-identical to `results/a2/cache_stats_*.json`, and every rebuilt cache file (raw, plate,
+  global, fingerprint, meta, statistics) is byte-identical to the restored cache.
+- **V-JEPA 2 weights:** SHA-256 `25466aef…786b` matches `manifests/models.yaml`.
+- **Runner:** per-GPU slots (`CUDA_VISIBLE_DEVICES` per job, 4 memory units per GPU, 22 M = 1,
+  50 M = 2); operational only. Input dry run: 12 of 12 families load; train/validation well
+  counts identical to the completed runs.
+
 ## Erratum E-02.1 (2026-10-22, before any gate)
 
 The G-Plan-2 trajectory rule compared the planner with replicate-endpoint retrieval, which for

@@ -34,6 +34,28 @@ CACHE = REPO / "data" / "cache"
 MIN_NEG = 4
 WELL_TSVS = ["splits/stage1_wells.tsv", "splits/stage2_wells.tsv"]
 ROOTS = ["data/latents", "data/latents_s2"]
+#: every latent shard under data/latents*/ (backbone, path, SHA-256), author instruction
+#: 2026-10-23; data/latents_unused_1019/ (early 10-19 shards, not used) is excluded by name
+SHARD_MANIFEST = REPO / "manifests" / "cache_shards.tsv"
+DATA = REPO / "data"
+UNUSED_DIRS = {"latents_unused_1019"}
+
+
+class ShardManifestError(RuntimeError):
+    pass
+
+
+def check_shard_manifest() -> None:
+    """Refuse (listing the paths) if a shard under data/latents*/ is not in the manifest, or a
+    manifest shard is missing from disk. Paths only; backup and restore check the hashes."""
+    want = set(pd.read_csv(SHARD_MANIFEST, sep="\t").path)
+    have = {str(p.relative_to(DATA.parent)) for d in DATA.glob("latents*")
+            if d.is_dir() and d.name not in UNUSED_DIRS for p in d.rglob("*.npz")}
+    extra, missing = sorted(have - want), sorted(want - have)
+    if extra or missing:
+        raise ShardManifestError(
+            f"latent shards do not match {SHARD_MANIFEST.name}: "
+            f"{len(extra)} not in the manifest {extra}; {len(missing)} missing {missing}")
 
 
 def well_table(tsvs) -> pd.DataFrame:
@@ -45,6 +67,7 @@ def well_table(tsvs) -> pd.DataFrame:
 
 def build(backbone: str, roots=ROOTS, tsvs=WELL_TSVS, include_test: bool = False,
           suffix: str = "") -> Path:
+    check_shard_manifest()
     out = CACHE / f"{backbone}{suffix}"
     out.mkdir(parents=True, exist_ok=True)
     wt = well_table(tsvs)

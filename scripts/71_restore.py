@@ -36,6 +36,22 @@ NOT_NEEDED_LABEL = ("ledger rows without a backup copy: stage-1 smoke tests, unr
 #: instance's 10-22 audit shows they were no longer on its disk
 NOT_NEEDED = {"checkpoints/predictors/smoke_l.pt", "checkpoints/predictors/smoke_n.pt",
               "checkpoints/predictors/smoke_s.pt"}
+KEPT_ASIDE_LABEL = ("ledgered, not on the old instance's disk at the cache build, kept aside, "
+                    "not used")
+#: author decision 2026-10-23: early 10-19 shards (100 wells, no fingerprint) of 8 stage-2
+#: training plates; the 10-21 caches were built from 572 shards per backbone without them and
+#: the 10-22 audit counted 1,770 latent shards (572 x 3 + 54 static). Restored with matching
+#: hashes, then moved from data/latents/<bb>/ to data/latents_unused_1019/<bb>/ (excluded by
+#: name from the shard manifest, manifests/cache_shards.tsv).
+KEPT_ASIDE_DIR = REPO / "data" / "latents_unused_1019"
+
+
+def kept_aside_path(rel: str) -> Path:
+    """data/latents/<bb>/<plate>.npz -> data/latents_unused_1019/<bb>/<plate>.npz"""
+    parts = Path(rel).parts
+    if parts[:2] != ("data", "latents"):
+        return KEPT_ASIDE_DIR / "__none__"
+    return KEPT_ASIDE_DIR.joinpath(*parts[2:])
 
 
 def ledger_rows() -> list[dict]:
@@ -48,12 +64,14 @@ def reconcile(rows: list[dict], status: dict[str, str]) -> dict:
     """Classify every ledger row; `status` = restore status per path."""
     latest = {r["path"]: r["sha256"] for r in rows}
     out = {"restored_or_present_matching_hash": 0, "superseded_by_later_row": 0,
-           NOT_NEEDED_LABEL: [], "unaccounted": []}
+           "kept_aside_rows": 0, NOT_NEEDED_LABEL: [], "unaccounted": []}
     for r in rows:
         p, ok = r["path"], status.get(r["path"]) in ("restored", "present_match")
         if p in NOT_NEEDED and status.get(p) == "missing_source":
             out[NOT_NEEDED_LABEL].append({"path": p, "bytes": int(r["bytes"]),
                                           "sha256": r["sha256"], "ledgered_utc": r["utc"]})
+        elif status.get(p) == "kept_aside":
+            out["kept_aside_rows"] += 1      # every row of the path; see KEPT_ASIDE_LABEL
         elif ok and r["sha256"] == latest[p]:
             out["restored_or_present_matching_hash"] += 1
         elif ok:
@@ -98,14 +116,30 @@ def main() -> int:
     rows = ledger_rows()
     if args.reconcile_only:
         out = json.loads(AUDIT.read_text())
-        status = {r["path"]: r["status"] for r in out["problems"]}
-        for r in rows:
-            status.setdefault(r["path"], "restored")     # not a problem in the audit
+        # hashes were verified by the restore run; here only presence on disk is re-read
+        status = {r["path"]: "restored" if target(r["path"]).exists()
+                  else "kept_aside" if kept_aside_path(r["path"]).exists()
+                  else "missing_source" for r in rows}
         out["reconciliation"] = reconcile(rows, status)
+        latest = {r["path"]: r for r in rows}
+        aside = []
+        for f in sorted(KEPT_ASIDE_DIR.glob("*/*.npz")):
+            rel = f"data/latents/{f.parent.name}/{f.name}"
+            got = backup.sha256(f)
+            aside.append({"ledger_path": rel, "now_at": str(f.relative_to(REPO)),
+                          "sha256": got, "matches_latest_ledger_row":
+                          got == latest[rel]["sha256"], "ledgered_utc": latest[rel]["utc"]})
+        out["reconciliation"][KEPT_ASIDE_LABEL] = aside
+        out["reconciliation"]["kept_aside_all_match"] = all(
+            a["matches_latest_ledger_row"] for a in aside)
+        out["problems_resolved_by_author_decision"] = sorted(
+            {r["path"] for r in out["problems"] if r["path"] in NOT_NEEDED}
+            | set(out.get("problems_resolved_by_author_decision", [])))
         out["problems"] = [r for r in out["problems"] if r["path"] not in NOT_NEEDED]
         AUDIT.write_text(json.dumps(out, indent=1))
         print(json.dumps(out["reconciliation"], indent=1))
-        return 0 if out["reconciliation"]["every_row_accounted_for"] else 1
+        return 0 if (out["reconciliation"]["every_row_accounted_for"]
+                     and out["reconciliation"]["kept_aside_all_match"]) else 1
     t0 = time.time()
     latest, hashes = {}, {}
     for row in rows:

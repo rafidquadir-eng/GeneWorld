@@ -38,8 +38,9 @@
  "problems": [],
  "minutes": 39.3546594897906,
  "reconciliation": {
-  "restored_or_present_matching_hash": 2053,
-  "superseded_by_later_row": 27,
+  "restored_or_present_matching_hash": 2029,
+  "superseded_by_later_row": 24,
+  "kept_aside_rows": 27,
   "ledger rows without a backup copy: stage-1 smoke tests, unreferenced, not needed": [
    {
     "path": "checkpoints/predictors/smoke_l.pt",
@@ -62,6 +63,182 @@
   ],
   "unaccounted": [],
   "ledger_rows": 2083,
-  "every_row_accounted_for": true
- }
+  "every_row_accounted_for": true,
+  "ledgered, not on the old instance's disk at the cache build, kept aside, not used": [
+   {
+    "ledger_path": "data/latents/dinov2/LT0012_27.npz",
+    "now_at": "data/latents_unused_1019/dinov2/LT0012_27.npz",
+    "sha256": "862b157affbc885a1eab7ec524e5a344be998ba025fff92a83cce0bb9383c9be",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T20:50:33Z"
+   },
+   {
+    "ledger_path": "data/latents/dinov2/LT0040_42.npz",
+    "now_at": "data/latents_unused_1019/dinov2/LT0040_42.npz",
+    "sha256": "6ca26d388b17e0f067c8a37a48ab0770a3f229ac2bc8e407ca286e448f7a490a",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T21:10:37Z"
+   },
+   {
+    "ledger_path": "data/latents/dinov2/LT0066_19.npz",
+    "now_at": "data/latents_unused_1019/dinov2/LT0066_19.npz",
+    "sha256": "3c19ef67ac376b961ed4bd161db1a5ea97e322d32c7003bc1b4a8a87392bfaf1",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T21:07:45Z"
+   },
+   {
+    "ledger_path": "data/latents/dinov2/LT0110_01.npz",
+    "now_at": "data/latents_unused_1019/dinov2/LT0110_01.npz",
+    "sha256": "bea0cb65161000af3d42014f2780c6a79530c01ae578b26aa31352889e00bf8c",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T20:33:24Z"
+   },
+   {
+    "ledger_path": "data/latents/dinov2/LT0118_26.npz",
+    "now_at": "data/latents_unused_1019/dinov2/LT0118_26.npz",
+    "sha256": "3cfec2a07cf8af3f35efa97ad786c115926e48a8cb5140591f555f720bf22048",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T21:04:53Z"
+   },
+   {
+    "ledger_path": "data/latents/dinov2/LT0119_07.npz",
+    "now_at": "data/latents_unused_1019/dinov2/LT0119_07.npz",
+    "sha256": "1b9e52deb7164ff1972615b538ad969c51b939e86b02c8cd3c1f4bffe9038a36",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T20:36:16Z"
+   },
+   {
+    "ledger_path": "data/latents/dinov2/LT0145_04.npz",
+    "now_at": "data/latents_unused_1019/dinov2/LT0145_04.npz",
+    "sha256": "b7c2e53aa541baeaf1d5fca5544b245d07ff66c859786b62ed444e65a67a72f1",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T20:59:10Z"
+   },
+   {
+    "ledger_path": "data/latents/dinov2/LT0158_05.npz",
+    "now_at": "data/latents_unused_1019/dinov2/LT0158_05.npz",
+    "sha256": "825835e018e61dc636b76f0639a8f3bdf8a020eadd7df6ef2f870164f101be34",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T20:44:50Z"
+   },
+   {
+    "ledger_path": "data/latents/tijepa1/LT0012_27.npz",
+    "now_at": "data/latents_unused_1019/tijepa1/LT0012_27.npz",
+    "sha256": "41f6616c0e6b249a1a98d480aaf7a3f0f368aace58f285b406957ce2e165af65",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T20:50:34Z"
+   },
+   {
+    "ledger_path": "data/latents/tijepa1/LT0040_42.npz",
+    "now_at": "data/latents_unused_1019/tijepa1/LT0040_42.npz",
+    "sha256": "be602203ea2fb53be1f0c0bdc665357b9dedc5f15425e5305b13ea09d30633ff",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T21:10:38Z"
+   },
+   {
+    "ledger_path": "data/latents/tijepa1/LT0066_19.npz",
+    "now_at": "data/latents_unused_1019/tijepa1/LT0066_19.npz",
+    "sha256": "4d9b8bf3f076efa5baaf1968bb20a46bf5140da60808fb9dc62e86010a885eed",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T21:07:46Z"
+   },
+   {
+    "ledger_path": "data/latents/tijepa1/LT0110_01.npz",
+    "now_at": "data/latents_unused_1019/tijepa1/LT0110_01.npz",
+    "sha256": "20cd77afcbb1259dd5abeac26bb5fccd4cd4064c1b32f7cbc88400e56e97781a",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T20:33:25Z"
+   },
+   {
+    "ledger_path": "data/latents/tijepa1/LT0118_26.npz",
+    "now_at": "data/latents_unused_1019/tijepa1/LT0118_26.npz",
+    "sha256": "a5a9b6afb8c8adf581c4f8fc9eeb5fe0390f43d7295ebb36ab991a3093e3b55e",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T21:04:54Z"
+   },
+   {
+    "ledger_path": "data/latents/tijepa1/LT0119_07.npz",
+    "now_at": "data/latents_unused_1019/tijepa1/LT0119_07.npz",
+    "sha256": "592f34afc994de0c8a476f0b57787379ca2469ef26308dbf242c79d36537c74f",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T20:36:17Z"
+   },
+   {
+    "ledger_path": "data/latents/tijepa1/LT0145_04.npz",
+    "now_at": "data/latents_unused_1019/tijepa1/LT0145_04.npz",
+    "sha256": "f622e53d0140b1fc363c090b3edf2b9a9dbdc5a3da73f8f39fbc0cf1c4b30d04",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T20:59:11Z"
+   },
+   {
+    "ledger_path": "data/latents/tijepa1/LT0158_05.npz",
+    "now_at": "data/latents_unused_1019/tijepa1/LT0158_05.npz",
+    "sha256": "72a482e3a42312e25f29a00618f2839911be516972268cb53f2d7183235eb7ea",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T20:44:51Z"
+   },
+   {
+    "ledger_path": "data/latents/vjepa2/LT0012_27.npz",
+    "now_at": "data/latents_unused_1019/vjepa2/LT0012_27.npz",
+    "sha256": "f5fdbf7eecfda4f11ae238babde2bac3816ee2bef1320aed40413a379f098645",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T20:50:32Z"
+   },
+   {
+    "ledger_path": "data/latents/vjepa2/LT0040_42.npz",
+    "now_at": "data/latents_unused_1019/vjepa2/LT0040_42.npz",
+    "sha256": "998b4181aa407355f2f8032b6164fecbab0256e2067d4dda4a0150007b3f5b87",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T21:10:36Z"
+   },
+   {
+    "ledger_path": "data/latents/vjepa2/LT0066_19.npz",
+    "now_at": "data/latents_unused_1019/vjepa2/LT0066_19.npz",
+    "sha256": "4a7f8618ad10ecc5f83ba32c073b9faf4d8262e5f4c40686cdcfae9d3c4f5d10",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T21:07:44Z"
+   },
+   {
+    "ledger_path": "data/latents/vjepa2/LT0110_01.npz",
+    "now_at": "data/latents_unused_1019/vjepa2/LT0110_01.npz",
+    "sha256": "898e1147b05096b7908c4297204627c63e7f0e7e50d7b00e056577ee15d723ef",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T20:33:23Z"
+   },
+   {
+    "ledger_path": "data/latents/vjepa2/LT0118_26.npz",
+    "now_at": "data/latents_unused_1019/vjepa2/LT0118_26.npz",
+    "sha256": "c6dd8c31aeb75431a71ecaa535445a05d51f93bc6cd86772181376ae0a7fd8d5",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T21:04:52Z"
+   },
+   {
+    "ledger_path": "data/latents/vjepa2/LT0119_07.npz",
+    "now_at": "data/latents_unused_1019/vjepa2/LT0119_07.npz",
+    "sha256": "10725cefd7c697152bdb01a2c8fb079940d96c2286189f8c136a92784d24f9e3",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T20:36:15Z"
+   },
+   {
+    "ledger_path": "data/latents/vjepa2/LT0145_04.npz",
+    "now_at": "data/latents_unused_1019/vjepa2/LT0145_04.npz",
+    "sha256": "8ac3119a949ce53494b2e23a87df545bd91eebea47bddbb367b83c5ac2888666",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T20:59:09Z"
+   },
+   {
+    "ledger_path": "data/latents/vjepa2/LT0158_05.npz",
+    "now_at": "data/latents_unused_1019/vjepa2/LT0158_05.npz",
+    "sha256": "8c40fd9898735a40da508770050a1ae695fd5799a5a6919ddab5b4b47c522f40",
+    "matches_latest_ledger_row": true,
+    "ledgered_utc": "2026-10-19T20:44:49Z"
+   }
+  ],
+  "kept_aside_all_match": true
+ },
+ "problems_resolved_by_author_decision": [
+  "checkpoints/predictors/smoke_l.pt",
+  "checkpoints/predictors/smoke_n.pt",
+  "checkpoints/predictors/smoke_s.pt"
+ ]
 }

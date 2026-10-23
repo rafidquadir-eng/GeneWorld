@@ -19,7 +19,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
 
-from geneworld import backup  # noqa: E402
+from geneworld import backup, cache  # noqa: E402
 
 GROUPS = {
     "latent_shards": ["data/latents/*/*.npz", "data/latents_s2/*/*.npz",
@@ -43,6 +43,7 @@ def hashes(rel: str) -> tuple[str, str, str | None, int]:
 
 def main() -> int:
     t0 = time.time()
+    cache.check_shard_manifest()     # stray or missing latent shards: refuse, listing them
     files = {}
     for g, pats in GROUPS.items():
         for pat in pats:
