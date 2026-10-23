@@ -119,6 +119,9 @@ def main() -> int:
         res["tests"][b] = {
             "primary": E.plate_test(E.primary(errs["action_conditioned"][is_p]),
                                     E.primary(errs[b][is_p]), plates[is_p]),
+            "secondary_well_weighted_primary": E.well_weighted_plate_test(
+                E.primary(errs["action_conditioned"][is_p]), E.primary(errs[b][is_p]),
+                plates[is_p]),
             "secondary_all_wells": E.plate_test(E.primary(errs["action_conditioned"]),
                                                 E.primary(errs[b]), plates),
             "secondary_3_12h_primary": E.plate_test(
@@ -133,6 +136,10 @@ def main() -> int:
                 "replicate drift, one-sided p < 0.05 over plates each",
         "vs_action_agnostic": t["action_agnostic"]["primary"],
         "vs_replicate_drift": t["replicate_drift"]["primary"],
+        "secondary_well_weighted": {
+            "note": "completion plan v2 F6; secondary, not part of the gate",
+            "vs_action_agnostic": t["action_agnostic"]["secondary_well_weighted_primary"],
+            "vs_replicate_drift": t["replicate_drift"]["secondary_well_weighted_primary"]},
         "pass": bool(all(t[b]["primary"]["p_one_sided"] is not None and
                          t[b]["primary"]["p_one_sided"] < 0.05 and t[b]["primary"]["mean"] < 0
                          for b in ("action_agnostic", "replicate_drift")))}

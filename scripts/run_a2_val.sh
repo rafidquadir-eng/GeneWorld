@@ -10,6 +10,13 @@ log() { echo "[$(date -u "+%m-%d %H:%M:%S")] $*" | tee -a $L/pipeline.log; }
 commit() {
   BR=$(git rev-parse --abbrev-ref HEAD)
   if [ "$BR" = main ]; then log "refusing to commit on main"; exit 1; fi
+  # back up every new or changed results file (copy + verified SHA-256 + ledger row)
+  git status --porcelain --untracked-files=all results | cut -c4- | \
+    $P -c "import sys; sys.path.insert(0, 'src'); from pathlib import Path
+from geneworld import backup
+for f in sys.stdin.read().split():
+    if Path(f).is_file():
+        backup.backup(Path(f))" || { log "backup of results FAILED"; exit 1; }
   git add -A results/a2 reports manifests scripts src splits >/dev/null 2>&1
   git add -f logs/a2_val logs/embed_stage2.log >/dev/null 2>&1
   git commit -qm "$1

@@ -128,6 +128,22 @@ def plate_test(e_model, e_base, plates) -> dict:
     return t
 
 
+def well_weighted_plate_test(e_model, e_base, plates) -> dict:
+    """Secondary (completion plan v2, F6): as `plate_test`, but each plate's mean difference
+    is weighted by its number of wells, so the statistic is the well-weighted mean difference;
+    one-sided Monte Carlo sign flip over plates (signs flip per plate, not per well)."""
+    ps = np.unique(plates)
+    d = np.array([np.nanmean(e_model[plates == p] - e_base[plates == p]) for p in ps])
+    n = np.array([np.sum(plates == p) for p in ps], float)
+    ok = np.isfinite(d)
+    t = sign_flip(d[ok] * n[ok] * ok.sum() / n[ok].sum())
+    t["weighting"] = "wells per plate"
+    t["n_wells"] = int(n[ok].sum())
+    t["wells_per_plate"] = {"min": int(n[ok].min()), "median": float(np.median(n[ok])),
+                            "max": int(n[ok].max())} if ok.any() else None
+    return t
+
+
 def gene_boot(a: dict, b: dict, n=10_000, seed=0) -> dict:
     gs = sorted(set(a) & set(b))
     d = np.array([a[g] - b[g] for g in gs])
