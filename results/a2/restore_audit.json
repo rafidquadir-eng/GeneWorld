@@ -1,0 +1,67 @@
+{
+ "utc": "2026-10-23T03:58:16Z",
+ "source_root": "/home/ubuntu/LambdaFilesystem/geneworld_backups",
+ "ledger_rows": 2083,
+ "paths": 2054,
+ "counts": {
+  "restored": 1956,
+  "missing_source": 3,
+  "present_match": 95
+ },
+ "bytes_restored": 309263749949,
+ "paths_with_superseded_rows": [
+  "data/latents/dinov2/LT0013_42.npz",
+  "data/latents/dinov2/LT0014_01.npz",
+  "data/latents/dinov2/LT0035_06.npz",
+  "data/latents/dinov2/LT0067_07.npz",
+  "data/latents/dinov2/LT0091_02.npz",
+  "data/latents/dinov2/LT0110_01.npz",
+  "data/latents/dinov2/LT0114_62.npz",
+  "data/latents/dinov2/LT0138_03.npz",
+  "data/latents/tijepa1/LT0013_42.npz",
+  "data/latents/tijepa1/LT0014_01.npz",
+  "data/latents/tijepa1/LT0035_06.npz",
+  "data/latents/tijepa1/LT0067_07.npz",
+  "data/latents/tijepa1/LT0091_02.npz",
+  "data/latents/tijepa1/LT0110_01.npz",
+  "data/latents/tijepa1/LT0114_62.npz",
+  "data/latents/tijepa1/LT0138_03.npz",
+  "data/latents/vjepa2/LT0013_42.npz",
+  "data/latents/vjepa2/LT0014_01.npz",
+  "data/latents/vjepa2/LT0035_06.npz",
+  "data/latents/vjepa2/LT0067_07.npz",
+  "data/latents/vjepa2/LT0091_02.npz",
+  "data/latents/vjepa2/LT0110_01.npz",
+  "data/latents/vjepa2/LT0114_62.npz",
+  "data/latents/vjepa2/LT0138_03.npz"
+ ],
+ "problems": [],
+ "minutes": 39.3546594897906,
+ "reconciliation": {
+  "restored_or_present_matching_hash": 2053,
+  "superseded_by_later_row": 27,
+  "ledger rows without a backup copy: stage-1 smoke tests, unreferenced, not needed": [
+   {
+    "path": "checkpoints/predictors/smoke_l.pt",
+    "bytes": 80874980,
+    "sha256": "66394d6a690488ebdae586fbc2a47be5ba1c3d665b9948a249a51b233a141390",
+    "ledgered_utc": "2026-10-19T21:58:36Z"
+   },
+   {
+    "path": "checkpoints/predictors/smoke_n.pt",
+    "bytes": 80422055,
+    "sha256": "f642c5f452b1a47b82c6237e2520947ca9d585559d629c8df738e80047711272",
+    "ledgered_utc": "2026-10-19T21:59:31Z"
+   },
+   {
+    "path": "checkpoints/predictors/smoke_s.pt",
+    "bytes": 81735701,
+    "sha256": "a4d430487eb71b320f17fa79c4a4f29b1873d2d4394cc5d1bcf63b102ae78c55",
+    "ledgered_utc": "2026-10-19T22:00:27Z"
+   }
+  ],
+  "unaccounted": [],
+  "ledger_rows": 2083,
+  "every_row_accounted_for": true
+ }
+}

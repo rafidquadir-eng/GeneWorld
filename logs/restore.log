@@ -1,0 +1,27 @@
+{
+ "utc": "2026-10-23T03:58:16Z",
+ "source_root": "/home/ubuntu/LambdaFilesystem/geneworld_backups",
+ "ledger_rows": 2083,
+ "paths": 2054,
+ "counts": {
+  "restored": 1956,
+  "missing_source": 3,
+  "present_match": 95
+ },
+ "bytes_restored": 309263749949,
+ "problems": [
+  {
+   "path": "checkpoints/predictors/smoke_l.pt",
+   "status": "missing_source"
+  },
+  {
+   "path": "checkpoints/predictors/smoke_n.pt",
+   "status": "missing_source"
+  },
+  {
+   "path": "checkpoints/predictors/smoke_s.pt",
+   "status": "missing_source"
+  }
+ ],
+ "minutes": 39.3546594897906
+}
