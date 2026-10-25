@@ -1,0 +1,25 @@
+{
+ "wells": "logs/rehearsal_embed/rehearsal_plates.tsv",
+ "n_wells": 556,
+ "n_plates": 3,
+ "out_root": "data/latents_rehearsal/plates",
+ "streams_per_gpu": 128,
+ "streams_total": 128,
+ "fetcher": "native",
+ "gpus": {
+  "2": {
+   "plates": [
+    "LT0049_42",
+    "LT0098_13",
+    "LT0076_16"
+   ],
+   "n_wells": 556,
+   "start_utc": "2026-10-25T23:03:47Z",
+   "exit_code": 0,
+   "minutes": 17.4,
+   "end_utc": "2026-10-25T23:21:08Z"
+  }
+ },
+ "n_failures": 0,
+ "problems": []
+}

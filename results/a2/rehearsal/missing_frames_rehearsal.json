@@ -1,0 +1,73 @@
+{
+ "split": "rehearsal",
+ "rule": "manifests/amend02_protocol.json missing_frames_rule",
+ "n_wells": 556,
+ "n_plates": 3,
+ "wells_lost": 0,
+ "plates_with_losses": 0,
+ "whole_plates_lost": [],
+ "h1_primary_wells_lost": 0,
+ "primary_gene_wells_lost": 0,
+ "lost_only_frames_ge_88": 0,
+ "frames_recovered_on_recheck_wells": 0,
+ "fisher_library_wells": {
+  "mitotic_delay": {
+   "table_lost_embedded_x_class_not": [
+    [
+     0,
+     0
+    ],
+    [
+     4,
+     508
+    ]
+   ],
+   "p_two_sided": 1.0,
+   "q_bh": 1.0
+  },
+  "polylobed": {
+   "table_lost_embedded_x_class_not": [
+    [
+     0,
+     0
+    ],
+    [
+     10,
+     502
+    ]
+   ],
+   "p_two_sided": 1.0,
+   "q_bh": 1.0
+  },
+  "binuclear": {
+   "table_lost_embedded_x_class_not": [
+    [
+     0,
+     0
+    ],
+    [
+     19,
+     493
+    ]
+   ],
+   "p_two_sided": 1.0,
+   "q_bh": 1.0
+  },
+  "any_reproducible": {
+   "table_lost_embedded_x_class_not": [
+    [
+     0,
+     0
+    ],
+    [
+     50,
+     462
+    ]
+   ],
+   "p_two_sided": 1.0,
+   "q_bh": 1.0
+  }
+ },
+ "class_source": "sirna-level classes on screenA training plates",
+ "wells_lost_detail": []
+}
