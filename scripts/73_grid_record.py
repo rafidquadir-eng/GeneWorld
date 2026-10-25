@@ -41,8 +41,15 @@ SECTIONS = [
     ("2026-10-22T07:31:59", OLD, None),
     ("2026-10-23T05:35:47", NEW, 3),       # runner log lost (G3)
     ("2026-10-23T14:26:02", NEW, None),
-    ("2026-10-23T16:26:51", NEW, None),    # S12 orchestrator's grid step (0 jobs to run)
 ]
+
+
+def sections() -> list[tuple]:
+    """SECTIONS, then one section per start of the S12 orchestrator's grid step, dated by its
+    '[MM-DD HH:MM:SS] start grid on GPU ...' line in logs/a2_val/pipeline.log."""
+    extra = re.findall(r"^\[(\d\d)-(\d\d) (\d\d:\d\d:\d\d)\] start grid on GPU",
+                       (REPO / "logs" / "a2_val" / "pipeline.log").read_text(), re.M)
+    return SECTIONS + [(f"2026-{mo}-{d}T{t}", NEW, None) for mo, d, t in extra]
 LINE = re.compile(r"^(\d\d):(\d\d):(\d\d) (done|FAILED) (\S+) "
                   r"\((?:GPU (\d+), )?([\d.]+) min\)")
 
@@ -64,14 +71,15 @@ def grid_names() -> list[dict]:
 
 def logged_attempts() -> dict[str, list[dict]]:
     att: dict[str, list[dict]] = {}
+    SEC = sections()
     sec, day, prev = -1, None, None
     for ln in (REPO / "logs" / "a2_val" / "grid.log").read_text().splitlines():
         if "jobs to run" in ln:
             sec += 1
-            if sec >= len(SECTIONS):
-                raise SystemExit(f"grid.log has runner section {sec + 1} ({ln!r}) that "
-                                 "SECTIONS does not date; add its start time")
-            start = dt.datetime.fromisoformat(SECTIONS[sec][0]).replace(tzinfo=UTC)
+            if sec >= len(SEC):
+                raise SystemExit(f"grid.log has runner section {sec + 1} ({ln!r}) that no "
+                                 "pipeline.log line dates")
+            start = dt.datetime.fromisoformat(SEC[sec][0]).replace(tzinfo=UTC)
             day, prev = start.date(), start.time()
             continue
         m = LINE.match(ln)
@@ -83,7 +91,7 @@ def logged_attempts() -> dict[str, list[dict]]:
         prev = t
         end = dt.datetime.combine(day, t, UTC)
         mins = float(m[7])
-        _, host, inc = SECTIONS[sec]
+        _, host, inc = SEC[sec]
         att.setdefault(m[5], []).append({
             "host": host, "gpu": m[6] if m[6] else ("0" if host == OLD else None),
             "start_utc": iso(end - dt.timedelta(minutes=mins)), "end_utc": iso(end),
@@ -163,7 +171,7 @@ def main() -> int:
                               "(logs/migration/incident_1023_nvidia_restart.log)"},
            "runner_sections": [{"n": i + 1, "start_utc": s + "Z", "host": h,
                                 "log": "lost (G3)" if i == 3 else "logs/a2_val/grid.log"}
-                               for i, (s, h, _) in enumerate(SECTIONS)],
+                               for i, (s, h, _) in enumerate(sections())],
            "notes": notes, "runs": out_runs}
     (REPO / "results" / "a2" / "grid_runs.json").write_text(json.dumps(out, indent=1))
     print(json.dumps({k: v for k, v in out.items() if k != "runs"}, indent=1))
