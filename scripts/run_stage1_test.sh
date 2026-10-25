@@ -46,12 +46,14 @@ step() {
 }
 [ -e $L/steps.tsv ] || printf "step\texit_code\tseconds\n" > $L/steps.tsv
 $P scripts/79_embed_commit.py preflight --mode $MODE --plates "$PLATES"
+# EMBED_GPUS (rehearsal only; the test embeds on all 8 GPUs)
+if [ $MODE = test ] && [ -n "${EMBED_GPUS:-}" ]; then echo "EMBED_GPUS is for the rehearsal only"; exit 1; fi
 FREEZE=$(git rev-parse --short HEAD)
 log "$MODE: freeze $FREEZE on $(git rev-parse --abbrev-ref HEAD)"
 
 embed() {   # embed <split> <wells.tsv> <out-root> <tag> <failures.json>
   step embed_$4 $P scripts/78_parallel_embed.py --wells "$2" --out-root "$3" --tag "$4" \
-       --failures "$5" --streams-total 128
+       --failures "$5" --streams-total 128 --gpus "${EMBED_GPUS:-0,1,2,3,4,5,6,7}"
 }
 embed_commit() {   # embed_commit <split> <wells.tsv> <failures.json> <base> <log dirs>
   step s3_$1 $P scripts/76_s3_accounting.py --split $1 --wells "$2" --failures "$3"

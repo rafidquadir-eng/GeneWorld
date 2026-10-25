@@ -126,10 +126,14 @@ def main() -> int:
     ap.add_argument("--units", type=int, default=4,
                     help="GPU memory units per GPU (40 GB: 4; 22M = 1, 50M = 2)")
     ap.add_argument("--check-inputs", action="store_true")
+    ap.add_argument("--only-split", choices=["gene", "complex"], default=None,
+                    help="run only the jobs of this gene split (default: all)")
     args = ap.parse_args()
     gpus = gpu_ids()
     todo = []
     for j in jobs(args.phase):
+        if args.only_split and j["gene_split"] != args.only_split:
+            continue
         name = a2.run_name(j["norm"], j["backbone"], j["family"], j["config"], j["seed"],
                            j["gene_split"])
         if not (a2.RES_DIR / "train" / f"{name}.json").exists():
@@ -149,6 +153,8 @@ def main() -> int:
         mine = {n for n, *_ in running}
         ext = external_live(mine)
         for n, g in ext.items():
+            if g is not None and g not in used:          # on a GPU this runner does not use
+                continue
             for gg in ([g] if g in used else gpus):     # unknown GPU: count it on every GPU
                 used[gg] += units_of(n)
         for name, j in list(todo):
