@@ -1,0 +1,89 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/GeneWorld/scripts/73_grid_record.py", line 170, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/ubuntu/GeneWorld/scripts/73_grid_record.py", line 94, in main
+    att = logged_attempts()
+          ^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/GeneWorld/scripts/73_grid_record.py", line 70, in logged_attempts
+    start = dt.datetime.fromisoformat(SECTIONS[sec][0]).replace(tzinfo=UTC)
+                                      ~~~~~~~~^^^^^
+IndexError: list index out of range
+grid.log has runner section 7 ('grid: 0 jobs to run; GPUs 0,1,2,3,4,5,6,7, 4 memory units each') that SECTIONS does not date; add its start time
+{
+ "generated_utc": "2026-10-25T22:55:44Z",
+ "n_runs": 288,
+ "status_counts": {
+  "complete": 288,
+  "running": 0,
+  "pending": 0,
+  "failed": 0
+ },
+ "completed_on": {
+  "old instance, 1 x A100-40GB (single GPU)": 76,
+  "new instance, 8 x A100-SXM4-40GB": 212
+ },
+ "failed_attempts_by_incident": {
+  "1": 277,
+  "2": 13,
+  "3": 27
+ },
+ "incidents": {
+  "1": "2026-10-21 CUDA out-of-memory, 4 processes on one 40 GB GPU",
+  "2": "2026-10-22 07:27-07:31 UTC CUDA out-of-memory, three 50 M runs on one 40 GB GPU",
+  "3": "2026-10-23 06:20 UTC unattended OS upgrade restarted the NVIDIA services (logs/migration/incident_1023_nvidia_restart.log)"
+ },
+ "runner_sections": [
+  {
+   "n": 1,
+   "start_utc": "2026-10-21T20:57:39Z",
+   "host": "old instance, 1 x A100-40GB (single GPU)",
+   "log": "logs/a2_val/grid.log"
+  },
+  {
+   "n": 2,
+   "start_utc": "2026-10-21T23:17:08Z",
+   "host": "old instance, 1 x A100-40GB (single GPU)",
+   "log": "logs/a2_val/grid.log"
+  },
+  {
+   "n": 3,
+   "start_utc": "2026-10-22T07:31:59Z",
+   "host": "old instance, 1 x A100-40GB (single GPU)",
+   "log": "logs/a2_val/grid.log"
+  },
+  {
+   "n": 4,
+   "start_utc": "2026-10-23T05:35:47Z",
+   "host": "new instance, 8 x A100-SXM4-40GB",
+   "log": "lost (G3)"
+  },
+  {
+   "n": 5,
+   "start_utc": "2026-10-23T14:26:02Z",
+   "host": "new instance, 8 x A100-SXM4-40GB",
+   "log": "logs/a2_val/grid.log"
+  },
+  {
+   "n": 6,
+   "start_utc": "2026-10-23T16:26:51Z",
+   "host": "new instance, 8 x A100-SXM4-40GB",
+   "log": "logs/a2_val/grid.log"
+  },
+  {
+   "n": 7,
+   "start_utc": "2026-10-25T22:54:46Z",
+   "host": "new instance, 8 x A100-SXM4-40GB",
+   "log": "logs/a2_val/grid.log"
+  },
+  {
+   "n": 8,
+   "start_utc": "2026-10-25T22:55:32Z",
+   "host": "new instance, 8 x A100-SXM4-40GB",
+   "log": "logs/a2_val/grid.log"
+  }
+ ],
+ "notes": [
+  "incident 2: the runner log shows 13 failed attempts (07:27:21-07:31:21 UTC 10-22); reports/AMEND02_PROGRESS.md said 12"
+ ]
+}

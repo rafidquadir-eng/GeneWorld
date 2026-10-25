@@ -1,15 +1,15 @@
 {
- "generated_utc": "2026-10-23T14:57:10Z",
+ "generated_utc": "2026-10-25T22:55:44Z",
  "n_runs": 288,
  "status_counts": {
-  "complete": 245,
-  "running": 16,
+  "complete": 288,
+  "running": 0,
   "pending": 0,
-  "failed": 27
+  "failed": 0
  },
  "completed_on": {
   "old instance, 1 x A100-40GB (single GPU)": 76,
-  "new instance, 8 x A100-SXM4-40GB": 169
+  "new instance, 8 x A100-SXM4-40GB": 212
  },
  "failed_attempts_by_incident": {
   "1": 277,
@@ -49,6 +49,24 @@
   {
    "n": 5,
    "start_utc": "2026-10-23T14:26:02Z",
+   "host": "new instance, 8 x A100-SXM4-40GB",
+   "log": "logs/a2_val/grid.log"
+  },
+  {
+   "n": 6,
+   "start_utc": "2026-10-23T16:26:51Z",
+   "host": "new instance, 8 x A100-SXM4-40GB",
+   "log": "logs/a2_val/grid.log"
+  },
+  {
+   "n": 7,
+   "start_utc": "2026-10-25T22:54:46Z",
+   "host": "new instance, 8 x A100-SXM4-40GB",
+   "log": "logs/a2_val/grid.log"
+  },
+  {
+   "n": 8,
+   "start_utc": "2026-10-25T22:55:32Z",
    "host": "new instance, 8 x A100-SXM4-40GB",
    "log": "logs/a2_val/grid.log"
   }
@@ -2509,8 +2527,8 @@
    "family": "h1_learned",
    "config": "50M_d0.3_w0.05",
    "seed": 0,
-   "status": "running",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "aa79add6f4dd6d66dba4730ed6e3e9bd601a1e9bebe480b254d4decf97ca5971",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -2523,6 +2541,18 @@
      "runner_section": 1,
      "source": "logged (runner line; date from the section start)",
      "attempt": 1
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "0",
+     "start_utc": "2026-10-23T14:26:03Z",
+     "end_utc": "2026-10-23T15:37:27Z",
+     "minutes": 71.4,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 2
     }
    ]
   },
@@ -2563,8 +2593,8 @@
    "family": "h2:perturbseq",
    "config": "50M_d0.3_w0.05",
    "seed": 0,
-   "status": "running",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "6f74297124099872a25d70077093ad839fe281aa7a6248de2f246e88d085c870",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -2577,6 +2607,18 @@
      "runner_section": 1,
      "source": "logged (runner line; date from the section start)",
      "attempt": 1
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "1",
+     "start_utc": "2026-10-23T14:26:03Z",
+     "end_utc": "2026-10-23T15:13:15Z",
+     "minutes": 47.2,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 2
     }
    ]
   },
@@ -2584,8 +2626,8 @@
    "family": "h2:jump_crispr",
    "config": "50M_d0.3_w0.05",
    "seed": 0,
-   "status": "running",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "69ef4a2915b215c24a90f34e08b92f530e82da3dc7ff621be3e69f9addee4ac9",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -2598,6 +2640,18 @@
      "runner_section": 1,
      "source": "logged (runner line; date from the section start)",
      "attempt": 1
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "2",
+     "start_utc": "2026-10-23T14:26:06Z",
+     "end_utc": "2026-10-23T15:27:06Z",
+     "minutes": 61.0,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 2
     }
    ]
   },
@@ -2605,8 +2659,8 @@
    "family": "h2:jump_orf",
    "config": "50M_d0.3_w0.05",
    "seed": 0,
-   "status": "running",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "588729991b419d5cf55c780abf86cc462767e0a6b55f9c8fcda05b440df961b1",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -2619,6 +2673,18 @@
      "runner_section": 1,
      "source": "logged (runner line; date from the section start)",
      "attempt": 1
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "3",
+     "start_utc": "2026-10-23T14:26:05Z",
+     "end_utc": "2026-10-23T15:17:35Z",
+     "minutes": 51.5,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 2
     }
    ]
   },
@@ -2626,8 +2692,8 @@
    "family": "h2:string",
    "config": "50M_d0.3_w0.05",
    "seed": 0,
-   "status": "running",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "52584ba6b6b7e9ddcc74efdf52662c7b3a5c1183eb98bc3714d4f366ff190ebd",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -2640,6 +2706,18 @@
      "runner_section": 1,
      "source": "logged (runner line; date from the section start)",
      "attempt": 1
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "4",
+     "start_utc": "2026-10-23T14:26:04Z",
+     "end_utc": "2026-10-23T15:20:16Z",
+     "minutes": 54.2,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 2
     }
    ]
   },
@@ -2647,8 +2725,8 @@
    "family": "h2:esm2",
    "config": "50M_d0.3_w0.05",
    "seed": 0,
-   "status": "running",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "4779104a78b65cbc295b0af0c16006b8d537aed50e31c75c922eaab0d0644f6e",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -2661,6 +2739,18 @@
      "runner_section": 1,
      "source": "logged (runner line; date from the section start)",
      "attempt": 1
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "5",
+     "start_utc": "2026-10-23T14:26:04Z",
+     "end_utc": "2026-10-23T15:19:46Z",
+     "minutes": 53.7,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 2
     }
    ]
   },
@@ -2668,8 +2758,8 @@
    "family": "h2shuf:perturbseq",
    "config": "50M_d0.3_w0.05",
    "seed": 0,
-   "status": "running",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "383e21a1dbdff5b6951177ab777198f441b029152e51d06ed222c2cdbd3abc2b",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -2682,6 +2772,18 @@
      "runner_section": 1,
      "source": "logged (runner line; date from the section start)",
      "attempt": 1
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "6",
+     "start_utc": "2026-10-23T14:26:06Z",
+     "end_utc": "2026-10-23T15:28:36Z",
+     "minutes": 62.5,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 2
     }
    ]
   },
@@ -2743,8 +2845,8 @@
    "family": "h2shuf:string",
    "config": "50M_d0.3_w0.05",
    "seed": 0,
-   "status": "running",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "55b1e4a9ec761d57f4d1caaef222ef7125b2ec2cab64d16e3f52a12326450521",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -2757,6 +2859,18 @@
      "runner_section": 1,
      "source": "logged (runner line; date from the section start)",
      "attempt": 1
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "7",
+     "start_utc": "2026-10-23T14:26:02Z",
+     "end_utc": "2026-10-23T15:23:26Z",
+     "minutes": 57.4,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 2
     }
    ]
   },
@@ -2764,8 +2878,8 @@
    "family": "h2shuf:esm2",
    "config": "50M_d0.3_w0.05",
    "seed": 0,
-   "status": "running",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "8443061d7561e71b7292acebcb43cf6a69cb038ee128d9344a3a2e5cad74a9fb",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -2778,6 +2892,18 @@
      "runner_section": 1,
      "source": "logged (runner line; date from the section start)",
      "attempt": 1
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "0",
+     "start_utc": "2026-10-23T14:26:02Z",
+     "end_utc": "2026-10-23T15:27:56Z",
+     "minutes": 61.9,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 2
     }
    ]
   },
@@ -2785,8 +2911,8 @@
    "family": "h1_learned",
    "config": "50M_d0.3_w0.2",
    "seed": 0,
-   "status": "running",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "0a693e8e611b98855a9cc2964df4844082bb261970e199f89f8741a34a934786",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -2799,6 +2925,18 @@
      "runner_section": 1,
      "source": "logged (runner line; date from the section start)",
      "attempt": 1
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "1",
+     "start_utc": "2026-10-23T14:26:03Z",
+     "end_utc": "2026-10-23T15:35:57Z",
+     "minutes": 69.9,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 2
     }
    ]
   },
@@ -2806,8 +2944,8 @@
    "family": "h1_none",
    "config": "50M_d0.3_w0.2",
    "seed": 0,
-   "status": "running",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "94340e630425ea9cf030daae71c76c2dee692ef71ddb5764b9d1449794fd075a",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -2820,6 +2958,18 @@
      "runner_section": 1,
      "source": "logged (runner line; date from the section start)",
      "attempt": 1
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "2",
+     "start_utc": "2026-10-23T14:26:05Z",
+     "end_utc": "2026-10-23T15:10:35Z",
+     "minutes": 44.5,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 2
     }
    ]
   },
@@ -2827,8 +2977,8 @@
    "family": "h2:perturbseq",
    "config": "50M_d0.3_w0.2",
    "seed": 0,
-   "status": "running",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "4310361770691ef69bfabde136d477bda6ab7ddcbc72787f462c83467607fd93",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -2841,6 +2991,18 @@
      "runner_section": 1,
      "source": "logged (runner line; date from the section start)",
      "attempt": 1
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "3",
+     "start_utc": "2026-10-23T14:26:05Z",
+     "end_utc": "2026-10-23T15:15:05Z",
+     "minutes": 49.0,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 2
     }
    ]
   },
@@ -2848,8 +3010,8 @@
    "family": "h2:jump_crispr",
    "config": "50M_d0.3_w0.2",
    "seed": 0,
-   "status": "running",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "9243300283f9bee5e1f0bea8c4592ddd97a00fda5a96e3242a8cc3b5ffd50144",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -2862,6 +3024,18 @@
      "runner_section": 1,
      "source": "logged (runner line; date from the section start)",
      "attempt": 1
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "4",
+     "start_utc": "2026-10-23T14:26:04Z",
+     "end_utc": "2026-10-23T15:23:46Z",
+     "minutes": 57.7,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 2
     }
    ]
   },
@@ -2869,8 +3043,8 @@
    "family": "h2:jump_orf",
    "config": "50M_d0.3_w0.2",
    "seed": 0,
-   "status": "running",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "be422071b9a7558a46153c6a8db00af175714b02736cb889cde2d3f5146bbf48",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -2883,6 +3057,18 @@
      "runner_section": 1,
      "source": "logged (runner line; date from the section start)",
      "attempt": 1
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "5",
+     "start_utc": "2026-10-23T14:26:04Z",
+     "end_utc": "2026-10-23T15:19:46Z",
+     "minutes": 53.7,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 2
     }
    ]
   },
@@ -2890,8 +3076,8 @@
    "family": "h2:string",
    "config": "50M_d0.3_w0.2",
    "seed": 0,
-   "status": "running",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "8481d2f7982b291ef4b8f014af87efdc354ff8a9ee14ac05940caa8b8094d5ea",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -2904,6 +3090,18 @@
      "runner_section": 1,
      "source": "logged (runner line; date from the section start)",
      "attempt": 1
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "6",
+     "start_utc": "2026-10-23T14:26:01Z",
+     "end_utc": "2026-10-23T15:15:55Z",
+     "minutes": 49.9,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 2
     }
    ]
   },
@@ -2911,8 +3109,8 @@
    "family": "h2:esm2",
    "config": "50M_d0.3_w0.2",
    "seed": 0,
-   "status": "running",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "6baf9e71a6bf8550a90f7218b9ee9ccad2a1b5832146673c360c0b6b5b5cedee",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -2925,6 +3123,18 @@
      "runner_section": 1,
      "source": "logged (runner line; date from the section start)",
      "attempt": 1
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "7",
+     "start_utc": "2026-10-23T14:26:05Z",
+     "end_utc": "2026-10-23T15:37:47Z",
+     "minutes": 71.7,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 2
     }
    ]
   },
@@ -2932,8 +3142,8 @@
    "family": "h2shuf:perturbseq",
    "config": "50M_d0.3_w0.2",
    "seed": 0,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "de96439fa3af90df6f47bcd5f28a08c5129b25f9625e90147eae42da7e2eb910",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -2958,6 +3168,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "2",
+     "start_utc": "2026-10-23T15:10:38Z",
+     "end_utc": "2026-10-23T16:25:20Z",
+     "minutes": 74.7,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -2965,8 +3187,8 @@
    "family": "h2shuf:jump_crispr",
    "config": "50M_d0.3_w0.2",
    "seed": 0,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "0a81e91241d605acd43bd64fc2f79687ca01a8e73ec186264f17a2f8fdddb644",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -2991,6 +3213,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "1",
+     "start_utc": "2026-10-23T15:13:17Z",
+     "end_utc": "2026-10-23T16:12:29Z",
+     "minutes": 59.2,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -2998,8 +3232,8 @@
    "family": "h2shuf:jump_orf",
    "config": "50M_d0.3_w0.2",
    "seed": 0,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "cfe97b6ef8c67592c9740a63bd6bba751c6b88a296ac87d25eff1ca79499021a",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3024,6 +3258,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "3",
+     "start_utc": "2026-10-23T15:15:07Z",
+     "end_utc": "2026-10-23T16:13:19Z",
+     "minutes": 58.2,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3031,8 +3277,8 @@
    "family": "h2shuf:string",
    "config": "50M_d0.3_w0.2",
    "seed": 0,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "751c75b552674fa847eb977dfa18cf466655b0a10294a89151c24db81ac382af",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3057,6 +3303,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "6",
+     "start_utc": "2026-10-23T15:15:58Z",
+     "end_utc": "2026-10-23T16:15:40Z",
+     "minutes": 59.7,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3064,8 +3322,8 @@
    "family": "h2shuf:esm2",
    "config": "50M_d0.3_w0.2",
    "seed": 0,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "05cb017bb19d3b8ad190fae92d6bbbb72086f5c1c78a4fecc68261f4a29f2de0",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3090,6 +3348,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "3",
+     "start_utc": "2026-10-23T15:17:38Z",
+     "end_utc": "2026-10-23T16:21:20Z",
+     "minutes": 63.7,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3097,8 +3367,8 @@
    "family": "h1_learned",
    "config": "22M_d0.1_w0.05",
    "seed": 1,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "3c18f75d4b25d8a24a5907aa1aea8afff3ff612fe15b097dbd123970cee65c32",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3123,6 +3393,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "5",
+     "start_utc": "2026-10-23T15:19:45Z",
+     "end_utc": "2026-10-23T16:05:39Z",
+     "minutes": 45.9,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3130,8 +3412,8 @@
    "family": "h1_none",
    "config": "22M_d0.1_w0.05",
    "seed": 1,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "41ddb979b8c732ef21f24c247b6ecf0f6ec72ae73b0197b8e3d3fa2859240e78",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3156,6 +3438,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "5",
+     "start_utc": "2026-10-23T15:19:45Z",
+     "end_utc": "2026-10-23T16:05:39Z",
+     "minutes": 45.9,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3163,8 +3457,8 @@
    "family": "h2:perturbseq",
    "config": "22M_d0.1_w0.05",
    "seed": 1,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "2d453bee6403b46d8cbdeeb7831bf545078ac0e5fb93eab00876b88e38d8697b",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3189,6 +3483,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "5",
+     "start_utc": "2026-10-23T15:19:47Z",
+     "end_utc": "2026-10-23T16:01:59Z",
+     "minutes": 42.2,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3196,8 +3502,8 @@
    "family": "h2:jump_crispr",
    "config": "22M_d0.1_w0.05",
    "seed": 1,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "271ce7ec4eb07d364a07463c52918e566dd862c848b9d61b4e1b46001907a98b",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3222,6 +3528,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "5",
+     "start_utc": "2026-10-23T15:19:43Z",
+     "end_utc": "2026-10-23T16:04:49Z",
+     "minutes": 45.1,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3229,8 +3547,8 @@
    "family": "h2:jump_orf",
    "config": "22M_d0.1_w0.05",
    "seed": 1,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "a185ca1fdd686dcf5fa4be6810a77af8429a86ca1eb92d8377a9767b4406d22d",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3255,6 +3573,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "4",
+     "start_utc": "2026-10-23T15:20:15Z",
+     "end_utc": "2026-10-23T16:08:09Z",
+     "minutes": 47.9,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3262,8 +3592,8 @@
    "family": "h2:string",
    "config": "22M_d0.1_w0.05",
    "seed": 1,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "941b820765d0b58fd3009f5d7e8e43b0c9ed33753d6ac522759b0a1b16d6bacb",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3288,6 +3618,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "4",
+     "start_utc": "2026-10-23T15:20:13Z",
+     "end_utc": "2026-10-23T16:12:49Z",
+     "minutes": 52.6,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3295,8 +3637,8 @@
    "family": "h2:esm2",
    "config": "22M_d0.1_w0.05",
    "seed": 1,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "f9629f30e409177ce546b798f0d141b740e6179286cdb93d1717612b48eb0421",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3321,6 +3663,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "7",
+     "start_utc": "2026-10-23T15:23:24Z",
+     "end_utc": "2026-10-23T16:16:00Z",
+     "minutes": 52.6,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3328,8 +3682,8 @@
    "family": "h2shuf:perturbseq",
    "config": "22M_d0.1_w0.05",
    "seed": 1,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "571f92bdaad9db7d7f224b9847e9b9c15ce6a9a60d97883a8e2e3c6e4a5e65ee",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3354,6 +3708,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "7",
+     "start_utc": "2026-10-23T15:23:25Z",
+     "end_utc": "2026-10-23T16:07:19Z",
+     "minutes": 43.9,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3361,8 +3727,8 @@
    "family": "h2shuf:jump_crispr",
    "config": "22M_d0.1_w0.05",
    "seed": 1,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "8ac7850f2eb46dc4dde3dd6ff2bf504fcb102e5d44f65f421becce538a8f38f8",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3387,6 +3753,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "4",
+     "start_utc": "2026-10-23T15:23:43Z",
+     "end_utc": "2026-10-23T16:10:19Z",
+     "minutes": 46.6,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3394,8 +3772,8 @@
    "family": "h2shuf:jump_orf",
    "config": "22M_d0.1_w0.05",
    "seed": 1,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "9be5f36db81458edd54b238fad9b7a3c640b6e776ce61ae762dd81a3f4af7018",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3420,6 +3798,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "4",
+     "start_utc": "2026-10-23T15:23:45Z",
+     "end_utc": "2026-10-23T16:10:39Z",
+     "minutes": 46.9,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3427,8 +3817,8 @@
    "family": "h2shuf:string",
    "config": "22M_d0.1_w0.05",
    "seed": 1,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "3634b917d781ba3dd61f5882588792e6f93c704a6e4ab0889e5c56b0403cc6f4",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3453,6 +3843,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "2",
+     "start_utc": "2026-10-23T15:27:08Z",
+     "end_utc": "2026-10-23T16:21:50Z",
+     "minutes": 54.7,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3460,8 +3862,8 @@
    "family": "h2shuf:esm2",
    "config": "22M_d0.1_w0.05",
    "seed": 1,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "3abf3ec16356bfa9a17dcbdc6ae4f1f3d1ce321e0dcc4ec80f710c748ef7ac94",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3486,6 +3888,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "2",
+     "start_utc": "2026-10-23T15:27:04Z",
+     "end_utc": "2026-10-23T16:22:40Z",
+     "minutes": 55.6,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3493,8 +3907,8 @@
    "family": "h1_learned",
    "config": "22M_d0.1_w0.2",
    "seed": 1,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "8d4c10b2cf98db0adcf6c7c83fd815e5cfdd8a3efe59d85c089784140e065033",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3519,6 +3933,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "0",
+     "start_utc": "2026-10-23T15:27:54Z",
+     "end_utc": "2026-10-23T16:25:30Z",
+     "minutes": 57.6,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3547,8 +3973,8 @@
    "family": "h2:perturbseq",
    "config": "22M_d0.1_w0.2",
    "seed": 1,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "e07c2eb746c4a8b235b2e34fee14802f94d9e8dfcf4e120d5f53546b79194936",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3573,6 +3999,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "0",
+     "start_utc": "2026-10-23T15:27:54Z",
+     "end_utc": "2026-10-23T16:14:00Z",
+     "minutes": 46.1,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3580,8 +4018,8 @@
    "family": "h2:jump_crispr",
    "config": "22M_d0.1_w0.2",
    "seed": 1,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "22dd41f4f3bf8c782aa9fb90d4e08b4ca71988e6f6b87fd3db9e68caaac63779",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3606,6 +4044,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "6",
+     "start_utc": "2026-10-23T15:28:37Z",
+     "end_utc": "2026-10-23T16:07:19Z",
+     "minutes": 38.7,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3613,8 +4063,8 @@
    "family": "h2:jump_orf",
    "config": "22M_d0.1_w0.2",
    "seed": 1,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "079a3c72761b9538a8de0d2d562b55dcb7e5bba69b14771990f8836d6af8d12e",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3639,6 +4089,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "6",
+     "start_utc": "2026-10-23T15:28:35Z",
+     "end_utc": "2026-10-23T16:11:59Z",
+     "minutes": 43.4,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3667,8 +4129,8 @@
    "family": "h2:esm2",
    "config": "22M_d0.1_w0.2",
    "seed": 1,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "78ed588fb0012f173a7c6031c6f4680365d8faedfbe22877801ce5b2b4fd7add",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3693,6 +4155,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "1",
+     "start_utc": "2026-10-23T15:36:00Z",
+     "end_utc": "2026-10-23T16:25:00Z",
+     "minutes": 49.0,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3700,8 +4174,8 @@
    "family": "h2shuf:perturbseq",
    "config": "22M_d0.1_w0.2",
    "seed": 1,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "d8fde92c3eeb00c9b00ca5234d70dbb0f5c2fb09d822518ca0ff26e39631ee68",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3726,6 +4200,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "1",
+     "start_utc": "2026-10-23T15:36:00Z",
+     "end_utc": "2026-10-23T16:23:30Z",
+     "minutes": 47.5,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3733,8 +4219,8 @@
    "family": "h2shuf:jump_crispr",
    "config": "22M_d0.1_w0.2",
    "seed": 1,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "a4a475240b8ba8f6ce785e2db3b1ba26ec96ffeeedafb1944324fa45e8d9ebfb",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3759,6 +4245,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "0",
+     "start_utc": "2026-10-23T15:37:30Z",
+     "end_utc": "2026-10-23T16:26:00Z",
+     "minutes": 48.5,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3766,8 +4264,8 @@
    "family": "h2shuf:jump_orf",
    "config": "22M_d0.1_w0.2",
    "seed": 1,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "0cfcebe67f07b457181e3618a88943c330430d50d1953f043926a172660a2e6d",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3792,6 +4290,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "0",
+     "start_utc": "2026-10-23T15:37:30Z",
+     "end_utc": "2026-10-23T16:26:30Z",
+     "minutes": 49.0,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3799,8 +4309,8 @@
    "family": "h2shuf:string",
    "config": "22M_d0.1_w0.2",
    "seed": 1,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "565449da23dff43f2d0d92fb80e978d2fd1623ccfbe9d3a321a81faaa5b79a35",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3825,6 +4335,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "7",
+     "start_utc": "2026-10-23T15:37:48Z",
+     "end_utc": "2026-10-23T16:25:00Z",
+     "minutes": 47.2,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },
@@ -3832,8 +4354,8 @@
    "family": "h2shuf:esm2",
    "config": "22M_d0.1_w0.2",
    "seed": 1,
-   "status": "failed",
-   "results_sha256": null,
+   "status": "complete",
+   "results_sha256": "468d8b4136324de90754d8c88f0263410780308ee7de1bb4d11b9501fa3ca4fb",
    "attempts": [
     {
      "host": "old instance, 1 x A100-40GB (single GPU)",
@@ -3858,6 +4380,18 @@
      "runner_section": 4,
      "source": "reconstructed: incident-3 run list and kernel log (runner log lost)",
      "attempt": 2
+    },
+    {
+     "host": "new instance, 8 x A100-SXM4-40GB",
+     "gpu": "7",
+     "start_utc": "2026-10-23T15:37:46Z",
+     "end_utc": "2026-10-23T16:21:10Z",
+     "minutes": 43.4,
+     "status": "complete",
+     "incident": null,
+     "runner_section": 5,
+     "source": "logged (runner line; date from the section start)",
+     "attempt": 3
     }
    ]
   },

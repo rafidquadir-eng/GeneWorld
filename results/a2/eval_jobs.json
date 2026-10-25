@@ -1,0 +1,42 @@
+{
+ "host": "150-136-44-126",
+ "hardware": "8 x A100-SXM4-40GB",
+ "jobs": {
+  "grid": {
+   "cmd": "scripts/run_a2_jobs.py --phase grid",
+   "gpus": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "log": "logs/a2_val/grid.log",
+   "start_utc": "2026-10-25T22:55:32Z",
+   "end_utc": "2026-10-25T22:55:37Z",
+   "exit_code": 0,
+   "minutes": 0.1
+  },
+  "grid_record": {
+   "cmd": "scripts/73_grid_record.py",
+   "gpus": [],
+   "log": "logs/a2_val/grid_record.log",
+   "start_utc": "2026-10-25T22:55:42Z",
+   "end_utc": "2026-10-25T22:55:47Z",
+   "exit_code": 0,
+   "minutes": 0.1
+  },
+  "selection": {
+   "cmd": "scripts/60_select_a2.py",
+   "gpus": [],
+   "log": "logs/a2_val/selection.log",
+   "start_utc": "2026-10-25T22:55:52Z",
+   "end_utc": "2026-10-25T22:55:57Z",
+   "exit_code": 0,
+   "minutes": 0.1
+  }
+ }
+}

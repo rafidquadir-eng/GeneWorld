@@ -1,2 +1,59 @@
 [10-23 14:54:58] S12: waiting for grid runner 177180
 [10-23 14:59:50] S12: waiting for grid runner 177180
+[10-23 16:26:51] S12: validation jobs in parallel on 8 GPUs (scripts/74_val_parallel.py)
+[10-23 16:26:51] start grid on GPU 0,1,2,3,4,5,6,7
+[10-23 16:26:56] done grid (exit 0, 0.1 min)
+[10-23 16:27:01] start grid_record on GPU -
+[10-23 16:27:06] FAILED grid_record (exit 1, 0.1 min)
+[10-23 16:27:11] blocked: selection
+[10-23 16:27:11] blocked: commit_selection
+[10-23 16:27:11] blocked: h2_val
+[10-23 16:27:11] blocked: h1_val
+[10-23 16:27:11] blocked: controls_plate
+[10-23 16:27:11] blocked: secondary
+[10-23 16:27:11] blocked: secondary_complex
+[10-23 16:27:11] blocked: h3_val
+[10-23 16:27:11] blocked: h1_val_global
+[10-23 16:27:11] blocked: h2_val_global
+[10-23 16:27:11] blocked: h3_val_global
+[10-23 16:27:11] blocked: h1_val_dinov2
+[10-23 16:27:11] blocked: h1_val_tijepa1
+[10-23 16:27:11] blocked: controls_global
+[10-23 16:27:11] blocked: h2_val_complex
+[10-23 16:27:11] blocked: h3_val_complex
+[10-23 16:27:11] blocked: commit_evals
+[10-23 16:27:11] blocked: gates
+[10-23 16:27:11] blocked: commit_gates
+[10-23 16:27:16] S12 stopped: {'grid_record': 'failed', 'selection': 'blocked', 'commit_selection': 'blocked', 'h2_val': 'blocked', 'h1_val': 'blocked', 'controls_plate': 'blocked', 'secondary': 'blocked', 'secondary_complex': 'blocked', 'h3_val': 'blocked', 'h1_val_global': 'blocked', 'h2_val_global': 'blocked', 'h3_val_global': 'blocked', 'h1_val_dinov2': 'blocked', 'h1_val_tijepa1': 'blocked', 'controls_global': 'blocked', 'h2_val_complex': 'blocked', 'h3_val_complex': 'blocked', 'commit_evals': 'blocked', 'gates': 'blocked', 'commit_gates': 'blocked'}
+[10-25 22:54:46] S12: validation jobs in parallel on 8 GPUs (scripts/74_val_parallel.py)
+[10-25 22:54:46] start grid on GPU 0,1,2,3,4,5,6,7
+[10-25 22:54:51] done grid (exit 0, 0.1 min)
+[10-25 22:54:56] start grid_record on GPU -
+[10-25 22:55:01] FAILED grid_record (exit 1, 0.1 min)
+[10-25 22:55:06] blocked: selection
+[10-25 22:55:06] blocked: commit_selection
+[10-25 22:55:06] blocked: h2_val
+[10-25 22:55:06] blocked: h1_val
+[10-25 22:55:06] blocked: controls_plate
+[10-25 22:55:06] blocked: secondary
+[10-25 22:55:06] blocked: secondary_complex
+[10-25 22:55:06] blocked: h3_val
+[10-25 22:55:06] blocked: h1_val_global
+[10-25 22:55:06] blocked: h2_val_global
+[10-25 22:55:06] blocked: h3_val_global
+[10-25 22:55:06] blocked: h1_val_dinov2
+[10-25 22:55:06] blocked: h1_val_tijepa1
+[10-25 22:55:06] blocked: controls_global
+[10-25 22:55:06] blocked: h2_val_complex
+[10-25 22:55:06] blocked: h3_val_complex
+[10-25 22:55:06] blocked: commit_evals
+[10-25 22:55:06] blocked: gates
+[10-25 22:55:06] blocked: commit_gates
+[10-25 22:55:11] S12 stopped: {'grid_record': 'failed', 'selection': 'blocked', 'commit_selection': 'blocked', 'h2_val': 'blocked', 'h1_val': 'blocked', 'controls_plate': 'blocked', 'secondary': 'blocked', 'secondary_complex': 'blocked', 'h3_val': 'blocked', 'h1_val_global': 'blocked', 'h2_val_global': 'blocked', 'h3_val_global': 'blocked', 'h1_val_dinov2': 'blocked', 'h1_val_tijepa1': 'blocked', 'controls_global': 'blocked', 'h2_val_complex': 'blocked', 'h3_val_complex': 'blocked', 'commit_evals': 'blocked', 'gates': 'blocked', 'commit_gates': 'blocked'}
+[10-25 22:55:32] S12: validation jobs in parallel on 8 GPUs (scripts/74_val_parallel.py)
+[10-25 22:55:32] start grid on GPU 0,1,2,3,4,5,6,7
+[10-25 22:55:37] done grid (exit 0, 0.1 min)
+[10-25 22:55:42] start grid_record on GPU -
+[10-25 22:55:47] done grid_record (exit 0, 0.1 min)
+[10-25 22:55:52] start selection on GPU -
+[10-25 22:55:57] done selection (exit 0, 0.1 min)

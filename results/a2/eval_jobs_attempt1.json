@@ -1,0 +1,33 @@
+{
+ "host": "150-136-44-126",
+ "hardware": "8 x A100-SXM4-40GB",
+ "jobs": {
+  "grid": {
+   "cmd": "scripts/run_a2_jobs.py --phase grid",
+   "gpus": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "log": "logs/a2_val/grid.log",
+   "start_utc": "2026-10-23T16:26:51Z",
+   "end_utc": "2026-10-23T16:26:56Z",
+   "exit_code": 0,
+   "minutes": 0.1
+  },
+  "grid_record": {
+   "cmd": "scripts/73_grid_record.py",
+   "gpus": [],
+   "log": "logs/a2_val/grid_record.log",
+   "start_utc": "2026-10-23T16:27:01Z",
+   "end_utc": "2026-10-23T16:27:06Z",
+   "exit_code": 1,
+   "minutes": 0.1
+  }
+ }
+}

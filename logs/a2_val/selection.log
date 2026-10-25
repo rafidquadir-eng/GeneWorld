@@ -1,0 +1,12 @@
+h1_learned             50M_d0.1_w0.2      2.9484
+h1_none                50M_d0.3_w0.05     3.1127
+h2:perturbseq          50M_d0.3_w0.2      3.0012
+h2:jump_crispr         50M_d0.3_w0.2      2.8682
+h2:jump_orf            50M_d0.3_w0.2      2.8810
+h2:string              50M_d0.3_w0.2      2.8480
+h2:esm2                50M_d0.3_w0.2      2.8523
+h2shuf:perturbseq      50M_d0.3_w0.2      2.9957
+h2shuf:jump_crispr     50M_d0.3_w0.2      2.8790
+h2shuf:jump_orf        50M_d0.3_w0.2      2.8781
+h2shuf:string          50M_d0.3_w0.2      2.8492
+h2shuf:esm2            50M_d0.3_w0.2      2.8530
