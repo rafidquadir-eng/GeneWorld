@@ -1,0 +1,6 @@
+unseen primary {'n_q<0.05': 0, 'n_beats_gba': 0, 'pass': False} {'mitotic_delay': 0.0485, 'polylobed': 0.0128, 'binuclear': 0.035}
+unseen stringent {'n_q<0.05': 0, 'n_beats_gba': 2, 'pass': False} {'mitotic_delay': 0.0504, 'polylobed': 0.0163, 'binuclear': 0.0077}
+seen primary {'n_q<0.05': 3, 'n_beats_gba': 0, 'pass': False} {'mitotic_delay': 0.0794, 'polylobed': 0.0295, 'binuclear': 0.0737}
+seen stringent {'n_q<0.05': 2, 'n_beats_gba': 0, 'pass': False} {'mitotic_delay': 0.1324, 'polylobed': 0.159, 'binuclear': 0.0062}
+{"planner": {"hit@1": 0.0, "hit@10": 0.00625, "hit@100": 0.020833333333333332, "mrr": 0.0021429511898124185, "median_rank": 3143.0}, "retrieval_knn": {"hit@1": 0.0, "hit@10": 0.0020833333333333333, "hit@100": 0.03333333333333333, "mrr": 0.0016339127195830435, "median_rank": 3136.5}, "oracle_ceiling_replicate_endpoint": {"hit@1": 0.010416666666666666, "hit@10": 0.04583333333333333, "hit@100": 0.12291666666666666, "mrr": 0.02386884651483763, "median_rank": 1456.0}}
+{"rule": "phenotype (primary truth, unseen genes) and trajectory rules; trajectory: hit@100 above random (binomial p < 0.05) and above kNN-imputed endpoint retrieval (bootstrap CI over target genes above 0), erratum E-02.1", "erratum": "E-02.1", "phenotype_pass": false, "trajectory_pass": false, "pass": false}

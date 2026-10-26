@@ -1,0 +1,216 @@
+{
+ "split": "test",
+ "design_commit": "dd57079",
+ "freeze_commit": "rehearsal-e7aa35e",
+ "selection": {
+  "file": "results/a2/rehearsal/selection.json",
+  "sha256": "be8a5582cfa95de17b8a502ae3b0b43c9a92c9113e991e062b240d240f1a854f"
+ },
+ "planning_source": "jump_crispr",
+ "G_Signal_2": {
+  "rule": "primary wells, 24/36 h: action-conditioned beats action-agnostic and replicate drift, one-sided p < 0.05 over plates each",
+  "vs_action_agnostic": {
+   "n_groups": 3,
+   "mean": 0.01384441057840983,
+   "p_one_sided": 0.6216137838621614,
+   "frac_groups_better": 0.6666666666666666,
+   "model": 2.6771717071533203,
+   "baseline": 2.66332745552063,
+   "relative_change": 0.005198121070861816
+  },
+  "vs_replicate_drift": {
+   "n_groups": 3,
+   "mean": -2.9172282218933105,
+   "p_one_sided": 0.12315876841231588,
+   "frac_groups_better": 1.0,
+   "model": 2.6771717071533203,
+   "baseline": 5.594399929046631,
+   "relative_change": -0.5214550495147705
+  },
+  "secondary_well_weighted": {
+   "note": "completion plan v2 F6; secondary, not part of the gate",
+   "vs_action_agnostic": {
+    "n_groups": 3,
+    "mean": -0.08472171674172084,
+    "p_one_sided": 0.24874751252487476,
+    "frac_groups_better": 0.6666666666666666,
+    "weighting": "wells per plate",
+    "n_wells": 36,
+    "wells_per_plate": {
+     "min": 1,
+     "median": 16.0,
+     "max": 19
+    }
+   },
+   "vs_replicate_drift": {
+    "n_groups": 3,
+    "mean": -2.9790836241510177,
+    "p_one_sided": 0.12315876841231588,
+    "frac_groups_better": 1.0,
+    "weighting": "wells per plate",
+    "n_wells": 36,
+    "wells_per_plate": {
+     "min": 1,
+     "median": 16.0,
+     "max": 19
+    }
+   }
+  },
+  "pass": false,
+  "source": {
+   "file": "results/a2/rehearsal/h1/h1_test_plate_vjepa2.json",
+   "sha256": "53b0027528073b21260a8c420875f3ddbcbaf62b35d77fdbc482f323f2cc4ae1"
+  }
+ },
+ "G_ZeroShot_2": {
+  "rule": "on primary genes at 24/36 h, >= 1 source: true - trained-shuffled 95% CI over genes below 0 and true - action-agnostic 95% CI below 0",
+  "pass": false,
+  "passing_sources": [],
+  "source": {
+   "file": "results/a2/rehearsal/h2/h2_test_plate_vjepa2.json",
+   "sha256": "41628329bf44c80b6ff3fbb911cad68dab629dff28765c9c421e1eddea4244c7"
+  },
+  "per_source": {
+   "perturbseq": {
+    "pass": false,
+    "true_vs_shuffled_trained": {
+     "n_genes": 108,
+     "mean": 0.007460329267713759,
+     "relative": 0.0024417947642099147,
+     "ci95": [
+      -0.019260257041012797,
+      0.0318481321963999
+     ],
+     "frac_genes_better": 0.4444444444444444
+    },
+    "true_vs_agnostic": {
+     "n_genes": 108,
+     "mean": 0.08241976300875346,
+     "relative": 0.02765480598519443,
+     "ci95": [
+      0.04595191867815124,
+      0.11642588917855859
+     ],
+     "frac_genes_better": 0.2777777777777778
+    }
+   },
+   "jump_crispr": {
+    "pass": false,
+    "true_vs_shuffled_trained": {
+     "n_genes": 90,
+     "mean": -0.01620758639441596,
+     "relative": -0.0054801524360360565,
+     "ci95": [
+      -0.03773921291033427,
+      0.003858001728852582
+     ],
+     "frac_genes_better": 0.5333333333333333
+    },
+    "true_vs_agnostic": {
+     "n_genes": 90,
+     "mean": 0.06635460588667128,
+     "relative": 0.02308031009331324,
+     "ci95": [
+      0.030548059973451825,
+      0.1040310271249877
+     ],
+     "frac_genes_better": 0.36666666666666664
+    }
+   },
+   "jump_orf": {
+    "pass": false,
+    "true_vs_shuffled_trained": {
+     "n_genes": 139,
+     "mean": -0.0019566506790600234,
+     "relative": -0.000668656729974737,
+     "ci95": [
+      -0.0170860084055139,
+      0.012007192570528534
+     ],
+     "frac_genes_better": 0.5179856115107914
+    },
+    "true_vs_agnostic": {
+     "n_genes": 139,
+     "mean": 0.02369130172317834,
+     "relative": 0.00816774433936418,
+     "ci95": [
+      -0.005992649506321913,
+      0.052373846464877506
+     ],
+     "frac_genes_better": 0.39568345323741005
+    }
+   },
+   "string": {
+    "pass": false,
+    "true_vs_shuffled_trained": {
+     "n_genes": 195,
+     "mean": -0.0031811384054330678,
+     "relative": -0.0011072721806459906,
+     "ci95": [
+      -0.0160330809538181,
+      0.008845699628194172
+     ],
+     "frac_genes_better": 0.5282051282051282
+    },
+    "true_vs_agnostic": {
+     "n_genes": 195,
+     "mean": -0.04615039825439453,
+     "relative": -0.01582704553585912,
+     "ci95": [
+      -0.06952971137486973,
+      -0.024689715030865797
+     ],
+     "frac_genes_better": 0.6974358974358974
+    }
+   },
+   "esm2": {
+    "pass": false,
+    "true_vs_shuffled_trained": {
+     "n_genes": 196,
+     "mean": -0.007557339206033823,
+     "relative": -0.002614318515641756,
+     "ci95": [
+      -0.019437809531786004,
+      0.004788368833916525
+     ],
+     "frac_genes_better": 0.5663265306122449
+    },
+    "true_vs_agnostic": {
+     "n_genes": 196,
+     "mean": -0.03091848869712985,
+     "relative": -0.010609923713462921,
+     "ci95": [
+      -0.053014454352004185,
+      -0.009051993458854919
+     ],
+     "frac_genes_better": 0.5816326530612245
+    }
+   }
+  }
+ },
+ "G_Plan_2": {
+  "rule": "phenotype (primary truth, unseen genes) and trajectory rules; trajectory: hit@100 above random (binomial p < 0.05) and above kNN-imputed endpoint retrieval (bootstrap CI over target genes above 0), erratum E-02.1",
+  "erratum": "E-02.1",
+  "phenotype_pass": false,
+  "trajectory_pass": false,
+  "pass": false,
+  "source": {
+   "file": "results/a2/rehearsal/h3/h3_test_plate_vjepa2_jump_crispr.json",
+   "sha256": "08229aae75d28290e2fac85ce33a19b6fb041c4de2e134f017947eb514baf5a8"
+  },
+  "trajectory_gate_comparator": "retrieval_knn",
+  "trajectory_vs_comparator": {
+   "difference": -0.015025252525252532,
+   "ci95": [
+    -0.05000063131313133,
+    0.015824915824915825
+   ]
+  },
+  "oracle_ceiling_hit@100": 0.1694560669456067
+ },
+ "errata": [
+  "E-02.1 (2026-10-22): G-Plan-2 trajectory comparator = kNN-imputed endpoint retrieval"
+ ],
+ "consequence": "G-Signal-2 failed: H2/H3 are exploratory (amendment 02 section 4)",
+ "code_commit": "83127b8"
+}

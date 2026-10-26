@@ -1,0 +1,119 @@
+{
+ "name": "a2_global_vjepa2_h2shuf-jump_crispr_50M_d0.3_w0.2_s1",
+ "family": "h2shuf:jump_crispr",
+ "config": "50M_d0.3_w0.2",
+ "seed": 1,
+ "norm": "global",
+ "backbone_key": "vjepa2",
+ "gene_split": "gene",
+ "best_val_primary": 0.45110055804252625,
+ "best_step": 750,
+ "stopped_at": 3750,
+ "n_params": 57587200,
+ "n_train_wells": 22076,
+ "n_val_wells": 480,
+ "minutes": 35.84670320749283,
+ "curve": [
+  {
+   "step": 250,
+   "val_primary": 0.516380786895752,
+   "loss_tf": 0.24536733329296112,
+   "loss_ro": 0.37710559368133545
+  },
+  {
+   "step": 500,
+   "val_primary": 0.46566110849380493,
+   "loss_tf": 0.23963652551174164,
+   "loss_ro": 0.3550974726676941
+  },
+  {
+   "step": 750,
+   "val_primary": 0.45110055804252625,
+   "loss_tf": 0.235149085521698,
+   "loss_ro": 0.3407566547393799
+  },
+  {
+   "step": 1000,
+   "val_primary": 0.472900390625,
+   "loss_tf": 0.23817849159240723,
+   "loss_ro": 0.336667537689209
+  },
+  {
+   "step": 1250,
+   "val_primary": 0.4586702883243561,
+   "loss_tf": 0.23191389441490173,
+   "loss_ro": 0.3242906332015991
+  },
+  {
+   "step": 1500,
+   "val_primary": 0.4556155204772949,
+   "loss_tf": 0.22966234385967255,
+   "loss_ro": 0.31704747676849365
+  },
+  {
+   "step": 1750,
+   "val_primary": 0.4797159433364868,
+   "loss_tf": 0.22978542745113373,
+   "loss_ro": 0.30742496252059937
+  },
+  {
+   "step": 2000,
+   "val_primary": 0.4547748267650604,
+   "loss_tf": 0.2277384251356125,
+   "loss_ro": 0.2998415231704712
+  },
+  {
+   "step": 2250,
+   "val_primary": 0.47017133235931396,
+   "loss_tf": 0.2292671501636505,
+   "loss_ro": 0.3177027106285095
+  },
+  {
+   "step": 2500,
+   "val_primary": 0.46557149291038513,
+   "loss_tf": 0.22408854961395264,
+   "loss_ro": 0.3107633888721466
+  },
+  {
+   "step": 2750,
+   "val_primary": 0.45513850450515747,
+   "loss_tf": 0.22419117391109467,
+   "loss_ro": 0.286754846572876
+  },
+  {
+   "step": 3000,
+   "val_primary": 0.4652670919895172,
+   "loss_tf": 0.2234397977590561,
+   "loss_ro": 0.2783253788948059
+  },
+  {
+   "step": 3250,
+   "val_primary": 0.48143666982650757,
+   "loss_tf": 0.22141645848751068,
+   "loss_ro": 0.27900171279907227
+  },
+  {
+   "step": 3500,
+   "val_primary": 0.4681047201156616,
+   "loss_tf": 0.22206473350524902,
+   "loss_ro": 0.2775759696960449
+  },
+  {
+   "step": 3750,
+   "val_primary": 0.4696961045265198,
+   "loss_tf": 0.21880841255187988,
+   "loss_ro": 0.26754826307296753
+  }
+ ],
+ "checkpoint": "a2_global_vjepa2_h2shuf-jump_crispr_50M_d0.3_w0.2_s1.pt",
+ "peak_gpu_memory_gb": 14.52547328,
+ "checkpoint_sha256": "768e129f5ded33ac11d80bfd1a05d71650abc7ad94ec94b351a91a24faee43bc",
+ "backbone": {
+  "kind": "backbone",
+  "key": "vjepa2_vitl",
+  "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+  "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+  "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+ },
+ "design_commit": "dd57079"
+}

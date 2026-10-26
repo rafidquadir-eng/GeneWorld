@@ -37,6 +37,167 @@
    "end_utc": "2026-10-25T22:55:57Z",
    "exit_code": 0,
    "minutes": 0.1
+  },
+  "h2_val": {
+   "cmd": "scripts/62_eval_h2_a2.py --split val",
+   "gpus": [
+    "0"
+   ],
+   "log": "logs/a2_val/h2_val.log",
+   "start_utc": "2026-10-25T22:56:04Z",
+   "end_utc": "2026-10-25T23:05:29Z",
+   "exit_code": 0,
+   "minutes": 9.4
+  },
+  "h1_val": {
+   "cmd": "scripts/61_eval_h1_a2.py --split val",
+   "gpus": [
+    "1"
+   ],
+   "log": "logs/a2_val/h1_val.log",
+   "start_utc": "2026-10-25T22:56:04Z",
+   "end_utc": "2026-10-25T23:11:09Z",
+   "exit_code": 0,
+   "minutes": 15.1
+  },
+  "controls_plate": {
+   "cmd": "scripts/64_controls_a2.py --norm plate",
+   "gpus": [
+    "2"
+   ],
+   "log": "logs/a2_val/controls_plate.log",
+   "start_utc": "2026-10-25T22:56:04Z",
+   "end_utc": "2026-10-25T22:56:44Z",
+   "exit_code": 0,
+   "minutes": 0.7
+  },
+  "secondary": {
+   "cmd": "scripts/run_a2_jobs.py --phase secondary",
+   "gpus": [
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "log": "logs/a2_val/secondary.log",
+   "start_utc": "2026-10-25T22:56:04Z",
+   "end_utc": "2026-10-26T04:23:12Z",
+   "exit_code": 0,
+   "minutes": 327.1
+  },
+  "h3_val": {
+   "cmd": "scripts/63_plan_a2.py --split val",
+   "gpus": [
+    "0"
+   ],
+   "log": "logs/a2_val/h3_val.log",
+   "start_utc": "2026-10-25T23:05:34Z",
+   "end_utc": "2026-10-26T00:19:40Z",
+   "exit_code": 0,
+   "minutes": 74.1
+  },
+  "secondary_complex": {
+   "cmd": "scripts/run_a2_jobs.py --phase secondary",
+   "gpus": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "log": "logs/a2_val/secondary.log",
+   "start_utc": "2026-10-26T04:23:17Z",
+   "end_utc": "2026-10-26T04:23:22Z",
+   "exit_code": 0,
+   "minutes": 0.1
+  },
+  "h1_val_global": {
+   "cmd": "scripts/61_eval_h1_a2.py --split val --norm global",
+   "gpus": [
+    "4"
+   ],
+   "log": "logs/a2_val/h1_val_global.log",
+   "start_utc": "2026-10-26T04:23:17Z",
+   "end_utc": "2026-10-26T04:48:12Z",
+   "exit_code": 0,
+   "minutes": 24.9
+  },
+  "h2_val_global": {
+   "cmd": "scripts/62_eval_h2_a2.py --split val --norm global",
+   "gpus": [
+    "5"
+   ],
+   "log": "logs/a2_val/h2_val_global.log",
+   "start_utc": "2026-10-26T04:23:17Z",
+   "end_utc": "2026-10-26T04:33:17Z",
+   "exit_code": 0,
+   "minutes": 10.0
+  },
+  "h3_val_global": {
+   "cmd": "scripts/63_plan_a2.py --split val --norm global",
+   "gpus": [
+    "6"
+   ],
+   "log": "logs/a2_val/h3_val_global.log",
+   "start_utc": "2026-10-26T04:23:17Z",
+   "end_utc": "2026-10-26T05:41:22Z",
+   "exit_code": 0,
+   "minutes": 78.1
+  },
+  "h1_val_dinov2": {
+   "cmd": "scripts/61_eval_h1_a2.py --split val --backbone dinov2",
+   "gpus": [
+    "7"
+   ],
+   "log": "logs/a2_val/h1_val_dinov2.log",
+   "start_utc": "2026-10-26T04:23:17Z",
+   "end_utc": "2026-10-26T04:38:02Z",
+   "exit_code": 0,
+   "minutes": 14.8
+  },
+  "h1_val_tijepa1": {
+   "cmd": "scripts/61_eval_h1_a2.py --split val --backbone tijepa1",
+   "gpus": [
+    "0"
+   ],
+   "log": "logs/a2_val/h1_val_tijepa1.log",
+   "start_utc": "2026-10-26T04:23:27Z",
+   "end_utc": "2026-10-26T04:42:12Z",
+   "exit_code": 0,
+   "minutes": 18.8
+  },
+  "controls_global": {
+   "cmd": "scripts/64_controls_a2.py --norm global",
+   "gpus": [
+    "1"
+   ],
+   "log": "logs/a2_val/controls_global.log",
+   "start_utc": "2026-10-26T04:23:27Z",
+   "end_utc": "2026-10-26T04:24:02Z",
+   "exit_code": 0,
+   "minutes": 0.6
+  },
+  "h2_val_complex": {
+   "cmd": "scripts/62_eval_h2_a2.py --split val --gene-split complex --sources jump_crispr",
+   "gpus": [
+    "2"
+   ],
+   "log": "logs/a2_val/h2_val_complex.log",
+   "start_utc": "2026-10-26T04:23:27Z",
+   "end_utc": "2026-10-26T04:25:17Z",
+   "exit_code": 0,
+   "minutes": 1.8
+  },
+  "h3_val_complex": {
+   "cmd": "scripts/63_plan_a2.py --split val --gene-split complex",
+   "gpus": [
+    "3"
+   ],
+   "log": "logs/a2_val/h3_val_complex.log",
+   "start_utc": "2026-10-26T04:23:27Z",
+   "end_utc": "2026-10-26T05:37:42Z",
+   "exit_code": 0,
+   "minutes": 74.3
   }
  }
 }

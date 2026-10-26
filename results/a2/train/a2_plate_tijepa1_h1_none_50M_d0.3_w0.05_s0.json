@@ -1,0 +1,119 @@
+{
+ "name": "a2_plate_tijepa1_h1_none_50M_d0.3_w0.05_s0",
+ "family": "h1_none",
+ "config": "50M_d0.3_w0.05",
+ "seed": 0,
+ "norm": "plate",
+ "backbone_key": "tijepa1",
+ "gene_split": "gene",
+ "best_val_primary": 2.6072232723236084,
+ "best_step": 750,
+ "stopped_at": 3750,
+ "n_params": 62678400,
+ "n_train_wells": 45786,
+ "n_val_wells": 362,
+ "minutes": 35.06963558197022,
+ "curve": [
+  {
+   "step": 250,
+   "val_primary": 2.890923023223877,
+   "loss_tf": 0.5361507534980774,
+   "loss_ro": 0.9334651231765747
+  },
+  {
+   "step": 500,
+   "val_primary": 2.767451763153076,
+   "loss_tf": 0.5232167840003967,
+   "loss_ro": 0.8651832938194275
+  },
+  {
+   "step": 750,
+   "val_primary": 2.6072232723236084,
+   "loss_tf": 0.5196879506111145,
+   "loss_ro": 0.8702487945556641
+  },
+  {
+   "step": 1000,
+   "val_primary": 2.6469640731811523,
+   "loss_tf": 0.5215795636177063,
+   "loss_ro": 0.8490413427352905
+  },
+  {
+   "step": 1250,
+   "val_primary": 2.6494288444519043,
+   "loss_tf": 0.5076514482498169,
+   "loss_ro": 0.831915557384491
+  },
+  {
+   "step": 1500,
+   "val_primary": 2.6328036785125732,
+   "loss_tf": 0.5024479627609253,
+   "loss_ro": 0.8301588892936707
+  },
+  {
+   "step": 1750,
+   "val_primary": 2.6570632457733154,
+   "loss_tf": 0.5030355453491211,
+   "loss_ro": 0.7966240644454956
+  },
+  {
+   "step": 2000,
+   "val_primary": 2.6726458072662354,
+   "loss_tf": 0.5006795525550842,
+   "loss_ro": 0.8031683564186096
+  },
+  {
+   "step": 2250,
+   "val_primary": 2.614551544189453,
+   "loss_tf": 0.49400752782821655,
+   "loss_ro": 0.7570629119873047
+  },
+  {
+   "step": 2500,
+   "val_primary": 2.68758487701416,
+   "loss_tf": 0.4985084533691406,
+   "loss_ro": 0.8235295414924622
+  },
+  {
+   "step": 2750,
+   "val_primary": 2.6622369289398193,
+   "loss_tf": 0.48997873067855835,
+   "loss_ro": 0.7555608153343201
+  },
+  {
+   "step": 3000,
+   "val_primary": 2.7228550910949707,
+   "loss_tf": 0.4910215437412262,
+   "loss_ro": 0.7531793713569641
+  },
+  {
+   "step": 3250,
+   "val_primary": 2.737978458404541,
+   "loss_tf": 0.48870202898979187,
+   "loss_ro": 0.7080903053283691
+  },
+  {
+   "step": 3500,
+   "val_primary": 2.702329635620117,
+   "loss_tf": 0.4940509796142578,
+   "loss_ro": 0.7060660719871521
+  },
+  {
+   "step": 3750,
+   "val_primary": 2.6968815326690674,
+   "loss_tf": 0.4773772656917572,
+   "loss_ro": 0.6781387329101562
+  }
+ ],
+ "checkpoint": "a2_plate_tijepa1_h1_none_50M_d0.3_w0.05_s0.pt",
+ "peak_gpu_memory_gb": 14.258354176,
+ "checkpoint_sha256": "70da6f9df392e68e0d3f428ba7fb435ca324a9a0853bfcb855a4b3d6ab439236",
+ "backbone": {
+  "kind": "backbone",
+  "key": "tijepa1",
+  "source": "TiJepa checkpoint tijepa1_T1_seed0.pt",
+  "revision": null,
+  "sha256": "a09e76e91b5c52d884f484cfbf5b00951b162136e1a44f6995dd2829f0289d38"
+ },
+ "design_commit": "dd57079"
+}

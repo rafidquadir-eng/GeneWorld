@@ -78,3 +78,34 @@ grid finished; 277 failed: ['a2_plate_vjepa2_h2-esm2_22M_d0.1_w0.05_s0', 'a2_pla
 [10-25 22:55:47] done grid_record (exit 0, 0.1 min)
 [10-25 22:55:52] start selection on GPU -
 [10-25 22:55:57] done selection (exit 0, 0.1 min)
+[10-25 22:56:04] committed and pushed 0a26d51: Amendment 02 step 5: grid trained (3 seeds); selected configurations recorded (results/a2/selection.json) before any gate; final grid run record (results/a2/grid_runs.json, S11)
+[10-25 22:56:04] start h2_val on GPU 0
+[10-25 22:56:04] start h1_val on GPU 1
+[10-25 22:56:04] start controls_plate on GPU 2
+[10-25 22:56:04] start secondary on GPU 3,4,5,6,7
+[10-25 22:56:44] done controls_plate (exit 0, 0.7 min)
+[10-25 23:05:29] done h2_val (exit 0, 9.4 min)
+[10-25 23:05:34] start h3_val on GPU 0
+[10-25 23:11:09] done h1_val (exit 0, 15.1 min)
+[10-26 00:19:40] done h3_val (exit 0, 74.1 min)
+[10-26 02:07:32] complex-split secondary runs started early on GPUs 0,1,2 (secondary runner has launched all 48 jobs; planning source fixed)
+[10-26 04:23:12] done secondary (exit 0, 327.1 min)
+[10-26 04:23:17] complex-split secondary runs (early) finished: secondary finished; 0 failed: []
+[10-26 04:23:17] start secondary_complex on GPU 0,1,2,3
+[10-26 04:23:17] start h1_val_global on GPU 4
+[10-26 04:23:17] start h2_val_global on GPU 5
+[10-26 04:23:17] start h3_val_global on GPU 6
+[10-26 04:23:17] start h1_val_dinov2 on GPU 7
+[10-26 04:23:22] done secondary_complex (exit 0, 0.1 min)
+[10-26 04:23:27] start h1_val_tijepa1 on GPU 0
+[10-26 04:23:27] start controls_global on GPU 1
+[10-26 04:23:27] start h2_val_complex on GPU 2
+[10-26 04:23:27] start h3_val_complex on GPU 3
+[10-26 04:24:02] done controls_global (exit 0, 0.6 min)
+[10-26 04:25:17] done h2_val_complex (exit 0, 1.8 min)
+[10-26 04:33:17] done h2_val_global (exit 0, 10.0 min)
+[10-26 04:38:02] done h1_val_dinov2 (exit 0, 14.8 min)
+[10-26 04:42:12] done h1_val_tijepa1 (exit 0, 18.8 min)
+[10-26 04:48:12] done h1_val_global (exit 0, 24.9 min)
+[10-26 05:37:42] done h3_val_complex (exit 0, 74.3 min)
+[10-26 05:41:22] done h3_val_global (exit 0, 78.1 min)

@@ -1,0 +1,6 @@
+perturbseq: 108 primary genes; true-shuffled -0.0029 CI [-0.00917922883398003, 0.002812963227430979]; true-agnostic +0.0169 CI [0.010986984252101846, 0.02283266972474477]; pass False
+jump_crispr: 90 primary genes; true-shuffled +0.0000 CI [-0.005046488659249412, 0.005182568422622149]; true-agnostic +0.0193 CI [0.013887571237153477, 0.025233764466312196]; pass False
+jump_orf: 139 primary genes; true-shuffled +0.0023 CI [-0.0003374556146508498, 0.005005360014147037]; true-agnostic +0.0140 CI [0.00922709832088553, 0.019108977935297023]; pass False
+string: 195 primary genes; true-shuffled -0.0006 CI [-0.003376306662192711, 0.0021288250157466297]; true-agnostic -0.0048 CI [-0.008069511044483918, -0.0014557795302990169]; pass False
+esm2: 196 primary genes; true-shuffled -0.0005 CI [-0.0026124658367159413, 0.0016021327742812585]; true-agnostic -0.0013 CI [-0.0043022272386113, 0.0017661296097295624]; pass False
+{"rule": "on primary genes at 24/36 h, >= 1 source: true - trained-shuffled 95% CI over genes below 0 and true - action-agnostic 95% CI below 0", "pass": false, "passing_sources": []} planning source: perturbseq

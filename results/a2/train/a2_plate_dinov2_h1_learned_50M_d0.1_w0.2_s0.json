@@ -1,0 +1,131 @@
+{
+ "name": "a2_plate_dinov2_h1_learned_50M_d0.1_w0.2_s0",
+ "family": "h1_learned",
+ "config": "50M_d0.1_w0.2",
+ "seed": 0,
+ "norm": "plate",
+ "backbone_key": "dinov2",
+ "gene_split": "gene",
+ "best_val_primary": 3.6044790744781494,
+ "best_step": 1250,
+ "stopped_at": 4250,
+ "n_params": 70333056,
+ "n_train_wells": 45786,
+ "n_val_wells": 362,
+ "minutes": 37.74431736866633,
+ "curve": [
+  {
+   "step": 250,
+   "val_primary": 4.043295860290527,
+   "loss_tf": 0.532566249370575,
+   "loss_ro": 1.037406086921692
+  },
+  {
+   "step": 500,
+   "val_primary": 3.795903444290161,
+   "loss_tf": 0.5113995671272278,
+   "loss_ro": 0.9696750640869141
+  },
+  {
+   "step": 750,
+   "val_primary": 3.6912994384765625,
+   "loss_tf": 0.5058325529098511,
+   "loss_ro": 0.9559906721115112
+  },
+  {
+   "step": 1000,
+   "val_primary": 3.6427321434020996,
+   "loss_tf": 0.5027952790260315,
+   "loss_ro": 0.936406672000885
+  },
+  {
+   "step": 1250,
+   "val_primary": 3.6044790744781494,
+   "loss_tf": 0.48922666907310486,
+   "loss_ro": 0.8957958221435547
+  },
+  {
+   "step": 1500,
+   "val_primary": 3.614471197128296,
+   "loss_tf": 0.48183244466781616,
+   "loss_ro": 0.8717779517173767
+  },
+  {
+   "step": 1750,
+   "val_primary": 3.6502628326416016,
+   "loss_tf": 0.48023849725723267,
+   "loss_ro": 0.8468489646911621
+  },
+  {
+   "step": 2000,
+   "val_primary": 3.6297833919525146,
+   "loss_tf": 0.4718971252441406,
+   "loss_ro": 0.832163393497467
+  },
+  {
+   "step": 2250,
+   "val_primary": 3.6291918754577637,
+   "loss_tf": 0.46733978390693665,
+   "loss_ro": 0.8091047406196594
+  },
+  {
+   "step": 2500,
+   "val_primary": 3.641202211380005,
+   "loss_tf": 0.47141700983047485,
+   "loss_ro": 0.8618290424346924
+  },
+  {
+   "step": 2750,
+   "val_primary": 3.6359238624572754,
+   "loss_tf": 0.46493658423423767,
+   "loss_ro": 0.7907180190086365
+  },
+  {
+   "step": 3000,
+   "val_primary": 3.645681381225586,
+   "loss_tf": 0.4564089775085449,
+   "loss_ro": 0.7729892730712891
+  },
+  {
+   "step": 3250,
+   "val_primary": 3.6206870079040527,
+   "loss_tf": 0.46020787954330444,
+   "loss_ro": 0.7577161192893982
+  },
+  {
+   "step": 3500,
+   "val_primary": 3.681522846221924,
+   "loss_tf": 0.45417988300323486,
+   "loss_ro": 0.7536123394966125
+  },
+  {
+   "step": 3750,
+   "val_primary": 3.688204765319824,
+   "loss_tf": 0.4529940187931061,
+   "loss_ro": 0.7252916693687439
+  },
+  {
+   "step": 4000,
+   "val_primary": 3.688425064086914,
+   "loss_tf": 0.44787153601646423,
+   "loss_ro": 0.7166848182678223
+  },
+  {
+   "step": 4250,
+   "val_primary": 3.672412395477295,
+   "loss_tf": 0.44747671484947205,
+   "loss_ro": 0.7593461275100708
+  }
+ ],
+ "checkpoint": "a2_plate_dinov2_h1_learned_50M_d0.1_w0.2_s0.pt",
+ "peak_gpu_memory_gb": 14.381101568,
+ "checkpoint_sha256": "9ca3c54831a85b5acf3f29d1742ee50efd9dcfa8b7b30ad992d2536f197531bb",
+ "backbone": {
+  "kind": "backbone",
+  "key": "dinov2_vits14",
+  "source": "timm:vit_small_patch14_dinov2.lvd142m",
+  "revision": "4610ca143709d58a633b6397a74412c2c3842454",
+  "sha256": "04d27f3400d059fc0cfd7d17dd1909a75bf3ea8fb3eeb48b97cb99e57ee20081"
+ },
+ "design_commit": "dd57079"
+}

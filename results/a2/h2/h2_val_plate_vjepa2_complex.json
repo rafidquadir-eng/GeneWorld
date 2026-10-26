@@ -1,0 +1,318 @@
+{
+ "split": "val",
+ "norm": "plate",
+ "backbone": "vjepa2",
+ "gene_split": "complex",
+ "design_commit": "dd57079",
+ "freeze_commit": null,
+ "agnostic_models": [
+  {
+   "kind": "predictor",
+   "file": "a2_plate_vjepa2_complex_h1_none_50M_d0.3_w0.05_s0.pt",
+   "step": 1500,
+   "sha256": "d34c6446b995275f4e6ce0537ae8646ae36c37f553d45b725f7a7a8c3ab79dd9",
+   "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+   "backbone": {
+    "kind": "backbone",
+    "key": "vjepa2_vitl",
+    "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+    "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+    "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+   },
+   "action_source": "h1_none",
+   "norm": "plate",
+   "config": "50M_d0.3_w0.05",
+   "seed": 0,
+   "gene_split": "complex",
+   "design_commit": "dd57079"
+  },
+  {
+   "kind": "predictor",
+   "file": "a2_plate_vjepa2_complex_h1_none_50M_d0.3_w0.05_s1.pt",
+   "step": 2500,
+   "sha256": "8088f2f7bce6d1c6061045287a1e199c3211dccb7ead15e0d82c6387c68daa55",
+   "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+   "backbone": {
+    "kind": "backbone",
+    "key": "vjepa2_vitl",
+    "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+    "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+    "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+   },
+   "action_source": "h1_none",
+   "norm": "plate",
+   "config": "50M_d0.3_w0.05",
+   "seed": 1,
+   "gene_split": "complex",
+   "design_commit": "dd57079"
+  },
+  {
+   "kind": "predictor",
+   "file": "a2_plate_vjepa2_complex_h1_none_50M_d0.3_w0.05_s2.pt",
+   "step": 2750,
+   "sha256": "87124f7f362f94cb523becaff1be7ea4f37fdb1f57e48435fc7b6578be700af6",
+   "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+   "backbone": {
+    "kind": "backbone",
+    "key": "vjepa2_vitl",
+    "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+    "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+    "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+   },
+   "action_source": "h1_none",
+   "norm": "plate",
+   "config": "50M_d0.3_w0.05",
+   "seed": 2,
+   "gene_split": "complex",
+   "design_commit": "dd57079"
+  }
+ ],
+ "sources": {
+  "jump_crispr": {
+   "models_true": [
+    {
+     "kind": "predictor",
+     "file": "a2_plate_vjepa2_complex_h2-jump_crispr_50M_d0.3_w0.2_s0.pt",
+     "step": 2750,
+     "sha256": "a978646bbcf2bf8190dadaac46bf4f3ca49fa7c6750ad40313a70b8aa385c9c4",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2:jump_crispr",
+     "norm": "plate",
+     "config": "50M_d0.3_w0.2",
+     "seed": 0,
+     "gene_split": "complex",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_plate_vjepa2_complex_h2-jump_crispr_50M_d0.3_w0.2_s1.pt",
+     "step": 3750,
+     "sha256": "f006fe2d1a7a1530b29ef375b349383caf4d5b49dd25ca765046a4922ad1e425",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2:jump_crispr",
+     "norm": "plate",
+     "config": "50M_d0.3_w0.2",
+     "seed": 1,
+     "gene_split": "complex",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_plate_vjepa2_complex_h2-jump_crispr_50M_d0.3_w0.2_s2.pt",
+     "step": 4250,
+     "sha256": "6c0ccdb895ea9f5c9f381321376c18b786af9d2ee31d35931b6af2d9a7f87022",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2:jump_crispr",
+     "norm": "plate",
+     "config": "50M_d0.3_w0.2",
+     "seed": 2,
+     "gene_split": "complex",
+     "design_commit": "dd57079"
+    }
+   ],
+   "models_shuffled": [
+    {
+     "kind": "predictor",
+     "file": "a2_plate_vjepa2_complex_h2shuf-jump_crispr_50M_d0.3_w0.2_s0.pt",
+     "step": 3500,
+     "sha256": "e39b378df6b5db79ebf0cdfa542cfb8c6fbfcb2b6cdd3e16f6111c4f84252c24",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2shuf:jump_crispr",
+     "norm": "plate",
+     "config": "50M_d0.3_w0.2",
+     "seed": 0,
+     "gene_split": "complex",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_plate_vjepa2_complex_h2shuf-jump_crispr_50M_d0.3_w0.2_s1.pt",
+     "step": 3500,
+     "sha256": "b966ac1e7ef8e59dec1d81085e3a4a86b978ccde0d1cc8b90c74c05ad7ba9bb7",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2shuf:jump_crispr",
+     "norm": "plate",
+     "config": "50M_d0.3_w0.2",
+     "seed": 1,
+     "gene_split": "complex",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_plate_vjepa2_complex_h2shuf-jump_crispr_50M_d0.3_w0.2_s2.pt",
+     "step": 2250,
+     "sha256": "ada33f09137ab3710206b1daf673164a49e6e48204761aacf5dc87b6a2ca3c18",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2shuf:jump_crispr",
+     "norm": "plate",
+     "config": "50M_d0.3_w0.2",
+     "seed": 2,
+     "gene_split": "complex",
+     "design_commit": "dd57079"
+    }
+   ],
+   "configs": {
+    "true": "50M_d0.3_w0.2",
+    "shuffled": "50M_d0.3_w0.2"
+   },
+   "primary": {
+    "n_wells": 452,
+    "n_genes": 86,
+    "mean_error": {
+     "true": 2.8610869618349297,
+     "shuffled_trained": 2.8772188993387444,
+     "agnostic": 2.8161633000817408,
+     "shuffled_eval_time": 2.886165437310241,
+     "knn_gene": 4.7836640296980395
+    },
+    "true_vs_shuffled_trained": {
+     "n_genes": 86,
+     "mean": -0.016131937503814697,
+     "relative": -0.005606781433113106,
+     "ci95": [
+      -0.05828849000986231,
+      0.015777995420056718
+     ],
+     "frac_genes_better": 0.5116279069767442
+    },
+    "true_vs_agnostic": {
+     "n_genes": 86,
+     "mean": 0.04492366175318873,
+     "relative": 0.015952079821466736,
+     "ci95": [
+      -0.004396807523660881,
+      0.08790376796278843
+     ],
+     "frac_genes_better": 0.3488372093023256
+    },
+    "true_vs_shuffled_eval_time": {
+     "n_genes": 86,
+     "mean": -0.02507847547531128,
+     "relative": -0.008689202341319424,
+     "ci95": [
+      -0.06186426257671312,
+      0.0007279475761014334
+     ],
+     "frac_genes_better": 0.5813953488372093
+    },
+    "true_vs_knn_gene": {
+     "n_genes": 86,
+     "mean": -1.9225770678631096,
+     "relative": -0.4019047023217618,
+     "ci95": [
+      -2.0731360160680703,
+      -1.7892118324027506
+     ],
+     "frac_genes_better": 1.0
+    }
+   },
+   "all_genes": {
+    "n_wells": 2849,
+    "n_genes": 614,
+    "mean_error": {
+     "true": 2.658131000467543,
+     "shuffled_trained": 2.6560169840868597,
+     "agnostic": 2.5904808605532694
+    },
+    "true_vs_shuffled_trained": {
+     "n_genes": 614,
+     "mean": 0.00211401638068283,
+     "relative": 0.0007959348126720389,
+     "ci95": [
+      -0.0066330756009207485,
+      0.0103663497037142
+     ],
+     "frac_genes_better": 0.48534201954397393
+    },
+    "true_vs_agnostic": {
+     "n_genes": 614,
+     "mean": 0.06765013991427343,
+     "relative": 0.02611489663730815,
+     "ci95": [
+      0.055153631392247514,
+      0.08012077569573244
+     ],
+     "frac_genes_better": 0.28664495114006516
+    }
+   },
+   "G_ZeroShot_2_pass": false
+  }
+ },
+ "common_primary_genes": {
+  "n_genes": 86,
+  "by_source": {
+   "jump_crispr": {
+    "shuffled_trained": {
+     "n_genes": 86,
+     "mean": -0.016131937503814697,
+     "relative": -0.005606781433113106,
+     "ci95": [
+      -0.05828849000986231,
+      0.015777995420056718
+     ],
+     "frac_genes_better": 0.5116279069767442
+    },
+    "agnostic": {
+     "n_genes": 86,
+     "mean": 0.04492366175318873,
+     "relative": 0.015952079821466736,
+     "ci95": [
+      -0.004396807523660881,
+      0.08790376796278843
+     ],
+     "frac_genes_better": 0.3488372093023256
+    }
+   }
+  }
+ },
+ "G_ZeroShot_2": {
+  "rule": "on primary genes at 24/36 h, >= 1 source: true - trained-shuffled 95% CI over genes below 0 and true - action-agnostic 95% CI below 0",
+  "pass": false,
+  "passing_sources": []
+ },
+ "planning_source": "jump_crispr",
+ "planning_source_rule": "the G-ZeroShot-2-passing source with the most negative mean (true - trained-shuffled) primary error on validation; if none passes, the source with the most negative mean, and H3 is exploratory",
+ "code_commit": "83127b8"
+}

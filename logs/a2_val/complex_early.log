@@ -1,0 +1,11 @@
+secondary: 9 jobs to run; GPUs 0,1,2, 4 memory units each
+02:51:35 done a2_plate_vjepa2_complex_h1_none_50M_d0.3_w0.05_s0 (GPU 2, 44.0 min); 3 queued
+02:58:36 done a2_plate_vjepa2_complex_h1_none_50M_d0.3_w0.05_s1 (GPU 2, 51.0 min); 2 queued
+02:58:46 done a2_plate_vjepa2_complex_h2-jump_crispr_50M_d0.3_w0.2_s0 (GPU 0, 51.2 min); 1 queued
+03:06:06 done a2_plate_vjepa2_complex_h2shuf-jump_crispr_50M_d0.3_w0.2_s1 (GPU 1, 58.5 min); 0 queued
+03:06:16 done a2_plate_vjepa2_complex_h2shuf-jump_crispr_50M_d0.3_w0.2_s0 (GPU 1, 58.7 min); 0 queued
+03:11:06 done a2_plate_vjepa2_complex_h2-jump_crispr_50M_d0.3_w0.2_s1 (GPU 0, 63.5 min); 0 queued
+03:28:26 done a2_plate_vjepa2_complex_h1_none_50M_d0.3_w0.05_s2 (GPU 0, 29.7 min); 0 queued
+04:09:56 done a2_plate_vjepa2_complex_h2shuf-jump_crispr_50M_d0.3_w0.2_s2 (GPU 2, 71.3 min); 0 queued
+04:23:16 done a2_plate_vjepa2_complex_h2-jump_crispr_50M_d0.3_w0.2_s2 (GPU 2, 91.7 min); 0 queued
+secondary finished; 0 failed: []
