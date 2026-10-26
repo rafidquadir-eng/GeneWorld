@@ -1,0 +1,15 @@
+13 plates (0 done), 13 to embed; backbones ['vjepa2', 'dinov2', 'tijepa1']
+LT0005_06: 98 wells; 147 wells in 4.2 min (0.58 wells/s)
+LT0014_23: 100 wells; 198 wells in 5.9 min (0.56 wells/s)
+LT0016_26: 187 wells; 385 wells in 11.7 min (0.55 wells/s)
+LT0025_56: 174 wells; 559 wells in 16.9 min (0.55 wells/s)
+LT0027_45: 97 wells; 656 wells in 19.7 min (0.55 wells/s)
+LT0048_13: 184 wells; 840 wells in 25.2 min (0.55 wells/s)
+LT0061_03: 189 wells; 1029 wells in 30.6 min (0.56 wells/s)
+LT0064_02: 188 wells; 1217 wells in 35.9 min (0.56 wells/s)
+LT0064_18: 185 wells; 1402 wells in 41.2 min (0.57 wells/s)
+LT0067_11: 99 wells; 1501 wells in 44.0 min (0.57 wells/s)
+LT0067_37: 88 wells; 1589 wells in 46.5 min (0.57 wells/s)
+LT0134_01: 26 wells; 1615 wells in 47.3 min (0.57 wells/s)
+LT0158_01: 160 wells; 1775 wells in 52.0 min (0.57 wells/s)
+done: 1775 wells, 0 failures, 0.87 h
