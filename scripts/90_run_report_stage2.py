@@ -391,6 +391,69 @@ def section_grid(d: Doc):
              for k, v in ej["jobs"].items()])
 
 
+def _utc(s: str):
+    import datetime as dt
+    return dt.datetime.strptime(s, "%Y-%m-%dT%H:%M:%SZ")
+
+
+def section_incidents(d: Doc):
+    """Incidents and deviations, from the grid record, the S12 job records (one file per
+    stopped attempt) and the rehearsal step record."""
+    d.h(2, "9. Incidents and deviations")
+    g = load("grid_runs.json")
+    if g:
+        d.t(["grid incident", "failed attempts"],
+            [[f"{k}: {v}", g["failed_attempts_by_incident"].get(k)]
+             for k, v in g["incidents"].items()])
+    ej = load("eval_jobs.json")
+    attempts = sorted(R.glob("eval_jobs_attempt*.json"))
+    rows = []
+    for i, p in enumerate(attempts):
+        jobs = json.loads(p.read_text())["jobs"]
+        bad = [(k, v) for k, v in jobs.items() if v.get("exit_code") not in (0, None)]
+        nxt = (json.loads(attempts[i + 1].read_text()) if i + 1 < len(attempts) else ej)
+        if not bad or not nxt:
+            continue
+        k, v = bad[0]
+        restart = _utc(nxt["jobs"]["grid"]["start_utc"])
+        rows.append([f"S12 attempt {i + 1}", f"`{k}` exit {v['exit_code']}", v["end_utc"],
+                     f(round((restart - _utc(v["end_utc"])).total_seconds() / 3600, 1))])
+    if rows:
+        d.p("The S12 orchestrator stopped before any selection or evaluation when the grid "
+            "record (`scripts/73_grid_record.py`) failed on an undated runner section; each "
+            "attempt's job record is kept (`results/a2/eval_jobs_attempt<n>.json`). No result "
+            "was produced by a stopped attempt.")
+        d.t(["attempt", "stopped at job", "stopped (UTC)", "hours to restart"], rows)
+    cx = sorted((R / "train").glob("a2_plate_vjepa2_complex_*.json"))
+    if ej and "secondary_complex" in ej["jobs"]:
+        d.p(f"The {len(cx)} complex-split secondary runs were trained by a complex-only runner "
+            "started while the gene-split secondary runner finished (completion plan "
+            "parallelisation); the orchestrator's `secondary_complex` step then found no run "
+            f"left ({f(ej['jobs']['secondary_complex']['minutes'])} min). Same configurations, "
+            "seeds and inputs.")
+    steps = REPO / "logs" / "rehearsal" / "steps.tsv"
+    if steps.exists():
+        import csv
+        rs = list(csv.DictReader(steps.open(), delimiter="\t"))
+        failed = [r["step"] for r in rs if r["exit_code"] != "0"]
+        d.p(f"S18 rehearsal: {len(rs)} step runs, {len(failed)} failed"
+            + (f" ({', '.join(f'`{s}`' for s in failed)}; each rerun later with exit 0, "
+               "see `logs/rehearsal/`)" if failed else "") + ".")
+
+
+def section_not_run(d: Doc, gt):
+    d.h(2, "10. Not run")
+    missing = [(n, p) for n, p in (
+        ("test evaluation", "gates_test.json"),
+        ("screenB H1", "h1/h1_screenB_global_vjepa2.json"),
+        ("E1", "exploratory/e1/h1/h1_test_plate_vjepa2.json"),
+        ("E2", "exploratory/e2.json"),
+        ("E3", "exploratory/e3/compare.json")) if not (R / p).exists()]
+    d.p("Every planned step has a results file." if not missing else
+        "No results file yet for: " + "; ".join(f"{n} (`results/a2/{p}`)"
+                                               for n, p in missing) + ".")
+
+
 def section_exploratory(d: Doc, gt):
     d.h(2, "Exploratory, after the test")
     if not gt:
@@ -459,6 +522,8 @@ def build() -> str:
                         f"leakage max r {f(c['leakage']['max_r'], 3)}, "
                         f"{c['leakage']['n_match_r>=0.98']} matches r ≥ 0.98" if c
                         else "not yet available."))
+    section_incidents(d)
+    section_not_run(d, gt)
     section_exploratory(d, gt)
     return "\n".join(d.lines)
 
