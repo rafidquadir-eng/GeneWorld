@@ -112,3 +112,5 @@ grid finished; 277 failed: ['a2_plate_vjepa2_h2-esm2_22M_d0.1_w0.05_s0', 'a2_pla
 [10-26 05:41:30] committed and pushed e866090: Amendment 02 step 5: validation evaluations (H1 with replicate baselines and phenotype probe CIs, H2, H3; global sensitivity; alternative backbones; complex split; controls), run in parallel on 8 GPUs (results/a2/eval_jobs.json)
 [10-26 05:41:30] start gates on GPU -
 [10-26 05:41:35] done gates (exit 0, 0.1 min)
+[10-26 05:41:41] committed and pushed d0ab6e1: Amendment 02 step 6: G-Signal-2, G-ZeroShot-2, G-Plan-2 on validation recorded (results/a2/gates_val.json) before the freeze
+[10-26 05:41:46] S12 finished: all jobs done

@@ -1,0 +1,830 @@
+{
+ "label": "rehearsal on validation and training data already used; not results",
+ "selection": {
+  "seed": 20261023,
+  "plates": [
+   "LT0076_16",
+   "LT0049_42",
+   "LT0098_13"
+  ],
+  "train": [
+   [
+    "LT0003_15",
+    "C20"
+   ],
+   [
+    "LT0007_10",
+    "E15"
+   ],
+   [
+    "LT0007_20",
+    "H19"
+   ],
+   [
+    "LT0009_07",
+    "I5"
+   ],
+   [
+    "LT0009_07",
+    "I16"
+   ],
+   [
+    "LT0009_07",
+    "P13"
+   ],
+   [
+    "LT0018_25",
+    "L2"
+   ],
+   [
+    "LT0027_43",
+    "D18"
+   ],
+   [
+    "LT0029_01",
+    "F16"
+   ],
+   [
+    "LT0029_01",
+    "I21"
+   ],
+   [
+    "LT0029_01",
+    "J21"
+   ],
+   [
+    "LT0029_06",
+    "F2"
+   ],
+   [
+    "LT0035_07",
+    "C21"
+   ],
+   [
+    "LT0035_47",
+    "I5"
+   ],
+   [
+    "LT0062_30",
+    "E20"
+   ],
+   [
+    "LT0065_06",
+    "K13"
+   ],
+   [
+    "LT0071_44",
+    "O16"
+   ],
+   [
+    "LT0071_45",
+    "B22"
+   ],
+   [
+    "LT0082_20",
+    "F4"
+   ],
+   [
+    "LT0082_20",
+    "G16"
+   ],
+   [
+    "LT0082_20",
+    "J15"
+   ],
+   [
+    "LT0089_02",
+    "N3"
+   ],
+   [
+    "LT0089_02",
+    "N21"
+   ],
+   [
+    "LT0091_02",
+    "D10"
+   ],
+   [
+    "LT0093_13",
+    "I8"
+   ],
+   [
+    "LT0103_08",
+    "J8"
+   ],
+   [
+    "LT0103_18",
+    "E14"
+   ],
+   [
+    "LT0103_18",
+    "N1"
+   ],
+   [
+    "LT0104_20",
+    "M13"
+   ],
+   [
+    "LT0105_20",
+    "F24"
+   ],
+   [
+    "LT0105_27",
+    "D17"
+   ],
+   [
+    "LT0106_10",
+    "H12"
+   ],
+   [
+    "LT0107_02",
+    "G15"
+   ],
+   [
+    "LT0107_17",
+    "M5"
+   ],
+   [
+    "LT0114_31",
+    "J12"
+   ],
+   [
+    "LT0114_59",
+    "O16"
+   ],
+   [
+    "LT0114_62",
+    "D9"
+   ],
+   [
+    "LT0115_21",
+    "B3"
+   ],
+   [
+    "LT0121_09",
+    "I7"
+   ],
+   [
+    "LT0121_09",
+    "N21"
+   ],
+   [
+    "LT0121_37",
+    "O13"
+   ],
+   [
+    "LT0126_38",
+    "P11"
+   ],
+   [
+    "LT0133_01",
+    "K20"
+   ],
+   [
+    "LT0134_07",
+    "D1"
+   ],
+   [
+    "LT0134_07",
+    "D19"
+   ],
+   [
+    "LT0138_02",
+    "K14"
+   ],
+   [
+    "LT0138_03",
+    "B22"
+   ],
+   [
+    "LT0140_10",
+    "D21"
+   ],
+   [
+    "LT0140_10",
+    "E19"
+   ],
+   [
+    "LT0601_03",
+    "C4"
+   ],
+   [
+    "LT0001_12",
+    "E8"
+   ],
+   [
+    "LT0004_11",
+    "D10"
+   ],
+   [
+    "LT0012_27",
+    "P13"
+   ],
+   [
+    "LT0013_11",
+    "H11"
+   ],
+   [
+    "LT0015_44",
+    "P9"
+   ],
+   [
+    "LT0023_01",
+    "H8"
+   ],
+   [
+    "LT0023_11",
+    "G12"
+   ],
+   [
+    "LT0024_01",
+    "J3"
+   ],
+   [
+    "LT0029_01",
+    "N8"
+   ],
+   [
+    "LT0032_14",
+    "O6"
+   ],
+   [
+    "LT0033_11",
+    "P8"
+   ],
+   [
+    "LT0043_48",
+    "L17"
+   ],
+   [
+    "LT0044_16",
+    "F1"
+   ],
+   [
+    "LT0048_03",
+    "E4"
+   ],
+   [
+    "LT0060_17",
+    "P21"
+   ],
+   [
+    "LT0060_52",
+    "G19"
+   ],
+   [
+    "LT0063_17",
+    "M4"
+   ],
+   [
+    "LT0066_23",
+    "K5"
+   ],
+   [
+    "LT0068_01",
+    "P6"
+   ],
+   [
+    "LT0069_52",
+    "A4"
+   ],
+   [
+    "LT0072_47",
+    "L3"
+   ],
+   [
+    "LT0075_01",
+    "B24"
+   ],
+   [
+    "LT0076_08",
+    "I11"
+   ],
+   [
+    "LT0077_01",
+    "N18"
+   ],
+   [
+    "LT0079_13",
+    "J14"
+   ],
+   [
+    "LT0092_14",
+    "A15"
+   ],
+   [
+    "LT0093_13",
+    "A19"
+   ],
+   [
+    "LT0093_17",
+    "D10"
+   ],
+   [
+    "LT0100_03",
+    "M18"
+   ],
+   [
+    "LT0100_09",
+    "C19"
+   ],
+   [
+    "LT0111_44",
+    "I22"
+   ],
+   [
+    "LT0117_05",
+    "C14"
+   ],
+   [
+    "LT0117_05",
+    "O19"
+   ],
+   [
+    "LT0124_08",
+    "C21"
+   ],
+   [
+    "LT0125_03",
+    "B20"
+   ],
+   [
+    "LT0126_01",
+    "I6"
+   ],
+   [
+    "LT0135_02",
+    "I5"
+   ],
+   [
+    "LT0138_02",
+    "P6"
+   ],
+   [
+    "LT0140_10",
+    "B24"
+   ],
+   [
+    "LT0147_02",
+    "L12"
+   ],
+   [
+    "LT0148_01",
+    "D5"
+   ],
+   [
+    "LT0148_11",
+    "N20"
+   ],
+   [
+    "LT0150_02",
+    "C23"
+   ],
+   [
+    "LT0151_06",
+    "H10"
+   ],
+   [
+    "LT0151_08",
+    "K9"
+   ],
+   [
+    "LT0153_01",
+    "O15"
+   ],
+   [
+    "LT0156_07",
+    "B13"
+   ],
+   [
+    "LT0170_08",
+    "O2"
+   ],
+   [
+    "LT0602_06",
+    "A5"
+   ],
+   [
+    "LT0603_06",
+    "K22"
+   ]
+  ]
+ },
+ "compare": {
+  "error_level": {
+   "value": 0.31899502873420715,
+   "source": "results/h1/h1_val_vjepa2.json mean_error.action_conditioned.all_horizons (stage 1)"
+  },
+  "criterion": "byte-identical, or normalised-space MSE <= 1% of the error level and every BH q > 0.01 (sign-flip over wells per dimension)",
+  "backbones": {
+   "vjepa2": {
+    "n_comparisons": 656,
+    "byte_identical_fraction": 1.0,
+    "all_byte_identical": true,
+    "max_abs_difference_raw": 0.0,
+    "relative_l2_raw": {
+     "median": 0.0,
+     "max": 0.0,
+     "per_clip_median": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "normalised_mse": 0.0,
+    "normalised_mse_fraction_of_error_level": 0.0,
+    "normalised_mse_primary_clips_8_12": 0.0,
+    "shift_test": {
+     "n_dimensions": 1024,
+     "min_q_bh": 1.0,
+     "n_q_le_0.01": 0
+    },
+    "pass": true
+   },
+   "dinov2": {
+    "n_comparisons": 656,
+    "byte_identical_fraction": 1.0,
+    "all_byte_identical": true,
+    "max_abs_difference_raw": 0.0,
+    "relative_l2_raw": {
+     "median": 0.0,
+     "max": 0.0,
+     "per_clip_median": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "normalised_mse": 0.0,
+    "normalised_mse_fraction_of_error_level": 0.0,
+    "normalised_mse_primary_clips_8_12": 0.0,
+    "shift_test": {
+     "n_dimensions": 384,
+     "min_q_bh": 1.0,
+     "n_q_le_0.01": 0
+    },
+    "pass": true
+   },
+   "tijepa1": {
+    "n_comparisons": 656,
+    "byte_identical_fraction": 1.0,
+    "all_byte_identical": true,
+    "max_abs_difference_raw": 0.0,
+    "relative_l2_raw": {
+     "median": 0.0,
+     "max": 0.0,
+     "per_clip_median": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "normalised_mse": 0.0,
+    "normalised_mse_fraction_of_error_level": 0.0,
+    "normalised_mse_primary_clips_8_12": 0.0,
+    "shift_test": {
+     "n_dimensions": 384,
+     "min_q_bh": 1.0,
+     "n_q_le_0.01": 0
+    },
+    "pass": true
+   }
+  },
+  "pass": true
+ },
+ "rehearsal_embed_plates": {
+  "gpus": {
+   "2": {
+    "plates": [
+     "LT0049_42",
+     "LT0098_13",
+     "LT0076_16"
+    ],
+    "n_wells": 556,
+    "exit_code": 0,
+    "minutes": 17.4
+   }
+  },
+  "streams_total": 128,
+  "n_failures": 0,
+  "problems": []
+ },
+ "rehearsal_embed_train": {
+  "gpus": {
+   "2": {
+    "plates": [
+     "LT0029_01",
+     "LT0009_07",
+     "LT0082_20",
+     "LT0140_10",
+     "LT0089_02",
+     "LT0093_13",
+     "LT0103_18",
+     "LT0117_05",
+     "LT0121_09",
+     "LT0134_07",
+     "LT0138_02",
+     "LT0001_12",
+     "LT0003_15",
+     "LT0004_11",
+     "LT0007_10",
+     "LT0007_20",
+     "LT0012_27",
+     "LT0013_11",
+     "LT0015_44",
+     "LT0018_25",
+     "LT0023_01",
+     "LT0023_11",
+     "LT0024_01",
+     "LT0027_43",
+     "LT0029_06",
+     "LT0032_14",
+     "LT0033_11",
+     "LT0035_07",
+     "LT0035_47",
+     "LT0043_48",
+     "LT0044_16",
+     "LT0048_03",
+     "LT0060_17",
+     "LT0060_52",
+     "LT0062_30",
+     "LT0063_17",
+     "LT0065_06",
+     "LT0066_23",
+     "LT0068_01",
+     "LT0069_52",
+     "LT0071_44",
+     "LT0071_45",
+     "LT0072_47",
+     "LT0075_01",
+     "LT0076_08",
+     "LT0077_01",
+     "LT0079_13",
+     "LT0091_02",
+     "LT0092_14",
+     "LT0093_17",
+     "LT0100_03",
+     "LT0100_09",
+     "LT0103_08",
+     "LT0104_20",
+     "LT0105_20",
+     "LT0105_27",
+     "LT0106_10",
+     "LT0107_02",
+     "LT0107_17",
+     "LT0111_44",
+     "LT0114_31",
+     "LT0114_59",
+     "LT0114_62",
+     "LT0115_21",
+     "LT0121_37",
+     "LT0124_08",
+     "LT0125_03",
+     "LT0126_01",
+     "LT0126_38",
+     "LT0133_01",
+     "LT0135_02",
+     "LT0138_03",
+     "LT0147_02",
+     "LT0148_01",
+     "LT0148_11",
+     "LT0150_02",
+     "LT0151_06",
+     "LT0151_08",
+     "LT0153_01",
+     "LT0156_07",
+     "LT0170_08",
+     "LT0601_03",
+     "LT0602_06",
+     "LT0603_06"
+    ],
+    "n_wells": 100,
+    "exit_code": 0,
+    "minutes": 3.6
+   }
+  },
+  "streams_total": 128,
+  "n_failures": 0,
+  "problems": []
+ },
+ "evaluation_steps": [
+  {
+   "step": "wells",
+   "exit_code": 0,
+   "seconds": 3
+  },
+  {
+   "step": "embed_rehearsal_embed_plates",
+   "exit_code": 0,
+   "seconds": 1042
+  },
+  {
+   "step": "embed_rehearsal_embed_train",
+   "exit_code": 0,
+   "seconds": 214
+  },
+  {
+   "step": "s3_rehearsal",
+   "exit_code": 0,
+   "seconds": 13
+  },
+  {
+   "step": "manifest_rehearsal",
+   "exit_code": 0,
+   "seconds": 3
+  },
+  {
+   "step": "commit_rehearsal",
+   "exit_code": 0,
+   "seconds": 1
+  },
+  {
+   "step": "check_rehearsal",
+   "exit_code": 0,
+   "seconds": 1
+  },
+  {
+   "step": "compare",
+   "exit_code": 0,
+   "seconds": 405
+  },
+  {
+   "step": "tables",
+   "exit_code": 0,
+   "seconds": 1
+  },
+  {
+   "step": "s1_h1",
+   "exit_code": 0,
+   "seconds": 315
+  },
+  {
+   "step": "s1_h1_dinov2",
+   "exit_code": 0,
+   "seconds": 64
+  },
+  {
+   "step": "s1_h1_tijepa1",
+   "exit_code": 0,
+   "seconds": 68
+  },
+  {
+   "step": "s1_h2",
+   "exit_code": 0,
+   "seconds": 134
+  },
+  {
+   "step": "s1_h3",
+   "exit_code": 0,
+   "seconds": 826
+  },
+  {
+   "step": "s1_h2_complex",
+   "exit_code": 0,
+   "seconds": 103
+  },
+  {
+   "step": "s1_h3_complex",
+   "exit_code": 0,
+   "seconds": 830
+  },
+  {
+   "step": "cache_vjepa2",
+   "exit_code": 0,
+   "seconds": 491
+  },
+  {
+   "step": "cache_dinov2",
+   "exit_code": 0,
+   "seconds": 248
+  },
+  {
+   "step": "cache_tijepa1",
+   "exit_code": 0,
+   "seconds": 241
+  },
+  {
+   "step": "h1",
+   "exit_code": 0,
+   "seconds": 220
+  },
+  {
+   "step": "h2",
+   "exit_code": 0,
+   "seconds": 459
+  },
+  {
+   "step": "h3",
+   "exit_code": 0,
+   "seconds": 4328
+  },
+  {
+   "step": "h1_global",
+   "exit_code": 0,
+   "seconds": 206
+  },
+  {
+   "step": "h2_global",
+   "exit_code": 1,
+   "seconds": 360
+  },
+  {
+   "step": "h2_global",
+   "exit_code": 0,
+   "seconds": 783
+  },
+  {
+   "step": "h3_global",
+   "exit_code": 0,
+   "seconds": 7386
+  },
+  {
+   "step": "h1_dinov2",
+   "exit_code": 0,
+   "seconds": 122
+  },
+  {
+   "step": "h1_tijepa1",
+   "exit_code": 0,
+   "seconds": 132
+  },
+  {
+   "step": "controls_plate",
+   "exit_code": 0,
+   "seconds": 26
+  },
+  {
+   "step": "controls_global",
+   "exit_code": 0,
+   "seconds": 26
+  },
+  {
+   "step": "gates",
+   "exit_code": 0,
+   "seconds": 3
+  },
+  {
+   "step": "cache_screenB",
+   "exit_code": 0,
+   "seconds": 448
+  },
+  {
+   "step": "h1_screenB",
+   "exit_code": 0,
+   "seconds": 55
+  },
+  {
+   "step": "h2_complex",
+   "exit_code": 0,
+   "seconds": 77
+  },
+  {
+   "step": "h3_complex",
+   "exit_code": 0,
+   "seconds": 4000
+  },
+  {
+   "step": "summary",
+   "exit_code": 0,
+   "seconds": 0
+  }
+ ],
+ "evaluation_all_ok": false,
+ "evaluation_last_run_ok": true,
+ "evaluation_failed_attempts": [
+  "h2_global"
+ ]
+}

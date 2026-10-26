@@ -197,9 +197,13 @@ def main() -> int:
     # 9 S18
     s18 = load("rehearsal/summary.json")
     p9 = bool(s18 and s18["compare"]["pass"] and s18.get("evaluation_all_ok"))
+    p9r = bool(s18 and s18["compare"]["pass"] and s18.get("evaluation_last_run_ok"))
     items.append(item(9, "S18 passed (re-embedding criterion; full rehearsal path ran)",
-                      "pass" if p9 else "FAIL" if s18 else "not yet run",
+                      "pass" if p9 else "pass after rerun (author to confirm)" if p9r
+                      else "FAIL" if s18 else "not yet run",
                       {"summary": "results/a2/rehearsal/summary.json",
+                       "failed_attempts_rerun": s18.get("evaluation_failed_attempts")
+                       if s18 else None,
                        "compare": {b: {k: v[k] for k in ("all_byte_identical",
                                                          "normalised_mse_fraction_of_error_level",
                                                          "pass")}

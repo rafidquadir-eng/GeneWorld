@@ -1,8 +1,9 @@
-# Amendment 02: progress (updated 2026-10-23 15:50 UTC)
+# Amendment 02: progress (updated 2026-10-26 06:45 UTC)
 
 Interim status while the amendment-02 round runs (design commit `dd57079`). Final results go in
 `reports/RUN_REPORT_STAGE2.md`. No gate, selection or amended validation evaluation has been
-computed, and no test plate, test gene or screenB well has been embedded or evaluated.
+computed before 10-26; validation gates are now recorded (`d0ab6e1`). No test plate has been
+embedded and nothing has been evaluated on the test split or screenB.
 
 | step | status | evidence |
 |---|---|---|
@@ -10,10 +11,10 @@ computed, and no test plate, test gene or screenB well has been embedded or eval
 | 2. Freeze before training (sections 2, 6) | done | `splits/amend02_h1_primary_wells.tsv` (535 val / 1,112 test), `splits/amend02_h2_primary_genes.tsv` (204 / 417), truth lists with SHA-256 and unseen counts in `manifests/amend02_freeze.json` (`6716199`) |
 | 3. Stage 2 (section 7) | done 20:21 UTC | 60,289 of 61,372 wells on 404 of 410 plates; 1,212 shards backed up with SHA-256 (`results/a2/stage2_data.json`). All 1,083 failures are HTTP 404 for frames missing from the S3 conversion (movies shorter than 93 frames; mostly frames 89–92): 6 plates entirely (LT0003_40, LT0008_14, LT0012_29, LT0079_38, LT0084_46, LT0096_29; 4 training, 2 validation) and 1–3 wells on 24 others |
 | 4. Per-plate control normalisation and plate probe | done 20:57 UTC | no plate dropped (4–8 negative-control wells per plate, median 8); probes below (`results/a2/plate_probe.json`) |
-| 5. Grid x 3 seeds, replicate baselines, probe CIs | running | first attempt: 277 of 288 runs failed with CUDA out-of-memory (4 concurrent processes on 40 GB); 11 completed and are kept. Operational fix (evaluation chunks of 256 wells, expandable CUDA segments, 3 workers; no protocol value changed, `c03b433`); 277 runs restarted 23:17 UTC. Second incident 07:30 UTC 10-22: 50 M runs need ~14.6 GB in training, so three at once overflowed; 12 more runs failed (rerun). The runner now schedules by GPU memory (22 M = 1 unit, 50 M = 2, capacity 4) and respects live locks (`77c1905`); 52 of 288 runs done, 236 queued. Migrated 10-23 to 8 x A100-40GB (per-GPU slots, `264fee5`; section "Migration" below). Third incident 06:20 UTC 10-23: an unattended OS upgrade restarted the NVIDIA services and 27 in-flight runs failed (rerun from scratch; section "Incident 3"). 245 of 288 done at 14:30 UTC 10-23, 43 running or queued |
+| 5. Grid x 3 seeds, replicate baselines, probe CIs | done 05:41 UTC 10-26 (288 of 288 grid runs, `0a26d51`; evaluations `e866090`) | first attempt: 277 of 288 runs failed with CUDA out-of-memory (4 concurrent processes on 40 GB); 11 completed and are kept. Operational fix (evaluation chunks of 256 wells, expandable CUDA segments, 3 workers; no protocol value changed, `c03b433`); 277 runs restarted 23:17 UTC. Second incident 07:30 UTC 10-22: 50 M runs need ~14.6 GB in training, so three at once overflowed; 12 more runs failed (rerun). The runner now schedules by GPU memory (22 M = 1 unit, 50 M = 2, capacity 4) and respects live locks (`77c1905`); 52 of 288 runs done, 236 queued. Migrated 10-23 to 8 x A100-40GB (per-GPU slots, `264fee5`; section "Migration" below). Third incident 06:20 UTC 10-23: an unattended OS upgrade restarted the NVIDIA services and 27 in-flight runs failed (rerun from scratch; section "Incident 3"). 245 of 288 done at 14:30 UTC 10-23, 43 running or queued |
 | S2/S3 missing frames (completion plan v2) | done 10-23 | S2 `65db5d2` (`results/a2/missing_frames.json`); S3 rule pre-registered for test and screenB in the protocol, `884a9c0` |
-| 6. Gates on validation | queued (automatic, `scripts/run_a2_val.sh` from step 5) | `results/a2/gates_val.json`, committed before the freeze |
-| 7. Freeze, embed test plates, test once | prepared | `splits/test_wells_to_embed.tsv` (14,186 wells, 100 plates); extended `scripts/run_stage1_test.sh` |
+| 6. Gates on validation | done 05:41 UTC 10-26 (S12, `d0ab6e1`); S13 checklist in `reports/GATES_VAL_SUMMARY.md`; waiting for the author's "go" | `results/a2/gates_val.json`, committed before the freeze |
+| 7. Freeze, embed test plates, test once | prepared; D2 order and rehearsal (S17/S18) done | `splits/test_wells_to_embed.tsv` (14,186 wells, 100 plates); extended `scripts/run_stage1_test.sh` |
 | 8. Run report | after step 7 | |
 
 ## Decisions and deviations so far

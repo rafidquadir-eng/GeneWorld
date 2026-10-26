@@ -1,4 +1,43 @@
-# GeneWorld amendment 02: review packet (updated 2026-10-23 15:50 UTC)
+# GeneWorld amendment 02: review packet (updated 2026-10-26 06:45 UTC)
+
+## Update 2026-10-26 06:45 UTC: S12 finished, S18 finished, S13 checklist (stopped for "go")
+
+Covers the work since the 10-23 15:50 update, under completion plans v3 and v4 (`8953484`).
+Validation only: **no test plate embedded, no test or screenB evaluation, no exploratory
+analysis on real data.** Gate numbers and the checklist are in `reports/GATES_VAL_SUMMARY.md`.
+
+| step | status | commits / evidence |
+|---|---|---|
+| S11 grid record | done; 288 of 288 runs complete; failed attempts by incident 277 / 13 / 27 | `0a26d51`; `results/a2/grid_runs.json` |
+| S12 parallel validation | done 05:41 UTC 10-26; all jobs exit 0 | `e866090` (evaluations), `d0ab6e1` (gates); `results/a2/eval_jobs.json` |
+| S17 test path | done; tests pass | `72f12a8` |
+| S18 rehearsal | done 06:22 UTC 10-26; re-embedding byte-identical for all three backbones; full path ran, one step (`h2_global`) rerun | `5918338`, `83127b8`, this update; `results/a2/rehearsal/summary.json` |
+| S13 checklist | 9 of 10 pass (item 9 after a rerun); item 7 flagged for the author | `reports/GATES_VAL_SUMMARY.md` |
+
+### Incidents and deviations since 10-23
+
+- **S12 stopped twice at the grid record** (attempt 1 at 16:27 UTC 10-23, attempt 2 at 22:55
+  UTC 10-25): `scripts/73_grid_record.py` refused a runner section with no date (the
+  orchestrator's own grid step adds one per start). Fixed by dating each such section from its
+  `start grid` line (`7856987`). Both attempts stopped before any selection or evaluation; their
+  job records are kept (`results/a2/eval_jobs_attempt1.json`, `_attempt2.json`). The GPUs were
+  idle about 54.5 h (10-23 16:27 to 10-25 22:55 UTC) while the session was paused.
+- **Parallelisation (author, 10-25):** S18 ran on GPU 2 alongside S12; the 9 complex-split
+  secondary runs were trained by a complex-only runner (GPUs 0-2) from 02:07 UTC 10-26, so the
+  orchestrator's `secondary_complex` step found nothing to run. Same configurations, seeds and
+  inputs (`e7aa35e`).
+- **S18 `h2_global` ordering:** the rehearsal's first `h2_global` attempt (01:59 UTC 10-26)
+  failed because the global secondary models were still training in S12; it was rerun after
+  they finished (`logs/rehearsal/resume.sh`) and exited 0. The summary keeps the strict flag
+  (`evaluation_all_ok: false`) and adds `evaluation_last_run_ok: true` with the failed attempt
+  listed.
+- **Item 7 (author judgment):** two results files contain test-split gene names.
+  `results/a2/missing_frames.json` labels failed wells on training and validation plates (S2).
+  `results/a2/rehearsal/selection_of_wells.json` lists the 100 training-plate wells re-embedded
+  for the S18 comparison: 18 of them are wells of test-split genes on training plates, already
+  embedded in stage 2. They were used only in the byte-identity comparison (identical); no
+  evaluation used them.
+
 
 ## Update 2026-10-23 15:50 UTC: completion plan v3 (S10-S12 under way) and CPU-side work
 

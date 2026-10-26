@@ -226,6 +226,10 @@ def main() -> int:
         st = pd.read_csv(steps, sep="\t")
         out["evaluation_steps"] = st.to_dict("records")
         out["evaluation_all_ok"] = bool((st.exit_code == 0).all())
+        # a step rerun after a failed attempt counts once, by its last run; the failed
+        # attempts stay listed (the strict flag above is kept as recorded)
+        out["evaluation_last_run_ok"] = bool((st.groupby("step").exit_code.last() == 0).all())
+        out["evaluation_failed_attempts"] = st[st.exit_code != 0].step.tolist()
     (R / "summary.json").write_text(json.dumps(out, indent=1))
     print("written results/a2/rehearsal/summary.json")
     return 0
