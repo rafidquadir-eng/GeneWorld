@@ -1,0 +1,4 @@
+unseen primary {'n_q<0.05': 0, 'n_beats_gba': 0, 'pass': False} {'mitotic_delay': 0.0485, 'polylobed': 0.0128, 'binuclear': 0.035}
+unseen stringent {'n_q<0.05': 0, 'n_beats_gba': 2, 'pass': False} {'mitotic_delay': 0.0504, 'polylobed': 0.0163, 'binuclear': 0.0077}
+seen primary {'n_q<0.05': 3, 'n_beats_gba': 0, 'pass': False} {'mitotic_delay': 0.0794, 'polylobed': 0.0295, 'binuclear': 0.0737}
+seen stringent {'n_q<0.05': 2, 'n_beats_gba': 0, 'pass': False} {'mitotic_delay': 0.1324, 'polylobed': 0.159, 'binuclear': 0.0062}

@@ -1,0 +1,41 @@
+{
+ "planner_dyn": {
+  "hit@1": 0.002,
+  "hit@10": 0.006,
+  "hit@100": 0.034,
+  "mrr": 0.00428358326847198,
+  "median_rank": 1510.0,
+  "top10_same_class": 0.15454545454545454,
+  "top10_same_complex": 0.007317073170731708
+ },
+ "planner_end": {
+  "hit@1": 0.002,
+  "hit@10": 0.006,
+  "hit@100": 0.03,
+  "mrr": 0.004591947472583699,
+  "median_rank": 1492.5,
+  "top10_same_class": 0.16168831168831171,
+  "top10_same_complex": 0.00894308943089431
+ },
+ "retrieval_knn": {
+  "hit@1": 0.0,
+  "hit@10": 0.002,
+  "hit@100": 0.034,
+  "mrr": 0.002061114975234162,
+  "median_rank": 1340.0,
+  "top10_same_class": 0.07662337662337662,
+  "top10_same_complex": 0.0065040650406504065
+ },
+ "retrieval_obs": {
+  "hit@1": 0.002,
+  "hit@10": 0.048,
+  "hit@100": 0.148,
+  "mrr": 0.019401644039030528,
+  "median_rank": 857.5,
+  "top10_same_class": 0.27012987012987016,
+  "top10_same_complex": 0.009756097560975611
+ }
+}
+unseen {"n_phenotypes_q<0.05": 0, "n_beats_gba": 0, "pass": false} {'mitotic_delay': 0.0202, 'polylobed': 0.0098, 'binuclear': 0.0076}
+seen {"n_phenotypes_q<0.05": 2, "n_beats_gba": 2, "pass": true} {'mitotic_delay': 0.1786, 'polylobed': 0.133, 'binuclear': 0.0199}
+{"rule": "trajectory: planner hit@100 above random (p < 0.05) and above retrieval_knn (bootstrap CI > 0); phenotype: amendment 01 rule on unseen genes", "trajectory_pass": false, "phenotype_pass": false}

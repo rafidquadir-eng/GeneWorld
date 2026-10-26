@@ -1,0 +1,6 @@
+perturbseq: 152 genes; true-shuffled -0.0020 (-0.6%) CI -0.0050..+0.0011; vs kNN -33.2%; vs agnostic +3.1%
+jump_crispr: 131 genes; true-shuffled +0.0019 (+0.5%) CI -0.0012..+0.0051; vs kNN -32.9%; vs agnostic +4.7%
+jump_orf: 193 genes; true-shuffled +0.0011 (+0.3%) CI -0.0021..+0.0044; vs kNN -34.0%; vs agnostic +3.4%
+string: 284 genes; true-shuffled -0.0020 (-0.6%) CI -0.0041..+0.0002; vs kNN -36.3%; vs agnostic -1.6%
+esm2: 287 genes; true-shuffled -0.0015 (-0.5%) CI -0.0036..+0.0006; vs kNN -37.0%; vs agnostic -2.2%
+{"rule": "true - shuffled 95% CI over genes below 0 for >= 1 source", "pass": false, "passing_sources": [], "selected_source": null}

@@ -1,0 +1,5 @@
+[10-25 23:03:43] rehearsal: freeze e7aa35e on stage1
+[10-25 23:25:00] embed commit 5918338 (rehearsal); allowed-paths check passed
+[10-26 01:59:59] step h2_global FAILED (exit 1); see logs/rehearsal/h2_global.log
+[10-26 02:00:59] resume: waiting for the global and backbone secondary models
+[10-26 02:45:17] resume: global and backbone models present

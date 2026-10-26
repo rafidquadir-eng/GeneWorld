@@ -1,0 +1,124 @@
+{
+ "split": "val",
+ "backbone": "vjepa2",
+ "agnostic": {
+  "kind": "predictor",
+  "file": "h2c_none.pt",
+  "step": 500,
+  "sha256": "b834daa1d781b9691bae27c1d8ef4dd5b3923596c71da075cdb16297d54e78aa",
+  "split_manifest_sha256": "4551afe6ce0a0f78484b1440863ab9210b42ff053b73ff4733309f9a45745de4",
+  "backbone": {
+   "kind": "backbone",
+   "key": "vjepa2_vitl",
+   "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+   "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+   "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+  },
+  "action_source": "none"
+ },
+ "design_commit": "deb443d",
+ "freeze_commit": null,
+ "sources": {
+  "string": {
+   "model": {
+    "kind": "predictor",
+    "file": "h2c_string.pt",
+    "step": 2000,
+    "sha256": "6fc41e998a024bbb5bab6d50c258cbbf9e0150da23d4586ad5ccd061810f4c87",
+    "split_manifest_sha256": "4551afe6ce0a0f78484b1440863ab9210b42ff053b73ff4733309f9a45745de4",
+    "backbone": {
+     "kind": "backbone",
+     "key": "vjepa2_vitl",
+     "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+     "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+     "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+    },
+    "action_source": "encoding:string"
+   },
+   "n_wells": 930,
+   "n_genes": 316,
+   "mean_error": {
+    "true": 0.3270896573704255,
+    "shuffled": 0.3285572744340082,
+    "knn_gene": 0.5310345132705532,
+    "agnostic": 0.323000006377697,
+    "copy_last": 0.8760561125376557
+   },
+   "true_vs_shuffled": {
+    "n_genes": 316,
+    "mean": -0.001467617063582698,
+    "relative": -0.004466853050540065,
+    "ci95": [
+     -0.0030532949238638333,
+     0.0001212963975871662
+    ],
+    "frac_genes_better": 0.5189873417721519
+   },
+   "true_vs_knn_gene": {
+    "n_genes": 316,
+    "mean": -0.20394485590012768,
+    "relative": -0.38405197930369017,
+    "ci95": [
+     -0.2122062970377222,
+     -0.19576274546900693
+    ],
+    "frac_genes_better": 1.0
+   },
+   "true_vs_agnostic": {
+    "n_genes": 316,
+    "mean": 0.0040896509927284865,
+    "relative": 0.012661457931819164,
+    "ci95": [
+     0.0012828418466297887,
+     0.006841217399916694
+    ],
+    "frac_genes_better": 0.3987341772151899
+   },
+   "G_ZeroShot_pass": false
+  }
+ },
+ "common_genes": {
+  "n_genes": 316,
+  "by_source": {
+   "string": {
+    "shuffled": {
+     "n_genes": 316,
+     "mean": -0.001467617063582698,
+     "relative": -0.004466853050540065,
+     "ci95": [
+      -0.0030532949238638333,
+      0.0001212963975871662
+     ],
+     "frac_genes_better": 0.5189873417721519
+    },
+    "knn_gene": {
+     "n_genes": 316,
+     "mean": -0.20394485590012768,
+     "relative": -0.38405197930369017,
+     "ci95": [
+      -0.2122062970377222,
+      -0.19576274546900693
+     ],
+     "frac_genes_better": 1.0
+    },
+    "agnostic": {
+     "n_genes": 316,
+     "mean": 0.0040896509927284865,
+     "relative": 0.012661457931819164,
+     "ci95": [
+      0.0012828418466297887,
+      0.006841217399916694
+     ],
+     "frac_genes_better": 0.3987341772151899
+    }
+   }
+  }
+ },
+ "G_ZeroShot": {
+  "rule": "true - shuffled 95% CI over genes below 0 for >= 1 source",
+  "pass": false,
+  "passing_sources": [],
+  "selected_source": null
+ },
+ "code_commit": "5918338"
+}

@@ -1,0 +1,115 @@
+{
+ "error_level": {
+  "value": 0.31899502873420715,
+  "source": "results/h1/h1_val_vjepa2.json mean_error.action_conditioned.all_horizons (stage 1)"
+ },
+ "criterion": "byte-identical, or normalised-space MSE <= 1% of the error level and every BH q > 0.01 (sign-flip over wells per dimension)",
+ "backbones": {
+  "vjepa2": {
+   "n_comparisons": 656,
+   "byte_identical_fraction": 1.0,
+   "all_byte_identical": true,
+   "max_abs_difference_raw": 0.0,
+   "relative_l2_raw": {
+    "median": 0.0,
+    "max": 0.0,
+    "per_clip_median": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "normalised_mse": 0.0,
+   "normalised_mse_fraction_of_error_level": 0.0,
+   "normalised_mse_primary_clips_8_12": 0.0,
+   "shift_test": {
+    "n_dimensions": 1024,
+    "min_q_bh": 1.0,
+    "n_q_le_0.01": 0
+   },
+   "pass": true
+  },
+  "dinov2": {
+   "n_comparisons": 656,
+   "byte_identical_fraction": 1.0,
+   "all_byte_identical": true,
+   "max_abs_difference_raw": 0.0,
+   "relative_l2_raw": {
+    "median": 0.0,
+    "max": 0.0,
+    "per_clip_median": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "normalised_mse": 0.0,
+   "normalised_mse_fraction_of_error_level": 0.0,
+   "normalised_mse_primary_clips_8_12": 0.0,
+   "shift_test": {
+    "n_dimensions": 384,
+    "min_q_bh": 1.0,
+    "n_q_le_0.01": 0
+   },
+   "pass": true
+  },
+  "tijepa1": {
+   "n_comparisons": 656,
+   "byte_identical_fraction": 1.0,
+   "all_byte_identical": true,
+   "max_abs_difference_raw": 0.0,
+   "relative_l2_raw": {
+    "median": 0.0,
+    "max": 0.0,
+    "per_clip_median": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "normalised_mse": 0.0,
+   "normalised_mse_fraction_of_error_level": 0.0,
+   "normalised_mse_primary_clips_8_12": 0.0,
+   "shift_test": {
+    "n_dimensions": 384,
+    "min_q_bh": 1.0,
+    "n_q_le_0.01": 0
+   },
+   "pass": true
+  }
+ },
+ "pass": true
+}

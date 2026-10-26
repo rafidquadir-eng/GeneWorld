@@ -1,0 +1,77 @@
+H1 val: 818 wells (683 library) on 18 plates
+{
+ "mean_error": {
+  "copy_last": {
+   "all_horizons": 0.9225403070449829,
+   "3h": 0.12842945754528046,
+   "12h": 0.5062204599380493,
+   "24h": 1.0611834526062012,
+   "36h": 1.9943281412124634
+  },
+  "slot_mean": {
+   "all_horizons": 0.8628012537956238,
+   "3h": 0.7102713584899902,
+   "12h": 0.7577342391014099,
+   "24h": 0.8616083860397339,
+   "36h": 1.1215910911560059
+  },
+  "slot_drift": {
+   "all_horizons": 0.5768166184425354,
+   "3h": 0.11472640931606293,
+   "12h": 0.40607574582099915,
+   "24h": 0.6813592910766602,
+   "36h": 1.1051050424575806
+  },
+  "control_mean": {
+   "all_horizons": 0.8535435199737549,
+   "3h": 0.7102017998695374,
+   "12h": 0.7583498358726501,
+   "24h": 0.8559595942497253,
+   "36h": 1.0896625518798828
+  },
+  "control_drift": {
+   "all_horizons": 0.5604466795921326,
+   "3h": 0.10492995381355286,
+   "12h": 0.39739230275154114,
+   "24h": 0.6676997542381287,
+   "36h": 1.0717647075653076
+  },
+  "action_conditioned": {
+   "all_horizons": 0.36478665471076965,
+   "3h": 0.09011781215667725,
+   "12h": 0.31587472558021545,
+   "24h": 0.44352245330810547,
+   "36h": 0.6096315383911133
+  },
+  "action_agnostic": {
+   "all_horizons": 0.35306164622306824,
+   "3h": 0.0911385789513588,
+   "12h": 0.2891843616962433,
+   "24h": 0.41881242394447327,
+   "36h": 0.6131112575531006
+  },
+  "context_swap": {
+   "all_horizons": 1.4884694814682007,
+   "3h": 1.346053123474121,
+   "12h": 1.3339935541152954,
+   "24h": 1.4557913541793823,
+   "36h": 1.8180396556854248
+  }
+ },
+ "G_Signal": {
+  "rule": "action_conditioned beats action_agnostic and slot_mean, one-sided p < 0.05 over plates (mean over 3/12/24/36 h)",
+  "pass": false
+ },
+ "context_swap": {
+  "n_wells": 683,
+  "own_context": 0.36478665471076965,
+  "swapped_context": 1.4884693622589111,
+  "action_agnostic_own_context": 0.35306164622306824
+ }
+}
+action_conditioned_vs_action_agnostic: mean diff +0.0246 (+7.0%), p = 0.9973, plates better 28%
+action_conditioned_vs_slot_mean: mean diff -0.5217 (-58.2%), p = 1e-05, plates better 100%
+action_conditioned_vs_slot_drift: mean diff -0.2034 (-35.2%), p = 1e-05, plates better 100%
+action_conditioned_vs_copy_last: mean diff -0.5257 (-58.4%), p = 1e-05, plates better 100%
+action_conditioned_vs_control_mean: mean diff -0.4972 (-57.0%), p = 1e-05, plates better 100%
+action_conditioned_vs_control_drift: mean diff -0.1902 (-33.7%), p = 1e-05, plates better 100%
