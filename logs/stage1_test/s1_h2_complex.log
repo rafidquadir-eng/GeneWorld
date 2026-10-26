@@ -1,0 +1,2 @@
+string: 617 genes; true-shuffled -0.0012 (-0.4%) CI -0.0024..-0.0001; vs kNN -35.9%; vs agnostic +2.0%
+{"rule": "true - shuffled 95% CI over genes below 0 for >= 1 source", "pass": true, "passing_sources": ["string"], "selected_source": "string"}

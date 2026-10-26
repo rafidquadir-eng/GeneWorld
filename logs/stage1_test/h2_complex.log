@@ -1,0 +1,2 @@
+jump_crispr: 210 primary genes; true-shuffled -0.0052 CI [-0.017302651958806172, 0.006298234036990574]; true-agnostic +0.0580 CI [0.03951494248140426, 0.07560311232294355]; pass False
+{"rule": "on primary genes at 24/36 h, >= 1 source: true - trained-shuffled 95% CI over genes below 0 and true - action-agnostic 95% CI below 0", "pass": false, "passing_sources": []} planning source: jump_crispr

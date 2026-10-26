@@ -1,0 +1,45 @@
+{
+ "norm": "global",
+ "backbone": {
+  "kind": "backbone",
+  "key": "vjepa2_vitl",
+  "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+  "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+  "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+ },
+ "design_commit": "dd57079",
+ "split": "test",
+ "freeze_commit": "ce5c3df",
+ "static": {
+  "n_wells": 300,
+  "real_vs_static_over_between_wells_median": 3.4988183975219727,
+  "per_clip": [
+   3.9012999534606934,
+   3.910900115966797,
+   3.8004000186920166,
+   3.681299924850464,
+   3.584700107574463,
+   3.5353000164031982,
+   3.4728000164031982,
+   3.4105000495910645,
+   3.3736000061035156,
+   3.3239998817443848,
+   3.3201000690460205,
+   3.325900077819824,
+   3.3613998889923096,
+   3.3550000190734863
+  ],
+  "predictor_error_24_36h": {
+   "real_context": 0.409011572599411,
+   "static_context": 2.1403205394744873
+  }
+ },
+ "leakage": {
+  "n_eval_wells": 17555,
+  "n_train_wells": 63005,
+  "max_r": 0.7507687211036682,
+  "median_max_r": 0.19874167442321777,
+  "n_match_r>=0.98": 0,
+  "n_report_r>=0.90": 0
+ }
+}

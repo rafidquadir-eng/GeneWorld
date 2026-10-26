@@ -1,0 +1,1250 @@
+{
+ "split": "test",
+ "norm": "global",
+ "backbone": "vjepa2",
+ "gene_split": "gene",
+ "design_commit": "dd57079",
+ "freeze_commit": "ce5c3df",
+ "agnostic_models": [
+  {
+   "kind": "predictor",
+   "file": "a2_global_vjepa2_h1_none_50M_d0.3_w0.05_s0.pt",
+   "step": 2000,
+   "sha256": "fd3f4c91906a76811bbe7aff45cd92abb72ad8c80be2145beff107b8b8667386",
+   "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+   "backbone": {
+    "kind": "backbone",
+    "key": "vjepa2_vitl",
+    "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+    "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+    "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+   },
+   "action_source": "h1_none",
+   "norm": "global",
+   "config": "50M_d0.3_w0.05",
+   "seed": 0,
+   "gene_split": "gene",
+   "design_commit": "dd57079"
+  },
+  {
+   "kind": "predictor",
+   "file": "a2_global_vjepa2_h1_none_50M_d0.3_w0.05_s1.pt",
+   "step": 1750,
+   "sha256": "a7be0700c51a8865636bde46f599ee6f38743db2b2eafbc884984cd87a086633",
+   "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+   "backbone": {
+    "kind": "backbone",
+    "key": "vjepa2_vitl",
+    "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+    "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+    "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+   },
+   "action_source": "h1_none",
+   "norm": "global",
+   "config": "50M_d0.3_w0.05",
+   "seed": 1,
+   "gene_split": "gene",
+   "design_commit": "dd57079"
+  },
+  {
+   "kind": "predictor",
+   "file": "a2_global_vjepa2_h1_none_50M_d0.3_w0.05_s2.pt",
+   "step": 1500,
+   "sha256": "8b1057493fbbaf15116a03bbea71c808ad45e4b4a58cd74f2681f0d2fa14bcb6",
+   "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+   "backbone": {
+    "kind": "backbone",
+    "key": "vjepa2_vitl",
+    "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+    "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+    "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+   },
+   "action_source": "h1_none",
+   "norm": "global",
+   "config": "50M_d0.3_w0.05",
+   "seed": 2,
+   "gene_split": "gene",
+   "design_commit": "dd57079"
+  }
+ ],
+ "sources": {
+  "perturbseq": {
+   "models_true": [
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2-perturbseq_50M_d0.3_w0.2_s0.pt",
+     "step": 1500,
+     "sha256": "3ee776fcd30093709cac869201ba2d64657a731a2028e895bb61c744c44fd21e",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2:perturbseq",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 0,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2-perturbseq_50M_d0.3_w0.2_s1.pt",
+     "step": 1500,
+     "sha256": "4dc0f1359ac212d52a6608c2afbc394242b0be6881a07faa741d1b8832c7d7d9",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2:perturbseq",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 1,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2-perturbseq_50M_d0.3_w0.2_s2.pt",
+     "step": 1000,
+     "sha256": "3bd0e5c6301c1bcfc4e43df86d0df04c34cf0232ea30d81c2b3f8ce746a8eb00",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2:perturbseq",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 2,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    }
+   ],
+   "models_shuffled": [
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2shuf-perturbseq_50M_d0.3_w0.2_s0.pt",
+     "step": 750,
+     "sha256": "b97717951e432a456a51f4e1e01176e4566387cb0809b45ade15eef0f1ffff71",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2shuf:perturbseq",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 0,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2shuf-perturbseq_50M_d0.3_w0.2_s1.pt",
+     "step": 2000,
+     "sha256": "9769f9bd756c6e343c46604081ae423779f94461a2c1c71a5740192c994bf99e",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2shuf:perturbseq",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 1,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2shuf-perturbseq_50M_d0.3_w0.2_s2.pt",
+     "step": 750,
+     "sha256": "91fff4b6713a810ae2c94f51b033eb4816cb78c1d31a384c9f722fc697e01138",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2shuf:perturbseq",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 2,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    }
+   ],
+   "configs": {
+    "true": "50M_d0.3_w0.2",
+    "shuffled": "50M_d0.3_w0.2"
+   },
+   "primary": {
+    "n_wells": 1330,
+    "n_genes": 215,
+    "mean_error": {
+     "true": 0.45638126079426256,
+     "shuffled_trained": 0.45900827466055405,
+     "agnostic": 0.43992323625919433,
+     "shuffled_eval_time": 0.45943263131518697,
+     "knn_gene": 0.8011365604955096
+    },
+    "true_vs_shuffled_trained": {
+     "n_genes": 215,
+     "mean": -0.0026270138662914896,
+     "relative": -0.005723238580468304,
+     "ci95": [
+      -0.005908554691907972,
+      0.0005244290482166197
+     ],
+     "frac_genes_better": 0.5116279069767442
+    },
+    "true_vs_agnostic": {
+     "n_genes": 215,
+     "mean": 0.016458024535068245,
+     "relative": 0.037411128075470534,
+     "ci95": [
+      0.013027183039243832,
+      0.019928577542304992
+     ],
+     "frac_genes_better": 0.19069767441860466
+    },
+    "true_vs_shuffled_eval_time": {
+     "n_genes": 215,
+     "mean": -0.003051370520924413,
+     "relative": -0.006641606000404199,
+     "ci95": [
+      -0.004995632240938586,
+      -0.0012056897060815685
+     ],
+     "frac_genes_better": 0.5767441860465117
+    },
+    "true_vs_knn_gene": {
+     "n_genes": 215,
+     "mean": -0.34475529970124713,
+     "relative": -0.4303327506212088,
+     "ci95": [
+      -0.35868972070341887,
+      -0.3314052834171195
+     ],
+     "frac_genes_better": 1.0
+    }
+   },
+   "all_genes": {
+    "n_wells": 7707,
+    "n_genes": 1456,
+    "mean_error": {
+     "true": 0.3983483704339181,
+     "shuffled_trained": 0.39490267730594336,
+     "agnostic": 0.3832315121582904
+    },
+    "true_vs_shuffled_trained": {
+     "n_genes": 1456,
+     "mean": 0.003445693127974704,
+     "relative": 0.008725423568868962,
+     "ci95": [
+      0.002450115616934804,
+      0.004456827279108648
+     ],
+     "frac_genes_better": 0.426510989010989
+    },
+    "true_vs_agnostic": {
+     "n_genes": 1456,
+     "mean": 0.015116858275627696,
+     "relative": 0.03944576005895839,
+     "ci95": [
+      0.013965232455898282,
+      0.016252894873045137
+     ],
+     "frac_genes_better": 0.2129120879120879
+    }
+   },
+   "G_ZeroShot_2_pass": false
+  },
+  "jump_crispr": {
+   "models_true": [
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2-jump_crispr_50M_d0.3_w0.2_s0.pt",
+     "step": 1000,
+     "sha256": "40c42e94cd306715d04b40c30e31bdb6d40b4c6f40d2f046872b6ff868368ffb",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2:jump_crispr",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 0,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2-jump_crispr_50M_d0.3_w0.2_s1.pt",
+     "step": 1500,
+     "sha256": "36c58b60435a328c02d6bce8140a687552aed08a04636727f6195d6cd08c4caf",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2:jump_crispr",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 1,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2-jump_crispr_50M_d0.3_w0.2_s2.pt",
+     "step": 2250,
+     "sha256": "dcc8f2d2707e362f33ffb368e040563538db6e11e09488a1755e7e32a974e5d7",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2:jump_crispr",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 2,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    }
+   ],
+   "models_shuffled": [
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2shuf-jump_crispr_50M_d0.3_w0.2_s0.pt",
+     "step": 750,
+     "sha256": "e58b524c4e445b6337ee28489c7b57666a61495abaa4b87285699afa0c9f2843",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2shuf:jump_crispr",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 0,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2shuf-jump_crispr_50M_d0.3_w0.2_s1.pt",
+     "step": 750,
+     "sha256": "768e129f5ded33ac11d80bfd1a05d71650abc7ad94ec94b351a91a24faee43bc",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2shuf:jump_crispr",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 1,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2shuf-jump_crispr_50M_d0.3_w0.2_s2.pt",
+     "step": 1250,
+     "sha256": "85a1a953717eacf98ed3f7f906bce238d9910014484ec0c71a07f37d25f1f3a6",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2shuf:jump_crispr",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 2,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    }
+   ],
+   "configs": {
+    "true": "50M_d0.3_w0.2",
+    "shuffled": "50M_d0.3_w0.2"
+   },
+   "primary": {
+    "n_wells": 1371,
+    "n_genes": 214,
+    "mean_error": {
+     "true": 0.45262893602669796,
+     "shuffled_trained": 0.4536650002559769,
+     "agnostic": 0.43418659367293955,
+     "shuffled_eval_time": 0.4540677427131439,
+     "knn_gene": 0.7995785497059332
+    },
+    "true_vs_shuffled_trained": {
+     "n_genes": 214,
+     "mean": -0.0010360642292789209,
+     "relative": -0.002283764955847034,
+     "ci95": [
+      -0.004820828850024214,
+      0.002467721540515667
+     ],
+     "frac_genes_better": 0.5
+    },
+    "true_vs_agnostic": {
+     "n_genes": 214,
+     "mean": 0.018442342353758412,
+     "relative": 0.04247561445356496,
+     "ci95": [
+      0.014831184602786446,
+      0.02184202565211002
+     ],
+     "frac_genes_better": 0.205607476635514
+    },
+    "true_vs_shuffled_eval_time": {
+     "n_genes": 214,
+     "mean": -0.0014388066864459315,
+     "relative": -0.0031687049114054178,
+     "ci95": [
+      -0.004248921660201572,
+      0.0007993997048551786
+     ],
+     "frac_genes_better": 0.5700934579439252
+    },
+    "true_vs_knn_gene": {
+     "n_genes": 214,
+     "mean": -0.3469496136792352,
+     "relative": -0.43391560942553475,
+     "ci95": [
+      -0.3592053815826913,
+      -0.3348367347860726
+     ],
+     "frac_genes_better": 1.0
+    }
+   },
+   "all_genes": {
+    "n_wells": 7377,
+    "n_genes": 1306,
+    "mean_error": {
+     "true": 0.41037444839935755,
+     "shuffled_trained": 0.4046132974269562,
+     "agnostic": 0.3874423045659321
+    },
+    "true_vs_shuffled_trained": {
+     "n_genes": 1306,
+     "mean": 0.005761150972401384,
+     "relative": 0.01423865950288361,
+     "ci95": [
+      0.004477617974645511,
+      0.0070400747894145445
+     ],
+     "frac_genes_better": 0.40505359877488517
+    },
+    "true_vs_agnostic": {
+     "n_genes": 1306,
+     "mean": 0.022932143833425473,
+     "relative": 0.05918853868866303,
+     "ci95": [
+      0.021562801720788432,
+      0.024296607881510605
+     ],
+     "frac_genes_better": 0.1362940275650842
+    }
+   },
+   "G_ZeroShot_2_pass": false
+  },
+  "jump_orf": {
+   "models_true": [
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2-jump_orf_50M_d0.3_w0.2_s0.pt",
+     "step": 2250,
+     "sha256": "ba060b285bec28850fa57a1f7444f4baac277fb833e6486ac981f5c445c2297e",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2:jump_orf",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 0,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2-jump_orf_50M_d0.3_w0.2_s1.pt",
+     "step": 1250,
+     "sha256": "086f5cb5a34cada8a57d9846c655a837079546b8fa7714c43f4dc53a71aafc03",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2:jump_orf",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 1,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2-jump_orf_50M_d0.3_w0.2_s2.pt",
+     "step": 2000,
+     "sha256": "1e3f1f54e2528007e668329611f1a8da91a3e366ded7707b0b84df373c218209",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2:jump_orf",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 2,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    }
+   ],
+   "models_shuffled": [
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2shuf-jump_orf_50M_d0.3_w0.2_s0.pt",
+     "step": 2250,
+     "sha256": "cf6bc11fd7a9d31624eee60a0f8a0bce1033fa2acd9c85a76b77fcc6e94317ea",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2shuf:jump_orf",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 0,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2shuf-jump_orf_50M_d0.3_w0.2_s1.pt",
+     "step": 1500,
+     "sha256": "c1675694b3e68b67d9e8d30a7a3b63204f0e902a1b55a6231a544d449a6d57e0",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2shuf:jump_orf",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 1,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2shuf-jump_orf_50M_d0.3_w0.2_s2.pt",
+     "step": 2000,
+     "sha256": "4d9ffd1ae18397369a459a793b81abf5d5e9447d75232018370c3ec37798cc8a",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2shuf:jump_orf",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 2,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    }
+   ],
+   "configs": {
+    "true": "50M_d0.3_w0.2",
+    "shuffled": "50M_d0.3_w0.2"
+   },
+   "primary": {
+    "n_wells": 1718,
+    "n_genes": 273,
+    "mean_error": {
+     "true": 0.4483868408770788,
+     "shuffled_trained": 0.4467040600575807,
+     "agnostic": 0.4325710552516001,
+     "shuffled_eval_time": 0.44891621243386043,
+     "knn_gene": 0.8013211820588444
+    },
+    "true_vs_shuffled_trained": {
+     "n_genes": 273,
+     "mean": 0.001682780819498139,
+     "relative": 0.003767104376175112,
+     "ci95": [
+      -0.00021881856597386867,
+      0.0035913472074073738
+     ],
+     "frac_genes_better": 0.46153846153846156
+    },
+    "true_vs_agnostic": {
+     "n_genes": 273,
+     "mean": 0.015815785625478723,
+     "relative": 0.03656228366061076,
+     "ci95": [
+      0.012992057559036072,
+      0.018809431193621603
+     ],
+     "frac_genes_better": 0.23809523809523808
+    },
+    "true_vs_shuffled_eval_time": {
+     "n_genes": 273,
+     "mean": -0.0005293715567815871,
+     "relative": -0.001179221293683197,
+     "ci95": [
+      -0.0017671881332283928,
+      0.0007342223473739263
+     ],
+     "frac_genes_better": 0.5091575091575091
+    },
+    "true_vs_knn_gene": {
+     "n_genes": 273,
+     "mean": -0.35293434118176553,
+     "relative": -0.44044054878839844,
+     "ci95": [
+      -0.3651218189888603,
+      -0.34082626952847717
+     ],
+     "frac_genes_better": 1.0
+    }
+   },
+   "all_genes": {
+    "n_wells": 9927,
+    "n_genes": 1861,
+    "mean_error": {
+     "true": 0.39338952203645045,
+     "shuffled_trained": 0.3924729574325583,
+     "agnostic": 0.3851853539023202
+    },
+    "true_vs_shuffled_trained": {
+     "n_genes": 1861,
+     "mean": 0.0009165646038921465,
+     "relative": 0.0023353573450972664,
+     "ci95": [
+      0.0002550462283862656,
+      0.001567096332031062
+     ],
+     "frac_genes_better": 0.4674905964535196
+    },
+    "true_vs_agnostic": {
+     "n_genes": 1861,
+     "mean": 0.008204168134130245,
+     "relative": 0.02129927332650028,
+     "ci95": [
+      0.007214341096055565,
+      0.0091907252308856
+     ],
+     "frac_genes_better": 0.322944653412144
+    }
+   },
+   "G_ZeroShot_2_pass": false
+  },
+  "string": {
+   "models_true": [
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2-string_50M_d0.3_w0.2_s0.pt",
+     "step": 2750,
+     "sha256": "2f904ca66d5e0e5caef2759d71711e476e05dee2ccb521041fe681ea07405701",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2:string",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 0,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2-string_50M_d0.3_w0.2_s1.pt",
+     "step": 3000,
+     "sha256": "7121d1ce427bb0c003ace6475c44e34c7eea7040e65cfab5c4e29267c859ef5f",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2:string",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 1,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2-string_50M_d0.3_w0.2_s2.pt",
+     "step": 2250,
+     "sha256": "7c1a8f1cd96b2f3ba908ed33f66f636a70565038b7265f70a1df4b88923da23b",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2:string",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 2,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    }
+   ],
+   "models_shuffled": [
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2shuf-string_50M_d0.3_w0.2_s0.pt",
+     "step": 2750,
+     "sha256": "cbb3307fd6e72cdacf0f20e7875a97c73a43d174fe0564109059c5bddd3988ca",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2shuf:string",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 0,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2shuf-string_50M_d0.3_w0.2_s1.pt",
+     "step": 1250,
+     "sha256": "cc2547b8589d12c1cde3c61c319505a06747e2551b3da772b44bb6aceb0d49ce",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2shuf:string",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 1,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2shuf-string_50M_d0.3_w0.2_s2.pt",
+     "step": 1750,
+     "sha256": "0bd3525d5b0cf931facdaff1abe7c93f7eef9c3eebe599af7321346e08d94810",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2shuf:string",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 2,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    }
+   ],
+   "configs": {
+    "true": "50M_d0.3_w0.2",
+    "shuffled": "50M_d0.3_w0.2"
+   },
+   "primary": {
+    "n_wells": 2540,
+    "n_genes": 396,
+    "mean_error": {
+     "true": 0.43167007104917005,
+     "shuffled_trained": 0.43191852947377196,
+     "agnostic": 0.4350399278631114,
+     "shuffled_eval_time": 0.43428955738893665,
+     "knn_gene": 0.7920606018918933
+    },
+    "true_vs_shuffled_trained": {
+     "n_genes": 396,
+     "mean": -0.000248458424601892,
+     "relative": -0.0005752437268774502,
+     "ci95": [
+      -0.0021426501128860194,
+      0.0015283161322727345
+     ],
+     "frac_genes_better": 0.4696969696969697
+    },
+    "true_vs_agnostic": {
+     "n_genes": 396,
+     "mean": -0.003369856813941339,
+     "relative": -0.007746086274181496,
+     "ci95": [
+      -0.005532088911518304,
+      -0.001208724158656116
+     ],
+     "frac_genes_better": 0.5429292929292929
+    },
+    "true_vs_shuffled_eval_time": {
+     "n_genes": 396,
+     "mean": -0.0026194863397665698,
+     "relative": -0.00603165859090804,
+     "ci95": [
+      -0.004258052423370607,
+      -0.0011578852386035117
+     ],
+     "frac_genes_better": 0.5959595959595959
+    },
+    "true_vs_knn_gene": {
+     "n_genes": 396,
+     "mean": -0.36039053084272327,
+     "relative": -0.45500373327735877,
+     "ci95": [
+      -0.37022002548581423,
+      -0.3509105812363101
+     ],
+     "frac_genes_better": 1.0
+    }
+   },
+   "all_genes": {
+    "n_wells": 15259,
+    "n_genes": 2820,
+    "mean_error": {
+     "true": 0.3797285925517691,
+     "shuffled_trained": 0.378614092671068,
+     "agnostic": 0.38386656328084623
+    },
+    "true_vs_shuffled_trained": {
+     "n_genes": 2820,
+     "mean": 0.001114499880701092,
+     "relative": 0.002943630208898096,
+     "ci95": [
+      0.0005467497693467225,
+      0.0016765633397174218
+     ],
+     "frac_genes_better": 0.45886524822695035
+    },
+    "true_vs_agnostic": {
+     "n_genes": 2820,
+     "mean": -0.004137970729077116,
+     "relative": -0.010779711297880579,
+     "ci95": [
+      -0.004833529699091793,
+      -0.0034363964394210507
+     ],
+     "frac_genes_better": 0.5890070921985816
+    }
+   },
+   "G_ZeroShot_2_pass": false
+  },
+  "esm2": {
+   "models_true": [
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2-esm2_50M_d0.3_w0.2_s0.pt",
+     "step": 1750,
+     "sha256": "cc5e12ee505816bb6665f91f9bfc8ab323bc7f5d79bbb8a2c999a7fad034a6b9",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2:esm2",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 0,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2-esm2_50M_d0.3_w0.2_s1.pt",
+     "step": 2500,
+     "sha256": "465b54c192bafef3617359e53f53a23d629c3680ce143e970fb73a928b3d8528",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2:esm2",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 1,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2-esm2_50M_d0.3_w0.2_s2.pt",
+     "step": 1250,
+     "sha256": "d650a91827de193db3255e6032bb3f138aaf344b6b7360aa013ece18350dec3a",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2:esm2",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 2,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    }
+   ],
+   "models_shuffled": [
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2shuf-esm2_50M_d0.3_w0.2_s0.pt",
+     "step": 1750,
+     "sha256": "678a3bbf628c4f9027c0f990aa814a6ecc70f9903e7714833c77ceaeca4f0728",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2shuf:esm2",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 0,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2shuf-esm2_50M_d0.3_w0.2_s1.pt",
+     "step": 3250,
+     "sha256": "cd44410244f082f0f2a8f993fec61a7e181273dc885c237d8ae66d69ac82496e",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2shuf:esm2",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 1,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    },
+    {
+     "kind": "predictor",
+     "file": "a2_global_vjepa2_h2shuf-esm2_50M_d0.3_w0.2_s2.pt",
+     "step": 1250,
+     "sha256": "59a68c47bbd80444207fe43746007cff5ba3faf7de5165b2adf59230dad5a369",
+     "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+     "backbone": {
+      "kind": "backbone",
+      "key": "vjepa2_vitl",
+      "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+      "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+      "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+     },
+     "action_source": "h2shuf:esm2",
+     "norm": "global",
+     "config": "50M_d0.3_w0.2",
+     "seed": 2,
+     "gene_split": "gene",
+     "design_commit": "dd57079"
+    }
+   ],
+   "configs": {
+    "true": "50M_d0.3_w0.2",
+    "shuffled": "50M_d0.3_w0.2"
+   },
+   "primary": {
+    "n_wells": 2564,
+    "n_genes": 403,
+    "mean_error": {
+     "true": 0.43445833829733044,
+     "shuffled_trained": 0.435899189329029,
+     "agnostic": 0.4358774490155298,
+     "shuffled_eval_time": 0.43698075421099036,
+     "knn_gene": 0.7937489032153752
+    },
+    "true_vs_shuffled_trained": {
+     "n_genes": 403,
+     "mean": -0.001440851031698601,
+     "relative": -0.003305468482096563,
+     "ci95": [
+      -0.002796431782449741,
+      -0.00012935581189527274
+     ],
+     "frac_genes_better": 0.5707196029776674
+    },
+    "true_vs_agnostic": {
+     "n_genes": 403,
+     "mean": -0.0014191107181993963,
+     "relative": -0.0032557562255275396,
+     "ci95": [
+      -0.0033633248238054757,
+      0.0004960759827132256
+     ],
+     "frac_genes_better": 0.543424317617866
+    },
+    "true_vs_shuffled_eval_time": {
+     "n_genes": 403,
+     "mean": -0.0025224159136599407,
+     "relative": -0.0057723730149498165,
+     "ci95": [
+      -0.003479950078219989,
+      -0.0016099773476792333
+     ],
+     "frac_genes_better": 0.630272952853598
+    },
+    "true_vs_knn_gene": {
+     "n_genes": 403,
+     "mean": -0.3592905649180448,
+     "relative": -0.45265015606648984,
+     "ci95": [
+      -0.3686218194571086,
+      -0.35019084492111324
+     ],
+     "frac_genes_better": 1.0
+    }
+   },
+   "all_genes": {
+    "n_wells": 15442,
+    "n_genes": 2861,
+    "mean_error": {
+     "true": 0.3806257741522514,
+     "shuffled_trained": 0.38177631246964444,
+     "agnostic": 0.38410799573535315
+    },
+    "true_vs_shuffled_trained": {
+     "n_genes": 2861,
+     "mean": -0.0011505383173930233,
+     "relative": -0.0030136451105371442,
+     "ci95": [
+      -0.0016049180707182345,
+      -0.000710509538556762
+     ],
+     "frac_genes_better": 0.5505068157986718
+    },
+    "true_vs_agnostic": {
+     "n_genes": 2861,
+     "mean": -0.003482221583101725,
+     "relative": -0.009065735735168001,
+     "ci95": [
+      -0.0041301540878061985,
+      -0.0028390076127305644
+     ],
+     "frac_genes_better": 0.5955959454736106
+    }
+   },
+   "G_ZeroShot_2_pass": false
+  }
+ },
+ "common_primary_genes": {
+  "n_genes": 84,
+  "by_source": {
+   "perturbseq": {
+    "shuffled_trained": {
+     "n_genes": 84,
+     "mean": -9.243757951827276e-05,
+     "relative": -0.0002058023559615707,
+     "ci95": [
+      -0.00490847107555185,
+      0.004797523841261864
+     ],
+     "frac_genes_better": 0.4880952380952381
+    },
+    "agnostic": {
+     "n_genes": 84,
+     "mean": 0.01984021599803652,
+     "relative": 0.04622341149869147,
+     "ci95": [
+      0.015158206091395447,
+      0.024793138496932526
+     ],
+     "frac_genes_better": 0.19047619047619047
+    }
+   },
+   "jump_crispr": {
+    "shuffled_trained": {
+     "n_genes": 84,
+     "mean": -0.0020695612544105167,
+     "relative": -0.0045958858921635315,
+     "ci95": [
+      -0.009942906988518579,
+      0.004335869493938627
+     ],
+     "frac_genes_better": 0.47619047619047616
+    },
+    "agnostic": {
+     "n_genes": 84,
+     "mean": 0.01901345274278096,
+     "relative": 0.04429723711968636,
+     "ci95": [
+      0.012129537051632291,
+      0.02494201986562638
+     ],
+     "frac_genes_better": 0.19047619047619047
+    }
+   },
+   "jump_orf": {
+    "shuffled_trained": {
+     "n_genes": 84,
+     "mean": 0.0017404662711279733,
+     "relative": 0.003912563451057061,
+     "ci95": [
+      -0.002369692398323899,
+      0.0058640538404385245
+     ],
+     "frac_genes_better": 0.44047619047619047
+    },
+    "agnostic": {
+     "n_genes": 84,
+     "mean": 0.017356492578983307,
+     "relative": 0.04043687601163981,
+     "ci95": [
+      0.011837954003186452,
+      0.022953363853905877
+     ],
+     "frac_genes_better": 0.25
+    }
+   },
+   "string": {
+    "shuffled_trained": {
+     "n_genes": 84,
+     "mean": -0.0025154870180856613,
+     "relative": -0.005878307056468857,
+     "ci95": [
+      -0.008444985578812304,
+      0.00233299916698819
+     ],
+     "frac_genes_better": 0.4880952380952381
+    },
+    "agnostic": {
+     "n_genes": 84,
+     "mean": -0.0038127342150324865,
+     "relative": -0.008882846578420756,
+     "ci95": [
+      -0.00916603674136457,
+      0.001002255525617372
+     ],
+     "frac_genes_better": 0.4880952380952381
+    }
+   },
+   "esm2": {
+    "shuffled_trained": {
+     "n_genes": 84,
+     "mean": -0.0004726538345927284,
+     "relative": -0.0010920803089088382,
+     "ci95": [
+      -0.003702377687607493,
+      0.002631049727400144
+     ],
+     "frac_genes_better": 0.5357142857142857
+    },
+    "agnostic": {
+     "n_genes": 84,
+     "mean": 0.0031044522211665197,
+     "relative": 0.007232704694159153,
+     "ci95": [
+      -0.001090133607032753,
+      0.007376257392267379
+     ],
+     "frac_genes_better": 0.44047619047619047
+    }
+   }
+  }
+ },
+ "G_ZeroShot_2": {
+  "rule": "on primary genes at 24/36 h, >= 1 source: true - trained-shuffled 95% CI over genes below 0 and true - action-agnostic 95% CI below 0",
+  "pass": false,
+  "passing_sources": []
+ },
+ "planning_source": "perturbseq",
+ "planning_source_rule": "the G-ZeroShot-2-passing source with the most negative mean (true - trained-shuffled) primary error on validation; if none passes, the source with the most negative mean, and H3 is exploratory",
+ "code_commit": "bc186bb"
+}

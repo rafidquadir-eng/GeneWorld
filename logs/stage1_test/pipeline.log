@@ -1,0 +1,10 @@
+[10-26 13:02:23] test: freeze ce5c3df on stage1
+[10-26 13:02:23] B: embedding test plates (14186 wells)
+[10-26 13:58:29] embed commit bc186bb (test); allowed-paths check passed
+[10-26 13:58:29] A: stage-1 H1 h1_learned_B vs h1_none_C; planning source string
+[10-26 14:39:10] A done
+test: G-Signal-2 True, G-ZeroShot-2 True, G-Plan-2 False (source jump_crispr)
+[10-26 20:00:02] C: embedding screenB (9151 wells)
+[10-26 20:44:46] embed commit f3a2c9d (screenB); allowed-paths check passed
+G-Signal-2 fail: vs agnostic -0.8% p=0.102; vs replicate drift -36.6% p=1e-05
+[10-26 21:10:51] test evaluation done (freeze ce5c3df, test embed commit bc186bb); GPU idle

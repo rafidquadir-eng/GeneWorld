@@ -1,0 +1,218 @@
+{
+ "split": "test",
+ "design_commit": "dd57079",
+ "freeze_commit": "ce5c3df",
+ "selection": {
+  "file": "results/a2/selection.json",
+  "sha256": "be8a5582cfa95de17b8a502ae3b0b43c9a92c9113e991e062b240d240f1a854f"
+ },
+ "planning_source": "jump_crispr",
+ "G_Signal_2": {
+  "rule": "primary wells, 24/36 h: action-conditioned beats action-agnostic and replicate drift, one-sided p < 0.05 over plates each",
+  "vs_action_agnostic": {
+   "n_groups": 82,
+   "mean": -0.18309952573078433,
+   "p_one_sided": 9.99990000099999e-06,
+   "frac_groups_better": 0.8414634146341463,
+   "model": 3.0572609901428223,
+   "baseline": 3.2403602600097656,
+   "relative_change": -0.05650585889816284
+  },
+  "vs_replicate_drift": {
+   "n_groups": 82,
+   "mean": -2.588584709458235,
+   "p_one_sided": 9.99990000099999e-06,
+   "frac_groups_better": 1.0,
+   "model": 3.0572609901428223,
+   "baseline": 5.645845890045166,
+   "relative_change": -0.458493709564209
+  },
+  "secondary_well_weighted": {
+   "note": "completion plan v2 F6; secondary, not part of the gate",
+   "vs_action_agnostic": {
+    "n_groups": 82,
+    "mean": -0.17402544578343826,
+    "p_one_sided": 9.99990000099999e-06,
+    "frac_groups_better": 0.8414634146341463,
+    "weighting": "wells per plate",
+    "n_wells": 770,
+    "wells_per_plate": {
+     "min": 1,
+     "median": 6.5,
+     "max": 37
+    }
+   },
+   "vs_replicate_drift": {
+    "n_groups": 82,
+    "mean": -2.560521160936975,
+    "p_one_sided": 9.99990000099999e-06,
+    "frac_groups_better": 1.0,
+    "weighting": "wells per plate",
+    "n_wells": 770,
+    "wells_per_plate": {
+     "min": 1,
+     "median": 6.5,
+     "max": 37
+    }
+   }
+  },
+  "pass": true,
+  "source": {
+   "file": "results/a2/h1/h1_test_plate_vjepa2.json",
+   "sha256": "2e3ed9f97b207fe9ddd7d2949145443a629ec9d43952468819c3328b710e2a01"
+  }
+ },
+ "G_ZeroShot_2": {
+  "rule": "on primary genes at 24/36 h, >= 1 source: true - trained-shuffled 95% CI over genes below 0 and true - action-agnostic 95% CI below 0",
+  "pass": true,
+  "passing_sources": [
+   "string"
+  ],
+  "source": {
+   "file": "results/a2/h2/h2_test_plate_vjepa2.json",
+   "sha256": "ed22be3e6e8b37299f6c8364f5665a7736466eff50dbfeb623030f35ee814789"
+  },
+  "per_source": {
+   "perturbseq": {
+    "pass": false,
+    "true_vs_shuffled_trained": {
+     "n_genes": 215,
+     "mean": 0.0002430488896924396,
+     "relative": 7.848818709765837e-05,
+     "ci95": [
+      -0.013994144270586411,
+      0.014379398101984069
+     ],
+     "frac_genes_better": 0.4883720930232558
+    },
+    "true_vs_agnostic": {
+     "n_genes": 215,
+     "mean": 0.08944997732029404,
+     "relative": 0.02974306226718304,
+     "ci95": [
+      0.06875398947749027,
+      0.11068285942077637
+     ],
+     "frac_genes_better": 0.26046511627906976
+    }
+   },
+   "jump_crispr": {
+    "pass": false,
+    "true_vs_shuffled_trained": {
+     "n_genes": 214,
+     "mean": -0.010777735264501839,
+     "relative": -0.0036642356027830614,
+     "ci95": [
+      -0.03449681222995865,
+      0.006992346925713191
+     ],
+     "frac_genes_better": 0.5373831775700935
+    },
+    "true_vs_agnostic": {
+     "n_genes": 214,
+     "mean": 0.059167225784230455,
+     "relative": 0.020605795975195074,
+     "ci95": [
+      0.03585025881216905,
+      0.08104937179623363
+     ],
+     "frac_genes_better": 0.32242990654205606
+    }
+   },
+   "jump_orf": {
+    "pass": false,
+    "true_vs_shuffled_trained": {
+     "n_genes": 273,
+     "mean": -0.0017582745779128302,
+     "relative": -0.0005911416599965191,
+     "ci95": [
+      -0.01079897247391306,
+      0.007247884937258423
+     ],
+     "frac_genes_better": 0.47985347985347987
+    },
+    "true_vs_agnostic": {
+     "n_genes": 273,
+     "mean": 0.04518680345444452,
+     "relative": 0.015435678137327935,
+     "ci95": [
+      0.03154237789985461,
+      0.059763227878036077
+     ],
+     "frac_genes_better": 0.31868131868131866
+    }
+   },
+   "string": {
+    "pass": true,
+    "true_vs_shuffled_trained": {
+     "n_genes": 396,
+     "mean": -0.008796734340263136,
+     "relative": -0.0030084110941560605,
+     "ci95": [
+      -0.01759876362001053,
+      -0.00010824424750877524
+     ],
+     "frac_genes_better": 0.5202020202020202
+    },
+    "true_vs_agnostic": {
+     "n_genes": 396,
+     "mean": -0.039039422466297345,
+     "relative": -0.013214488555487014,
+     "ci95": [
+      -0.05067474315262804,
+      -0.027580545519036475
+     ],
+     "frac_genes_better": 0.6717171717171717
+    }
+   },
+   "esm2": {
+    "pass": false,
+    "true_vs_shuffled_trained": {
+     "n_genes": 403,
+     "mean": -0.004173329687000208,
+     "relative": -0.0014215983289391776,
+     "ci95": [
+      -0.012012573248399399,
+      0.003741839099166998
+     ],
+     "frac_genes_better": 0.5186104218362283
+    },
+    "true_vs_agnostic": {
+     "n_genes": 403,
+     "mean": -0.028446888213713765,
+     "relative": -0.009610650163328405,
+     "ci95": [
+      -0.03966913774942346,
+      -0.017220863943951895
+     ],
+     "frac_genes_better": 0.6153846153846154
+    }
+   }
+  }
+ },
+ "G_Plan_2": {
+  "rule": "phenotype (primary truth, unseen genes) and trajectory rules; trajectory: hit@100 above random (binomial p < 0.05) and above kNN-imputed endpoint retrieval (bootstrap CI over target genes above 0), erratum E-02.1",
+  "erratum": "E-02.1",
+  "phenotype_pass": false,
+  "trajectory_pass": false,
+  "pass": false,
+  "source": {
+   "file": "results/a2/h3/h3_test_plate_vjepa2_jump_crispr.json",
+   "sha256": "d27c49eadaab1de6e0abe806416b11236e8c21fe9bcc761d35dd5e735e455a0f"
+  },
+  "trajectory_gate_comparator": "retrieval_knn",
+  "trajectory_vs_comparator": {
+   "difference": -0.012239583333333335,
+   "ci95": [
+    -0.03680555555555555,
+    0.009898003472222196
+   ]
+  },
+  "oracle_ceiling_hit@100": 0.162
+ },
+ "errata": [
+  "E-02.1 (2026-10-22): G-Plan-2 trajectory comparator = kNN-imputed endpoint retrieval"
+ ],
+ "consequence": "G-Signal-2 passed: H2/H3 are confirmatory",
+ "code_commit": "bc186bb"
+}

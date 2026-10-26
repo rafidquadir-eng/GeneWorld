@@ -1,0 +1,16 @@
+H1 screenB (global): 5789 library wells of seen genes, 5258 primary, 28 plates
+/home/ubuntu/GeneWorld/scripts/61_eval_h1_a2.py:115: RuntimeWarning: Mean of empty slice
+  "primary_wells_24_36h": float(np.nanmean(E.primary(e[is_p]))),
+/home/ubuntu/GeneWorld/scripts/61_eval_h1_a2.py:116: RuntimeWarning: Mean of empty slice
+  "all_wells_24_36h": float(np.nanmean(E.primary(e))),
+/home/ubuntu/GeneWorld/scripts/61_eval_h1_a2.py:117: RuntimeWarning: Mean of empty slice
+  **{f"primary_{h * 3}h": float(np.nanmean(e[is_p][:, h - 1])) for h in a2.ALL_STEPS}}
+/home/ubuntu/GeneWorld/src/geneworld/eval/a2eval.py:123: RuntimeWarning: Mean of empty slice
+  b = np.array([np.nanmean(e_base[plates == p]) for p in ps])
+/home/ubuntu/GeneWorld/src/geneworld/eval/a2eval.py:126: RuntimeWarning: Mean of empty slice
+  t["baseline"] = float(np.nanmean(b))
+/home/ubuntu/GeneWorld/src/geneworld/eval/a2eval.py:127: RuntimeWarning: Mean of empty slice
+  t["relative_change"] = float(np.nanmean(a) / np.nanmean(b) - 1)
+/home/ubuntu/GeneWorld/src/geneworld/eval/a2eval.py:136: RuntimeWarning: Mean of empty slice
+  d = np.array([np.nanmean(e_model[plates == p] - e_base[plates == p]) for p in ps])
+G-Signal-2 fail: vs agnostic -0.8% p=0.102; vs replicate drift -36.6% p=1e-05

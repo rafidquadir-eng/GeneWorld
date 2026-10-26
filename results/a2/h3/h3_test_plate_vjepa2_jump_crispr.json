@@ -1,0 +1,1625 @@
+{
+ "split": "test",
+ "norm": "plate",
+ "backbone": "vjepa2",
+ "gene_split": "gene",
+ "source": "jump_crispr",
+ "models": [
+  {
+   "kind": "predictor",
+   "file": "a2_plate_vjepa2_h2-jump_crispr_50M_d0.3_w0.2_s0.pt",
+   "step": 3000,
+   "sha256": "1a7d38485f2fd2af412a0d56c815bf5cb8c561326bfb250a0cc0e1d1401ca13f",
+   "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+   "backbone": {
+    "kind": "backbone",
+    "key": "vjepa2_vitl",
+    "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+    "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+    "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+   },
+   "action_source": "h2:jump_crispr",
+   "norm": "plate",
+   "config": "50M_d0.3_w0.2",
+   "seed": 0,
+   "gene_split": "gene",
+   "design_commit": "dd57079"
+  },
+  {
+   "kind": "predictor",
+   "file": "a2_plate_vjepa2_h2-jump_crispr_50M_d0.3_w0.2_s1.pt",
+   "step": 2000,
+   "sha256": "b6cdee3813f9761520530dd8abf5cedd91bf5ec7c50412b3eb675919002c58d1",
+   "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+   "backbone": {
+    "kind": "backbone",
+    "key": "vjepa2_vitl",
+    "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+    "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+    "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+   },
+   "action_source": "h2:jump_crispr",
+   "norm": "plate",
+   "config": "50M_d0.3_w0.2",
+   "seed": 1,
+   "gene_split": "gene",
+   "design_commit": "dd57079"
+  },
+  {
+   "kind": "predictor",
+   "file": "a2_plate_vjepa2_h2-jump_crispr_50M_d0.3_w0.2_s2.pt",
+   "step": 2250,
+   "sha256": "a4ee9b006affbeb0ee5570b8fc24527c0979fe087980521e092e9bc606d03a6a",
+   "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+   "backbone": {
+    "kind": "backbone",
+    "key": "vjepa2_vitl",
+    "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+    "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+    "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+   },
+   "action_source": "h2:jump_crispr",
+   "norm": "plate",
+   "config": "50M_d0.3_w0.2",
+   "seed": 2,
+   "gene_split": "gene",
+   "design_commit": "dd57079"
+  }
+ ],
+ "design_commit": "dd57079",
+ "freeze_commit": "ce5c3df",
+ "phenotype_targets": {
+  "start_plates": [
+   "LT0029_05",
+   "LT0132_31",
+   "LT0031_32",
+   "LT0037_52",
+   "LT0043_48",
+   "LT0601_05",
+   "LT0144_02",
+   "LT0015_44",
+   "LT0130_41",
+   "LT0095_14",
+   "LT0041_35",
+   "LT0010_06",
+   "LT0060_31",
+   "LT0100_12",
+   "LT0111_44",
+   "LT0120_07",
+   "LT0017_08",
+   "LT0071_02",
+   "LT0170_09",
+   "LT0076_02"
+  ],
+  "sets": {
+   "unseen": {
+    "n_genes": 1538,
+    "n_with_embedded_wells": 1306,
+    "truth": {
+     "primary": {
+      "phenotypes": {
+       "mitotic_delay": {
+        "n_target_wells": 372,
+        "primary_clip12": {
+         "planner": {
+          "ap": 0.07198093005787791,
+          "auroc": 0.5844311377245508,
+          "prevalence": 0.022756827048114433,
+          "n_pos": 35,
+          "n": 1538,
+          "hits@10": 1,
+          "enrichment@10": 4.394285714285715,
+          "hits@50": 3,
+          "enrichment@50": 2.6365714285714286,
+          "hits@100": 4,
+          "enrichment@100": 1.7577142857142858
+         },
+         "perm": {
+          "ap": 0.07198093005787791,
+          "null_mean": 0.02734054619703799,
+          "null_95": 0.04236704703775973,
+          "p_one_sided": 0.0024997500249975004,
+          "q_bh": 0.007499250074992501
+         },
+         "perm_expression_matched": {
+          "ap": 0.07198093005787791,
+          "null_mean": 0.027181798594723375,
+          "null_95": 0.04064028351411182,
+          "p_one_sided": 0.00039996000399960006
+         },
+         "gba": {
+          "ap": 0.09702223255713134,
+          "auroc": 0.6461553084307575,
+          "prevalence": 0.022756827048114433,
+          "n_pos": 35,
+          "n": 1538,
+          "hits@10": 3,
+          "enrichment@10": 13.182857142857143,
+          "hits@50": 6,
+          "enrichment@50": 5.273142857142857,
+          "hits@100": 9,
+          "enrichment@100": 3.954857142857143
+         },
+         "gba_perm": {
+          "ap": 0.09702223255713134,
+          "null_mean": 0.027135404705805603,
+          "null_95": 0.041439537464841775,
+          "p_one_sided": 0.00039996000399960006
+         },
+         "n_train_truth_genes_for_gba": 124,
+         "retrieval_knn": {
+          "ap": 0.10245139228175411,
+          "auroc": 0.5123847543009219,
+          "prevalence": 0.022756827048114433,
+          "n_pos": 35,
+          "n": 1538,
+          "hits@10": 3,
+          "enrichment@10": 13.182857142857143,
+          "hits@50": 4,
+          "enrichment@50": 3.5154285714285716,
+          "hits@100": 4,
+          "enrichment@100": 1.7577142857142858
+         },
+         "subset_with_embedded_wells": {
+          "planner": {
+           "ap": 0.08179010726650832,
+           "auroc": 0.5898392716646059,
+           "prevalence": 0.02679938744257274,
+           "n_pos": 35,
+           "n": 1306,
+           "hits@10": 2,
+           "enrichment@10": 7.4628571428571435,
+           "hits@50": 3,
+           "enrichment@50": 2.238857142857143,
+           "hits@100": 6,
+           "enrichment@100": 2.238857142857143
+          },
+          "oracle_ceiling_replicate_endpoint": {
+           "ap": 0.12381199514458129,
+           "auroc": 0.7497583455097223,
+           "prevalence": 0.02679938744257274,
+           "n_pos": 35,
+           "n": 1306,
+           "hits@10": 2,
+           "enrichment@10": 7.4628571428571435,
+           "hits@50": 8,
+           "enrichment@50": 5.970285714285715,
+           "hits@100": 14,
+           "enrichment@100": 5.224000000000001
+          }
+         }
+        },
+        "secondary_clip8": {
+         "planner": {
+          "ap": 0.07029718933343458,
+          "auroc": 0.5785761809713905,
+          "prevalence": 0.022756827048114433,
+          "n_pos": 35,
+          "n": 1538,
+          "hits@10": 1,
+          "enrichment@10": 4.394285714285715,
+          "hits@50": 3,
+          "enrichment@50": 2.6365714285714286,
+          "hits@100": 4,
+          "enrichment@100": 1.7577142857142858
+         },
+         "perm": {
+          "ap": 0.07029718933343458,
+          "null_mean": 0.027336955337735572,
+          "null_95": 0.04228515783995746,
+          "p_one_sided": 0.0027997200279972004
+         },
+         "perm_expression_matched": {
+          "ap": 0.07029718933343458,
+          "null_mean": 0.02716392161039938,
+          "null_95": 0.040621865682969785,
+          "p_one_sided": 0.0007999200079992001
+         }
+        }
+       },
+       "polylobed": {
+        "n_target_wells": 197,
+        "primary_clip12": {
+         "planner": {
+          "ap": 0.02484655115222039,
+          "auroc": 0.5544525332745054,
+          "prevalence": 0.017555266579973992,
+          "n_pos": 27,
+          "n": 1538,
+          "hits@10": 1,
+          "enrichment@10": 5.696296296296296,
+          "hits@50": 1,
+          "enrichment@50": 1.1392592592592592,
+          "hits@100": 1,
+          "enrichment@100": 0.5696296296296296
+         },
+         "perm": {
+          "ap": 0.02484655115222039,
+          "null_mean": 0.021974443453620433,
+          "null_95": 0.0364392208610237,
+          "p_one_sided": 0.20477952204779523,
+          "q_bh": 0.20477952204779523
+         },
+         "perm_expression_matched": {
+          "ap": 0.02484655115222039,
+          "null_mean": 0.023440950876348905,
+          "null_95": 0.04306660469640804,
+          "p_one_sided": 0.2596740325967403
+         },
+         "gba": {
+          "ap": 0.020429095984324484,
+          "auroc": 0.49023212491114543,
+          "prevalence": 0.017555266579973992,
+          "n_pos": 27,
+          "n": 1538,
+          "hits@10": 0,
+          "enrichment@10": 0.0,
+          "hits@50": 1,
+          "enrichment@50": 1.1392592592592592,
+          "hits@100": 3,
+          "enrichment@100": 1.708888888888889
+         },
+         "gba_perm": {
+          "ap": 0.020429095984324484,
+          "null_mean": 0.02186342666096115,
+          "null_95": 0.0353730629055967,
+          "p_one_sided": 0.44935506449355067
+         },
+         "n_train_truth_genes_for_gba": 85,
+         "retrieval_knn": {
+          "ap": 0.019201648128364147,
+          "auroc": 0.4824129225188126,
+          "prevalence": 0.017555266579973992,
+          "n_pos": 27,
+          "n": 1538,
+          "hits@10": 0,
+          "enrichment@10": 0.0,
+          "hits@50": 1,
+          "enrichment@50": 1.1392592592592592,
+          "hits@100": 2,
+          "enrichment@100": 1.1392592592592592
+         },
+         "subset_with_embedded_wells": {
+          "planner": {
+           "ap": 0.031104945288428935,
+           "auroc": 0.5612023282078012,
+           "prevalence": 0.020673813169984685,
+           "n_pos": 27,
+           "n": 1306,
+           "hits@10": 1,
+           "enrichment@10": 4.837037037037038,
+           "hits@50": 1,
+           "enrichment@50": 0.9674074074074075,
+           "hits@100": 4,
+           "enrichment@100": 1.934814814814815
+          },
+          "oracle_ceiling_replicate_endpoint": {
+           "ap": 0.17918923441778156,
+           "auroc": 0.7548721512755915,
+           "prevalence": 0.020673813169984685,
+           "n_pos": 27,
+           "n": 1306,
+           "hits@10": 4,
+           "enrichment@10": 19.34814814814815,
+           "hits@50": 8,
+           "enrichment@50": 7.73925925925926,
+           "hits@100": 11,
+           "enrichment@100": 5.3207407407407405
+          }
+         }
+        },
+        "secondary_clip8": {
+         "planner": {
+          "ap": 0.02792140205196028,
+          "auroc": 0.553153418143491,
+          "prevalence": 0.017555266579973992,
+          "n_pos": 27,
+          "n": 1538,
+          "hits@10": 1,
+          "enrichment@10": 5.696296296296296,
+          "hits@50": 1,
+          "enrichment@50": 1.1392592592592592,
+          "hits@100": 1,
+          "enrichment@100": 0.5696296296296296
+         },
+         "perm": {
+          "ap": 0.02792140205196028,
+          "null_mean": 0.021971993236798035,
+          "null_95": 0.03649352843481785,
+          "p_one_sided": 0.128987101289871
+         },
+         "perm_expression_matched": {
+          "ap": 0.02792140205196028,
+          "null_mean": 0.023789686626504793,
+          "null_95": 0.044414866403483806,
+          "p_one_sided": 0.18988101189881013
+         }
+        }
+       },
+       "binuclear": {
+        "n_target_wells": 538,
+        "primary_clip12": {
+         "planner": {
+          "ap": 0.05321653950436516,
+          "auroc": 0.5395577518219028,
+          "prevalence": 0.035110533159947985,
+          "n_pos": 54,
+          "n": 1538,
+          "hits@10": 2,
+          "enrichment@10": 5.696296296296296,
+          "hits@50": 4,
+          "enrichment@50": 2.2785185185185184,
+          "hits@100": 6,
+          "enrichment@100": 1.708888888888889
+         },
+         "perm": {
+          "ap": 0.05321653950436516,
+          "null_mean": 0.03928098683930261,
+          "null_95": 0.053313606121954064,
+          "p_one_sided": 0.050794920507949204,
+          "q_bh": 0.0761923807619238
+         },
+         "perm_expression_matched": {
+          "ap": 0.05321653950436516,
+          "null_mean": 0.040692645185526406,
+          "null_95": 0.05766019954537563,
+          "p_one_sided": 0.08819118088191182
+         },
+         "gba": {
+          "ap": 0.04688098564045936,
+          "auroc": 0.5635045422781272,
+          "prevalence": 0.035110533159947985,
+          "n_pos": 54,
+          "n": 1538,
+          "hits@10": 0,
+          "enrichment@10": 0.0,
+          "hits@50": 4,
+          "enrichment@50": 2.2785185185185184,
+          "hits@100": 7,
+          "enrichment@100": 1.993703703703704
+         },
+         "gba_perm": {
+          "ap": 0.04688098564045936,
+          "null_mean": 0.03953514758708985,
+          "null_95": 0.054674634690006496,
+          "p_one_sided": 0.1337866213378662
+         },
+         "n_train_truth_genes_for_gba": 181,
+         "retrieval_knn": {
+          "ap": 0.03661426470185019,
+          "auroc": 0.5148871917739841,
+          "prevalence": 0.035110533159947985,
+          "n_pos": 54,
+          "n": 1538,
+          "hits@10": 0,
+          "enrichment@10": 0.0,
+          "hits@50": 0,
+          "enrichment@50": 0.0,
+          "hits@100": 2,
+          "enrichment@100": 0.5696296296296296
+         },
+         "subset_with_embedded_wells": {
+          "planner": {
+           "ap": 0.06692288655746362,
+           "auroc": 0.5453348716128269,
+           "prevalence": 0.04134762633996937,
+           "n_pos": 54,
+           "n": 1306,
+           "hits@10": 3,
+           "enrichment@10": 7.2555555555555555,
+           "hits@50": 4,
+           "enrichment@50": 1.934814814814815,
+           "hits@100": 8,
+           "enrichment@100": 1.934814814814815
+          },
+          "oracle_ceiling_replicate_endpoint": {
+           "ap": 0.15825696452355725,
+           "auroc": 0.7008490119512484,
+           "prevalence": 0.04134762633996937,
+           "n_pos": 54,
+           "n": 1306,
+           "hits@10": 4,
+           "enrichment@10": 9.674074074074076,
+           "hits@50": 7,
+           "enrichment@50": 3.3859259259259264,
+           "hits@100": 16,
+           "enrichment@100": 3.86962962962963
+          }
+         }
+        },
+        "secondary_clip8": {
+         "planner": {
+          "ap": 0.052807288739960864,
+          "auroc": 0.5289258260956373,
+          "prevalence": 0.035110533159947985,
+          "n_pos": 54,
+          "n": 1538,
+          "hits@10": 2,
+          "enrichment@10": 5.696296296296296,
+          "hits@50": 4,
+          "enrichment@50": 2.2785185185185184,
+          "hits@100": 5,
+          "enrichment@100": 1.424074074074074
+         },
+         "perm": {
+          "ap": 0.052807288739960864,
+          "null_mean": 0.039272025831554765,
+          "null_95": 0.05339764901553536,
+          "p_one_sided": 0.053894610538946106
+         },
+         "perm_expression_matched": {
+          "ap": 0.052807288739960864,
+          "null_mean": 0.04057143806780041,
+          "null_95": 0.057528653865254756,
+          "p_one_sided": 0.08999100089991001
+         }
+        }
+       }
+      },
+      "decision": {
+       "n_q<0.05": 1,
+       "n_beats_gba": 2,
+       "pass": false
+      }
+     },
+     "stringent": {
+      "phenotypes": {
+       "mitotic_delay": {
+        "n_target_wells": 372,
+        "primary_clip12": {
+         "planner": {
+          "ap": 0.12131160556355623,
+          "auroc": 0.6626445449974862,
+          "prevalence": 0.011053315994798439,
+          "n_pos": 17,
+          "n": 1538,
+          "hits@10": 2,
+          "enrichment@10": 18.094117647058827,
+          "hits@50": 4,
+          "enrichment@50": 7.23764705882353,
+          "hits@100": 6,
+          "enrichment@100": 5.4282352941176475
+         },
+         "perm": {
+          "ap": 0.12131160556355623,
+          "null_mean": 0.015640028975413237,
+          "null_95": 0.02908234058832355,
+          "p_one_sided": 0.0005999400059994001,
+          "q_bh": 0.0008999100089991002
+         },
+         "perm_expression_matched": {
+          "ap": 0.12131160556355623,
+          "null_mean": 0.018685049707886637,
+          "null_95": 0.047546042928033855,
+          "p_one_sided": 0.0018998100189981002
+         },
+         "gba": {
+          "ap": 0.21750413808964184,
+          "auroc": 0.6536721197354681,
+          "prevalence": 0.011053315994798439,
+          "n_pos": 17,
+          "n": 1538,
+          "hits@10": 5,
+          "enrichment@10": 45.23529411764706,
+          "hits@50": 7,
+          "enrichment@50": 12.665882352941178,
+          "hits@100": 8,
+          "enrichment@100": 7.23764705882353
+         },
+         "gba_perm": {
+          "ap": 0.21750413808964184,
+          "null_mean": 0.01566349053622364,
+          "null_95": 0.02983974758972821,
+          "p_one_sided": 9.999000099990002e-05
+         },
+         "n_train_truth_genes_for_gba": 36,
+         "retrieval_knn": {
+          "ap": 0.22566127338338507,
+          "auroc": 0.7154348919054802,
+          "prevalence": 0.011053315994798439,
+          "n_pos": 17,
+          "n": 1538,
+          "hits@10": 4,
+          "enrichment@10": 36.18823529411765,
+          "hits@50": 5,
+          "enrichment@50": 9.047058823529413,
+          "hits@100": 5,
+          "enrichment@100": 4.523529411764707
+         },
+         "subset_with_embedded_wells": {
+          "planner": {
+           "ap": 0.1384560844008074,
+           "auroc": 0.6672751334824076,
+           "prevalence": 0.013016845329249618,
+           "n_pos": 17,
+           "n": 1306,
+           "hits@10": 3,
+           "enrichment@10": 23.047058823529408,
+           "hits@50": 4,
+           "enrichment@50": 6.145882352941176,
+           "hits@100": 6,
+           "enrichment@100": 4.609411764705882
+          },
+          "oracle_ceiling_replicate_endpoint": {
+           "ap": 0.04184989736325817,
+           "auroc": 0.6063067585451559,
+           "prevalence": 0.013016845329249618,
+           "n_pos": 17,
+           "n": 1306,
+           "hits@10": 1,
+           "enrichment@10": 7.682352941176471,
+           "hits@50": 2,
+           "enrichment@50": 3.072941176470588,
+           "hits@100": 6,
+           "enrichment@100": 4.609411764705882
+          }
+         }
+        },
+        "secondary_clip8": {
+         "planner": {
+          "ap": 0.12009960102739677,
+          "auroc": 0.6624511737633909,
+          "prevalence": 0.011053315994798439,
+          "n_pos": 17,
+          "n": 1538,
+          "hits@10": 2,
+          "enrichment@10": 18.094117647058827,
+          "hits@50": 4,
+          "enrichment@50": 7.23764705882353,
+          "hits@100": 6,
+          "enrichment@100": 5.4282352941176475
+         },
+         "perm": {
+          "ap": 0.12009960102739677,
+          "null_mean": 0.015630641785368635,
+          "null_95": 0.028714984725610487,
+          "p_one_sided": 0.0006999300069993001
+         },
+         "perm_expression_matched": {
+          "ap": 0.12009960102739677,
+          "null_mean": 0.018664848031770917,
+          "null_95": 0.04750895697824387,
+          "p_one_sided": 0.001999800019998
+         }
+        }
+       },
+       "polylobed": {
+        "n_target_wells": 197,
+        "primary_clip12": {
+         "planner": {
+          "ap": 0.1818247497162583,
+          "auroc": 0.8014416775884666,
+          "prevalence": 0.007802340702210663,
+          "n_pos": 12,
+          "n": 1538,
+          "hits@10": 3,
+          "enrichment@10": 38.449999999999996,
+          "hits@50": 4,
+          "enrichment@50": 10.253333333333334,
+          "hits@100": 5,
+          "enrichment@100": 6.408333333333333
+         },
+         "perm": {
+          "ap": 0.1818247497162583,
+          "null_mean": 0.012226902151446853,
+          "null_95": 0.0244675941269061,
+          "p_one_sided": 9.999000099990002e-05,
+          "q_bh": 0.00029997000299970003
+         },
+         "perm_expression_matched": {
+          "ap": 0.1818247497162583,
+          "null_mean": 0.017206435976279848,
+          "null_95": 0.05552748615720045,
+          "p_one_sided": 0.00019998000199980003
+         },
+         "gba": {
+          "ap": 0.13139873942649327,
+          "auroc": 0.6952817824377457,
+          "prevalence": 0.007802340702210663,
+          "n_pos": 12,
+          "n": 1538,
+          "hits@10": 3,
+          "enrichment@10": 38.449999999999996,
+          "hits@50": 4,
+          "enrichment@50": 10.253333333333334,
+          "hits@100": 4,
+          "enrichment@100": 5.126666666666667
+         },
+         "gba_perm": {
+          "ap": 0.13139873942649327,
+          "null_mean": 0.012306266975509883,
+          "null_95": 0.02560853102390615,
+          "p_one_sided": 0.00029997000299970003
+         },
+         "n_train_truth_genes_for_gba": 38,
+         "retrieval_knn": {
+          "ap": 0.12323269556071628,
+          "auroc": 0.7189274792485801,
+          "prevalence": 0.007802340702210663,
+          "n_pos": 12,
+          "n": 1538,
+          "hits@10": 1,
+          "enrichment@10": 12.816666666666666,
+          "hits@50": 3,
+          "enrichment@50": 7.6899999999999995,
+          "hits@100": 3,
+          "enrichment@100": 3.8449999999999998
+         },
+         "subset_with_embedded_wells": {
+          "planner": {
+           "ap": 0.21836543521232588,
+           "auroc": 0.8041602266872746,
+           "prevalence": 0.009188361408882083,
+           "n_pos": 12,
+           "n": 1306,
+           "hits@10": 4,
+           "enrichment@10": 43.53333333333333,
+           "hits@50": 4,
+           "enrichment@50": 8.706666666666665,
+           "hits@100": 7,
+           "enrichment@100": 7.618333333333333
+          },
+          "oracle_ceiling_replicate_endpoint": {
+           "ap": 0.26243148649522513,
+           "auroc": 0.8086038124678001,
+           "prevalence": 0.009188361408882083,
+           "n_pos": 12,
+           "n": 1306,
+           "hits@10": 5,
+           "enrichment@10": 54.416666666666664,
+           "hits@50": 6,
+           "enrichment@50": 13.059999999999999,
+           "hits@100": 7,
+           "enrichment@100": 7.618333333333333
+          }
+         }
+        },
+        "secondary_clip8": {
+         "planner": {
+          "ap": 0.2224061255401883,
+          "auroc": 0.7990934906072521,
+          "prevalence": 0.007802340702210663,
+          "n_pos": 12,
+          "n": 1538,
+          "hits@10": 3,
+          "enrichment@10": 38.449999999999996,
+          "hits@50": 4,
+          "enrichment@50": 10.253333333333334,
+          "hits@100": 5,
+          "enrichment@100": 6.408333333333333
+         },
+         "perm": {
+          "ap": 0.2224061255401883,
+          "null_mean": 0.0121972409284366,
+          "null_95": 0.024187399580625973,
+          "p_one_sided": 9.999000099990002e-05
+         },
+         "perm_expression_matched": {
+          "ap": 0.2224061255401883,
+          "null_mean": 0.01753612158362171,
+          "null_95": 0.05614933145607605,
+          "p_one_sided": 9.999000099990002e-05
+         }
+        }
+       },
+       "binuclear": {
+        "n_target_wells": 538,
+        "primary_clip12": {
+         "planner": {
+          "ap": 0.04279581797376297,
+          "auroc": 0.8469687092568448,
+          "prevalence": 0.002600780234070221,
+          "n_pos": 4,
+          "n": 1538,
+          "hits@10": 1,
+          "enrichment@10": 38.45,
+          "hits@50": 1,
+          "enrichment@50": 7.69,
+          "hits@100": 1,
+          "enrichment@100": 3.845
+         },
+         "perm": {
+          "ap": 0.04279581797376297,
+          "null_mean": 0.007186280541848717,
+          "null_95": 0.018620658834178013,
+          "p_one_sided": 0.0168983101689831,
+          "q_bh": 0.0168983101689831
+         },
+         "perm_expression_matched": {
+          "ap": 0.04279581797376297,
+          "null_mean": 0.013827203963886227,
+          "null_95": 0.052178665173204714,
+          "p_one_sided": 0.055894410558944105
+         },
+         "gba": {
+          "ap": 0.006480587254063558,
+          "auroc": 0.7293024771838331,
+          "prevalence": 0.002600780234070221,
+          "n_pos": 4,
+          "n": 1538,
+          "hits@10": 0,
+          "enrichment@10": 0.0,
+          "hits@50": 0,
+          "enrichment@50": 0.0,
+          "hits@100": 0,
+          "enrichment@100": 0.0
+         },
+         "gba_perm": {
+          "ap": 0.006480587254063558,
+          "null_mean": 0.006948964840714146,
+          "null_95": 0.017979783270785112,
+          "p_one_sided": 0.21597840215978403
+         },
+         "n_train_truth_genes_for_gba": 16,
+         "retrieval_knn": {
+          "ap": 0.004043937903041928,
+          "auroc": 0.6150586701434159,
+          "prevalence": 0.002600780234070221,
+          "n_pos": 4,
+          "n": 1538,
+          "hits@10": 0,
+          "enrichment@10": 0.0,
+          "hits@50": 0,
+          "enrichment@50": 0.0,
+          "hits@100": 0,
+          "enrichment@100": 0.0
+         },
+         "subset_with_embedded_wells": {
+          "planner": {
+           "ap": 0.07106108112515395,
+           "auroc": 0.8511904761904762,
+           "prevalence": 0.0030627871362940277,
+           "n_pos": 4,
+           "n": 1306,
+           "hits@10": 1,
+           "enrichment@10": 32.65,
+           "hits@50": 1,
+           "enrichment@50": 6.53,
+           "hits@100": 1,
+           "enrichment@100": 3.265
+          },
+          "oracle_ceiling_replicate_endpoint": {
+           "ap": 0.07321516015670008,
+           "auroc": 0.9103302611367127,
+           "prevalence": 0.0030627871362940277,
+           "n_pos": 4,
+           "n": 1306,
+           "hits@10": 1,
+           "enrichment@10": 32.65,
+           "hits@50": 2,
+           "enrichment@50": 13.06,
+           "hits@100": 2,
+           "enrichment@100": 6.53
+          }
+         }
+        },
+        "secondary_clip8": {
+         "planner": {
+          "ap": 0.03781394258116647,
+          "auroc": 0.830019556714472,
+          "prevalence": 0.002600780234070221,
+          "n_pos": 4,
+          "n": 1538,
+          "hits@10": 1,
+          "enrichment@10": 38.45,
+          "hits@50": 1,
+          "enrichment@50": 7.69,
+          "hits@100": 1,
+          "enrichment@100": 3.845
+         },
+         "perm": {
+          "ap": 0.03781394258116647,
+          "null_mean": 0.007171614049573094,
+          "null_95": 0.018637847408421736,
+          "p_one_sided": 0.0198980101989801
+         },
+         "perm_expression_matched": {
+          "ap": 0.03781394258116647,
+          "null_mean": 0.01394414617831916,
+          "null_95": 0.06433311299121948,
+          "p_one_sided": 0.05749425057494251
+         }
+        }
+       }
+      },
+      "decision": {
+       "n_q<0.05": 3,
+       "n_beats_gba": 2,
+       "pass": true
+      }
+     }
+    }
+   },
+   "seen": {
+    "n_genes": 4398,
+    "n_with_embedded_wells": 4398,
+    "truth": {
+     "primary": {
+      "phenotypes": {
+       "mitotic_delay": {
+        "n_target_wells": 372,
+        "primary_clip12": {
+         "planner": {
+          "ap": 0.07650443950400548,
+          "auroc": 0.6249141470557157,
+          "prevalence": 0.02819463392451114,
+          "n_pos": 124,
+          "n": 4398,
+          "hits@10": 3,
+          "enrichment@10": 10.640322580645162,
+          "hits@50": 9,
+          "enrichment@50": 6.384193548387096,
+          "hits@100": 14,
+          "enrichment@100": 4.965483870967742
+         },
+         "perm": {
+          "ap": 0.07650443950400548,
+          "null_mean": 0.029950347455288705,
+          "null_95": 0.036517350697242434,
+          "p_one_sided": 9.999000099990002e-05,
+          "q_bh": 0.00014998500149985002
+         },
+         "perm_expression_matched": {
+          "ap": 0.07650443950400548,
+          "null_mean": 0.030224483329403314,
+          "null_95": 0.03683673555388603,
+          "p_one_sided": 9.999000099990002e-05
+         },
+         "gba": {
+          "ap": 0.15619717634181118,
+          "auroc": 0.7322935378205806,
+          "prevalence": 0.02819463392451114,
+          "n_pos": 124,
+          "n": 4398,
+          "hits@10": 7,
+          "enrichment@10": 24.827419354838707,
+          "hits@50": 14,
+          "enrichment@50": 9.930967741935484,
+          "hits@100": 18,
+          "enrichment@100": 6.384193548387096
+         },
+         "gba_perm": {
+          "ap": 0.15619717634181118,
+          "null_mean": 0.02992562992467689,
+          "null_95": 0.03626428056055777,
+          "p_one_sided": 9.999000099990002e-05
+         },
+         "n_train_truth_genes_for_gba": 124,
+         "retrieval_knn": {
+          "ap": 0.036947819282217395,
+          "auroc": 0.565476549881504,
+          "prevalence": 0.02819463392451114,
+          "n_pos": 124,
+          "n": 4398,
+          "hits@10": 1,
+          "enrichment@10": 3.546774193548387,
+          "hits@50": 2,
+          "enrichment@50": 1.4187096774193548,
+          "hits@100": 4,
+          "enrichment@100": 1.4187096774193548
+         },
+         "subset_with_embedded_wells": {
+          "planner": {
+           "ap": 0.07650443950400548,
+           "auroc": 0.6249141470557157,
+           "prevalence": 0.02819463392451114,
+           "n_pos": 124,
+           "n": 4398,
+           "hits@10": 3,
+           "enrichment@10": 10.640322580645162,
+           "hits@50": 9,
+           "enrichment@50": 6.384193548387096,
+           "hits@100": 14,
+           "enrichment@100": 4.965483870967742
+          },
+          "oracle_ceiling_replicate_endpoint": {
+           "ap": 0.10501160748774699,
+           "auroc": 0.7495811131070087,
+           "prevalence": 0.02819463392451114,
+           "n_pos": 124,
+           "n": 4398,
+           "hits@10": 2,
+           "enrichment@10": 7.093548387096774,
+           "hits@50": 10,
+           "enrichment@50": 7.093548387096774,
+           "hits@100": 16,
+           "enrichment@100": 5.674838709677419
+          }
+         }
+        },
+        "secondary_clip8": {
+         "planner": {
+          "ap": 0.07933538549062373,
+          "auroc": 0.6237565474663003,
+          "prevalence": 0.02819463392451114,
+          "n_pos": 124,
+          "n": 4398,
+          "hits@10": 3,
+          "enrichment@10": 10.640322580645162,
+          "hits@50": 8,
+          "enrichment@50": 5.674838709677419,
+          "hits@100": 13,
+          "enrichment@100": 4.610806451612904
+         },
+         "perm": {
+          "ap": 0.07933538549062373,
+          "null_mean": 0.029935696316669192,
+          "null_95": 0.03631874578919815,
+          "p_one_sided": 9.999000099990002e-05
+         },
+         "perm_expression_matched": {
+          "ap": 0.07933538549062373,
+          "null_mean": 0.03019638867679248,
+          "null_95": 0.036873002965283674,
+          "p_one_sided": 9.999000099990002e-05
+         }
+        }
+       },
+       "polylobed": {
+        "n_target_wells": 197,
+        "primary_clip12": {
+         "planner": {
+          "ap": 0.036944724453688876,
+          "auroc": 0.6482290203352382,
+          "prevalence": 0.019326966803092316,
+          "n_pos": 85,
+          "n": 4398,
+          "hits@10": 0,
+          "enrichment@10": 0.0,
+          "hits@50": 3,
+          "enrichment@50": 3.104470588235294,
+          "hits@100": 6,
+          "enrichment@100": 3.104470588235294
+         },
+         "perm": {
+          "ap": 0.036944724453688876,
+          "null_mean": 0.021088129709890314,
+          "null_95": 0.027116682736879383,
+          "p_one_sided": 0.0035996400359964,
+          "q_bh": 0.0035996400359964
+         },
+         "perm_expression_matched": {
+          "ap": 0.036944724453688876,
+          "null_mean": 0.020964866885264073,
+          "null_95": 0.026969193521474193,
+          "p_one_sided": 0.0037996200379962005
+         },
+         "gba": {
+          "ap": 0.1065419665411045,
+          "auroc": 0.8035787837045322,
+          "prevalence": 0.019326966803092316,
+          "n_pos": 85,
+          "n": 4398,
+          "hits@10": 4,
+          "enrichment@10": 20.696470588235293,
+          "hits@50": 10,
+          "enrichment@50": 10.348235294117647,
+          "hits@100": 15,
+          "enrichment@100": 7.761176470588235
+         },
+         "gba_perm": {
+          "ap": 0.1065419665411045,
+          "null_mean": 0.021061556441816558,
+          "null_95": 0.027091260175121958,
+          "p_one_sided": 9.999000099990002e-05
+         },
+         "n_train_truth_genes_for_gba": 85,
+         "retrieval_knn": {
+          "ap": 0.01921501292928803,
+          "auroc": 0.4940167209939854,
+          "prevalence": 0.019326966803092316,
+          "n_pos": 85,
+          "n": 4398,
+          "hits@10": 0,
+          "enrichment@10": 0.0,
+          "hits@50": 0,
+          "enrichment@50": 0.0,
+          "hits@100": 2,
+          "enrichment@100": 1.0348235294117647
+         },
+         "subset_with_embedded_wells": {
+          "planner": {
+           "ap": 0.036944724453688876,
+           "auroc": 0.6482290203352382,
+           "prevalence": 0.019326966803092316,
+           "n_pos": 85,
+           "n": 4398,
+           "hits@10": 0,
+           "enrichment@10": 0.0,
+           "hits@50": 3,
+           "enrichment@50": 3.104470588235294,
+           "hits@100": 6,
+           "enrichment@100": 3.104470588235294
+          },
+          "oracle_ceiling_replicate_endpoint": {
+           "ap": 0.09069314228705283,
+           "auroc": 0.7767379059205413,
+           "prevalence": 0.019326966803092316,
+           "n_pos": 85,
+           "n": 4398,
+           "hits@10": 3,
+           "enrichment@10": 15.52235294117647,
+           "hits@50": 6,
+           "enrichment@50": 6.208941176470588,
+           "hits@100": 10,
+           "enrichment@100": 5.174117647058823
+          }
+         }
+        },
+        "secondary_clip8": {
+         "planner": {
+          "ap": 0.03856948985513893,
+          "auroc": 0.6515213922341485,
+          "prevalence": 0.019326966803092316,
+          "n_pos": 85,
+          "n": 4398,
+          "hits@10": 0,
+          "enrichment@10": 0.0,
+          "hits@50": 3,
+          "enrichment@50": 3.104470588235294,
+          "hits@100": 7,
+          "enrichment@100": 3.6218823529411766
+         },
+         "perm": {
+          "ap": 0.03856948985513893,
+          "null_mean": 0.021089121380517845,
+          "null_95": 0.027142762143392174,
+          "p_one_sided": 0.001999800019998
+         },
+         "perm_expression_matched": {
+          "ap": 0.03856948985513893,
+          "null_mean": 0.020973417329407287,
+          "null_95": 0.02691285489844161,
+          "p_one_sided": 0.0024997500249975004
+         }
+        }
+       },
+       "binuclear": {
+        "n_target_wells": 538,
+        "primary_clip12": {
+         "planner": {
+          "ap": 0.07517143537283326,
+          "auroc": 0.6284441952266346,
+          "prevalence": 0.04115507048658481,
+          "n_pos": 181,
+          "n": 4398,
+          "hits@10": 1,
+          "enrichment@10": 2.4298342541436466,
+          "hits@50": 8,
+          "enrichment@50": 3.8877348066298345,
+          "hits@100": 13,
+          "enrichment@100": 3.1587845303867406
+         },
+         "perm": {
+          "ap": 0.07517143537283326,
+          "null_mean": 0.04287241274615538,
+          "null_95": 0.049679322189604094,
+          "p_one_sided": 9.999000099990002e-05,
+          "q_bh": 0.00014998500149985002
+         },
+         "perm_expression_matched": {
+          "ap": 0.07517143537283326,
+          "null_mean": 0.04304569428842944,
+          "null_95": 0.04996020238220783,
+          "p_one_sided": 9.999000099990002e-05
+         },
+         "gba": {
+          "ap": 0.143192636341165,
+          "auroc": 0.6867113773898598,
+          "prevalence": 0.04115507048658481,
+          "n_pos": 181,
+          "n": 4398,
+          "hits@10": 5,
+          "enrichment@10": 12.149171270718233,
+          "hits@50": 17,
+          "enrichment@50": 8.2614364640884,
+          "hits@100": 24,
+          "enrichment@100": 5.8316022099447515
+         },
+         "gba_perm": {
+          "ap": 0.143192636341165,
+          "null_mean": 0.04291305251832653,
+          "null_95": 0.04973919048290572,
+          "p_one_sided": 9.999000099990002e-05
+         },
+         "n_train_truth_genes_for_gba": 181,
+         "retrieval_knn": {
+          "ap": 0.039448454963185414,
+          "auroc": 0.4845331380350777,
+          "prevalence": 0.04115507048658481,
+          "n_pos": 181,
+          "n": 4398,
+          "hits@10": 0,
+          "enrichment@10": 0.0,
+          "hits@50": 2,
+          "enrichment@50": 0.9719337016574586,
+          "hits@100": 3,
+          "enrichment@100": 0.7289502762430939
+         },
+         "subset_with_embedded_wells": {
+          "planner": {
+           "ap": 0.07517143537283326,
+           "auroc": 0.6284441952266346,
+           "prevalence": 0.04115507048658481,
+           "n_pos": 181,
+           "n": 4398,
+           "hits@10": 1,
+           "enrichment@10": 2.4298342541436466,
+           "hits@50": 8,
+           "enrichment@50": 3.8877348066298345,
+           "hits@100": 13,
+           "enrichment@100": 3.1587845303867406
+          },
+          "oracle_ceiling_replicate_endpoint": {
+           "ap": 0.11718562658890475,
+           "auroc": 0.6995284804861146,
+           "prevalence": 0.04115507048658481,
+           "n_pos": 181,
+           "n": 4398,
+           "hits@10": 2,
+           "enrichment@10": 4.859668508287293,
+           "hits@50": 13,
+           "enrichment@50": 6.317569060773481,
+           "hits@100": 19,
+           "enrichment@100": 4.6166850828729284
+          }
+         }
+        },
+        "secondary_clip8": {
+         "planner": {
+          "ap": 0.07732318996857965,
+          "auroc": 0.6314745498685275,
+          "prevalence": 0.04115507048658481,
+          "n_pos": 181,
+          "n": 4398,
+          "hits@10": 1,
+          "enrichment@10": 2.4298342541436466,
+          "hits@50": 8,
+          "enrichment@50": 3.8877348066298345,
+          "hits@100": 13,
+          "enrichment@100": 3.1587845303867406
+         },
+         "perm": {
+          "ap": 0.07732318996857965,
+          "null_mean": 0.04287251721519974,
+          "null_95": 0.049787291600522386,
+          "p_one_sided": 9.999000099990002e-05
+         },
+         "perm_expression_matched": {
+          "ap": 0.07732318996857965,
+          "null_mean": 0.04302349798978248,
+          "null_95": 0.049894220052528485,
+          "p_one_sided": 9.999000099990002e-05
+         }
+        }
+       }
+      },
+      "decision": {
+       "n_q<0.05": 3,
+       "n_beats_gba": 0,
+       "pass": false
+      }
+     },
+     "stringent": {
+      "phenotypes": {
+       "mitotic_delay": {
+        "n_target_wells": 372,
+        "primary_clip12": {
+         "planner": {
+          "ap": 0.14397130610652048,
+          "auroc": 0.7038979316317693,
+          "prevalence": 0.008185538881309686,
+          "n_pos": 36,
+          "n": 4398,
+          "hits@10": 4,
+          "enrichment@10": 48.866666666666674,
+          "hits@50": 6,
+          "enrichment@50": 14.66,
+          "hits@100": 8,
+          "enrichment@100": 9.773333333333333
+         },
+         "perm": {
+          "ap": 0.14397130610652048,
+          "null_mean": 0.009939331353386587,
+          "null_95": 0.01511339769498266,
+          "p_one_sided": 9.999000099990002e-05,
+          "q_bh": 0.00014998500149985002
+         },
+         "perm_expression_matched": {
+          "ap": 0.14397130610652048,
+          "null_mean": 0.012127690787314446,
+          "null_95": 0.023624465414575045,
+          "p_one_sided": 9.999000099990002e-05
+         },
+         "gba": {
+          "ap": 0.31053516645501783,
+          "auroc": 0.857977991746905,
+          "prevalence": 0.008185538881309686,
+          "n_pos": 36,
+          "n": 4398,
+          "hits@10": 7,
+          "enrichment@10": 85.51666666666667,
+          "hits@50": 14,
+          "enrichment@50": 34.20666666666667,
+          "hits@100": 14,
+          "enrichment@100": 17.103333333333335
+         },
+         "gba_perm": {
+          "ap": 0.31053516645501783,
+          "null_mean": 0.009925513056378328,
+          "null_95": 0.01529140834517418,
+          "p_one_sided": 9.999000099990002e-05
+         },
+         "n_train_truth_genes_for_gba": 36,
+         "retrieval_knn": {
+          "ap": 0.05526098764065486,
+          "auroc": 0.6254648734015996,
+          "prevalence": 0.008185538881309686,
+          "n_pos": 36,
+          "n": 4398,
+          "hits@10": 2,
+          "enrichment@10": 24.433333333333337,
+          "hits@50": 5,
+          "enrichment@50": 12.216666666666669,
+          "hits@100": 6,
+          "enrichment@100": 7.33
+         },
+         "subset_with_embedded_wells": {
+          "planner": {
+           "ap": 0.14397130610652048,
+           "auroc": 0.7038979316317693,
+           "prevalence": 0.008185538881309686,
+           "n_pos": 36,
+           "n": 4398,
+           "hits@10": 4,
+           "enrichment@10": 48.866666666666674,
+           "hits@50": 6,
+           "enrichment@50": 14.66,
+           "hits@100": 8,
+           "enrichment@100": 9.773333333333333
+          },
+          "oracle_ceiling_replicate_endpoint": {
+           "ap": 0.01524214330992184,
+           "auroc": 0.6128177696265729,
+           "prevalence": 0.008185538881309686,
+           "n_pos": 36,
+           "n": 4398,
+           "hits@10": 0,
+           "enrichment@10": 0.0,
+           "hits@50": 1,
+           "enrichment@50": 2.4433333333333334,
+           "hits@100": 2,
+           "enrichment@100": 2.4433333333333334
+          }
+         }
+        },
+        "secondary_clip8": {
+         "planner": {
+          "ap": 0.14387872401083768,
+          "auroc": 0.7098553161139131,
+          "prevalence": 0.008185538881309686,
+          "n_pos": 36,
+          "n": 4398,
+          "hits@10": 4,
+          "enrichment@10": 48.866666666666674,
+          "hits@50": 7,
+          "enrichment@50": 17.103333333333335,
+          "hits@100": 8,
+          "enrichment@100": 9.773333333333333
+         },
+         "perm": {
+          "ap": 0.14387872401083768,
+          "null_mean": 0.009953794641746155,
+          "null_95": 0.015122206873278081,
+          "p_one_sided": 9.999000099990002e-05
+         },
+         "perm_expression_matched": {
+          "ap": 0.14387872401083768,
+          "null_mean": 0.012065326556806042,
+          "null_95": 0.02355045938409412,
+          "p_one_sided": 9.999000099990002e-05
+         }
+        }
+       },
+       "polylobed": {
+        "n_target_wells": 197,
+        "primary_clip12": {
+         "planner": {
+          "ap": 0.1458932665869791,
+          "auroc": 0.69543698696282,
+          "prevalence": 0.008640291041382447,
+          "n_pos": 38,
+          "n": 4398,
+          "hits@10": 4,
+          "enrichment@10": 46.29473684210526,
+          "hits@50": 6,
+          "enrichment@50": 13.888421052631577,
+          "hits@100": 8,
+          "enrichment@100": 9.258947368421051
+         },
+         "perm": {
+          "ap": 0.1458932665869791,
+          "null_mean": 0.010340624089685935,
+          "null_95": 0.015632422471447995,
+          "p_one_sided": 9.999000099990002e-05,
+          "q_bh": 0.00014998500149985002
+         },
+         "perm_expression_matched": {
+          "ap": 0.1458932665869791,
+          "null_mean": 0.012100254614001537,
+          "null_95": 0.023268861393337822,
+          "p_one_sided": 9.999000099990002e-05
+         },
+         "gba": {
+          "ap": 0.26073713838157225,
+          "auroc": 0.8743783196523419,
+          "prevalence": 0.008640291041382447,
+          "n_pos": 38,
+          "n": 4398,
+          "hits@10": 6,
+          "enrichment@10": 69.44210526315788,
+          "hits@50": 13,
+          "enrichment@50": 30.09157894736842,
+          "hits@100": 17,
+          "enrichment@100": 19.675263157894737
+         },
+         "gba_perm": {
+          "ap": 0.26073713838157225,
+          "null_mean": 0.010376278935781988,
+          "null_95": 0.015649949655628846,
+          "p_one_sided": 9.999000099990002e-05
+         },
+         "n_train_truth_genes_for_gba": 38,
+         "retrieval_knn": {
+          "ap": 0.043620583724832906,
+          "auroc": 0.5563435538387254,
+          "prevalence": 0.008640291041382447,
+          "n_pos": 38,
+          "n": 4398,
+          "hits@10": 2,
+          "enrichment@10": 23.14736842105263,
+          "hits@50": 5,
+          "enrichment@50": 11.573684210526315,
+          "hits@100": 7,
+          "enrichment@100": 8.101578947368422
+         },
+         "subset_with_embedded_wells": {
+          "planner": {
+           "ap": 0.1458932665869791,
+           "auroc": 0.69543698696282,
+           "prevalence": 0.008640291041382447,
+           "n_pos": 38,
+           "n": 4398,
+           "hits@10": 4,
+           "enrichment@10": 46.29473684210526,
+           "hits@50": 6,
+           "enrichment@50": 13.888421052631577,
+           "hits@100": 8,
+           "enrichment@100": 9.258947368421051
+          },
+          "oracle_ceiling_replicate_endpoint": {
+           "ap": 0.021280718980511017,
+           "auroc": 0.7005492515692902,
+           "prevalence": 0.008640291041382447,
+           "n_pos": 38,
+           "n": 4398,
+           "hits@10": 0,
+           "enrichment@10": 0.0,
+           "hits@50": 1,
+           "enrichment@50": 2.3147368421052628,
+           "hits@100": 1,
+           "enrichment@100": 1.1573684210526314
+          }
+         }
+        },
+        "secondary_clip8": {
+         "planner": {
+          "ap": 0.14394003651500673,
+          "auroc": 0.6985453887011106,
+          "prevalence": 0.008640291041382447,
+          "n_pos": 38,
+          "n": 4398,
+          "hits@10": 4,
+          "enrichment@10": 46.29473684210526,
+          "hits@50": 6,
+          "enrichment@50": 13.888421052631577,
+          "hits@100": 8,
+          "enrichment@100": 9.258947368421051
+         },
+         "perm": {
+          "ap": 0.14394003651500673,
+          "null_mean": 0.01034314490689634,
+          "null_95": 0.01568859152110135,
+          "p_one_sided": 9.999000099990002e-05
+         },
+         "perm_expression_matched": {
+          "ap": 0.14394003651500673,
+          "null_mean": 0.011985130953223818,
+          "null_95": 0.023177616384910137,
+          "p_one_sided": 9.999000099990002e-05
+         }
+        }
+       },
+       "binuclear": {
+        "n_target_wells": 538,
+        "primary_clip12": {
+         "planner": {
+          "ap": 0.008894009386293374,
+          "auroc": 0.7771137608397992,
+          "prevalence": 0.0036380172805820826,
+          "n_pos": 16,
+          "n": 4398,
+          "hits@10": 0,
+          "enrichment@10": 0.0,
+          "hits@50": 0,
+          "enrichment@50": 0.0,
+          "hits@100": 1,
+          "enrichment@100": 2.7487500000000002
+         },
+         "perm": {
+          "ap": 0.008894009386293374,
+          "null_mean": 0.005391676385020861,
+          "null_95": 0.009838508320968218,
+          "p_one_sided": 0.06519348065193481,
+          "q_bh": 0.06519348065193481
+         },
+         "perm_expression_matched": {
+          "ap": 0.008894009386293374,
+          "null_mean": 0.0064191415322084056,
+          "null_95": 0.012309765147466083,
+          "p_one_sided": 0.1090890910908909
+         },
+         "gba": {
+          "ap": 0.6082284430093803,
+          "auroc": 0.9818433363760839,
+          "prevalence": 0.0036380172805820826,
+          "n_pos": 16,
+          "n": 4398,
+          "hits@10": 8,
+          "enrichment@10": 219.9,
+          "hits@50": 10,
+          "enrichment@50": 54.975,
+          "hits@100": 11,
+          "enrichment@100": 30.236250000000002
+         },
+         "gba_perm": {
+          "ap": 0.6082284430093803,
+          "null_mean": 0.005432902446463181,
+          "null_95": 0.010262526302738353,
+          "p_one_sided": 9.999000099990002e-05
+         },
+         "n_train_truth_genes_for_gba": 16,
+         "retrieval_knn": {
+          "ap": 0.004719295059465314,
+          "auroc": 0.5586490187129165,
+          "prevalence": 0.0036380172805820826,
+          "n_pos": 16,
+          "n": 4398,
+          "hits@10": 0,
+          "enrichment@10": 0.0,
+          "hits@50": 0,
+          "enrichment@50": 0.0,
+          "hits@100": 0,
+          "enrichment@100": 0.0
+         },
+         "subset_with_embedded_wells": {
+          "planner": {
+           "ap": 0.008894009386293374,
+           "auroc": 0.7771137608397992,
+           "prevalence": 0.0036380172805820826,
+           "n_pos": 16,
+           "n": 4398,
+           "hits@10": 0,
+           "enrichment@10": 0.0,
+           "hits@50": 0,
+           "enrichment@50": 0.0,
+           "hits@100": 1,
+           "enrichment@100": 2.7487500000000002
+          },
+          "oracle_ceiling_replicate_endpoint": {
+           "ap": 0.02219974254078855,
+           "auroc": 0.6527555910543131,
+           "prevalence": 0.0036380172805820826,
+           "n_pos": 16,
+           "n": 4398,
+           "hits@10": 1,
+           "enrichment@10": 27.4875,
+           "hits@50": 2,
+           "enrichment@50": 10.995000000000001,
+           "hits@100": 3,
+           "enrichment@100": 8.24625
+          }
+         }
+        },
+        "secondary_clip8": {
+         "planner": {
+          "ap": 0.008835104403083034,
+          "auroc": 0.7715940209949794,
+          "prevalence": 0.0036380172805820826,
+          "n_pos": 16,
+          "n": 4398,
+          "hits@10": 0,
+          "enrichment@10": 0.0,
+          "hits@50": 0,
+          "enrichment@50": 0.0,
+          "hits@100": 1,
+          "enrichment@100": 2.7487500000000002
+         },
+         "perm": {
+          "ap": 0.008835104403083034,
+          "null_mean": 0.005399601976090729,
+          "null_95": 0.00987255536029022,
+          "p_one_sided": 0.0664933506649335
+         },
+         "perm_expression_matched": {
+          "ap": 0.008835104403083034,
+          "null_mean": 0.00637601148367736,
+          "null_95": 0.012509117483408978,
+          "p_one_sided": 0.10578942105789421
+         }
+        }
+       }
+      },
+      "decision": {
+       "n_q<0.05": 2,
+       "n_beats_gba": 0,
+       "pass": false
+      }
+     }
+    }
+   }
+  }
+ },
+ "trajectory_targets": {
+  "n_targets": 500,
+  "n_target_genes": 192,
+  "n_candidates": 6526,
+  "methods": {
+   "planner": {
+    "hit@1": 0.0,
+    "hit@10": 0.006,
+    "hit@100": 0.022,
+    "mrr": 0.003017507933740416,
+    "median_rank": 3322.0
+   },
+   "retrieval_knn": {
+    "hit@1": 0.0,
+    "hit@10": 0.01,
+    "hit@100": 0.03,
+    "mrr": 0.004834670322655456,
+    "median_rank": 3122.0
+   },
+   "oracle_ceiling_replicate_endpoint": {
+    "hit@1": 0.008,
+    "hit@10": 0.052,
+    "hit@100": 0.162,
+    "mrr": 0.02496047176689901,
+    "median_rank": 1400.0
+   }
+  },
+  "random": {
+   "hit@1": 0.00015323322096230462,
+   "hit@10": 0.0015323322096230463,
+   "hit@100": 0.015323322096230463
+  },
+  "planner_vs_random_hit@100_p": 0.15037062363830506,
+  "gate_comparator": "retrieval_knn",
+  "oracle_ceiling_label": "oracle ceiling (uses the unseen gene's observed wells)",
+  "planner_vs_retrieval_knn_hit@100": {
+   "difference": -0.012239583333333335,
+   "ci95": [
+    -0.03680555555555555,
+    0.009898003472222196
+   ]
+  },
+  "pass": false
+ },
+ "G_Plan_2": {
+  "rule": "phenotype (primary truth, unseen genes) and trajectory rules; trajectory: hit@100 above random (binomial p < 0.05) and above kNN-imputed endpoint retrieval (bootstrap CI over target genes above 0), erratum E-02.1",
+  "erratum": "E-02.1",
+  "phenotype_pass": false,
+  "trajectory_pass": false,
+  "pass": false
+ },
+ "code_commit": "bc186bb"
+}
