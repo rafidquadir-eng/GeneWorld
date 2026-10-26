@@ -198,6 +198,15 @@
    "end_utc": "2026-10-26T05:37:42Z",
    "exit_code": 0,
    "minutes": 74.3
+  },
+  "gates": {
+   "cmd": "scripts/65_gates_a2.py --split val",
+   "gpus": [],
+   "log": "logs/a2_val/gates.log",
+   "start_utc": "2026-10-26T05:41:30Z",
+   "end_utc": "2026-10-26T05:41:35Z",
+   "exit_code": 0,
+   "minutes": 0.1
   }
  }
 }

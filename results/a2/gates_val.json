@@ -1,0 +1,216 @@
+{
+ "split": "val",
+ "design_commit": "dd57079",
+ "freeze_commit": null,
+ "selection": {
+  "file": "results/a2/selection.json",
+  "sha256": "be8a5582cfa95de17b8a502ae3b0b43c9a92c9113e991e062b240d240f1a854f"
+ },
+ "planning_source": "jump_crispr",
+ "G_Signal_2": {
+  "rule": "primary wells, 24/36 h: action-conditioned beats action-agnostic and replicate drift, one-sided p < 0.05 over plates each",
+  "vs_action_agnostic": {
+   "n_groups": 40,
+   "mean": -0.21039310991764068,
+   "p_one_sided": 4.999950000499995e-05,
+   "frac_groups_better": 0.85,
+   "model": 3.1701951026916504,
+   "baseline": 3.3805880546569824,
+   "relative_change": -0.06223559379577637
+  },
+  "vs_replicate_drift": {
+   "n_groups": 40,
+   "mean": -2.79513455927372,
+   "p_one_sided": 9.99990000099999e-06,
+   "frac_groups_better": 1.0,
+   "model": 3.1701951026916504,
+   "baseline": 5.965329647064209,
+   "relative_change": -0.4685633182525635
+  },
+  "secondary_well_weighted": {
+   "note": "completion plan v2 F6; secondary, not part of the gate",
+   "vs_action_agnostic": {
+    "n_groups": 40,
+    "mean": -0.1642603070625665,
+    "p_one_sided": 9.99990000099999e-06,
+    "frac_groups_better": 0.85,
+    "weighting": "wells per plate",
+    "n_wells": 362,
+    "wells_per_plate": {
+     "min": 1,
+     "median": 5.5,
+     "max": 39
+    }
+   },
+   "vs_replicate_drift": {
+    "n_groups": 40,
+    "mean": -2.565922715387292,
+    "p_one_sided": 9.99990000099999e-06,
+    "frac_groups_better": 1.0,
+    "weighting": "wells per plate",
+    "n_wells": 362,
+    "wells_per_plate": {
+     "min": 1,
+     "median": 5.5,
+     "max": 39
+    }
+   }
+  },
+  "pass": true,
+  "source": {
+   "file": "results/a2/h1/h1_val_plate_vjepa2.json",
+   "sha256": "da7640d3c13f548614975e4648d6ce6eea07217732fdbdc7599d8dc981743d68"
+  }
+ },
+ "G_ZeroShot_2": {
+  "rule": "on primary genes at 24/36 h, >= 1 source: true - trained-shuffled 95% CI over genes below 0 and true - action-agnostic 95% CI below 0",
+  "pass": false,
+  "passing_sources": [],
+  "source": {
+   "file": "results/a2/h2/h2_val_plate_vjepa2.json",
+   "sha256": "e4a6afca74d6853c0bea0a99c5e02ed909e86f4c98c742649b3e32e5856919b9"
+  },
+  "per_source": {
+   "perturbseq": {
+    "pass": false,
+    "true_vs_shuffled_trained": {
+     "n_genes": 108,
+     "mean": 0.0075472284246374055,
+     "relative": 0.002470591318216364,
+     "ci95": [
+      -0.019210249351130592,
+      0.03191842955571632
+     ],
+     "frac_genes_better": 0.4444444444444444
+    },
+    "true_vs_agnostic": {
+     "n_genes": 108,
+     "mean": 0.08256850088084186,
+     "relative": 0.027709359472020356,
+     "ci95": [
+      0.046119878054768956,
+      0.1165747546211437
+     ],
+     "frac_genes_better": 0.26851851851851855
+    }
+   },
+   "jump_crispr": {
+    "pass": false,
+    "true_vs_shuffled_trained": {
+     "n_genes": 90,
+     "mean": -0.016404785050286187,
+     "relative": -0.005547866976408855,
+     "ci95": [
+      -0.03795397612783644,
+      0.003666429122289019
+     ],
+     "frac_genes_better": 0.5333333333333333
+    },
+    "true_vs_agnostic": {
+     "n_genes": 90,
+     "mean": 0.0657010899649726,
+     "relative": 0.02285376374091963,
+     "ci95": [
+      0.03004668500688341,
+      0.10339900563160578
+     ],
+     "frac_genes_better": 0.36666666666666664
+    }
+   },
+   "jump_orf": {
+    "pass": false,
+    "true_vs_shuffled_trained": {
+     "n_genes": 139,
+     "mean": -0.002043771229201941,
+     "relative": -0.0006994508845741265,
+     "ci95": [
+      -0.01719289865853975,
+      0.01193016274369877
+     ],
+     "frac_genes_better": 0.5179856115107914
+    },
+    "true_vs_agnostic": {
+     "n_genes": 139,
+     "mean": 0.023248635607657674,
+     "relative": 0.008025978868918537,
+     "ci95": [
+      -0.006320501938998269,
+      0.051902086657585854
+     ],
+     "frac_genes_better": 0.39568345323741005
+    }
+   },
+   "string": {
+    "pass": false,
+    "true_vs_shuffled_trained": {
+     "n_genes": 195,
+     "mean": -0.0030927462455553885,
+     "relative": -0.001078289544668598,
+     "ci95": [
+      -0.01586157737634121,
+      0.008835671360676105
+     ],
+     "frac_genes_better": 0.5282051282051282
+    },
+    "true_vs_agnostic": {
+     "n_genes": 195,
+     "mean": -0.04672926389254056,
+     "relative": -0.016048057835028717,
+     "ci95": [
+      -0.06971308442262503,
+      -0.02533046361727593
+     ],
+     "frac_genes_better": 0.7025641025641025
+    }
+   },
+   "esm2": {
+    "pass": false,
+    "true_vs_shuffled_trained": {
+     "n_genes": 196,
+     "mean": -0.007085107418955589,
+     "relative": -0.002454983579379122,
+     "ci95": [
+      -0.018825903139552295,
+      0.005096308689336383
+     ],
+     "frac_genes_better": 0.5663265306122449
+    },
+    "true_vs_agnostic": {
+     "n_genes": 196,
+     "mean": -0.03111921402872825,
+     "relative": -0.010693725510799723,
+     "ci95": [
+      -0.05324949980998526,
+      -0.009189264202604502
+     ],
+     "frac_genes_better": 0.5816326530612245
+    }
+   }
+  }
+ },
+ "G_Plan_2": {
+  "rule": "phenotype (primary truth, unseen genes) and trajectory rules; trajectory: hit@100 above random (binomial p < 0.05) and above kNN-imputed endpoint retrieval (bootstrap CI over target genes above 0), erratum E-02.1",
+  "erratum": "E-02.1",
+  "phenotype_pass": false,
+  "trajectory_pass": false,
+  "pass": false,
+  "source": {
+   "file": "results/a2/h3/h3_val_plate_vjepa2_jump_crispr.json",
+   "sha256": "d8deb16821b80cdf61dd3d938a4861b933e03c7d8c8e980c9a43f6e218780af0"
+  },
+  "trajectory_gate_comparator": "retrieval_knn",
+  "trajectory_vs_comparator": {
+   "difference": -0.015580808080808084,
+   "ci95": [
+    -0.050278409090909096,
+    0.01525252525252525
+   ]
+  },
+  "oracle_ceiling_hit@100": 0.16875
+ },
+ "errata": [
+  "E-02.1 (2026-10-22): G-Plan-2 trajectory comparator = kNN-imputed endpoint retrieval"
+ ],
+ "consequence": "G-Signal-2 passed: H2/H3 are confirmatory",
+ "code_commit": "e866090"
+}
