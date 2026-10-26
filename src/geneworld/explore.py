@@ -94,7 +94,7 @@ def within_series_probe(x: np.ndarray, meta: pd.DataFrame, rows: np.ndarray | No
     if rows is not None:
         keep = np.zeros(len(meta), bool)
         keep[rows] = True
-        tr &= keep
+        tr = tr & keep
     series, plates = meta.series.to_numpy(), meta.plate.to_numpy()
     per = []
     for sr in sorted(set(series[tr])):
