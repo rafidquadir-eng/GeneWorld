@@ -1,0 +1,113 @@
+{
+ "wells": "splits/screenB_wells.tsv",
+ "n_wells": 9151,
+ "n_plates": 28,
+ "out_root": "data/latents_screenB",
+ "streams_per_gpu": 16,
+ "streams_total": 128,
+ "fetcher": "native",
+ "gpus": {
+  "0": {
+   "plates": [
+    "LTValidMitosisSon384Plate02_04",
+    "LTValidMitosisSon384Plate06_01",
+    "LTValidMitosisSon384Plate07_06"
+   ],
+   "n_wells": 985,
+   "start_utc": "2026-10-26T20:00:03Z",
+   "exit_code": 0,
+   "minutes": 32.6,
+   "end_utc": "2026-10-26T20:32:41Z"
+  },
+  "1": {
+   "plates": [
+    "LTValidMitosisSon384Plate02_05",
+    "LTValidMitosisSon384Plate04_04",
+    "LTValidMitosisSon384Plate01_02"
+   ],
+   "n_wells": 986,
+   "start_utc": "2026-10-26T20:00:03Z",
+   "exit_code": 0,
+   "minutes": 32.7,
+   "end_utc": "2026-10-26T20:32:44Z"
+  },
+  "2": {
+   "plates": [
+    "LTValidMitosisSon384Plate01_01",
+    "LTValidMitosisSon384Plate04_02",
+    "LTValidMitosisSon384Plate06_03"
+   ],
+   "n_wells": 986,
+   "start_utc": "2026-10-26T20:00:03Z",
+   "exit_code": 0,
+   "minutes": 32.7,
+   "end_utc": "2026-10-26T20:32:44Z"
+  },
+  "3": {
+   "plates": [
+    "LTValidMitosisSon384Plate01_03",
+    "LTValidMitosisSon384Plate04_05",
+    "LTValidMitosisSon384Plate07_01",
+    "LTValidMitosisSon384Plate03_05"
+   ],
+   "n_wells": 1304,
+   "start_utc": "2026-10-26T20:00:03Z",
+   "exit_code": 0,
+   "minutes": 42.2,
+   "end_utc": "2026-10-26T20:42:12Z"
+  },
+  "4": {
+   "plates": [
+    "LTValidMitosisSon384Plate01_04",
+    "LTValidMitosisSon384Plate05_01",
+    "LTValidMitosisSon384Plate07_05",
+    "LTValidMitosisSon384Plate02_01"
+   ],
+   "n_wells": 1294,
+   "start_utc": "2026-10-26T20:00:03Z",
+   "exit_code": 0,
+   "minutes": 42.2,
+   "end_utc": "2026-10-26T20:42:12Z"
+  },
+  "5": {
+   "plates": [
+    "LTValidMitosisSon384Plate02_03",
+    "LTValidMitosisSon384Plate05_04",
+    "LTValidMitosisSon384Plate03_02",
+    "LTValidMitosisSon384Plate03_03"
+   ],
+   "n_wells": 1306,
+   "start_utc": "2026-10-26T20:00:03Z",
+   "exit_code": 0,
+   "minutes": 42.2,
+   "end_utc": "2026-10-26T20:42:12Z"
+  },
+  "6": {
+   "plates": [
+    "LTValidMitosisSon384Plate05_02",
+    "LTValidMitosisSon384Plate06_05",
+    "LTValidMitosisSon384Plate07_03",
+    "LTValidMitosisSon384Plate03_04"
+   ],
+   "n_wells": 1304,
+   "start_utc": "2026-10-26T20:00:03Z",
+   "exit_code": 0,
+   "minutes": 42.2,
+   "end_utc": "2026-10-26T20:42:12Z"
+  },
+  "7": {
+   "plates": [
+    "LTValidMitosisSon384Plate05_03",
+    "LTValidMitosisSon384Plate04_03",
+    "LTValidMitosisSon384Plate06_06"
+   ],
+   "n_wells": 986,
+   "start_utc": "2026-10-26T20:00:03Z",
+   "exit_code": 0,
+   "minutes": 42.2,
+   "end_utc": "2026-10-26T20:42:12Z"
+  }
+ },
+ "n_failures": 24,
+ "problems": []
+}

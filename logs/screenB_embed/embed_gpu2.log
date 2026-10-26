@@ -1,0 +1,5 @@
+3 plates (0 done), 3 to embed; backbones ['vjepa2', 'dinov2', 'tijepa1']
+LTValidMitosisSon384Plate01_01: 329 wells; 393 wells in 11.2 min (0.58 wells/s)
+LTValidMitosisSon384Plate04_02: 329 wells; 658 wells in 20.3 min (0.54 wells/s)
+LTValidMitosisSon384Plate06_03: 326 wells; 984 wells in 31.1 min (0.53 wells/s)
+done: 984 wells, 2 failures, 0.52 h
