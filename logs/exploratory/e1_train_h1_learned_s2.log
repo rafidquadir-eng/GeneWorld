@@ -1,0 +1,5 @@
+a2_plate_vjepa2_h1_learned_50M_d0.1_w0.2_s2: train wells 45786, val primary wells 362, actions 9967
+/home/ubuntu/GeneWorld/scripts/50_train_a2.py:178: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  curve.append({"step": step, "val_primary": score, "loss_tf": float(loss_tf),
+a2_plate_vjepa2_h1_learned_50M_d0.1_w0.2_s2: best 2.6781 at 2250 (stopped 5250); 21.4 min

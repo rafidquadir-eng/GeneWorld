@@ -1,0 +1,2544 @@
+{
+ "label": "exploratory, after the test",
+ "split": "val",
+ "n": 336,
+ "utc": "2026-10-26T14:37:36Z",
+ "wells": [
+  {
+   "plate": "LT0008_14",
+   "well": "A1",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "A11",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "A12",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "A14",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "A15",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "A18",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "A19",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "A2",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "A20",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "A24",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "A4",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "A8",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "B10",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "B13",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "B14",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "B18",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "B2",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "B22",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "B23",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "B3",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "B7",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "B9",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "C1",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "C15",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "C16",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "C17",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "C20",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "C22",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "C3",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "C4",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "C5",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "C7",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "C8",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "C9",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "D11",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "D14",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "D17",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "D18",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "D2",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "D20",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "D21",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "D23",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "D24",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "D3",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "D4",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "D7",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "D9",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "E11",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "E13",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "E14",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "E17",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "E18",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "E20",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "E21",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "E22",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "E3",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "E7",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "F1",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "F10",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "F13",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "F14",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "F17",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "F2",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "F20",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "F22",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "F24",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "F4",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "F5",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "F9",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "G10",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "G16",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "G21",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "G22",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "G5",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "G6",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "G7",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "G9",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "H11",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "H12",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "H13",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "H14",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "H17",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "H2",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "H20",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "H21",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "H22",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "H4",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "H8",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "H9",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "I10",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "I11",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "I14",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "I15",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "I16",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "I18",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "I19",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "I20",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "I21",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "I3",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "I4",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "I5",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "I6",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "I9",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "J1",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "J12",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "J13",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "J15",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "J2",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "J21",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "J22",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "J3",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "J4",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "J5",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "J6",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "J8",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "J9",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "K10",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "K13",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "K14",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "K19",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "K2",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "K21",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "K22",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "K3",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "K5",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "K7",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "L1",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "L10",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "L21",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "L24",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "L4",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "M10",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "M11",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "M2",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "M20",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "M21",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "M22",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "M23",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "M24",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "M7",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "M8",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "M9",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "N10",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "N12",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "N15",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "N18",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "N20",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "N21",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "N22",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "N23",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "N24",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "N3",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "N4",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "N6",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "N7",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "N8",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "N9",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "O10",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "O12",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "O13",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "O14",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "O16",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "O18",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "O19",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "O20",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "O24",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "O4",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "O5",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "O6",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "O7",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "O8",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "P10",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "P11",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "P16",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "P19",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "P2",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "P20",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "P21",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "P22",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "P23",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "P24",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "P5",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "P8",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0008_14",
+   "well": "P9",
+   "missing_frames": [
+    91,
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "A11",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "A12",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "A13",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "A15",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "A2",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "A20",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "A24",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "A4",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "A5",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "A7",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "B1",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "B11",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "B17",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "B2",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "B20",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "B22",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "B23",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "B24",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "B3",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "B4",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "B6",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "B7",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "B8",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "C1",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "C11",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "C14",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "C15",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "C16",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "C18",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "C2",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "C24",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "C6",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "C7",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "D14",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "D15",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "D16",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "D19",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "D2",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "D23",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "D3",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "E12",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "E15",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "E17",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "E2",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "E22",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "E23",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "E24",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "E8",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "F11",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "F14",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "F15",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "F2",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "F23",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "F24",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "F3",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "F7",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "F8",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "G11",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "G13",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "G14",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "G17",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "G20",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "G23",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "G24",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "G5",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "G9",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "H10",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "H11",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "H12",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "H2",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "H21",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "H22",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "H3",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "H7",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "H8",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "H9",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "I12",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "I15",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "I16",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "I17",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "I19",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "I2",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "I24",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "I8",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "I9",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "J1",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "J12",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "J13",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "J14",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "J15",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "J17",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "J2",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "J23",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "J24",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "J3",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "J4",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "J7",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "K1",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "K12",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "K16",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "K2",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "K21",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "K23",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "K4",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "K5",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "K7",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "L11",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "L13",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "L21",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "L22",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "L24",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "L3",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "L5",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "L8",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "M11",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "M13",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "M15",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "M16",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "M18",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "M4",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "M5",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "M8",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "M9",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "N1",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "N11",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "N16",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "N21",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "N24",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "N3",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "N5",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "N6",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "N9",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "O11",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "O16",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "O17",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "O2",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "O21",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "O22",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "O5",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "O7",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "P1",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "P16",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "P17",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "P18",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "P2",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "P21",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "P22",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "P24",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "P3",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "P6",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0079_38",
+   "well": "P7",
+   "missing_frames": [
+    92
+   ]
+  },
+  {
+   "plate": "LT0107_18",
+   "well": "C4",
+   "missing_frames": [
+    92
+   ]
+  }
+ ]
+}

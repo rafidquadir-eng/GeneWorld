@@ -1,0 +1,16 @@
+/home/ubuntu/GeneWorld/src/geneworld/explore.py:180: RuntimeWarning: Mean of empty slice
+  mu[p] = np.nanmean(tm, 0)
+/home/ubuntu/venv/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+{
+ "label": "exploratory, after the test",
+ "base_cache": "vjepa2_test",
+ "n_wells_added": 868,
+ "plates_without_statistics": [],
+ "splits": [
+  "train",
+  "val",
+  "test"
+ ],
+ "shards": "data/latents_e3/vjepa2"
+}

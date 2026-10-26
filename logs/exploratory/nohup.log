@@ -1,0 +1,5 @@
+[10-26 13:04:04] phase 1 waits for the test embed commit
+[10-26 13:59:04] phase 1: E1 cache (validation base) and 6 E1 models on GPUs 2-7; E3 candidates train/val
+[10-26 15:03:06] phase 1 done; waiting for the test evaluation
+[10-26 21:11:09] phase 2 (after the test; freeze ce5c3df)
+[10-26 22:28:04] step e2 FAILED (exit 1); see logs/exploratory/e2.log

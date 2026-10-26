@@ -431,14 +431,20 @@ def section_incidents(d: Doc):
             "parallelisation); the orchestrator's `secondary_complex` step then found no run "
             f"left ({f(ej['jobs']['secondary_complex']['minutes'])} min). Same configurations, "
             "seeds and inputs.")
-    steps = REPO / "logs" / "rehearsal" / "steps.tsv"
-    if steps.exists():
-        import csv
+    import csv
+    for name, sub in (("S18 rehearsal", "rehearsal"), ("Test evaluation", "stage1_test"),
+                      ("E1-E3", "exploratory")):
+        steps = REPO / "logs" / sub / "steps.tsv"
+        if not steps.exists():
+            continue
         rs = list(csv.DictReader(steps.open(), delimiter="\t"))
         failed = [r["step"] for r in rs if r["exit_code"] != "0"]
-        d.p(f"S18 rehearsal: {len(rs)} step runs, {len(failed)} failed"
-            + (f" ({', '.join(f'`{s}`' for s in failed)}; each rerun later with exit 0, "
-               "see `logs/rehearsal/`)" if failed else "") + ".")
+        last = {r["step"]: r["exit_code"] for r in rs}
+        rerun_ok = all(last[s] == "0" for s in failed)
+        d.p(f"{name}: {len(rs)} step runs, {len(failed)} failed"
+            + (f" ({', '.join(f'`{s}`' for s in failed)}; "
+               + ("each rerun later with exit 0" if rerun_ok else "not all rerun successfully")
+               + f", see `logs/{sub}/`)" if failed else "") + ".")
 
 
 def section_not_run(d: Doc, gt):

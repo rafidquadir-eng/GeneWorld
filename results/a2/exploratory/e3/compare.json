@@ -1,0 +1,25 @@
+{
+ "label": "exploratory, after the test",
+ "val": {
+  "n_wells_primary": [
+   362,
+   386
+  ],
+  "G_Signal_2_pass": [
+   true,
+   true
+  ],
+  "conclusion_differs": false
+ },
+ "test": {
+  "n_wells_primary": [
+   770,
+   770
+  ],
+  "G_Signal_2_pass": [
+   true,
+   true
+  ],
+  "conclusion_differs": false
+ }
+}

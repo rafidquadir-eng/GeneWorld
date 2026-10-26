@@ -1,0 +1,143 @@
+{
+ "name": "a2_plate_vjepa2_h1_learned_50M_d0.1_w0.2_s1",
+ "family": "h1_learned",
+ "config": "50M_d0.1_w0.2",
+ "seed": 1,
+ "norm": "plate",
+ "backbone_key": "vjepa2",
+ "gene_split": "gene",
+ "best_val_primary": 2.6564829349517822,
+ "best_step": 1750,
+ "stopped_at": 4750,
+ "n_params": 71318016,
+ "n_train_wells": 45786,
+ "n_val_wells": 362,
+ "minutes": 19.447893234093986,
+ "curve": [
+  {
+   "step": 250,
+   "val_primary": 3.1562654972076416,
+   "loss_tf": 0.6430190205574036,
+   "loss_ro": 0.9566382169723511
+  },
+  {
+   "step": 500,
+   "val_primary": 2.9456570148468018,
+   "loss_tf": 0.6338405609130859,
+   "loss_ro": 0.9091019630432129
+  },
+  {
+   "step": 750,
+   "val_primary": 2.7797958850860596,
+   "loss_tf": 0.625964879989624,
+   "loss_ro": 0.8860130310058594
+  },
+  {
+   "step": 1000,
+   "val_primary": 2.782564878463745,
+   "loss_tf": 0.6159054040908813,
+   "loss_ro": 0.8581270575523376
+  },
+  {
+   "step": 1250,
+   "val_primary": 2.718552827835083,
+   "loss_tf": 0.615233302116394,
+   "loss_ro": 0.8434697985649109
+  },
+  {
+   "step": 1500,
+   "val_primary": 2.6775522232055664,
+   "loss_tf": 0.6139241456985474,
+   "loss_ro": 0.8294865489006042
+  },
+  {
+   "step": 1750,
+   "val_primary": 2.6564829349517822,
+   "loss_tf": 0.612537145614624,
+   "loss_ro": 0.8201126456260681
+  },
+  {
+   "step": 2000,
+   "val_primary": 2.691561460494995,
+   "loss_tf": 0.6003878116607666,
+   "loss_ro": 0.7931054830551147
+  },
+  {
+   "step": 2250,
+   "val_primary": 2.6785378456115723,
+   "loss_tf": 0.6164244413375854,
+   "loss_ro": 0.8483409881591797
+  },
+  {
+   "step": 2500,
+   "val_primary": 2.66326642036438,
+   "loss_tf": 0.6044106483459473,
+   "loss_ro": 0.83296799659729
+  },
+  {
+   "step": 2750,
+   "val_primary": 2.683933734893799,
+   "loss_tf": 0.5956413745880127,
+   "loss_ro": 0.774927020072937
+  },
+  {
+   "step": 3000,
+   "val_primary": 2.689610242843628,
+   "loss_tf": 0.6102614402770996,
+   "loss_ro": 0.782241702079773
+  },
+  {
+   "step": 3250,
+   "val_primary": 2.677701234817505,
+   "loss_tf": 0.6069352030754089,
+   "loss_ro": 0.7780868411064148
+  },
+  {
+   "step": 3500,
+   "val_primary": 2.684657096862793,
+   "loss_tf": 0.5988643765449524,
+   "loss_ro": 0.7644723653793335
+  },
+  {
+   "step": 3750,
+   "val_primary": 2.6759023666381836,
+   "loss_tf": 0.6011845469474792,
+   "loss_ro": 0.7604647874832153
+  },
+  {
+   "step": 4000,
+   "val_primary": 2.6796860694885254,
+   "loss_tf": 0.6091703772544861,
+   "loss_ro": 0.7724274396896362
+  },
+  {
+   "step": 4250,
+   "val_primary": 2.694200038909912,
+   "loss_tf": 0.5975767374038696,
+   "loss_ro": 0.7560290098190308
+  },
+  {
+   "step": 4500,
+   "val_primary": 2.715866804122925,
+   "loss_tf": 0.5913879871368408,
+   "loss_ro": 0.7467426657676697
+  },
+  {
+   "step": 4750,
+   "val_primary": 2.7210466861724854,
+   "loss_tf": 0.586045503616333,
+   "loss_ro": 0.7316071391105652
+  }
+ ],
+ "checkpoint": "a2_plate_vjepa2_h1_learned_50M_d0.1_w0.2_s1.pt",
+ "peak_gpu_memory_gb": 14.859544064,
+ "checkpoint_sha256": "7f0d60ccae72a1bdef3e47fae35c8aa042a71f02ade35a5b99842024b54e23b6",
+ "backbone": {
+  "kind": "backbone",
+  "key": "vjepa2_vitl",
+  "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+  "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+  "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+ },
+ "design_commit": "dd57079"
+}

@@ -1,0 +1,5 @@
+/home/ubuntu/GeneWorld/src/geneworld/explore.py:53: RuntimeWarning: All-NaN slice encountered
+  c = np.nan_to_num(np.nanmedian(res, axis=0))
+/home/ubuntu/GeneWorld/src/geneworld/explore.py:45: RuntimeWarning: All-NaN slice encountered
+  r = np.nan_to_num(np.nanmedian(res, axis=1))
+/home/ubuntu/GeneWorld/data/cache/vjepa2_test_e1bscore
