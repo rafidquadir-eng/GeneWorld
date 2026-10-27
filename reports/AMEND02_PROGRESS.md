@@ -1,9 +1,8 @@
-# Amendment 02: progress (updated 2026-10-26 06:45 UTC)
+# Amendment 02: progress (updated 2026-10-27)
 
-Interim status while the amendment-02 round runs (design commit `dd57079`). Final results go in
-`reports/RUN_REPORT_STAGE2.md`. No gate, selection or amended validation evaluation has been
-computed before 10-26; validation gates are now recorded (`d0ab6e1`). No test plate has been
-embedded and nothing has been evaluated on the test split or screenB.
+Status of the amendment-02 round (design commit `dd57079`): complete. Validation gates
+`d0ab6e1`; test evaluated once after the freeze `ce5c3df` (`66696b4`). Final results:
+`reports/RUN_REPORT_STAGE2.md`; summary: `reports/STAGE2_COMPLETION_SUMMARY.md`.
 
 | step | status | evidence |
 |---|---|---|
@@ -14,8 +13,8 @@ embedded and nothing has been evaluated on the test split or screenB.
 | 5. Grid x 3 seeds, replicate baselines, probe CIs | done 05:41 UTC 10-26 (288 of 288 grid runs, `0a26d51`; evaluations `e866090`) | first attempt: 277 of 288 runs failed with CUDA out-of-memory (4 concurrent processes on 40 GB); 11 completed and are kept. Operational fix (evaluation chunks of 256 wells, expandable CUDA segments, 3 workers; no protocol value changed, `c03b433`); 277 runs restarted 23:17 UTC. Second incident 07:30 UTC 10-22: 50 M runs need ~14.6 GB in training, so three at once overflowed; 12 more runs failed (rerun). The runner now schedules by GPU memory (22 M = 1 unit, 50 M = 2, capacity 4) and respects live locks (`77c1905`); 52 of 288 runs done, 236 queued. Migrated 10-23 to 8 x A100-40GB (per-GPU slots, `264fee5`; section "Migration" below). Third incident 06:20 UTC 10-23: an unattended OS upgrade restarted the NVIDIA services and 27 in-flight runs failed (rerun from scratch; section "Incident 3"). 245 of 288 done at 14:30 UTC 10-23, 43 running or queued |
 | S2/S3 missing frames (completion plan v2) | done 10-23 | S2 `65db5d2` (`results/a2/missing_frames.json`); S3 rule pre-registered for test and screenB in the protocol, `884a9c0` |
 | 6. Gates on validation | done 05:41 UTC 10-26 (S12, `d0ab6e1`); S13 checklist in `reports/GATES_VAL_SUMMARY.md`; waiting for the author's "go" | `results/a2/gates_val.json`, committed before the freeze |
-| 7. Freeze, embed test plates, test once | prepared; D2 order and rehearsal (S17/S18) done | `splits/test_wells_to_embed.tsv` (14,186 wells, 100 plates); extended `scripts/run_stage1_test.sh` |
-| 8. Run report | after step 7 | |
+| 7. Freeze, embed test plates, test once | done 10-26 (freeze `ce5c3df`, test embed `bc186bb`, screenB embed `f3a2c9d`, results `66696b4`); E1-E3 `6733a43` | `splits/test_wells_to_embed.tsv` (14,186 wells, 100 plates); extended `scripts/run_stage1_test.sh` |
+| 8. Run report | done (`reports/RUN_REPORT_STAGE2.md`; summary `reports/STAGE2_COMPLETION_SUMMARY.md`) | |
 
 ## Decisions and deviations so far
 

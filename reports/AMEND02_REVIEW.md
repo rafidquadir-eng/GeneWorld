@@ -1,4 +1,11 @@
-# GeneWorld amendment 02: review packet (updated 2026-10-26 06:45 UTC)
+# GeneWorld amendment 02: review packet (updated 2026-10-27)
+
+## Update 2026-10-27: amendment 02 complete
+
+Test evaluated once (freeze `ce5c3df`), screenB, E1-E3 and the run report are done; all GPU work
+finished 23:50 UTC 10-26. Summary: `reports/STAGE2_COMPLETION_SUMMARY.md`; full numbers:
+`reports/RUN_REPORT_STAGE2.md`. Test gates: G-Signal-2 pass, G-ZeroShot-2 pass (string only,
+narrow), G-Plan-2 fail.
 
 ## Update 2026-10-26 06:45 UTC: S12 finished, S18 finished, S13 checklist (stopped for "go")
 
