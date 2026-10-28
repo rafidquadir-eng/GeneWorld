@@ -1,0 +1,146 @@
+{
+ "label": "exploratory, after the test (post hoc robustness control, docs/STAGE2_ROBUSTNESS_PLAN.md)",
+ "plan_commit": "78c8775",
+ "code_commit": "d4d0b81",
+ "split": "val",
+ "norm": "plate",
+ "freeze_commit": null,
+ "selected_configs": {
+  "h1_learned": "50M_d0.1_w0.2",
+  "h1_none": "50M_d0.3_w0.05"
+ },
+ "n_wells_primary": 362,
+ "n_plates_primary": 40,
+ "n_wells_all": 4808,
+ "statistic": "primary wells, mean error at 24 h and 36 h, errors averaged over 3 seeds, per-plate means, one-sided Monte Carlo sign flip over plates (100,000 draws); mean < 0 means the first-named model has lower error",
+ "description": "gain of the real h1_learned over the selected agnostic models (descriptive)",
+ "per_horizon_primary": {
+  "3h": {
+   "n_groups": 40,
+   "mean": 0.0026040345430374144,
+   "p_one_sided": 0.6992630073699263,
+   "frac_groups_better": 0.3,
+   "model": 0.9958785176277161,
+   "baseline": 0.9932743906974792,
+   "relative_change": 0.002621769905090332,
+   "n_wells": 362
+  },
+  "12h": {
+   "n_groups": 40,
+   "mean": -0.010907754302024841,
+   "p_one_sided": 0.17320826791732083,
+   "frac_groups_better": 0.55,
+   "model": 2.2416365146636963,
+   "baseline": 2.252544403076172,
+   "relative_change": -0.0048424601554870605,
+   "n_wells": 362
+  },
+  "24h": {
+   "n_groups": 40,
+   "mean": -0.1500144511461258,
+   "p_one_sided": 4.999950000499995e-05,
+   "frac_groups_better": 0.775,
+   "model": 2.8617501258850098,
+   "baseline": 3.0117645263671875,
+   "relative_change": -0.04980945587158203,
+   "n_wells": 362
+  },
+  "36h": {
+   "n_groups": 40,
+   "mean": -0.27077180743217466,
+   "p_one_sided": 3.999960000399996e-05,
+   "frac_groups_better": 0.85,
+   "model": 3.47864031791687,
+   "baseline": 3.7494120597839355,
+   "relative_change": -0.07221710681915283,
+   "n_wells": 362
+  }
+ },
+ "per_training_plate_class_primary": {
+  "mitotic_delay": {
+   "n_groups": 23,
+   "mean": -0.13124052337978198,
+   "p_one_sided": 0.04041959580404196,
+   "frac_groups_better": 0.5652173913043478,
+   "model": 3.1290946006774902,
+   "baseline": 3.2603352069854736,
+   "relative_change": -0.04025369882583618,
+   "n_wells": 63
+  },
+  "polylobed": {
+   "n_groups": 20,
+   "mean": -0.19909498691558838,
+   "p_one_sided": 0.024669753302466974,
+   "frac_groups_better": 0.75,
+   "model": 3.391751527786255,
+   "baseline": 3.590846300125122,
+   "relative_change": -0.055445075035095215,
+   "n_wells": 39
+  },
+  "binuclear": {
+   "n_groups": 32,
+   "mean": -0.12878774479031563,
+   "p_one_sided": 0.005499945000549994,
+   "frac_groups_better": 0.71875,
+   "model": 3.1238853931427,
+   "baseline": 3.2526731491088867,
+   "relative_change": -0.039594411849975586,
+   "n_wells": 117
+  },
+  "cell_death": {
+   "n_groups": 13,
+   "mean": -0.3340127468109131,
+   "p_one_sided": 0.0012399876001239988,
+   "frac_groups_better": 0.8461538461538461,
+   "model": 3.4264063835144043,
+   "baseline": 3.7604193687438965,
+   "relative_change": -0.08882331848144531,
+   "n_wells": 30
+  },
+  "nuclear_shape": {
+   "n_groups": 36,
+   "mean": -0.22625388701756796,
+   "p_one_sided": 3.999960000399996e-05,
+   "frac_groups_better": 0.8611111111111112,
+   "model": 3.1594157218933105,
+   "baseline": 3.385669231414795,
+   "relative_change": -0.06682682037353516,
+   "n_wells": 191
+  },
+  "segregation": {
+   "n_groups": 31,
+   "mean": -0.19002174177477438,
+   "p_one_sided": 0.001049989500104999,
+   "frac_groups_better": 0.7419354838709677,
+   "model": 3.0131075382232666,
+   "baseline": 3.203129768371582,
+   "relative_change": -0.059323906898498535,
+   "n_wells": 92
+  },
+  "none": {
+   "n_wells": 0,
+   "skipped": "fewer than 2 plates"
+  }
+ },
+ "class_definition": "classes of the training-plate wells of the well's siRNA (reproducible-phenotype annotation); a well can be in several",
+ "non_primary_library_wells": {
+  "n_groups": 49,
+  "mean": -0.036132379454009385,
+  "p_one_sided": 0.0034699653003469966,
+  "frac_groups_better": 0.673469387755102,
+  "model": 2.7432422637939453,
+  "baseline": 2.779374837875366,
+  "relative_change": -0.013000249862670898,
+  "n_wells": 4446
+ },
+ "primary_wells": {
+  "n_groups": 40,
+  "mean": -0.21039310991764068,
+  "p_one_sided": 4.999950000499995e-05,
+  "frac_groups_better": 0.85,
+  "model": 3.1701951026916504,
+  "baseline": 3.3805880546569824,
+  "relative_change": -0.06223559379577637,
+  "n_wells": 362
+ }
+}

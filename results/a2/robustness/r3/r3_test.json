@@ -1,0 +1,114 @@
+{
+ "label": "exploratory, after the test (post hoc robustness control, docs/STAGE2_ROBUSTNESS_PLAN.md)",
+ "plan_commit": "78c8775",
+ "code_commit": "d4d0b81",
+ "split": "test",
+ "norm": "plate",
+ "freeze_commit": "ce5c3df",
+ "selected_configs": {
+  "h1_learned": "50M_d0.1_w0.2",
+  "h1_none": "50M_d0.3_w0.05"
+ },
+ "n_wells_primary": 770,
+ "n_plates_primary": 82,
+ "n_wells_all": 9964,
+ "statistic": "primary wells, mean error at 24 h and 36 h, errors averaged over 3 seeds, per-plate means, one-sided Monte Carlo sign flip over plates (100,000 draws); mean < 0 means the first-named model has lower error",
+ "check_real_vs_agnostic_against_record": {
+  "file": "results/a2/h1/h1_test_plate_vjepa2.json",
+  "relative_change": -0.05650585889816284,
+  "mean": -0.18309952573078433,
+  "n_groups": 82,
+  "matches": true
+ },
+ "a_token_zeroed": {
+  "vs_selected_agnostic": {
+   "n_groups": 82,
+   "mean": -0.13000117133303388,
+   "p_one_sided": 9.99990000099999e-06,
+   "frac_groups_better": 0.7804878048780488,
+   "model": 3.1103591918945312,
+   "baseline": 3.2403602600097656,
+   "relative_change": -0.04011934995651245,
+   "n_wells": 770
+  },
+  "real_vs_token_zeroed": {
+   "n_groups": 82,
+   "mean": -0.053098354397750486,
+   "p_one_sided": 9.99990000099999e-06,
+   "frac_groups_better": 0.7560975609756098,
+   "model": 3.0572609901428223,
+   "baseline": 3.1103591918945312,
+   "relative_change": -0.017071425914764404,
+   "n_wells": 770
+  },
+  "fraction_of_gain_retained": 0.7100027747978864
+ },
+ "b_labels_permuted_within_plate": {
+  "rule": "gene and siRNA labels permuted across the evaluated library wells of each plate (default_rng(20261027)), at evaluation time",
+  "vs_selected_agnostic": {
+   "n_groups": 82,
+   "mean": 0.17918591383026866,
+   "p_one_sided": 1.0,
+   "frac_groups_better": 0.14634146341463414,
+   "model": 3.419545888900757,
+   "baseline": 3.2403602600097656,
+   "relative_change": 0.0552980899810791,
+   "n_wells": 770
+  },
+  "real_vs_permuted": {
+   "n_groups": 82,
+   "mean": -0.362285439561053,
+   "p_one_sided": 9.99990000099999e-06,
+   "frac_groups_better": 0.9024390243902439,
+   "model": 3.0572609901428223,
+   "baseline": 3.419545888900757,
+   "relative_change": -0.10594534873962402,
+   "n_wells": 770
+  }
+ },
+ "full_gain_vs_selected_agnostic": {
+  "n_groups": 82,
+  "mean": -0.18309952573078433,
+  "p_one_sided": 9.99990000099999e-06,
+  "frac_groups_better": 0.8414634146341463,
+  "model": 3.0572609901428223,
+  "baseline": 3.2403602600097656,
+  "relative_change": -0.05650585889816284,
+  "n_wells": 770
+ },
+ "c_global_token_zeroed": {
+  "check_real_vs_agnostic_against_record": {
+   "file": "results/a2/h1/h1_test_global_vjepa2.json",
+   "relative_change": -0.0322345495223999,
+   "mean": -0.014602652410181558,
+   "n_groups": 82,
+   "matches": true
+  },
+  "vs_selected_agnostic": {
+   "n_groups": 82,
+   "mean": -0.00916604007162699,
+   "p_one_sided": 0.01963980360196398,
+   "frac_groups_better": 0.5609756097560976,
+   "model": 0.4438483417034149,
+   "baseline": 0.45301443338394165,
+   "relative_change": -0.020233571529388428,
+   "n_wells": 770
+  },
+  "full_gain_vs_selected_agnostic": {
+   "n_groups": 82,
+   "mean": -0.014602652410181558,
+   "p_one_sided": 0.0026599734002659974,
+   "frac_groups_better": 0.6707317073170732,
+   "model": 0.4384117126464844,
+   "baseline": 0.45301443338394165,
+   "relative_change": -0.0322345495223999,
+   "n_wells": 770
+  },
+  "fraction_of_gain_retained": 0.6276969288973869,
+  "n_wells_primary": 770
+ },
+ "I3_component": {
+  "rule": "under R3(a) the gain over agnostic keeps >= 50% of its size and stays p < 0.05 (I3 also requires I1)",
+  "holds": true
+ }
+}

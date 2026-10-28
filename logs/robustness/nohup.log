@@ -1,0 +1,12 @@
+[10-28 16:10:21] start (code d4d0b81)
+[10-28 16:18:03] done r234_val (GPU 0)
+[10-28 16:29:43] done r1_train_h1_none_s1 (GPU 5)
+[10-28 16:29:50] done r234_test (GPU 0)
+[10-28 16:30:31] done r1_train_h1_none_s0 (GPU 4)
+[10-28 16:35:54] done r1_train_h1_learned_s1 (GPU 2)
+[10-28 16:35:55] done r1_train_h1_learned_s0 (GPU 1)
+[10-28 16:36:29] done r1_train_h1_learned_s2 (GPU 3)
+[10-28 16:37:29] done r1_train_h1_none_s2 (GPU 6)
+[10-28 16:38:56] done r1_eval_val (GPU 1)
+[10-28 16:39:47] done r1_eval_test (GPU 2)
+[10-28 16:39:47] robustness GPU work done

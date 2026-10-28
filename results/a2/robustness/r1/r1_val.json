@@ -1,0 +1,259 @@
+{
+ "label": "exploratory, after the test (post hoc robustness control, docs/STAGE2_ROBUSTNESS_PLAN.md)",
+ "plan_commit": "78c8775",
+ "code_commit": "d4d0b81",
+ "split": "val",
+ "norm": "plate",
+ "freeze_commit": null,
+ "selected_configs": {
+  "h1_learned": "50M_d0.1_w0.2",
+  "h1_none": "50M_d0.3_w0.05"
+ },
+ "n_wells_primary": 362,
+ "n_plates_primary": 40,
+ "n_wells_all": 4808,
+ "statistic": "primary wells, mean error at 24 h and 36 h, errors averaged over 3 seeds, per-plate means, one-sided Monte Carlo sign flip over plates (100,000 draws); mean < 0 means the first-named model has lower error",
+ "check_real_vs_agnostic_against_record": {
+  "file": "results/a2/h1/h1_val_plate_vjepa2.json",
+  "relative_change": -0.06223559379577637,
+  "mean": -0.21039310991764068,
+  "n_groups": 40,
+  "matches": true
+ },
+ "trained_shuffled": {
+  "config": "50M_d0.1_w0.2",
+  "models": [
+   {
+    "kind": "predictor",
+    "file": "a2_plate_vjepa2_h1_learned_50M_d0.1_w0.2_s0.pt",
+    "step": 3000,
+    "sha256": "ad29b0e6c0ba64c450f98e71d538183cfefbd3109b76187f6aa89b9e32efaebb",
+    "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+    "backbone": {
+     "kind": "backbone",
+     "key": "vjepa2_vitl",
+     "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+     "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+     "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+    },
+    "action_source": "h1_learned",
+    "norm": "plate",
+    "config": "50M_d0.1_w0.2",
+    "seed": 0,
+    "gene_split": "gene",
+    "design_commit": "dd57079"
+   },
+   {
+    "kind": "predictor",
+    "file": "a2_plate_vjepa2_h1_learned_50M_d0.1_w0.2_s1.pt",
+    "step": 3000,
+    "sha256": "b89f2b083811fb6f74812f9da4aa9dd358b2a5e64947924a7caf60c772810e3d",
+    "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+    "backbone": {
+     "kind": "backbone",
+     "key": "vjepa2_vitl",
+     "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+     "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+     "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+    },
+    "action_source": "h1_learned",
+    "norm": "plate",
+    "config": "50M_d0.1_w0.2",
+    "seed": 1,
+    "gene_split": "gene",
+    "design_commit": "dd57079"
+   },
+   {
+    "kind": "predictor",
+    "file": "a2_plate_vjepa2_h1_learned_50M_d0.1_w0.2_s2.pt",
+    "step": 3250,
+    "sha256": "3ed81600664ac5fd98c2fdbf2ada79a89630c9b26559640b85c1f25bb8fffdbd",
+    "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+    "backbone": {
+     "kind": "backbone",
+     "key": "vjepa2_vitl",
+     "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+     "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+     "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+    },
+    "action_source": "h1_learned",
+    "norm": "plate",
+    "config": "50M_d0.1_w0.2",
+    "seed": 2,
+    "gene_split": "gene",
+    "design_commit": "dd57079"
+   }
+  ],
+  "permutations": {
+   "0": {
+    "rule": "default_rng(20261027 + seed).permutation over the sorted training siRNAs with a gene action; well with siRNA s -> token pi(s), gene gene(pi(s))",
+    "seed": 0,
+    "n_sirnas": 16219,
+    "sha256": "ff795b42ae276e2dc05e30788a516029f5bee950c33a7b3a7a5547a65db1720e",
+    "n_fixed_points": 0,
+    "n_wells_remapped": 47815,
+    "n_wells_gene_only (siRNA not a training siRNA; no primary well)": 416
+   },
+   "1": {
+    "rule": "default_rng(20261027 + seed).permutation over the sorted training siRNAs with a gene action; well with siRNA s -> token pi(s), gene gene(pi(s))",
+    "seed": 1,
+    "n_sirnas": 16219,
+    "sha256": "66c3dcba7334f0ba509a19fd6920fa4f8cbc1836e414735bd070e017b4b1bd69",
+    "n_fixed_points": 1,
+    "n_wells_remapped": 47815,
+    "n_wells_gene_only (siRNA not a training siRNA; no primary well)": 416
+   },
+   "2": {
+    "rule": "default_rng(20261027 + seed).permutation over the sorted training siRNAs with a gene action; well with siRNA s -> token pi(s), gene gene(pi(s))",
+    "seed": 2,
+    "n_sirnas": 16219,
+    "sha256": "5a9ecf5e373614570ca17c68f51fcbb90bcaf2deb2be6c86e6af612502eda546",
+    "n_fixed_points": 1,
+    "n_wells_remapped": 47815,
+    "n_wells_gene_only (siRNA not a training siRNA; no primary well)": 416
+   }
+  }
+ },
+ "config_matched_agnostic": {
+  "config": "50M_d0.1_w0.2",
+  "models": [
+   {
+    "kind": "predictor",
+    "file": "a2_plate_vjepa2_h1_none_50M_d0.1_w0.2_s0.pt",
+    "step": 1750,
+    "sha256": "899b7bf4df414777ddf44756c8d0a949bbacd58981a5cbfad17e8512fa20c5b9",
+    "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+    "backbone": {
+     "kind": "backbone",
+     "key": "vjepa2_vitl",
+     "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+     "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+     "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+    },
+    "action_source": "h1_none",
+    "norm": "plate",
+    "config": "50M_d0.1_w0.2",
+    "seed": 0,
+    "gene_split": "gene",
+    "design_commit": "dd57079"
+   },
+   {
+    "kind": "predictor",
+    "file": "a2_plate_vjepa2_h1_none_50M_d0.1_w0.2_s1.pt",
+    "step": 1500,
+    "sha256": "d4d2733d892639238ce45c2f4bd6a794a6ba1b9c816d9e342ec150fe21ddbf80",
+    "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+    "backbone": {
+     "kind": "backbone",
+     "key": "vjepa2_vitl",
+     "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+     "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+     "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+    },
+    "action_source": "h1_none",
+    "norm": "plate",
+    "config": "50M_d0.1_w0.2",
+    "seed": 1,
+    "gene_split": "gene",
+    "design_commit": "dd57079"
+   },
+   {
+    "kind": "predictor",
+    "file": "a2_plate_vjepa2_h1_none_50M_d0.1_w0.2_s2.pt",
+    "step": 3500,
+    "sha256": "3d275e9cab661af24582b57acc82b112f521c9a8a0e6b1b8b0847ea7bef86570",
+    "split_manifest_sha256": "e1905310bedae03ab81fc676a926c37aa7bd02e4bce35c96020cb3d06dda94ef",
+    "backbone": {
+     "kind": "backbone",
+     "key": "vjepa2_vitl",
+     "source": "huggingface:facebook/vjepa2-vitl-fpc64-256",
+     "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+     "sha256": "25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b"
+    },
+    "action_source": "h1_none",
+    "norm": "plate",
+    "config": "50M_d0.1_w0.2",
+    "seed": 2,
+    "gene_split": "gene",
+    "design_commit": "dd57079"
+   }
+  ]
+ },
+ "tests": {
+  "real_vs_trained_shuffled": {
+   "n_groups": 40,
+   "mean": 0.005518925189971924,
+   "p_one_sided": 0.5669943300566994,
+   "frac_groups_better": 0.575,
+   "model": 3.1701951026916504,
+   "baseline": 3.1646761894226074,
+   "relative_change": 0.001743912696838379,
+   "n_wells": 362
+  },
+  "trained_shuffled_vs_selected_agnostic": {
+   "n_groups": 40,
+   "mean": -0.21591203510761262,
+   "p_one_sided": 2.999970000299997e-05,
+   "frac_groups_better": 0.75,
+   "model": 3.1646761894226074,
+   "baseline": 3.3805880546569824,
+   "relative_change": -0.06386816501617432,
+   "n_wells": 362
+  },
+  "trained_shuffled_vs_config_matched_agnostic": {
+   "n_groups": 40,
+   "mean": -0.21682159304618837,
+   "p_one_sided": 9.99990000099999e-06,
+   "frac_groups_better": 0.8,
+   "model": 3.1646761894226074,
+   "baseline": 3.381497859954834,
+   "relative_change": -0.06411999464035034,
+   "n_wells": 362
+  },
+  "real_vs_config_matched_agnostic": {
+   "n_groups": 40,
+   "mean": -0.21130266785621643,
+   "p_one_sided": 9.99990000099999e-06,
+   "frac_groups_better": 0.825,
+   "model": 3.1701951026916504,
+   "baseline": 3.381497859954834,
+   "relative_change": -0.062487900257110596,
+   "n_wells": 362
+  },
+  "config_matched_agnostic_vs_selected_agnostic": {
+   "n_groups": 40,
+   "mean": 0.0009095579385757447,
+   "p_one_sided": 0.5304446955530445,
+   "frac_groups_better": 0.35,
+   "model": 3.381497859954834,
+   "baseline": 3.3805880546569824,
+   "relative_change": 0.00026917457580566406,
+   "n_wells": 362
+  },
+  "real_vs_selected_agnostic (recorded gate comparison)": {
+   "n_groups": 40,
+   "mean": -0.21039310991764068,
+   "p_one_sided": 4.999950000499995e-05,
+   "frac_groups_better": 0.85,
+   "model": 3.1701951026916504,
+   "baseline": 3.3805880546569824,
+   "relative_change": -0.06223559379577637,
+   "n_wells": 362
+  },
+  "secondary_all_wells_real_vs_trained_shuffled": {
+   "n_groups": 49,
+   "mean": 0.0020160748034107443,
+   "p_one_sided": 0.6542834571654284,
+   "frac_groups_better": 0.5102040816326531,
+   "model": 2.7669007778167725,
+   "baseline": 2.7648847103118896,
+   "relative_change": 0.0007292032241821289,
+   "n_wells": 4808
+  }
+ },
+ "fraction_of_gain_over_selected_agnostic_reached_by_trained_shuffled": 1.026231492049014,
+ "I1": {
+  "rule": "real h1_learned beats the R1 trained-shuffled model, p < 0.05 over plates",
+  "holds": false
+ }
+}
