@@ -114,6 +114,9 @@ def results_macros() -> dict[str, str]:
             lam = r2["lambda_validation"]
             t2 = r2["tests"][f"real_vs_R2_lambda_{lam}"]
             r2ag = r2["tests"]["R2_lambda_validation_vs_selected_agnostic"]
+            na = r1["tests"]["config_matched_agnostic_vs_selected_agnostic"]
+            m |= {f"RobNoneAg{S}": f"{abs(100 * na['relative_change']):.2f}",
+                  f"RobNoneAgP{S}": pv(na["p_one_sided"])}
             a = r3["a_token_zeroed"]
             c = r3["c_global_token_zeroed"]
             b = r3["b_labels_permuted_within_plate"]["vs_selected_agnostic"]

@@ -7,5 +7,6 @@
 - Style files: `style/` from github.com/JmlrOrg/tmlr-style-file (Apache-2.0,
   `style/LICENSE-tmlr-style`).
 - Build (no system TeX needed): `tectonic -X compile --outdir <build dir> main_anon.tex`.
-- Results and discussion are placeholders until the test has been run. Nothing here is
+- Results and discussion are filled from the results files (pre-registered gates first, then the
+  post hoc robustness controls). Nothing here is
   submitted or posted; the author does that after review.

@@ -1,6 +1,5 @@
 % Shared body of the anonymised (main_anon.tex) and named (main_biorxiv.tex) versions.
-% Every number is a macro from numbers.tex (scripts/91_paper_numbers.py). Results and
-% discussion are placeholders until the test has been run.
+% Every number is a macro from numbers.tex (scripts/91_paper_numbers.py).
 
 \begin{abstract}
 World models that predict the consequences of actions in a learned latent space have been
@@ -14,8 +13,12 @@ on the gene improves forecasts for held-out plates beyond an action-agnostic mod
 replicate-memorisation baseline; whether gene representations from independent modalities
 (Perturb-seq, Cell Painting, protein language models, interaction networks) transfer the model
 to genes never seen in training; and whether searching over gene actions recovers the genes
-that produce a target phenotype or trajectory. \textbf{[Results: to be filled from the test
-evaluation.]}
+that produce a target phenotype or trajectory. On test, the gene-conditioned model beat both
+comparators ($p=\SignalTestAgP$), but a model trained with randomly permuted reagent labels did
+equally well, the effect did not replicate on an independent reagent set, zero-shot transfer
+passed for one of five gene representations only marginally, and planning was not
+distinguishable from nearest-gene retrieval. We report this as a negative result and describe
+the controls that exposed it.
 \end{abstract}
 
 \section{Introduction}
@@ -57,7 +60,9 @@ RNAi video, trained on \NWellsStageTwoEmbedded{} wells beyond a first stage of
 (prediction, zero-shot transfer and planning), memorisation and kNN baselines, trained
 shuffled-encoding controls and per-plate normalisation; (iii) a quantification of the batch
 structure carried by frozen video-encoder latents of microscopy; and (iv)
-\textbf{[results summary: to be filled]}.
+a negative result: post hoc controls show that a model trained
+with permuted reagent labels matches the gene-conditioned model, so the pre-registered
+prediction gain does not establish gene-conditioned dynamics.
 
 \section{Related work}\label{sec:related}
 
@@ -250,15 +255,143 @@ comes from models frozen before the test data were read. \TODO{author: review th
 
 \section{Results}\label{sec:results}
 
-\textbf{[Placeholder. Filled from the results files after the test has been run: gates on
-validation and test; prediction with every baseline and the phenotype probe; transfer per
-encoding source; planning; normalised and global preprocessing; alternative encoders;
-complex-held-out split; screen B; plate-identity probes; exploratory analyses after the test,
-labelled as such.]}
+We report the pre-registered gates first, exactly as recorded before and after the freeze, and
+then a set of robustness controls that we designed after seeing the test results. The controls
+and their interpretation rules were written down and committed before any of them was run; every
+number from them is post hoc and exploratory.
+
+\subsection{Pre-registered gates}
+
+\begin{table}[t]
+\centering
+\caption{Pre-registered decision gates on the validation and test splits. The test split was
+evaluated once, after the freeze.}
+\label{tab:gates}
+\begin{tabular}{lll}
+\toprule
+Gate & Validation & Test \\
+\midrule
+Prediction (H1) & \SignalValPass & \SignalTestPass \\
+Zero-shot transfer (H2) & \ZeroShotValPass & \ZeroShotTestPass \\
+Planning (H3) & \PlanValPass & \PlanTestPass \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Prediction.} On the \HOneTestWells{} primary test wells on \SignalTestPlates{} plates,
+the gene-conditioned predictor had \SignalTestAg\% lower error at 24 and 36 hours than the
+action-agnostic predictor ($p=\SignalTestAgP$) and \SignalTestDrift\% lower error than replicate
+drift ($p=\SignalTestDriftP$), so the prediction gate passes on test, as it did on validation
+(\HOneValWells{} wells on \SignalValPlates{} plates; \SignalValAg\% and \SignalValDrift\% lower,
+$p=\SignalValAgP$ and $p=\SignalValDriftP$; Table~\ref{tab:gates}). The comparison with the
+action-agnostic predictor gave the same direction under the global preprocessing (validation
+\HOneValGlobalAg\% \HOneValGlobalAgDir, $p=\HOneValGlobalAgP$; test \HOneTestGlobalAg\%
+\HOneTestGlobalAgDir, $p=\HOneTestGlobalAgP$) and with DINOv2 latents (validation
+\HOneValDinoAg\% \HOneValDinoAgDir, $p=\HOneValDinoAgP$; test \HOneTestDinoAg\%
+\HOneTestDinoAgDir, $p=\HOneTestDinoAgP$). With TiJepa-1 latents the error was
+\HOneValTijepaAg\% \HOneValTijepaAgDir{} on validation ($p=\HOneValTijepaAgP$) and
+\HOneTestTijepaAg\% \HOneTestTijepaAgDir{} on test ($p=\HOneTestTijepaAgP$). After an
+exploratory B-score correction of spatial plate effects, run after the test, the
+gene-conditioned predictor still had \EOneValAg\% (validation, $p=\EOneValAgP$) and
+\EOneTestAg\% (test, $p=\EOneTestAgP$) lower error than the action-agnostic predictor.
+
+\paragraph{Screen B.} On screen B, a second MitoCheck screen with independent siRNAs whose
+reagent token is unknown to the model, evaluated under the global preprocessing outside the
+gates, the gene-conditioned predictor did not beat the action-agnostic predictor (difference
+\ScreenBAg\% over \ScreenBPlates{} plates, $p=\ScreenBAgP$), although it beat replicate drift by
+\ScreenBDrift\% ($p=\ScreenBDriftP$). The prediction rule therefore fails on screen B.
+
+\paragraph{Zero-shot transfer.} The zero-shot gate passes the pre-registered rule on test for
+one of five sources (string) with a CI bound at $\ZeroShotTestStringShufHi$; the rule has no
+correction across sources; the same source fails on validation. We do not claim zero-shot
+transfer. For that source, the trained model had a mean difference of
+$\ZeroShotTestStringShuf$ (95\% CI $[\ZeroShotTestStringShufLo, \ZeroShotTestStringShufHi]$)
+from the model trained on shuffled encodings and $\ZeroShotTestStringAg$
+($[\ZeroShotTestStringAgLo, \ZeroShotTestStringAgHi]$) from the action-agnostic predictor, over
+\ZeroShotTestStringGenes{} primary test genes.
+
+\paragraph{Planning.} The planning gate fails on validation and test; planning is not
+distinguishable from kNN-imputed retrieval. The difference in hit@100 between the planner and
+nearest-gene-imputed endpoint retrieval was $\PlanValDiff$ on validation (95\% CI
+$[\PlanValLo, \PlanValHi]$) and $\PlanTestDiff$ on test ($[\PlanTestLo, \PlanTestHi]$); the
+oracle ceiling, which uses the unseen genes' own wells, reached hit@100 of \PlanValOracle{} and
+\PlanTestOracle.
+
+\subsection{Robustness controls (post hoc)}
+
+All controls use the primary wells, the 24- and 36-hour metric, three seeds and the same
+sign-flip test over plates as the prediction gate. Numbers are given for the test split, with
+validation in parentheses.
+
+\paragraph{Trained-shuffled control.} The gene-conditioned and action-agnostic predictors were
+selected with different regularisation, so we trained the gene-conditioned model again at its
+selected configuration with its action labels permuted: each training siRNA was mapped to
+another, and every well received the permuted siRNA and that siRNA's gene, identically in
+training and evaluation. This keeps the number of actions and the consistency between
+replicates and removes the biological correspondence. The real model's error was
+\RobOneRelTest\% \RobOneDirTest{} than the shuffled model's ($p=\RobOnePTest$; validation
+\RobOneRelVal\% \RobOneDirVal, $p=\RobOnePVal$). The shuffled model had \RobShufAgTest\% lower
+error than the action-agnostic predictor ($p=\RobShufAgPTest$; validation \RobShufAgVal\%,
+$p=\RobShufAgPVal$), \RobShufFracTest\% (\RobShufFracVal\%) of the real model's gain. An
+action-agnostic predictor trained at the gene-conditioned model's configuration differed from
+the selected one by \RobNoneAgTest\% ($p=\RobNoneAgPTest$; validation \RobNoneAgVal\%,
+$p=\RobNoneAgPVal$), so the regularisation difference does not explain the gain.
+
+\paragraph{Additive memorisation.} A baseline that adds to the action-agnostic forecast a
+fraction $\lambda$ of the average residual of the same siRNA's training-plate wells, with
+$\lambda=\RobTwoLambda$ chosen on validation, had \RobTwoAgTest\% lower error than the
+action-agnostic predictor ($p=\RobTwoAgPTest$; validation \RobTwoAgVal\%, $p=\RobTwoAgPVal$).
+The gene-conditioned model's error was \RobTwoRelTest\% \RobTwoDirTest{} than this baseline's
+(validation \RobTwoRelVal\% \RobTwoDirVal). The residuals are in-sample for the action-agnostic
+model on training plates.
+
+\paragraph{Reagent dependence.} With the siRNA token set to unknown at evaluation, the gain over
+the action-agnostic predictor kept \RobThreeFracTest\% of its size ($p=\RobThreePTest$;
+validation \RobThreeFracVal\%, $p=\RobThreePVal$), and \RobThreeGlobalFracTest\% under the
+global preprocessing ($p=\RobThreeGlobalPTest$; validation \RobThreeGlobalFracVal\%,
+$p=\RobThreeGlobalPVal$). Permuting gene and siRNA labels across wells within each plate made
+the error \RobThreePermRelTest\% \RobThreePermDirTest{} than the action-agnostic predictor's
+(validation \RobThreePermRelVal\% \RobThreePermDirVal).
+
+\paragraph{Where the gain sits.} The gain over the action-agnostic predictor was absent at 3
+hours (\RobFourThreehTest\%, $p=\RobFourThreehPTest$) and 12 hours (\RobFourTwelvehTest\%,
+$p=\RobFourTwelvehPTest$) and appeared at 24 hours (\RobFourTwentyFourhTest\%,
+$p=\RobFourTwentyFourhPTest$) and 36 hours (\RobFourThirtySixhTest\%,
+$p=\RobFourThirtySixhPTest$). On non-primary library wells it was \RobFourNonPrimRelTest\%
+($p=\RobFourNonPrimPTest$).
+
+\paragraph{Interpretation rules.} The rules fixed before these controls were run require, for
+any claim that the action input carries gene information, that the real model beat the
+trained-shuffled model ($p<0.05$); this \RobIOneTest{} on test (\RobIOneVal{} on validation).
+The rule for forecasts beyond additive memorisation \RobITwoTest, and the rule for a gene-level
+rather than reagent-level gain \RobIThreeTest, because both require the first.
 
 \section{Discussion}\label{sec:discussion}
 
-\textbf{[Placeholder until the results exist.]}
+The pre-registered prediction gate passed on validation and on test, and we report it as
+recorded. A trained-shuffled control matches it: a model given a consistent but biologically
+meaningless relabelling of the reagents forecasts as well as the gene-conditioned model. We
+therefore make no gene-conditioning claim, and this paper reports a negative result. The gain
+over the action-agnostic predictor shows that a consistent per-reagent label helps the forecast
+at 24 and 36 hours; it does not show that the model has learned what the knocked-down gene does.
+Screen B, where the reagents are new to the model and the gain over the action-agnostic
+predictor disappears, is consistent with that reading.
+
+The other two questions have negative answers under their own pre-registered rules. Zero-shot
+transfer passes the pre-registered rule on test for one of five sources (string) with a CI bound
+at $\ZeroShotTestStringShufHi$; the rule has no correction across sources; the same source fails
+on validation. We do not claim zero-shot transfer. Planning fails on validation and test;
+planning is not distinguishable from kNN-imputed retrieval.
+
+Three lessons carry over to other perturbation world models. First, beating an action-agnostic
+model is not evidence of action understanding when the two differ in what they can memorise; a
+trained-shuffled control with the same label structure is the comparison that isolates
+biological content. Second, replicate drift was a weak memorisation baseline here, and an
+additive per-reagent correction of the action-agnostic forecast did at least as well as the
+world model. Third, an independent reagent set is the most direct test of whether a learned
+effect is gene-level. The negative result is specific to this model, these frozen video latents
+and two days of low-resolution MitoCheck movies; richer encoders, longer horizons or multimodal
+gene representations may change it, and the evaluation design can be reused to test them.
 
 \section*{Licences and data availability}
 
