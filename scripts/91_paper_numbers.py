@@ -24,6 +24,136 @@ def n(x: int) -> str:
     return f"{x:,}".replace(",", "{,}")
 
 
+def pv(x: float) -> str:
+    """p value for math mode."""
+    if x < 0.001:
+        a, e = f"{x:.1e}".split("e")
+        return f"{a}\\times10^{{{int(e)}}}"
+    return f"{x:.3f}"
+
+
+def rel(x: float) -> str:
+    """|relative change| in percent, one decimal (direction is stated in the text)."""
+    return f"{abs(100 * x):.1f}"
+
+
+def fx(x: float, nd: int = 3) -> str:
+    return f"{x:.{nd}f}"
+
+
+def word(b: bool) -> str:
+    return "holds" if b else "does not hold"
+
+
+def results_macros() -> dict[str, str]:
+    """Gates (pre-registered), sensitivity analyses, screenB, exploratory E1-E3 and the post hoc
+    robustness controls; each block is added only if its results files exist."""
+    m: dict[str, str] = {}
+    A = REPO / "results" / "a2"
+    for sp, S in (("val", "Val"), ("test", "Test")):
+        f = A / f"gates_{sp}.json"
+        if not f.exists():
+            continue
+        g = json.loads(f.read_text())
+        s = g["G_Signal_2"]
+        m |= {f"Signal{S}Pass": "passes" if s["pass"] else "fails",
+              f"Signal{S}Plates": n(s["vs_action_agnostic"]["n_groups"]),
+              f"Signal{S}Ag": rel(s["vs_action_agnostic"]["relative_change"]),
+              f"Signal{S}AgP": pv(s["vs_action_agnostic"]["p_one_sided"]),
+              f"Signal{S}Drift": rel(s["vs_replicate_drift"]["relative_change"]),
+              f"Signal{S}DriftP": pv(s["vs_replicate_drift"]["p_one_sided"])}
+        z = g["G_ZeroShot_2"]
+        m |= {f"ZeroShot{S}Pass": "passes" if z["pass"] else "fails",
+              f"ZeroShot{S}NPassing": n(len(z["passing_sources"]))}
+        st = z["per_source"]["string"]
+        for k, kk in (("true_vs_shuffled_trained", "Shuf"), ("true_vs_agnostic", "Ag")):
+            t = st[k]
+            m |= {f"ZeroShot{S}String{kk}": fx(t["mean"], 4),
+                  f"ZeroShot{S}String{kk}Lo": fx(t["ci95"][0], 4),
+                  f"ZeroShot{S}String{kk}Hi": fx(t["ci95"][1], 4)}
+        m[f"ZeroShot{S}StringGenes"] = n(st["true_vs_shuffled_trained"]["n_genes"])
+        p = g["G_Plan_2"]
+        t = p["trajectory_vs_comparator"]
+        m |= {f"Plan{S}Pass": "passes" if p["pass"] else "fails",
+              f"Plan{S}Diff": fx(t["difference"]), f"Plan{S}Lo": fx(t["ci95"][0]),
+              f"Plan{S}Hi": fx(t["ci95"][1]), f"Plan{S}Oracle": fx(p["oracle_ceiling_hit@100"])}
+        h1 = json.loads((A / "h1" / f"h1_{sp}_plate_vjepa2.json").read_text())
+        m[f"HOne{S}Wells"] = n(h1["n_wells_primary"])
+        for f2, k in ((f"h1_{sp}_global_vjepa2.json", "Global"),
+                      (f"h1_{sp}_plate_dinov2.json", "Dino"),
+                      (f"h1_{sp}_plate_tijepa1.json", "Tijepa")):
+            q = A / "h1" / f2
+            if q.exists():
+                t = json.loads(q.read_text())["G_Signal_2"]["vs_action_agnostic"]
+                m |= {f"HOne{S}{k}Ag": rel(t["relative_change"]),
+                      f"HOne{S}{k}AgP": pv(t["p_one_sided"]),
+                      f"HOne{S}{k}AgDir": "lower" if t["mean"] < 0 else "higher"}
+    q = A / "h1" / "h1_screenB_global_vjepa2.json"
+    if q.exists():
+        s = json.loads(q.read_text())["G_Signal_2"]
+        m |= {"ScreenBPlates": n(s["vs_action_agnostic"]["n_groups"]),
+              "ScreenBAg": rel(s["vs_action_agnostic"]["relative_change"]),
+              "ScreenBAgP": pv(s["vs_action_agnostic"]["p_one_sided"]),
+              "ScreenBDrift": rel(s["vs_replicate_drift"]["relative_change"]),
+              "ScreenBDriftP": pv(s["vs_replicate_drift"]["p_one_sided"])}
+    X = A / "exploratory"
+    if (X / "e1/h1/h1_test_plate_vjepa2.json").exists():
+        for sp, S in (("val", "Val"), ("test", "Test")):
+            t = json.loads((X / f"e1/h1/h1_{sp}_plate_vjepa2.json").read_text())["G_Signal_2"]
+            m |= {f"EOne{S}Ag": rel(t["vs_action_agnostic"]["relative_change"]),
+                  f"EOne{S}AgP": pv(t["vs_action_agnostic"]["p_one_sided"])}
+    R = A / "robustness"
+    if all((R / f"{k}/{k}_{sp}.json").exists() for k in ("r1", "r2", "r3", "r4")
+           for sp in ("val", "test")):
+        out = {}
+        for sp, S in (("val", "Val"), ("test", "Test")):
+            r1, r2, r3, r4 = (json.loads((R / f"{k}/{k}_{sp}.json").read_text())
+                              for k in ("r1", "r2", "r3", "r4"))
+            t1 = r1["tests"]["real_vs_trained_shuffled"]
+            sh = r1["tests"]["trained_shuffled_vs_selected_agnostic"]
+            lam = r2["lambda_validation"]
+            t2 = r2["tests"][f"real_vs_R2_lambda_{lam}"]
+            r2ag = r2["tests"]["R2_lambda_validation_vs_selected_agnostic"]
+            a = r3["a_token_zeroed"]
+            c = r3["c_global_token_zeroed"]
+            b = r3["b_labels_permuted_within_plate"]["vs_selected_agnostic"]
+            ok = lambda t: t["p_one_sided"] < 0.05 and t["mean"] < 0  # noqa: E731
+            i1 = ok(t1)
+            out[S] = {"I1": i1, "I2": i1 and ok(t2),
+                      "I3": i1 and a["fraction_of_gain_retained"] >= 0.5
+                      and ok(a["vs_selected_agnostic"])}
+            m |= {f"RobOneRel{S}": rel(t1["relative_change"]),
+                  f"RobOneDir{S}": "lower" if t1["mean"] < 0 else "higher",
+                  f"RobOneP{S}": pv(t1["p_one_sided"]),
+                  f"RobShufAg{S}": rel(sh["relative_change"]),
+                  f"RobShufAgDir{S}": "lower" if sh["mean"] < 0 else "higher",
+                  f"RobShufAgP{S}": pv(sh["p_one_sided"]),
+                  f"RobShufFrac{S}": f"{100 * r1['fraction_of_gain_over_selected_agnostic_reached_by_trained_shuffled']:.0f}",
+                  f"RobTwoLambda": f"{lam:g}",
+                  f"RobTwoRel{S}": rel(t2["relative_change"]),
+                  f"RobTwoDir{S}": "lower" if t2["mean"] < 0 else "higher",
+                  f"RobTwoP{S}": pv(t2["p_one_sided"]),
+                  f"RobTwoAg{S}": rel(r2ag["relative_change"]),
+                  f"RobTwoAgDir{S}": "lower" if r2ag["mean"] < 0 else "higher",
+                  f"RobTwoAgP{S}": pv(r2ag["p_one_sided"]),
+                  f"RobThreeFrac{S}": f"{100 * a['fraction_of_gain_retained']:.0f}",
+                  f"RobThreeP{S}": pv(a["vs_selected_agnostic"]["p_one_sided"]),
+                  f"RobThreeGlobalFrac{S}": f"{100 * c['fraction_of_gain_retained']:.0f}",
+                  f"RobThreeGlobalP{S}": pv(c["vs_selected_agnostic"]["p_one_sided"]),
+                  f"RobThreePermRel{S}": rel(b["relative_change"]),
+                  f"RobThreePermDir{S}": "lower" if b["mean"] < 0 else "higher",
+                  f"RobThreePermP{S}": pv(b["p_one_sided"]),
+                  f"RobFourNonPrimRel{S}": rel(r4["non_primary_library_wells"]["relative_change"]),
+                  f"RobFourNonPrimP{S}": pv(r4["non_primary_library_wells"]["p_one_sided"])}
+            for h, t in r4["per_horizon_primary"].items():
+                k = {"3h": "Three", "12h": "Twelve", "24h": "TwentyFour", "36h": "ThirtySix"}[h]
+                m |= {f"RobFour{k}h{S}": rel(t["relative_change"]),
+                      f"RobFour{k}hP{S}": pv(t["p_one_sided"])}
+            m |= {f"RobIOne{S}": word(out[S]["I1"]), f"RobITwo{S}": word(out[S]["I2"]),
+                  f"RobIThree{S}": word(out[S]["I3"])}
+    return m
+
+
 def main() -> int:
     m: dict[str, str] = {}
     ps = pd.read_csv(REPO / "splits" / "plate_split.tsv", sep="\t").split.value_counts()
@@ -87,6 +217,7 @@ def main() -> int:
           "SirnaDropout": f"{fx['sirna_token_dropout']:g}",
           "Patience": n(int(re.search(r"not improved for (\d+) steps",
                                       fx["early_stopping"])[1]))}
+    m |= results_macros()
     lines = ["% generated by scripts/91_paper_numbers.py from results/, manifests/ and "
              "splits/; do not edit"]
     lines += [f"\\newcommand{{\\{k}}}{{{v}}}" for k, v in sorted(m.items())]
